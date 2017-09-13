@@ -689,6 +689,10 @@ public abstract class SonarActivity extends BaseActivity implements CommandFragm
         _sonarView.getDistanceAxisView().setMaxValue(distanceRounded);
         _sonarView.getDistanceAxisView().setVisibility(View.VISIBLE);
 
+        _sonarView.getNewAxisView().setWidthOverride(Math.round(distanceAxisWidth));
+        _sonarView.getNewAxisView().setMaxValue(distanceRounded);
+        _sonarView.getNewAxisView().setVisibility(View.VISIBLE);
+
         _sonarView.setMaxDataFrames(captured.size());
         _sonarView.setSonarData(captured);
         _sonarView.setVisibility(View.VISIBLE);

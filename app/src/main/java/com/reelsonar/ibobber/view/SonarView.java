@@ -1,8 +1,16 @@
 package com.reelsonar.ibobber.view;
 
 import android.content.Context;
-import android.graphics.*;
+import android.graphics.Bitmap;
+import android.graphics.BitmapShader;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.graphics.Rect;
+import android.graphics.Shader;
 import android.graphics.drawable.BitmapDrawable;
+import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
@@ -127,16 +135,39 @@ public class SonarView extends RelativeLayout {
         _distanceAxisView.setVisibility(View.INVISIBLE);
         LayoutParams distanceParams = new LayoutParams(LayoutParams.WRAP_CONTENT, _bottomMargin + 1);
         distanceParams.addRule(RIGHT_OF, _depthAxisView.getId());
+//        distanceParams.bottomMargin = (_bottomMargin + 1) / 2;
         distanceParams.addRule(ALIGN_PARENT_RIGHT);
         distanceParams.addRule(ALIGN_PARENT_BOTTOM);
         addView(_distanceAxisView, distanceParams);
+//        _distanceAxisView.post(new Runnable() {
+//            @Override
+//            public void run() {
+//
+//            }
+//        });
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+//                LayoutParams distanceParams = new LayoutParams(LayoutParams.WRAP_CONTENT, _bottomMargin + 1);
+//                distanceParams.addRule(RIGHT_OF, _depthAxisView.getId());
+//                distanceParams.bottomMargin = (_distanceAxisView.getHeight()) / 2;
+//                distanceParams.addRule(ALIGN_PARENT_RIGHT);
+//                distanceParams.addRule(ALIGN_PARENT_BOTTOM);
+
+                float y = ((_depthAxisView.getY() + _depthAxisView.getHeight()) - (_distanceAxisView.getHeight() / 2));
+//                float y = (_distanceAxisView.getY()-(_distanceAxisView.getHeight()/2));
+                _distanceAxisView.setY(y);
+            }
+        }, 1000);
+
 
         _newTestAxis = new NewAxisView(getContext());
         LayoutParams newdistanceParams = new LayoutParams(LayoutParams.WRAP_CONTENT, _bottomMargin + 1);
         _newTestAxis.setVisibility(View.INVISIBLE);
         newdistanceParams.addRule(ABOVE, _distanceAxisView.getId());
-        newdistanceParams.addRule(ALIGN_START,_distanceAxisView.getId());
-        addView(_newTestAxis, newdistanceParams);
+        newdistanceParams.addRule(ALIGN_START, _distanceAxisView.getId());
+        //   addView(_newTestAxis, newdistanceParams);
 
         setWillNotDraw(false);
     }
@@ -183,9 +214,11 @@ public class SonarView extends RelativeLayout {
     public AxisView getDepthAxisView() {
         return _depthAxisView;
     }
+
     public NewAxisView getNewAxisView() {
         return _newTestAxis;
     }
+
     public AxisView getDistanceAxisView() {
         return _distanceAxisView;
     }

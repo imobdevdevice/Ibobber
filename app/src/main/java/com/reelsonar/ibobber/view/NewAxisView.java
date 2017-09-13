@@ -9,6 +9,7 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Rect;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 public class NewAxisView extends View {
@@ -86,81 +87,25 @@ public class NewAxisView extends View {
         _widthOverride = widthOverride;
     }
 
-    private void drawVerticalAxis(Canvas canvas) {
-        float width = getWidth(), height = getHeight();
-        float axisX = width - 1.f;
-
-        Paint paint = new Paint();
-        paint.setColor(Color.WHITE);
-        paint.setStyle(Paint.Style.STROKE);
-        paint.setTextAlign(Paint.Align.LEFT);
-        paint.setTextSize(13.0f * _pxPerDip);
-        paint.setFakeBoldText(true);
-
-        Rect textBounds = new Rect();
-
-        Path path = new Path();
-        path.moveTo(axisX, 0);
-        path.lineTo(axisX, height);
-
-        float distanceBetweenTicks = (float) _maxValue / (float) _numOfTicks;
-        float majorTicX = axisX - MAJOR_TIC_LENGTH;
-        float minorTicX = axisX - MINOR_TIC_LENGTH;
-
-        float ticY = 0.f;
-        float ticSpace = ((height - 1.f) / (float) _numOfTicks) / 2.f; // height - 1 to account for the 0th tic.
-
-        for (int i = 0; i <= _numOfTicks; ++i) {
-            path.moveTo(majorTicX, ticY);
-            path.lineTo(axisX, ticY);
-
-            if (_maxValue > 0) {
-                int depth = Math.round(i * distanceBetweenTicks);
-                String depthText = String.valueOf(depth);
-                paint.getTextBounds(depthText, 0, depthText.length(), textBounds);
-
-                float textY = ticY;
-                if (i == 0) {
-                    textY += textBounds.height();
-                } else if (i == _numOfTicks) {
-                    textY -= textBounds.height() / 4.f;
-                } else {
-                    textY += textBounds.height() / 2.f;
-                }
-                canvas.drawText(depthText, ((majorTicX - textBounds.width()) / 2.f), textY, paint);
-            }
-
-            ticY += ticSpace;
-
-            if (i + 1 <= _numOfTicks) {
-                path.moveTo(minorTicX, ticY);
-                path.lineTo(axisX, ticY);
-
-                ticY += ticSpace;
-            }
-        }
-
-        canvas.drawPath(path, paint);
-    }
-
     private void drawHorizontalAxis(Canvas canvas) {
+        Log.d("width", "" + _widthOverride + " -- " + getWidth());
         float width = Math.max(getWidth(), _widthOverride);
         float visibleWidth = Math.min(getWidth(), _widthOverride);
+
         Paint paint = new Paint();
 
         paint.setColor(Color.WHITE);
 
-//        if (UserService.SUNLIGHT_TEST) {
-//            paint.setColor(Color.BLACK);
-//        } else {
-//            paint.setColor(Color.WHITE);
-//        }
+        //        if (UserService.SUNLIGHT_TEST) {
+        //            paint.setColor(Color.BLACK);
+        //        } else {
+        //            paint.setColor(Color.WHITE);
+        //        }
 
         paint.setStyle(Paint.Style.STROKE);
         paint.setTextSize(13.0f * _pxPerDip);
-        paint.setStrokeWidth(6f);
         paint.setFakeBoldText(true);
-//        paint.setStrokeWidth(10);
+
         Rect textBounds = new Rect();
 
         Path path = new Path();
@@ -169,29 +114,13 @@ public class NewAxisView extends View {
         canvas.drawPath(path, paint);
         path.reset();
 
-
-//        String test = "Test";
-//        paint.getTextBounds(test, 0, test.length(), textBounds);
-////        float posX = (canvas.getWidth() - textBounds.width()) / 2; // center
-////        float posY = ((canvas.getHeight() - textBounds.height()) / 2); // center
-////
-////        canvas.scale(1, 10, posX, posY);
-//        paint.setColor(Color.WHITE);
-//        paint.setTextSize(16.0f * _pxPerDip);
-//        canvas.drawText(test, 0, 0, paint);
-//////
-//        paint = new Paint();
-//        paint.setColor(Color.WHITE);
-//        paint.setStyle(Paint.Style.STROKE);
-//        paint.setTextSize(13.0f * _pxPerDip);
-//        paint.setFakeBoldText(true);
-
         float distanceBetweenTicks = (float) _maxValue / (float) _numOfTicks;
 
         float ticX = 0.f;
         float ticSpace = ((width - 1.f) / (float) _numOfTicks) / 2.f; // width - 1 to account for the 0th tic.
 
         for (int i = 0; i <= _numOfTicks; ++i) {
+            // For vertical Line
             path.moveTo(ticX, 0.0f);
             path.lineTo(ticX, MAJOR_TIC_LENGTH);
             canvas.drawPath(path, paint);
@@ -210,7 +139,6 @@ public class NewAxisView extends View {
                         textX -= (textBounds.width() / 2.f);
                     }
                     canvas.drawText(depthText, textX, MAJOR_TIC_LENGTH + textBounds.height() + 6.f, paint);
-//                    canvas.drawText(depthText, textX, getHeight()/2, paint);
                 }
             }
 
@@ -219,7 +147,7 @@ public class NewAxisView extends View {
             if (i + 1 <= _numOfTicks) {
                 path.moveTo(ticX, 0.f);
                 path.lineTo(ticX, MINOR_TIC_LENGTH);
-//                canvas.drawPath(path, paint);
+                canvas.drawPath(path, paint);
                 path.reset();
 
                 ticX += ticSpace;
