@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <integer name="ga_dispatchPeriod">20</integer>
+
+    <!--
+    <bool name="ga_dryRun">true</bool>
+    <string name="ga_logLevel">verbose</string>
+    -->
+
+</resources>

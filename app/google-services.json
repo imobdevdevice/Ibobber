@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "424806688569",
+    "firebase_url": "https://ibobber-f6496.firebaseio.com",
+    "project_id": "ibobber-f6496",
+    "storage_bucket": "ibobber-f6496.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:424806688569:android:1d567e741bd1bb29",
+        "android_client_info": {
+          "package_name": "com.reelsonar.ibobber"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "424806688569-na3ef5tkjj5ro09veai548prf1acthof.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcrjghq0cQm_oNV3mn8cSyRk6NHJ3uSnk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

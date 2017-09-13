@@ -1,0 +1,94 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:fitsSystemWindows="true"
+        tools:ignore="RtlHardcoded">
+
+        <com.reelsonar.ibobber.view.TitleView
+            android:id="@+id/titleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:SubTitleText="@string/create_account"
+            app:dividerSize="0dp" />
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/container"
+            style="@style/RootScrollStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/titleView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.reelsonar.ibobber.view.DividerEditText
+                    android:id="@+id/edtEmail"
+                    style="@style/RegularTransparentEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email_address_star"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:textCursorDrawable="@drawable/white_cursor"
+                    app:dividerSize="0dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/white" />
+
+
+                <com.reelsonar.ibobber.view.DividerEditText
+                    android:id="@+id/edtPassword"
+                    style="@style/RegularTransparentEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password_star"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@drawable/white_cursor"
+                    app:dividerSize="0dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/white" />
+
+                <com.reelsonar.ibobber.view.GradientButton
+                    android:id="@+id/btnLogin"
+                    style="@style/ButtonBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick="onLogin"
+                    android:stateListAnimator="@drawable/lift_on_touch"
+                    android:text="@string/create_account"
+                    android:textSize="@dimen/_13sdp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tvBack"
+            style="@style/BackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/status_bar_height"
+            android:drawablePadding="@dimen/_5sdp"
+            android:textSize="@dimen/_13sdp" />
+
+
+    </RelativeLayout>
+</layout>

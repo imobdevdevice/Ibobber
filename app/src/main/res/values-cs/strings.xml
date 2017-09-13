@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="bluetooth_off_alert">Zapněte Bluetooth, abyste mohli připojit zařízení"</string>
+    <string name="bluetooth_unsupported_alert">Bluetooth LE není podporován na tomto zařízení"</string>
+    <string name="bluetooth_start_search">Hledat ibobber"</string>
+    <string name="bluetooth_stop_search">Konec hledání"</string>
+    <string name="bluetooth_connected">připojeno"</string>
+    <string name="bluetooth_disconnected">nepřipojeno"</string>
+    <string name="bluetooth_reminder_title">upozornění"</string>
+    <string name="bluetooth_charge_reminder">plně nabijte Váš iBobber nejméně 1x za měsíc"</string>
+
+    <string name="bobber_out_of_water">iBobber není ve vodě"</string>
+    <string name="bobber_weak_sonar_signal">"Slabý signál sonar"</string>
+
+    <string name="bottom_menu_sonar">Sonar"</string>
+    <string name="bottom_menu_waterbed">Vodní hladina"</string>
+    <string name="bottom_menu_weather">Počasí"</string>
+
+    <string name="bottom_menu_calendar">Kalendář"</string>
+    <string name="bottom_menu_settings">Nastavení"</string>
+    <string name="bottom_menu_trip_log">Zápis cesty"</string>
+
+    <string name="button_done">Hotovo"</string>
+    <string name="button_cancel">Zrušit"</string>
+    <string name="button_back">ZPĚT"</string>
+    <string name="button_done_uppercase">HOTOVO"</string>
+    <string name="button_ok">OK"</string>
+    <string name="button_cancel_uppercase">ZRUŠIT"</string>
+    <string name="button_register">ZAREGISTROVAT"</string>
+    <string name="button_update_user">UPRAVIT UŽIVATELE"</string>
+    <string name="button_skip">Přeskočit"</string>
+    <string name="button_next">Další"</string>
+
+    <string name="cast_command_title">NAHODIT  iBOBBER"</string>
+    <string name="cast_command_detail">Stiskněte OK, když jste připraveni k monitorování oblasti."</string>
+
+    <string name="calendar_rise">Rise</string>
+    <string name="calendar_set">Nastavit"</string>
+    <string name="calendar_today">Dnes"</string>
+
+    <string name="firmware_done_title">Gratulujeme"</string>
+    <string name="firmware_done_detail">Váš iBobber je restartován, bude připraven k použití během pár minut."</string>
+    <string name="firmware_downloading">Stahuji…"</string>
+    <string name="firmware_download_error_title">Chyba"</string>
+    <string name="firmware_download_error_detail">Vyskytla se chyba ve stáhování firmware souboru. Prosím, zkontrolujte Vaše zařízení zda-li je připojeno k internetu a zkuste tuto operaci opakovat znovu."</string>
+    <string name="firmware_prepare_error_title">Chyba"</string>
+    <string name="firmware_prepare_error_detail">Tato chyba se vyskytla ve Vašem iBobber při aktualizaci systému. Prosím restartujte Vaše zařízení a restartujte prosím Váš iBobber."</string>
+    <string name="firmware_write_error_title">Chyba"</string>
+    <string name="firmware_write_error_detail">Vyskytla se chyba při zapisování firmwaru. Zajistěte prosím, že Vaše zařízení a iBobber jsou od sebe vzdáleny 60 cm."</string>
+    <string name="firmware_title">Aktualizace firmwaru"</string>
+    <string name="firmware_prepare_title">Připraveno, začínám…."</string>
+    <string name="firmware_prepare_detail">Chystáte se aktualizovat Váš iBobber firmware. Ujistěte se, že je Váš iBobber připojen na nabíječku. Nevypínejte Vaše zařízení ani nezavírejte tuto aplikaci."</string>
+    <string name="firmware_writing">Zapisuji…"</string>
+
+
+    <string name="fish_bass_lg_mth">Okoun velký (Okounek pstruhový)"</string>
+    <string name="fish_bass_sm_mth">Okoun malý (Okounek černý)"</string>
+    <string name="fish_bass_rock">Okoun -Rock (Slunečnice červenooká)"</string>
+    <string name="fish_bass_striped">Okoun -pruhovaný (Mořčák pruhovaný)"</string>
+    <string name="fish_bluegill">Slunečnice Pestrá (velkoploutvá)"</string>
+    <string name="fish_bullhead">Sumeček Bullhead (Vranka obecná)"</string>
+    <string name="fish_carp">Kapr obecný</string>
+    <string name="fish_catfish">Sumec"</string>
+    <string name="fish_cord">Cejn Obecný (Treska obecná)"</string>
+
+    <string name="fish_dorado">Delfín (doráda)"</string>
+    <string name="fish_grouper">Mořský okoun</string>
+    <string name="fish_mackeral">Makrela"</string>
+    <string name="fish_marlin">Merlin</string>
+    <string name="fish_muskie">Štika Muskle</string>
+    <string name="fish_perch">Okoun"</string>
+    <string name="fish_pike">Štika Obecná</string>
+    <string name="fish_pompino">Pompino (Pompano)"</string>
+    <string name="fish_salmon_atlantic">Losos atlatický"</string>
+    <string name="fish_salmon_copper">Losos Copper"</string>
+    <string name="fish_salmon_king">Losos Královský"</string>
+    <string name="fish_shark">Žralok</string>
+    <string name="fish_sturgeon">Jeseter"</string>
+    <string name="fish_swordfish">Mečoun"</string>
+    <string name="fish_trout_brook">Pstruh Duhový (siven americký)"</string>
+    <string name="fish_trout_brown">Pstruh Potočný (potoční)"</string>
+    <string name="fish_trout_cut_throat">Pstruh-Cut Throat"</string>
+    <string name="fish_trout_dolly">Pstruh-Dolly"</string>
+    <string name="fish_trout_steel">Pstruh -Stell (Steel)"</string>
+    <string name="fish_sterlet">Jeseter malý"</string>
+    <string name="fish_beluga">Výza Velká"</string>
+    <string name="fish_sturgeon_starry">Jeseter Hvězdnatý"</string>
+    <string name="fish_sturgeon_russian">Jeseter Ruský"</string>
+    <string name="fish_river_eel">Úhoř Říční"</string>
+    <string name="fish_roach">Plotice obecná"</string>
+    <string name="fish_chub">Jelec  Tloušť"</string>
+    <string name="fish_chevin">Jelec Jesen"</string>
+    <string name="fish_perlín">Perlín"</string>
+    <string name="fish_white_amur">Amur Bílý"</string>
+    <string name="fish_asp">Bolen Dravý"</string>
+    <string name="fish_tench">Lín Obecný"</string>
+    <string name="fish_common_nase">Ostroretka Stěhovavá"</string>
+    <string name="fish_parma_general">Parma Obecná"</string>
+    <string name="fish_bream">Cejn Velký"</string>
+    <string name="fish_carp_crucian">Karas Obecný"</string>
+    <string name="fish_carp_bighead">Tolstolobec Pestrý"</string>
+    <string name="fish_bullhead_brown">Sumeček Americký"</string>
+    <string name="fish_grayling">Lipan"</string>
+    <string name="fish_sunfish">Slunečnice Pestrá"</string>
+    <string name="fish_zander">Candát Obecný"</string>
+
+
+    <string name="uom_feet">stopy"</string>
+    <string name="uom_meters">metry"</string>
+    <string name="uom_max">max"</string>
+
+
+    <string name="onboarding_get_started">Označte rybu, kterou hledáte!"</string>
+
+    <string name="reel_command_title">Navinout iBobber"</string>
+    <string name="reel_command_detail">Stikněte OK, pokud jste dokončili vyhledávání."</string>
+
+    <string name="settings_app_tour">Aplikace turistická"</string>
+    <string name="settings_app_version">Verze aplikace"</string>
+    <string name="settings_firmware_version">Verze firmwaru"</string>
+    <string name="settings_bluetooth">Bluetooth"</string>
+    <string name="settings_favorite_fish">Oblíbená ryba"</string>
+    <string name="settings_personal">Osobní udaje"</string>
+    <string name="settings_bluetooth_sync">Připojení Bluetooth"</string>
+    <string name="settings_required">(Požadováno)"</string>
+    <string name="settings_metric">Metr"</string>
+    <string name="settings_imperial">Imp"</string>
+    <string name="settings_email">Email"</string>
+    <string name="settings_nickname">Přezdívka"</string>
+    <string name="settings_sonar_demo">Sonar demo"</string>
+    <string name="settings_terms">Podmínky použití"</string>
+    <string name="settings_privacy">Ochrana osobních údajů"</string>
+    <string name="settings_buy">Zakoupit iBobber na ReelSonar.com"</string>
+    <string name="settings_firmware_update">Aktualizovat"</string>
+    <string name="settings_firmware_bobber_required">Firmware - iBobber požadován"</string>
+    <string name="settings_speed">Rychlost"</string>
+
+    <string name="settings_antiglare">"Anti-sluneční"</string>
+
+    <string name="settings_language">Cizí Jazyk</string>
+    <string name="settings_measurement">Změřit"</string>
+
+    <string name="trip_log_bait">Sporovní Rybolov"</string>
+    <string name="trip_log_spin">Přívlač"</string>
+    <string name="trip_log_troll">Troling"</string>
+    <string name="trip_log_fly">Muškaření"</string>
+    <string name="trip_log_calm">Bezvětří"</string>
+    <string name="trip_log_chop">Slunečno"</string>
+    <string name="trip_log_fish_caught">Ulovené ryby"</string>
+    <string name="trip_log_conditions">Podmínky"</string>
+    <string name="trip_log_rough">Špatné počasí"</string>
+    <string name="trip_log_date">Datum"</string>
+    <string name="trip_log_time">Čas"</string>
+    <string name="trip_log_location">Lokalita</string>
+    <string name="trip_log_lure">Návnada"</string>
+    <string name="trip_log_lure_ph">Vložit návnadu"</string>
+    <string name="trip_log_title">Název"</string>
+    <string name="trip_log_title_ph">Vložit název"</string>
+    <string name="trip_log_type_of_fishing">Druh rybolovu"</string>
+    <string name="trip_log_notes_ph">Vložit poznámky"</string>
+    <string name="trip_log_notes">Poznámky"</string>
+    <string name="trip_log_untitled">Bez názvu"</string>
+    <string name="trip_log_empty">Stiskněte GPS tlačítko k vytvoření prvního záznamu rybolovu."</string>
+    <string name="trip_log_unknown_location">Neznámý"</string>
+    <string name="trip_log_share">iBobber záznam rybolovu"</string>
+    <string name="trip_log_edit">Upravit"</string>
+    <string name="trip_log_delete">Smazat"</string>
+    <string name="trip_log_trip_log_created">Záznam rybolovu vytvořen"</string>
+    <string name="trip_log_photos">"Fotos"</string>
+
+
+    <string name="weather_location_services">Zapněte iBobber zjištění polohy, abychom mohli určit Vaši polohu."</string>
+    <string name="weather_unavailable">Nelze získat informace o počasí."</string>
+
+
+    <string name="january">Leden"</string>
+    <string name="february">Únor"</string>
+    <string name="march">Březen"</string>
+    <string name="april">Duben"</string>
+    <string name="may">Květen"</string>
+    <string name="june">Červen"</string>
+    <string name="july">Červenec"</string>
+    <string name="august">Srpen"</string>
+    <string name="september">Září"</string>
+    <string name="october">Říjen"</string>
+    <string name="november">Listopad"</string>
+    <string name="december">Prosinec"</string>
+
+    <string name="sun">Ne"</string>
+    <string name="mon">Po"</string>
+    <string name="tue">Út"</string>
+    <string name="wed">St"</string>
+    <string name="thu">Čt"</string>
+    <string name="fri">Pá"</string>
+    <string name="sat">So"</string>
+
+    <string name="on">ON"</string>
+    <string name="off">OFF"</string>
+
+
+</resources>

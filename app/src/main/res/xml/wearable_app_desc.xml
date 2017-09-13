@@ -1,0 +1,5 @@
+<wearableApp package="com.reelsonar.ibobber">
+    <versionCode>11</versionCode>
+    <versionName>1.55</versionName>
+    <rawPathResId>wearable_app</rawPathResId>
+</wearableApp>

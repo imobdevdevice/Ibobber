@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.reelsonar.ibobber.view.TitleView
+                android:id="@+id/titleView"
+                app:SubTitleText="@string/sing_in"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_15sdp"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onFacebookClick">
+
+                    <TextView
+                        android:id="@+id/tvLoginFacebook"
+                        style="@style/ButtonBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_9sdp"
+                        android:background="@drawable/facebook_rounded"
+                        android:drawableLeft="@drawable/icon_facebook_white"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:paddingLeft="@dimen/_15sdp"
+
+                        android:stateListAnimator="@drawable/lift_on_touch"
+                        android:text="@string/continue_with_facebook"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <com.reelsonar.ibobber.view.GradientButton
+                        android:id="@+id/tvSignupFacebook"
+                        style="@style/ButtonBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_9sdp"
+                        android:drawableLeft="@drawable/icon_facebook_white"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:stateListAnimator="@drawable/lift_on_touch"
+                        android:text="@string/sign_up_with_facebook"
+                        android:textSize="@dimen/_13sdp"
+                        android:visibility="gone"
+                        app:backColor="@color/facebookBtnColor"
+                        app:endColorGradient="@color/facebookBtnColor"
+                        app:startColorGradient="@color/facebookBtnColor" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onTwitterLogin">
+
+                    <TextView
+                        android:id="@+id/tvLoginTwitter"
+                        style="@style/ButtonBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@drawable/twitter_rounded"
+                        android:drawableLeft="@drawable/icon_twitter_white"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:stateListAnimator="@drawable/lift_on_touch"
+                        android:text="@string/continue_with_twitter"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <com.reelsonar.ibobber.view.GradientButton
+                        android:id="@+id/tvSignupTwitter"
+                        style="@style/ButtonBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:drawableLeft="@drawable/icon_twitter_white"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:stateListAnimator="@drawable/lift_on_touch"
+                        android:text="@string/sign_up_with_twitter"
+                        android:textSize="@dimen/_13sdp"
+                        android:visibility="gone"
+                        app:backColor="@color/twitterColor"
+                        app:endColorGradient="@color/twitterColor"
+                        app:startColorGradient="@color/twitterColor" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="instaLogin">
+
+                    <TextView
+                        android:id="@+id/tvLoginInstagram"
+                        style="@style/ButtonBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@drawable/instagram_rounded"
+                        android:drawableLeft="@drawable/instagram_white"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:stateListAnimator="@drawable/lift_on_touch"
+                        android:text="@string/continue_with_instagram"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <com.reelsonar.ibobber.view.GradientButton
+                        android:id="@+id/tvSignupInstagram"
+                        style="@style/ButtonBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:drawableLeft="@drawable/instagram_white"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:stateListAnimator="@drawable/lift_on_touch"
+                        android:text="@string/sign_up_with_instagram"
+                        android:textSize="@dimen/_13sdp"
+                        android:visibility="gone"
+                        app:backColor="@color/dark_red"
+                        app:endColorGradient="@color/dark_red"
+                        app:startColorGradient="@color/dark_red" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:onClick="onLoginByEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvLoginEmail"
+                        style="@style/ButtonBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@drawable/email_rounded"
+                        android:drawableLeft="@drawable/icon_email_white"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:stateListAnimator="@drawable/lift_on_touch"
+                        android:text="@string/sign_in_with_email"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <com.reelsonar.ibobber.view.GradientButton
+                        android:id="@+id/tvSignupEmail"
+                        style="@style/ButtonBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:drawableLeft="@drawable/icon_email_white"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:stateListAnimator="@drawable/lift_on_touch"
+                        android:text="@string/sign_up_with_email"
+                        android:textSize="@dimen/_13sdp"
+                        android:visibility="gone"
+                        app:backColor="@color/email"
+                        app:endColorGradient="@color/email"
+                        app:startColorGradient="@color/email" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvAccountMessage"
+                    style="@style/FontRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:gravity="center"
+                    android:onClick="onSignup"
+                    android:text="@string/not_have_account"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/tvAccountAction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="onSignup"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/create_account"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical">
+
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/btnFBLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textAllCaps="false" />
+
+
+                <com.twitter.sdk.android.core.identity.TwitterLoginButton
+                    android:id="@+id/btnTwitterLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

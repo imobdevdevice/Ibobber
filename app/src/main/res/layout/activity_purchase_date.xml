@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.reelsonar.ibobber.PurchaseDateActivity">
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView8" android:src="@drawable/background" android:scaleType="fitXY"/>
+    <TextView
+            android:text="@string/purchase_date_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textSize="32sp" android:id="@+id/titlePrompt"
+            android:layout_below="@+id/imageView6" android:layout_centerHorizontal="true"
+            android:textColor="@color/white"/>
+    <DatePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/purchaseDatePicker" android:layout_centerHorizontal="true"  android:layout_centerVertical="true"
+            android:layout_marginTop="113dp" android:spinnersShown="false"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_done"
+            android:id="@+id/button3" android:layout_alignStart="@+id/purchaseDatePicker"
+            android:onClick="doneButtonClicked" android:textStyle="bold"
+            android:textSize="24sp" android:layout_alignParentBottom="true" android:layout_marginBottom="40dp"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_cancel"
+            android:id="@+id/button5" android:layout_alignBottom="@+id/button3"
+            android:layout_alignEnd="@+id/purchaseDatePicker" android:onClick="cancelButtonClicked"
+            android:textStyle="bold" android:textSize="24sp"/>
+    <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView6"
+            android:src="@drawable/ibobber" android:scaleType="fitXY"
+            android:layout_marginTop="47dp" android:layout_alignParentTop="true" android:layout_toEndOf="@+id/button3"/>
+
+</RelativeLayout>

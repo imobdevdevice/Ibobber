@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="bluetooth_off_alert">"\"iBobber\"를 악세사리에 연결하기 위해 블루투스를 켜세요"</string>
+  <string name="bluetooth_unsupported_alert">"Bluetooth LE는 이 기기에서 지원되지 않습니다"</string>
+  <string name="bluetooth_start_search">iBobbers 검색</string>
+  <string name="bluetooth_stop_search">검색 정지</string>
+  <string name="bluetooth_connected">연결됨</string>
+  <string name="bluetooth_disconnected">연결안됨</string>
+
+    <string name="bluetooth_reminder_title">리마인더:</string>
+    <string name="bluetooth_charge_reminder">한달에 최소 한 번 iBobber를 완전히 충전하세요.</string>
+
+  <string name="bobber_out_of_water">"물 밖의 iBobber"</string>
+  <string name="bobber_weak_sonar_signal">"약한 수중 음파 탐지기 신호"</string>
+  <string name="bottom_menu_sonar">"수중 음파 탐지기"</string>
+  <string name="bottom_menu_waterbed">"수중바닥"</string>
+  <string name="bottom_menu_weather">"날씨"</string>
+  <string name="bottom_menu_calendar">"달력"</string>
+  <string name="bottom_menu_settings">"설정"</string>
+  <string name="bottom_menu_trip_log">"여행 일지"</string>
+
+  <string name="button_done">"끝"</string>
+  <string name="button_cancel">"취소하기"</string>
+  <string name="button_back">"돌아가기"</string>
+  <string name="button_done_uppercase">"끝"</string>
+  <string name="button_ok">"OK"</string>
+  <string name="button_cancel_uppercase">"취소하기"</string>
+  <string name="button_register">"등록하기"</string>
+  <string name="button_update_user">"사용자 업데이트"</string>
+  <string name="button_skip">"뛰어넘기"</string>
+  <string name="button_next">"다음"</string>
+
+  <string name="cast_command_title">"iBOBBER 보내기"</string>
+  <string name="cast_command_detail">"살펴볼 준비가 되었을 때 OK를 누르세요."</string>
+
+  <string name="calendar_rise">"오름"</string>
+  <string name="calendar_set">"내림"</string>
+  <string name="calendar_today">"오늘 "</string>
+
+  <string name="firmware_done_title">"성공"</string>
+  <string name="firmware_done_detail">"당신의 iBobber가 리부팅중입니다."</string>
+  <string name="firmware_downloading">"다운로드중..."</string>
+  <string name="firmware_download_error_title">"오류"</string>
+  <string name="firmware_download_error_detail">"다운로드 중 오류가 발생했습니다\nthe 펌웨어 이미지.\n기기에\n작동되는 인터넷이 연결되어 있는지\n확인하고 후에 다시 시도하세요."</string>
+  <string name="firmware_prepare_error_title">"오류"</string>
+  <string name="firmware_prepare_error_detail">"업데이트를 위해 iBobber를 준비하는 도중\n오류가 발생했습니다.\n기기를 재시작하시고\niBober를 재설정해주세요."</string>
+  <string name="firmware_write_error_title">"오류"</string>
+  <string name="firmware_write_error_detail">"펌웨어 이미지를 작성하는 도중 오류가\n발생했습니다.\n당신의 기기와 iBobber가\n서로 2피트 내에 있는지 확인하시고\n나중에 다시 시도해주세요."</string>
+  <string name="firmware_title">"펌웨어 업데이트"</string>
+  <string name="firmware_prepare_title">"준비, 고정..."</string>
+  <string name="firmware_prepare_detail">"당신의 iBobber의 펌웨어를 업데이트\n하고자 합니다.\n\n실행전 iBobber가 충전되었는지\n확인하세요.\n\n업데이트 도중 기기를 끄거나\n앱을 중지하지마세요."</string>
+  <string name="firmware_writing">"작성중..."</string>
+
+  <string name="fish_bass_lg_mth">"큰 입 농어"</string>
+  <string name="fish_bass_sm_mth">"작은 입 농어"</string>
+  <string name="fish_bass_rock">"농어과의 낚싯감 민물고기"</string>
+  <string name="fish_bass_striped">"줄무늬 농어"</string>
+  <string name="fish_bluegill">"송어의 한종류"</string>
+  <string name="fish_bullhead">"메기"</string>
+  <string name="fish_carp">"잉어"</string>
+  <string name="fish_catfish">"메기"</string>
+  <string name="fish_cord">"대구"</string>
+  <string name="fish_crappie">"뿌옇게 흐린"</string>
+  <string name="fish_dorado">"만새기"</string>
+  <string name="fish_grouper">"농어과의 한종류"</string>
+  <string name="fish_mackeral">"고등어"</string>
+  <string name="fish_marlin">"청새치"</string>
+  <string name="fish_muskie">"강늉치고기"</string>
+  <string name="fish_perch">"농어 무리의 민물고기"</string>
+  <string name="fish_pike">"강꼬치고기"</string>
+  <string name="fish_pompino">"전갱이"</string>
+  <string name="fish_salmon_atlantic">"대서양 연어"</string>
+  <string name="fish_salmon_copper">"구리 연어"</string>
+  <string name="fish_salmon_king">"왕 연어"</string>
+  <string name="fish_shark">"상어"</string>
+  <string name="fish_sturgeon">"철갑상어"</string>
+  <string name="fish_swordfish">"황새어"</string>
+  <string name="fish_trout_brook">"민물송어"</string>
+  <string name="fish_trout_brown">"갈색송어"</string>
+  <string name="fish_trout_cut_throat">"송어의 목을 따다"</string>
+  <string name="fish_trout_dolly">"송어 인형"</string>
+  <string name="fish_trout_steel">"강철 송어"</string>
+  <string name="fish_walleye">"Walleye"</string>
+
+    <string name="fish_sterlet">""</string>
+    <string name="fish_beluga">""</string>
+    <string name="fish_sturgeon_starry">""</string>
+    <string name="fish_sturgeon_russian">""</string>
+    <string name="fish_river_eel">""</string>
+    <string name="fish_roach">""</string>
+    <string name="fish_chub">""</string>
+    <string name="fish_chevin">""</string>
+    <string name="fish_perlín">""</string>
+    <string name="fish_white_amur">""</string>
+    <string name="fish_asp">""</string>
+    <string name="fish_tench">""</string>
+    <string name="fish_common_nase">""</string>
+    <string name="fish_parma_general">""</string>
+    <string name="fish_bream">""</string>
+    <string name="fish_carp_crucian">""</string>
+    <string name="fish_carp_bighead">""</string>
+    <string name="fish_bullhead_brown">""</string>
+    <string name="fish_grayling">""</string>
+    <string name="fish_sunfish">""</string>
+    <string name="fish_zander">""</string>
+
+
+    <string name="uom_feet">"피트"</string>
+  <string name="uom_meters">"미터"</string>
+  <string name="uom_max">"최대"</string>
+
+  <string name="onboarding_get_started">"물고리를 찾을 수 있게\n설치를 합시다!"</string>
+
+  <string name="reel_command_title">"iBOBBER 안의 얼레"</string>
+  <string name="reel_command_detail">"살펴보기가 끝나면 OK를 누르세요."</string>
+
+  <string name="settings_language">"언어"</string>
+  <string name="settings_app_tour">"앱 투어"</string>
+  <string name="settings_app_version">"앱 버전"</string>
+  <string name="settings_firmware_version">"펌웨어 버전"</string>
+  <string name="settings_bluetooth">"블루투스"</string>
+  <string name="settings_favorite_fish">"가장좋아하는 물고기"</string>
+  <string name="settings_personal">"개인의"</string>
+  <string name="settings_bluetooth_sync">"블루투스 싱크"</string>
+  <string name="settings_required">"(요구되는)"</string>
+  <string name="settings_metric">"미터법의"</string>
+  <string name="settings_imperial">"제국의"</string>
+  <string name="settings_email">"이메일"</string>
+  <string name="settings_nickname">"별명"</string>
+  <string name="settings_sonar_demo">"수중 음파 탐지기 데모"</string>
+  <string name="settings_terms">"사용 조건"</string>
+  <string name="settings_privacy">"개인정보 보호정책"</string>
+  <string name="settings_buy">"ReelSonar.com에서 iBobber 구매하기"</string>
+  <string name="settings_firmware_update">"업데이트하기"</string>
+  <string name="settings_firmware_bobber_required">"펌웨어 - iBobber 필요함"</string>
+  <string name="settings_speed">"속도"</string>
+
+
+    <string name="settings_antiglare">"안티 햇빛"</string>
+
+    <string name="settings_measurement">"측정"</string>
+
+
+    <string name="trip_log_bait">"미끼"</string>
+  <string name="trip_log_spin">"회전"</string>
+  <string name="trip_log_troll">"트롤"</string>
+  <string name="trip_log_fly">"날기"</string>
+  <string name="trip_log_calm">"진정하기"</string>
+  <string name="trip_log_chop">"자르기"</string>
+  <string name="trip_log_fish_caught">"잡은 물고기"</string>
+  <string name="trip_log_conditions">"상황"</string>
+  <string name="trip_log_rough">"거칠"</string>
+  <string name="trip_log_date">"날짜"</string>
+  <string name="trip_log_time">"시간"</string>
+  <string name="trip_log_location">"장소"</string>
+  <string name="trip_log_lure">"유인하기"</string>
+  <string name="trip_log_lure_ph">"유인 입력"</string>
+  <string name="trip_log_title">"제목"</string>
+  <string name="trip_log_title_ph">"제목 입력하기"</string>
+  <string name="trip_log_type_of_fishing">"낚시 입력하기"</string>
+  <string name="trip_log_notes_ph">"노트 입력하기"</string>
+  <string name="trip_log_notes">"노트"</string>
+  <string name="trip_log_untitled">"무제의"</string>
+  <string name="trip_log_empty">"첫번째 여행 일지 입력 생성을 위해 GPS 태그 버튼을 눌러주세요."</string>
+  <string name="trip_log_unknown_location">"Unknown"</string>
+  <string name="trip_log_share">"iBobber 여행 일지"</string>
+  <string name="trip_log_photos">"사진"</string>
+
+    <string name="trip_log_edit">"수정"</string>
+    <string name="trip_log_delete">"삭제"</string>
+    <string name="trip_log_trip_log_created">"여행 기록 생성됨"</string>
+
+    <string name="weather_location_services">"저희가 당신의 위치를 결정할 수 있게 iBobber의 위치 서비스를 켜세요."</string>
+  <string name="weather_unavailable">"위치 정보를 가져올 수 없습니다."</string>
+
+  <string name="january">"1월"</string>
+  <string name="february">"2월"</string>
+  <string name="march">"3월"</string>
+  <string name="april">"4월"</string>
+  <string name="may">"5월"</string>
+  <string name="june">"6월"</string>
+  <string name="july">"7월"</string>
+  <string name="august">"8월"</string>
+  <string name="september">"9월"</string>
+  <string name="october">"10월"</string>
+  <string name="november">"11월"</string>
+  <string name="december">"12월"</string>
+
+  <string name="sun">"일요일"</string>
+  <string name="mon">"월요일"</string>
+  <string name="tue">"화요일"</string>
+  <string name="wed">"수요일"</string>
+  <string name="thu">"목요일"</string>
+  <string name="fri">"금요일"</string>
+  <string name="sat">"토요일"</string>
+
+  <string name="on">"킴"</string>
+  <string name="off">"끔"</string>
+</resources>

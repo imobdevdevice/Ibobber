@@ -1,0 +1,7 @@
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true" android:state_pressed="false" android:drawable="@drawable/triplog_button_grad" />
+    <item android:state_focused="true" android:state_pressed="true" android:drawable="@drawable/triplog_button_grad" />
+    <item android:state_focused="false" android:state_pressed="true" android:drawable="@drawable/triplog_button_grad" />
+    <item android:drawable="@drawable/icon_button_tag" />
+</selector>

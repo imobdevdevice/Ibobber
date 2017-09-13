@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/commandView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/command_bg"
+    android:layout_gravity="center"
+    android:padding="20dip"
+    tools:context="com.reelsonar.ibobber.view.CommandFragment">
+
+    <TextView
+            android:id="@+id/commandTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="18pt"
+            android:textStyle="bold"
+            android:text="@string/cast_command_title"
+            android:layout_alignParentTop="true"/>
+
+    <TextView
+            android:id="@+id/commandSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="12pt"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="@string/cast_command_detail"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/commandTitle"/>
+
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/commandSubtitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center">
+
+        <Button
+                android:id="@+id/commandCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:textSize="10pt"
+                android:textStyle="bold"
+                android:padding="12dp"
+                android:textColor="@color/white"
+                android:background="@drawable/button_gray"
+                android:text="@string/button_cancel"/>
+
+        <Button
+                android:id="@+id/commandOK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="12pt"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:background="@drawable/button_orange"
+                android:text="@string/button_ok"/>
+    </LinearLayout>
+
+</RelativeLayout>

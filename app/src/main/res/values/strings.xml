@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <string name="bluetooth_off_alert">"Turn On Bluetooth to Allow \"iBobber\" to Connect to Accessories"</string>
+    <string name="bluetooth_unsupported_alert">"Bluetooth LE is not Supported on this Device"</string>
+    <string name="bluetooth_start_search">Search for iBobbers</string>
+    <string name="bluetooth_stop_search">Stop Search</string>
+    <string name="bluetooth_connected">Connected</string>
+    <string name="bluetooth_disconnected">Disconnected</string>
+
+    <string name="bluetooth_reminder_title">Reminder:</string>
+    <string name="bluetooth_charge_reminder">Fully charge your iBobber at least once a month.</string>
+
+    <string name="bobber_out_of_water">"iBobber out of water"</string>
+    <string name="bobber_weak_sonar_signal">"Weak sonar signal"</string>
+    <string name="demo_mode">"Demo"</string>
+    <string name="bottom_menu_sonar">"Sonar"</string>
+    <string name="bottom_menu_waterbed">"Waterbed"</string>
+    <string name="bottom_menu_weather">"Weather"</string>
+    <string name="bottom_menu_calendar">"Calendar"</string>
+    <string name="bottom_menu_global_users">"Global Plotter"</string>
+    <string name="bottom_menu_settings">"Settings"</string>
+    <string name="bottom_menu_trip_log">"Trip Log"</string>
+    <string name="button_done">"Done"</string>
+    <string name="button_cancel">"Cancel"</string>
+    <string name="button_back">"BACK"</string>
+    <string name="button_done_uppercase">"DONE"</string>
+    <string name="button_ok">"OK"</string>
+    <string name="button_cancel_uppercase">"CANCEL"</string>
+    <string name="button_register">"REGISTER"</string>
+    <string name="button_update_user">"UPDATE USER"</string>
+    <string name="button_skip">"Skip"</string>
+    <string name="button_next">"Next"</string>
+    <string name="cast_command_title">"CAST iBOBBER"</string>
+    <string name="cast_command_detail">"Press OK when ready to map."</string>
+    <string name="calendar_rise">"Rise"</string>
+    <string name="calendar_set">"Set"</string>
+    <string name="calendar_today">"Today"</string>
+    <string name="firmware_done_title">"Success"</string>
+    <string name="firmware_done_detail">"Your iBobber is rebooting\nand will be available for\nuse in a few moments."</string>
+    <string name="firmware_downloading">"Downloading..."</string>
+    <string name="firmware_download_error_title">"Error"</string>
+    <string name="firmware_download_error_detail">"An error occurred downloading\nthe firmware image.\nPlease ensure your device has\nan active internet connection\nand try again later."</string>
+    <string name="firmware_prepare_error_title">"Error"</string>
+    <string name="firmware_prepare_error_detail">"An error occurred preparing\nyour iBobber for the update.\nPlease reboot your device\nand reset your iBobber."</string>
+    <string name="firmware_write_error_title">"Error"</string>
+    <string name="firmware_write_error_detail">"An error occured while writing\nthe firmware image.\nPlease ensure your device and\niBobber are within two feet\nof each other and try again."</string>
+    <string name="firmware_title">"Firmware Update"</string>
+    <string name="firmware_prepare_title">"Ready, set..."</string>
+    <string name="firmware_prepare_detail">"You are about to update your\niBobber's firmware.\n\nEnsure your iBobber is\ncharged before proceeding.\n\nDo not turn off your device or\nquit this app during the update."</string>
+    <string name="firmware_writing">"Writing..."</string>
+
+
+    <string name="fish_bass_lg_mth">"Bass-Lg Mth"</string>
+    <string name="fish_bass_sm_mth">"Bass-Sm Mth"</string>
+    <string name="fish_bass_rock">"Bass-Rock"</string>
+    <string name="fish_bass_striped">"Bass-Striped"</string>
+    <string name="fish_bluegill">"Bluegill"</string>
+    <string name="fish_bullhead">"Bullhead"</string>
+    <string name="fish_carp">"Carp"</string>
+    <string name="fish_catfish">"Catfish"</string>
+    <string name="fish_cord">"Cord"</string>
+    <string name="fish_crappie">"Crappie"</string>
+    <string name="fish_dorado">"Dorado"</string>
+    <string name="fish_grouper">"Grouper"</string>
+    <string name="fish_mackeral">"Mackeral"</string>
+    <string name="fish_marlin">"Marlin"</string>
+    <string name="fish_muskie">"Muskie"</string>
+    <string name="fish_perch">"Perch"</string>
+    <string name="fish_pike">"Pike"</string>
+    <string name="fish_pompino">"Pompino"</string>
+    <string name="fish_salmon_atlantic">"Salmon-Atlantic"</string>
+    <string name="fish_salmon_copper">"Salmon-Copper"</string>
+    <string name="fish_salmon_king">"Salmon-King"</string>
+    <string name="fish_shark">"Shark"</string>
+    <string name="fish_sturgeon">"Sturgeon"</string>
+    <string name="fish_swordfish">"Swordfish"</string>
+    <string name="fish_trout_brook">"Trout-Brook"</string>
+    <string name="fish_trout_brown">"Trout-Brown"</string>
+    <string name="fish_trout_cut_throat">"Trout-Cut Throat"</string>
+    <string name="fish_trout_dolly">"Trout-Dolly"</string>
+    <string name="fish_trout_steel">"Trout-Steel"</string>
+    <string name="fish_walleye">"Walleye"</string>
+
+
+    <string name="fish_sterlet">"Sterlet"</string>
+    <string name="fish_beluga">"Beluga"</string>
+    <string name="fish_sturgeon_starry">"Sturgeon-Starry"</string>
+    <string name="fish_sturgeon_russian">"Sturgeon-Russian"</string>
+    <string name="fish_river_eel">"River Eel"</string>
+    <string name="fish_roach">"Roach"</string>
+    <string name="fish_chub">"Chub"</string>
+    <string name="fish_chevin">"Chevin"</string>
+    <string name="fish_perlín">"Perlín"</string>
+    <string name="fish_white_amur">"White Amur"</string>
+    <string name="fish_asp">"Asp"</string>
+    <string name="fish_tench">"Tench"</string>
+    <string name="fish_common_nase">"Common Nase"</string>
+    <string name="fish_parma_general">"Parma General"</string>
+    <string name="fish_bream">"Bream"</string>
+    <string name="fish_carp_crucian">"Carp-Crucian"</string>
+    <string name="fish_carp_bighead">"Carp-Bighead"</string>
+    <string name="fish_bullhead_brown">"Bullhead-Brown"</string>
+    <string name="fish_grayling">"Grayling"</string>
+    <string name="fish_sunfish">"Sunfish"</string>
+    <string name="fish_zander">"Zander"</string>
+    <string name="fish_bream_nembwe">"Bream - Nembwe"</string>
+    <string name="fish_bream_three_spot">"Bream - Three Spot"</string>
+    <string name="fish_bream_thin_face">"Bream - Thin Face"</string>
+    <string name="fish_bream_pink_happy">"Bream - Pink Happy"</string>
+    <string name="fish_bream_red_breast">"Bream - Red Breast"</string>
+    <string name="fish_tigerfish">"Tigerfish"</string>
+    <string name="fish_barbel">"Barbel"</string>
+
+    <string name="fish_zh_fish1">""</string>
+    <string name="fish_zh_fish2">""</string>
+    <string name="fish_zh_fish3">""</string>
+    <string name="fish_zh_fish4">""</string>
+    <string name="fish_zh_fish5">""</string>
+    <string name="fish_zh_fish6">""</string>
+    <string name="fish_zh_fish7">""</string>
+    <string name="fish_zh_fish8">""</string>
+    <string name="fish_zh_fish9">""</string>
+    <string name="fish_zh_fish10">""</string>
+
+    <string name="fish_uk_fish1">""</string>
+    <string name="fish_uk_fish2">""</string>
+    <string name="fish_uk_fish3">""</string>
+    <string name="fish_uk_fish4">""</string>
+    <string name="fish_uk_fish5">""</string>
+    <string name="fish_uk_fish6">""</string>
+    <string name="fish_uk_fish7">""</string>
+    <string name="fish_uk_fish8">""</string>
+    <string name="fish_uk_fish9">""</string>
+    <string name="fish_uk_fish10">""</string>
+    <string name="fish_uk_fish11">""</string>
+    <string name="fish_uk_fish12">""</string>
+    <string name="fish_uk_fish13">""</string>
+    <string name="fish_uk_fish14">""</string>
+    <string name="fish_uk_fish15">""</string>
+    <string name="fish_uk_fish16">""</string>
+    <string name="fish_uk_fish17">""</string>
+    <string name="fish_uk_fish18">""</string>
+    <string name="fish_uk_fish19">""</string>
+    <string name="fish_uk_fish20">""</string>
+    <string name="fish_uk_fish21">""</string>
+    <string name="fish_uk_fish22">""</string>
+    <string name="fish_uk_fish23">""</string>
+    <string name="fish_uk_fish24">""</string>
+    <string name="fish_uk_fish25">""</string>
+    <string name="fish_uk_fish26">""</string>
+    <string name="fish_uk_fish27">""</string>
+    <string name="fish_uk_fish28">""</string>
+    <string name="fish_uk_fish29">""</string>
+    <string name="fish_uk_fish30">""</string>
+    <string name="fish_uk_fish31">""</string>
+    <string name="fish_uk_fish32">""</string>
+    <string name="fish_uk_fish33">""</string>
+    <string name="fish_uk_fish34">""</string>
+    <string name="fish_uk_fish35">""</string>
+    <string name="fish_uk_fish36">""</string>
+    <string name="fish_uk_fish37">""</string>
+    <string name="fish_uk_fish38">""</string>
+    <string name="fish_uk_fish39">""</string>
+    <string name="fish_uk_fish40">""</string>
+    <string name="fish_uk_fish41">""</string>
+    <string name="fish_uk_fish42">""</string>
+    <string name="fish_uk_fish43">""</string>
+    <string name="fish_uk_fish44">""</string>
+    <string name="fish_uk_fish45">""</string>
+    <string name="fish_uk_fish46">""</string>
+    <string name="fish_uk_fish47">""</string>
+    <string name="fish_uk_fish48">""</string>
+    <string name="fish_uk_fish49">""</string>
+    <string name="fish_uk_fish50">""</string>
+    <string name="fish_uk_fish51">""</string>
+
+
+    <string name="uom_feet">"feet"</string>
+    <string name="uom_meters">"meters"</string>
+    <string name="uom_max">"max"</string>
+    <string name="onboarding_get_started">"Let's get you set up to\nstart finding fish!"</string>
+    <string name="reel_command_title">"REEL IN iBOBBER"</string>
+    <string name="reel_command_detail">"Press OK when done mapping."</string>
+    <string name="settings_app_tour">"App Tour"</string>
+    <string name="settings_app_version">"App Version"</string>
+    <string name="settings_firmware_version">"Firmware Version"</string>
+    <string name="settings_bluetooth">"Bluetooth"</string>
+    <string name="settings_favorite_fish">"Favorite Fish"</string>
+    <string name="settings_personal">"Personal"</string>
+    <string name="settings_bluetooth_sync">"Bluetooth Sync"</string>
+    <string name="settings_required">"(Required)"</string>
+    <string name="settings_metric">"Metric"</string>
+    <string name="settings_imperial">"Imperial"</string>
+    <string name="settings_email">"Email"</string>
+    <string name="settings_nickname">"Nickname"</string>
+    <string name="settings_sonar_demo">"Sonar Demo"</string>
+    <string name="settings_terms">"Terms of Use"</string>
+    <string name="settings_privacy">"Privacy Policy"</string>
+    <string name="settings_buy">"Buy iBobber on ReelSonar.com"</string>
+    <string name="settings_buy_url">"http://reelsonar.com"</string>
+    <string name="settings_firmware_update">"Update to"</string>
+    <string name="settings_firmware_bobber_required">"Firmware - iBobber required"</string>
+    <string name="settings_speed">"Speed"</string>
+    <string name="settings_antiglare">"Anti-Glare"</string>
+    <string name="settings_language">"Language"</string>
+    <string name="settings_slow_mode">"Smart Watch"</string>
+    <string name="netfish_mode">"NetFish Mode"</string>
+
+    <string name="settings_measurement">"Measurement"</string>
+
+    <string name="trip_log_bait">"Bait"</string>
+    <string name="trip_log_spin">"Spin"</string>
+    <string name="trip_log_troll">"Troll"</string>
+    <string name="trip_log_fly">"Fly"</string>
+    <string name="trip_log_calm">"Calm"</string>
+    <string name="trip_log_chop">"Chop"</string>
+    <string name="trip_log_fish_caught">"Fish Caught"</string>
+    <string name="trip_log_conditions">"Conditions"</string>
+    <string name="trip_log_rough">"Rough"</string>
+    <string name="trip_log_date">"Date"</string>
+    <string name="trip_log_time">"Time"</string>
+    <string name="trip_log_location">"Location"</string>
+    <string name="trip_log_lure">"Lure"</string>
+    <string name="trip_log_lure_ph">"Enter Lure"</string>
+    <string name="trip_log_title">"Title"</string>
+    <string name="trip_log_title_ph">"Enter Title"</string>
+    <string name="trip_log_type_of_fishing">"Type of Fishing"</string>
+    <string name="trip_log_notes_ph">"Enter Notes"</string>
+    <string name="trip_log_notes">"Notes"</string>
+    <string name="trip_log_untitled">"Untitled"</string>
+    <string name="trip_log_empty">"Tap the GPS Tag button to create your first trip log entry."</string>
+    <string name="trip_log_unknown_location">"Unknown"</string>
+    <string name="trip_log_share">"iBobber Trip Log"</string>
+    <string name="trip_log_photos">"Photos"</string>
+    <string name="trip_log_water_temp">"H2O"</string>
+    <string name="trip_log_water_depth">"Depth"</string>
+    <string name="trip_log_air_temp">"Air Temp"</string>
+
+    <string name="trip_log_edit">"Edit"</string>
+    <string name="trip_log_delete">"Delete"</string>
+    <string name="trip_log_trip_log_created">"Trip Log Created"</string>
+
+    <string name="trip_log_lure_alabama_rig">Alabama Rig</string>
+    <string name="trip_log_lure_crank_bait">Crank Bait</string>
+    <string name="trip_log_lure_fish_decoy">Fish Decoy</string>
+    <string name="trip_log_lure_fly">Fly</string>
+    <string name="trip_log_lure_jig">Jig</string>
+    <string name="trip_log_lure_live_bait">Live Bait</string>
+    <string name="trip_log_lure_minnow">Minnow</string>
+    <string name="trip_log_lure_plug">Plug</string>
+    <string name="trip_log_lure_shad">Shad</string>
+    <string name="trip_log_lure_shrimp">Shrimp</string>
+    <string name="trip_log_lure_spinner_bait">Spinnner Bait</string>
+    <string name="trip_log_lure_spoon">Spoon</string>
+    <string name="trip_log_lure_squid">Squid</string>
+    <string name="trip_log_lure_swim_bait">Swim Bait</string>
+    <string name="trip_log_lure_top_water">Top Water</string>
+    <string name="trip_log_lure_worm">Worm</string>
+    <string name="trip_log_lure_senko">Senko</string>
+    <string name="trip_log_lure_other">Other</string>
+
+    <string name="purchase_date_title">Select Purchase Date</string>
+
+    <string name="weather_location_services">"Turn on iBobber Location Services to allow us to determine your location."</string>
+    <string name="weather_unavailable">"Unable to obtain weather information."</string>
+    <string name="january">"January"</string>
+    <string name="february">"February"</string>
+    <string name="march">"March"</string>
+    <string name="april">"April"</string>
+    <string name="may">"May"</string>
+    <string name="june">"June"</string>
+    <string name="july">"July"</string>
+    <string name="august">"August"</string>
+    <string name="september">"September"</string>
+    <string name="october">"October"</string>
+    <string name="november">"November"</string>
+    <string name="december">"December"</string>
+    <string name="sun">"Sun"</string>
+    <string name="mon">"Mon"</string>
+    <string name="tue">"Tue"</string>
+    <string name="wed">"Wed"</string>
+    <string name="thu">"Thu"</string>
+    <string name="fri">"Fri"</string>
+    <string name="sat">"Sat"</string>
+    <string name="on">"ON"</string>
+    <string name="off">"OFF"</string>
+    <string name="lang_en">English (American)</string>
+    <string name="lang_en_uk">English (British)</string>
+    <string name="lang_bg">български</string>
+    <string name="lang_cs">Česky</string>
+    <string name="lang_es">Español</string>
+    <string name="lang_de">Deutsch</string>
+    <string name="lang_fr">Française</string>
+    <string name="lang_pl">Polsky</string>
+    <string name="lang_pt">Português</string>
+    <string name="lang_ru">Pусский</string>
+    <string name="lang_sk">Slovensky</string>
+    <string name="lang_ja">日本語</string>
+    <string name="lang_ko">한국의</string>
+    <string name="lang_zh_hans">中文</string>
+    <string name="lang_ar">العربية</string>
+    <string name="app_name">iBobber</string>
+    <string name="fcc">FCC: SGGIBOBBER | IBOBBER</string>
+    <string name="ic">IC: 11845AIBOBBER | IBOBBER</string>
+    <string name="aeris_client_id">h26I2r6C3oLIoSSTAecRR</string>
+    <string name="aeris_client_secret">1lMQaUV4BDyzBFZglHaotLbVUFizoy1RrulWVF3h</string>
+    <string name="app_id">358989610957868</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve">AIzaSyBYMOSFJErEajXeA79Mr2x2kynkyEK7YJo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_image_display">Trip Log Photo</string>
+    <string name="title_activity_share">Fishidy</string>
+
+    <string-array name="fishidy_sharing_scope_array">
+        <item>Share with everyone</item>
+        <item>Share with followers only</item>
+        <item>Private</item>
+    </string-array>
+
+    <string-array name="lure_array_UNUSED">
+        <item>Alabama Rig</item>
+        <item>Crank Bait</item>
+        <item>Fish Decoy</item>
+        <item>Fly</item>
+        <item>Jig</item>
+        <item>Live Bait</item>
+        <item>Minnow</item>
+        <item>Plug</item>
+        <item>Shad</item>
+        <item>Shrimp</item>
+        <item>Spinner Bait</item>
+        <item>Spoon</item>
+        <item>Squid</item>
+        <item>Swim Bait</item>
+        <item>Top Water</item>
+        <item>Worm</item>
+        <item>Senko</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_active_users_globe">ActiveUsersGlobeActivity</string>
+    <string name="title_activity_purchase_date">PurchaseDateActivity</string>
+    <string name="SignUpTitle">Create your account</string>
+
+    <string name="create_account">Create Account</string>
+    <string name="not_have_account">Don\'t have an account?</string>
+    <string name="continue_with_facebook">Continue with Facebook</string>
+    <string name="continue_with_twitter">Continue with Twitter</string>
+    <string name="continue_with_instagram">Continue with Instagram</string>
+    <string name="sign_up_with_instagram">Sign up with Instagram</string>
+    <string name="sign_up_with_twitter">Sign up with Twitter</string>
+    <string name="sign_up_with_facebook">Sign up with Facebook</string>
+    <string name="sign_up_with_email">Sign up with Email</string>
+    <string name="sign_in_with_email">Sign in with Email</string>
+
+    <string name="back">Back</string>
+    <string name="skip">Skip ></string>
+
+    <string name="fname_star">First name *</string>
+    <string name="lname_star">Last name *</string>
+    <string name="email_address_star">Email address *</string>
+    <string name="user_name_star">Username *</string>
+    <string name="password_star">Password *</string>
+    <string name="confirm_password_star">Confirm Password *</string>
+    <string name="agree_to_terms_of_use">Agree to terms of use *</string>
+    <string name="invite_code">Referral code</string>
+
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_sign_up_short">Done</string>
+
+    <string name="facebook_app_id">484682045228905</string>
+    <string name="fb_login_protocol_scheme">fbSS484682045228905</string>
+    <string name="twitter_consumer_key" translatable="false">UCzThIahVH3IdTOUnxlKyEKiz</string>
+    <string name="twitter_consumer_secret" translatable="false">b9FhA7pijoOuHhonrY284EqYU8vnM1utqP8h1Z68PzI5gXOKQG</string>
+
+    <string-array name="bad_words">
+        <item>anal</item>
+        <item>ass</item>
+        <item>bitch</item>
+        <item>blowjob</item>
+        <item>blow job</item>
+        <item>boner</item>
+        <item>cunt</item>
+        <item>cock</item>
+        <item>c o c k</item>
+        <item>dick</item>
+        <item>d i c k</item>
+        <item>damn</item>
+        <item>fag</item>
+        <item>faggot</item>
+        <item>feck</item>
+        <item>fellate</item>
+        <item>fellatio</item>
+        <item>felching</item>
+        <item>fap</item>
+        <item>fuck</item>
+        <item>f u c k</item>
+        <item>fuk</item>
+        <item>homo</item>
+        <item>labia</item>
+        <item>nigger</item>
+        <item>nigga</item>
+        <item>Niggerfucker</item>
+        <item>pussy</item>
+        <item>queer</item>
+        <item>scrotum</item>
+        <item>sex</item>
+        <item>shit</item>
+        <item>slut</item>
+        <item>spunk</item>
+        <item>twat</item>
+        <item>wank</item>
+        <item>whore</item>
+    </string-array>
+
+    <!--Error Messages-->
+    <string name="error_fname">First name must have 2 character</string>
+    <string name="error_cancel">Cancel Request for Login.</string>
+    <string name="somethingwrong">Oops , something went wrong.</string>
+    <string name="error_login_failed">Login failed</string>
+    <string name="err_network">Sorry! Not connected to internet</string>
+    <string name="err_timeout">Sorry! Connection timeout</string>
+
+    <string name="okay">Okay!</string>
+    <string name="inappropriate_content">Inappropriate Content</string>
+    <string name="bed_username"><![CDATA[We are unable to accept this username because it contains inappropriate content (i.e. objectionable text) \\n\\n Please review &amp; edit your username before resubmitting.]]></string>
+
+    <string name="ibobber_title">Ibobber</string>
+    <string name="sing_in">Sign In</string>
+    <string name="logout">Logout</string>
+    <string name="location_permission_required">Location access is required.</string>
+    <string name="storage_permission_required">Storage access is required.</string>
+    <string name="are_you_sure">Are you sure ?</string>
+    <string name="netfish_catch">Netfish Catch</string>
+
+    <!--Netfish ads screen-->
+    <string name="nothanks">No thanks</string>
+    <string name="download_free">Download for Free!</string>
+    <string name="netfish_ads_text1">Earn free gear with iBobber</string>
+    <string name="netfish_ads_text2">Access over 1.6 million fishing spots</string>
+    <string name="netfish_ads_text3">Know when and where to fish</string>
+    <string name="record_your_latest_catch">Record your latest catch with</string>
+    <string name="netfish">NetFish</string>
+    <string name="netfish_catch_created">New netfish catch created.</string>
+
+
+</resources>

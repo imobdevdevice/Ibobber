@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Panel">
+        <!-- Defines panel animation duration in ms. -->
+        <attr name="animationDuration" format="integer" />
+        <!-- Defines panel position on the screen. -->
+        <attr name="position">
+            <!-- Panel placed at top of the screen. -->
+            <enum name="top" value="0" />
+            <!-- Panel placed at bottom of the screen. -->
+            <enum name="bottom" value="1" />
+            <!-- Panel placed at left of the screen. -->
+            <enum name="left" value="2" />
+            <!-- Panel placed at right of the screen. -->
+            <enum name="right" value="3" />
+        </attr>
+        <!-- Identifier for the child that represents the panel's handle. -->
+        <attr name="handle" format="reference" />
+        <!-- Identifier for the child that represents the panel's content. -->
+        <attr name="content" format="reference" />
+        <!-- Defines if flying gesture forces linear interpolator in animation. -->
+        <attr name="linearFlying" format="boolean" />
+        <!-- Defines size relative to parent (must be in form: nn%p). -->
+        <attr name="weight" format="fraction" />
+        <!-- Defines opened handle (drawable/color). -->
+        <attr name="openedHandle" format="reference|color" />
+        <!-- Defines closed handle (drawable/color). -->
+        <attr name="closedHandle" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="SlidingUpPanelLayout">
+        <attr name="umanoPanelHeight" format="dimension" />
+        <attr name="umanoShadowHeight" format="dimension" />
+        <attr name="umanoParallaxOffset" format="dimension" />
+        <attr name="umanoFadeColor" format="color" />
+        <attr name="umanoFlingVelocity" format="integer" />
+        <attr name="umanoDragView" format="reference" />
+        <attr name="umanoScrollableView" format="reference" />
+        <attr name="umanoDefaultHeight" format="dimension" />
+        <attr name="umanoOverlay" format="boolean" />
+        <attr name="umanoClipPanel" format="boolean" />
+        <attr name="umanoAnchorPoint" format="float" />
+        <attr name="umanoInitialState" format="enum">
+            <enum name="expanded" value="0" />
+            <enum name="collapsed" value="1" />
+            <enum name="anchored" value="2" />
+            <enum name="hidden" value="3" />
+        </attr>
+        <attr name="umanoScrollInterpolator" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="DividerTextView">
+        <attr name="dividerColorHighlight" format="color" />
+        <attr name="dividerColor" format="color" />
+        <attr name="dividerSize" format="dimension" />
+        <attr name="dividerDirection">
+            <flag name="None" value="0" />
+            <flag name="Left" value="1" />
+            <flag name="Right" value="2" />
+            <flag name="Top" value="4" />
+            <flag name="Bottom" value="8" />
+            <flag name="All" value="16" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="GradientButton">
+        <attr name="backColor" format="color" />
+        <attr name="startColorGradient" format="color" />
+        <attr name="endColorGradient" format="color" />
+        <attr name="isGradient" format="boolean" />
+        <attr name="setDrawable" format="integer" />
+        <attr name="buttonRadius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="TitleView">
+        <attr name="SubTitleText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="Netfish">
+        <attr name="isNetFish" format="boolean" />
+    </declare-styleable>
+
+
+
+    <declare-styleable name="ExpandableTextView">
+        <attr name="trimLength" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CirclePageIndicator">
+
+        <attr name="centered" />
+        <!-- Color of the filled circle that represents the current page. -->
+        <attr name="fillColor" format="color" />
+        <!-- Color of the filled circles that represents pages. -->
+        <attr name="pageColor" format="color" />
+        <!-- Orientation of the indicator. -->
+        <attr name="android:orientation" />
+        <!-- Radius of the circles. This is also the spacing between circles. -->
+        <attr name="radius" format="dimension" />
+        <!-- Whether or not the selected indicator snaps to the circles. -->
+        <attr name="snap" format="boolean" />
+        <!-- Color of the open circles. -->
+        <attr name="strokeColor" format="color" />
+        <!-- Width of the stroke used to draw the circles. -->
+        <attr name="strokeWidth" />
+        <!-- View background -->
+        <attr name="android:background" />
+    </declare-styleable>
+
+    <attr name="centered" format="boolean" />
+    <attr name="selectedColor" format="color" />
+    <attr name="strokeWidth" format="dimension" />
+    <attr name="unselectedColor" format="color" />
+
+    <declare-styleable name="ViewPagerIndicator">
+        <!-- Style of the circle indicator. -->
+        <attr name="vpiCirclePageIndicatorStyle" format="reference" />
+    </declare-styleable>
+
+    <!-- Range Seekbar -->
+    <declare-styleable name="CrystalRangeSeekbar">
+        <attr name="corner_radius" format="float" />
+        <attr name="min_value" format="float" />
+        <attr name="max_value" format="float" />
+        <attr name="min_start_value" format="float" />
+        <attr name="max_start_value" format="float" />
+        <attr name="steps" format="float" />
+        <attr name="gap" format="float" />
+        <attr name="fix_gap" format="float" />
+        <attr name="bar_color" format="color" />
+        <attr name="bar_highlight_color" format="color" />
+        <attr name="bar_height" format="float" />
+        <attr name="left_thumb_color" format="color" />
+        <attr name="left_thumb_color_pressed" format="color" />
+        <attr name="left_thumb_image" format="reference" />
+        <attr name="left_thumb_image_pressed" format="reference" />
+        <attr name="right_thumb_color" format="color" />
+        <attr name="right_thumb_color_pressed" format="color" />
+        <attr name="right_thumb_image" format="reference" />
+        <attr name="right_thumb_image_pressed" format="reference" />
+        <attr name="bar_stroke_size" format="float" />
+        <attr name="bar_divider" format="integer" />
+        <!-- <attr name="position" format="enum">
+             <enum name="left" value="0" />
+             <enum name="right" value="1" />
+         </attr>-->
+        <attr name="data_type" format="enum">
+            <enum name="_long" value="0" />
+            <enum name="_double" value="1" />
+            <enum name="_integer" value="2" />
+            <enum name="_float" value="3" />
+            <enum name="_short" value="4" />
+            <enum name="_byte" value="5" />
+        </attr>
+    </declare-styleable>
+
+    <!--Material spinner-->
+    <declare-styleable name="MaterialSpinner">
+        <attr name="ms_baseColor" format="integer" />
+        <attr name="ms_highlightColor" format="integer" />
+        <attr name="ms_errorColor" format="integer" />
+        <attr name="ms_error" format="string" />
+        <attr name="ms_hint" format="string" />
+        <attr name="ms_hintColor" format="color" />
+        <attr name="ms_floatingLabelText" format="string" />
+        <attr name="ms_floatingLabelColor" format="color" />
+        <attr name="ms_multiline" format="boolean" />
+        <attr name="ms_nbErrorLines" format="integer" />
+        <attr name="ms_typeface" format="string" />
+        <attr name="ms_alignLabels" format="boolean" />
+        <attr name="ms_thickness" format="dimension" />
+        <attr name="ms_thickness_error" format="dimension" />
+        <attr name="ms_arrowSize" format="dimension" />
+        <attr name="ms_arrowColor" format="color" />
+        <attr name="ms_enableFloatingLabel" format="boolean" />
+        <attr name="ms_enableErrorLabel" format="boolean" />
+        <attr name="ms_isRtl" format="boolean" />
+
+    </declare-styleable>
+</resources>

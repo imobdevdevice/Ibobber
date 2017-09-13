@@ -1,0 +1,155 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:fitsSystemWindows="true"
+        tools:ignore="RtlHardcoded">
+
+        <com.reelsonar.ibobber.view.TitleView
+            android:id="@+id/titleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:SubTitleText="@string/create_account" />
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/container"
+            style="@style/RootScrollStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/titleView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.reelsonar.ibobber.view.DividerEditText
+                    android:id="@+id/edtFirstName"
+                    style="@style/RegularTransparentEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/fname_star"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:textCursorDrawable="@drawable/white_cursor"
+                    app:dividerSize="0dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/white" />
+
+
+                <com.reelsonar.ibobber.view.DividerEditText
+                    android:id="@+id/edtLastName"
+                    style="@style/RegularTransparentEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/lname_star"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:textCursorDrawable="@drawable/white_cursor"
+                    app:dividerSize="0dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/white" />
+
+                <com.reelsonar.ibobber.view.DividerEditText
+                    android:id="@+id/edtEmail"
+                    style="@style/RegularTransparentEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email_address_star"
+                    android:inputType="textEmailAddress"
+                    android:textCursorDrawable="@drawable/white_cursor"
+                    app:dividerSize="0dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/white" />
+
+
+                <com.reelsonar.ibobber.view.DividerEditText
+                    android:id="@+id/edtUserName"
+                    style="@style/RegularTransparentEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/user_name_star"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:textCursorDrawable="@drawable/white_cursor"
+                    app:dividerSize="0dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/white" />
+
+
+                <com.reelsonar.ibobber.view.DividerEditText
+                    android:id="@+id/edtPassword"
+                    style="@style/RegularTransparentEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password_star"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@drawable/white_cursor"
+                    app:dividerSize="0dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/white" />
+
+                <com.reelsonar.ibobber.view.GradientButton
+                    android:id="@+id/btnSignUp"
+                    style="@style/ButtonBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:onClick="onSignUp"
+                    android:text="@string/create_account"
+                    android:textSize="@dimen/_13sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom|right">
+
+                    <TextView
+                        android:id="@+id/tvSkip"
+                        style="@style/FontRegular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/large"
+                        android:text="@string/skip"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_11sdp"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tvBack"
+            style="@style/BackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/status_bar_height"
+            android:drawablePadding="@dimen/_5sdp"
+            android:onClick="onBack"
+            android:textSize="@dimen/_13sdp" />
+
+
+    </RelativeLayout>
+</layout>

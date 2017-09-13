@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ltGray">#FFEEEEEE</color>
+    <color name="darkGray">#ff444444</color>
+    <color name="blueGray">#FF396172</color>
+    <color name="white">#ffffffff</color>
+    <color name="onBoardControlView">#FF334c62</color>
+
+    <color name="dateHighlightGreen">#00FF00</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="transparentGray">#66222222</color>
+
+    <color name="formTextColor">#808080</color>
+    <color name="email">#6289A2</color>
+    <color name="facebookBtnColor">#3664A2</color>
+    <color name="dark_red">#FF2288</color>
+    <color name="twitter_blue">#1DA1F2</color>
+    <color name="loginEditTxtColor">#16BDC4</color>
+    <color name="colorGrey">#c3c9c8</color>
+    <color name="twitterColor">#64B5F6</color>
+    <color name="dart_gray">#4E5858</color>
+
+    <color name="colorPrimary">#002756</color>
+    <color name="colorPrimaryDark">#015786</color>
+    <color name="colorAccent">#015786</color>
+    <color name="color_comment">#16868B</color>
+    <color name="color_selected">#0C203D</color>
+    <color name="color_unselected">#152956</color>
+    <color name="comment_gray">#424B4C</color>
+
+    <color name="toast_bg">#004C7D</color>
+    <color name="green">#66BEC2</color>
+
+    <color name="light_blue">#00AAE3</color>
+
+</resources>

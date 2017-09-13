@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        tools:context=".NetFishAdsActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/netfish_ads_bg">
+
+        <LinearLayout
+            android:id="@+id/top_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <TextView
+                style="@style/titleFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/record_your_latest_catch" />
+
+            <com.reelsonar.ibobber.view.TitleView
+                android:id="@+id/titleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isNetFish="true" />
+
+            <TextView
+                style="@style/regularFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/check_white"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="left|center"
+                android:text="@string/netfish_ads_text1" />
+
+            <TextView
+                style="@style/regularFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/check_white"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="left|center"
+                android:text="@string/netfish_ads_text2" />
+
+            <TextView
+                style="@style/regularFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/check_white"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="left|center"
+                android:text="@string/netfish_ads_text3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/download_free_btn"
+                style="@style/ButtonBold"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:onClick="onDownloadBtn"
+                android:background="@drawable/blue_selector"
+                android:text="@string/download_free"
+                android:textAllCaps="false" />
+
+            <TextView
+                style="@style/regularFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center"
+                android:onClick="onSkipBtn"
+                android:text="@string/nothanks" />
+
+            <TextView
+                style="@style/smallFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="NetFish is a member of the ReelSonar Family of Apps." />
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

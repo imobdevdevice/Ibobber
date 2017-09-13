@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <string name="ga_trackingId">UA-44406949-2</string>
+
+    <bool name="ga_autoActivityTracking">true</bool>
+
+    <!-- The screen names that will appear in reports -->
+    <screenName name="com.reelsonar.ibobber.onboarding.fish.SelectFishActivity">
+        On-boarding Favorite Fish
+    </screenName>
+    <screenName name="com.reelsonar.ibobber.onboarding.RegisterActivity">
+        On-boarding Registration
+    </screenName>
+    <screenName name="com.reelsonar.ibobber.onboarding.AppDemoActivity">
+        On-boarding Tour
+    </screenName>
+    <screenName name="com.reelsonar.ibobber.settings.SettingsActivity">
+        Settings
+    </screenName>
+    <screenName name="com.reelsonar.ibobber.BLEScanActivity">
+        Settings Bluetooth Sync
+    </screenName>
+    <screenName name="com.reelsonar.ibobber.triplog.TripLogListActivity">
+        Trip Log
+    </screenName>
+    <screenName name="com.reelsonar.ibobber.triplog.TripLogDetailActivity">
+        Trip Log Detail
+    </screenName>
+    <screenName name="com.reelsonar.ibobber.triplog.TripLogMapActivity">
+        Trip Log Map
+    </screenName>
+    <screenName name="com.reelsonar.ibobber.CalendarActivity">
+        Calendar
+    </screenName>
+    <screenName name="com.reelsonar.ibobber.TodayActivity">
+        Calendar Sun/Moon
+    </screenName>
+    <screenName name="com.reelsonar.ibobber.WeatherActivity">
+        Weather
+    </screenName>
+    <screenName name="com.reelsonar.ibobber.sonar.SonarLiveActivity">
+        Sonar Live
+    </screenName>
+    <screenName name="com.reelsonar.ibobber.sonar.SonarExploreActivity">
+        Sonar Explore
+    </screenName>
+    <screenName name="com.reelsonar.ibobber.sonar.SonarExploreActivity">
+        Sonar Explore
+    </screenName>
+    <screenName name="com.reelsonar.ibobber.ActiveUsersGlobeActivity">
+        Global Plotter
+    </screenName>
+
+
+
+</resources>

@@ -1,0 +1,23 @@
+Minor task :
+* Message changes Login , Register , App login Confirmation -- Done
+* Login and register shared preference data store
+* Validation
+* Progress Bar
+* Logout
+* understand code for Parse api
+* Create Trip Log Entry
+* Dynamic permission in Sonar Activity -- done
+
+Change :
+Store data into db on  Get Catch api ,
+
+
+Remaining :
+Logout nu function as per social media
+Database new fields add on upgrade method
+Remove 2 time ads on every trip log catch
+
+Confusion points :
+Get catches api not returns : lat , lng ,
+
+

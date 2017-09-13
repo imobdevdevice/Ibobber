@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                tools:context="AppDemoActivity$AppDemoFragment"
+                android:orientation="vertical"
+        >
+
+
+    <!-- Image Pager for each screen shot -->
+
+    <ViewFlipper
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/viewFlipper"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/footerLayout"
+            android:layout_centerInParent="true">
+
+        <ImageView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/onboarding_step1"
+                android:baselineAlignBottom="false" />
+
+        <ImageView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/onboarding_step2" />
+
+        <ImageView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/onboarding_step3" />
+
+        <ImageView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/onboarding_step4" />
+
+        <ImageView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/onboarding_step5" />
+
+        <ImageView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/onboarding_step6" />
+
+        <ImageView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/onboarding_step7" />
+
+    </ViewFlipper>
+
+    <!-- Bottom controls -->
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/onBoardControlView"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/footerLayout">
+
+        <Button
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="@string/button_skip"
+                android:id="@+id/skipButton"
+                android:textSize="18dip"
+                android:onClick="onSkipButton"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:background="@color/onBoardControlView"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/ltGray" />
+
+        <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="8dip"
+                android:layout_centerHorizontal="true"
+                android:background="@color/onBoardControlView"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/pageIndicatorLayout"/>
+
+
+        <Button
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="@string/button_next"
+                android:id="@+id/nextButton"
+                android:textSize="18dip"
+                android:onClick="onNextButton"
+                android:layout_alignBottom="@+id/skipButton"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:background="@color/onBoardControlView"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/ltGray" />
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="@string/button_done"
+                android:id="@+id/doneButton"
+                android:onClick="onSkipButton"
+                android:textSize="18dip"
+                android:visibility="gone"
+                android:gravity="right"
+                android:layout_alignBottom="@+id/skipButton"
+                android:background="@color/onBoardControlView"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/ltGray" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

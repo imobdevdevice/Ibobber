@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="bluetooth_off_alert">"قُم من فضلك بتفعيل البلوتوث لكي تسمح ل\"آي-بوبر\" بالاتّصال بالإكسسوارات"</string>
+  <string name="bluetooth_unsupported_alert">"البلوتوث الذكي غير مدعوم في هذا الجهاز"</string>
+  <string name="bluetooth_start_search">البحث عن iBobber</string>
+  <string name="bluetooth_stop_search"> إيقاف البحث</string>
+  <string name="bluetooth_connected">متصل</string>
+  <string name="bluetooth_disconnected">غير متصل</string>
+
+  <string name="bluetooth_reminder_title">"تذكير"</string>
+  <string name="bluetooth_charge_reminder">"قم بشحن اي بوبر شحن كامل علي الأقل مره في الشهر"</string>
+
+  <string name="bobber_out_of_water">"آي-بوبر خارج الماء"</string>
+  <string name="bobber_weak_sonar_signal">"إشارة السونار ضعيفة"</string>
+
+  <string name="bottom_menu_sonar">"سونار"</string>
+  <string name="bottom_menu_waterbed">"قاع البحر"</string>
+  <string name="bottom_menu_weather">"الطّقس"</string>
+  <string name="bottom_menu_calendar">"التّقويم"</string>
+  <string name="bottom_menu_settings">"الإعدادات"</string>
+  <string name="bottom_menu_trip_log">"دفتر الرّحلة"</string>
+
+  <string name="button_done">"تمّ"</string>
+  <string name="button_cancel">"إلغاء"</string>
+  <string name="button_back">"رجوع"</string>
+  <string name="button_done_uppercase">"تمّ"</string>
+  <string name="button_ok">"أوكي"</string>
+  <string name="button_cancel_uppercase">"إلغاء"</string>
+  <string name="button_register">"تسجيل"</string>
+  <string name="button_update_user">"تحديث المُستعمل"</string>
+  <string name="button_skip">"تخطّي"</string>
+  <string name="button_next">"التّالي"</string>
+
+  <string name="cast_command_title">"إلقاء آي-بوبر"</string>
+  <string name="cast_command_detail">".اضغط على زرّ أوكي عندما تكون جاهزًا لرسم خريطة"</string>
+
+  <string name="calendar_rise">"شروق"</string>
+  <string name="calendar_set">"غروب"</string>
+  <string name="calendar_today">"اليوم"</string>
+
+  <string name="firmware_done_title">"نجاح"</string>
+  <string name="firmware_done_detail">"آي-بوبر الخاصّ بك في طور التّشغيل\nو سوف يُصبح مُتاحًا\nللاستعمال في غضون لحظاتٍ قليلة."</string>
+  <string name="firmware_downloading">"تحميل..."</string>
+  <string name="firmware_download_error_title">"خطأ"</string>
+  <string name="firmware_download_error_detail">"طرأ خطأٌ ما عند تحميل\nصورة البرنامج الثابت.\nتأكّد من أن\nالإنترنت شغّالة\nو حاول مُجدّدًا في ما بعد."</string>
+  <string name="firmware_prepare_error_title">"خطأ"</string>
+  <string name="firmware_prepare_error_detail">"طرأ خطأٌ ما عند تحضير\nآي-بوبر للتّحديث.\nأعِد تشغيل جهازك\nو اضبط آي-بوبر على\nإعدادات المصنع."</string>
+  <string name="firmware_write_error_title">"خطأ"</string>
+  <string name="firmware_write_error_detail">"طرأ خطأٌ ما عند كتابة\nصورة البرنامج الثابت.\nتأكّد من أنّ جهازك و\nآي-بوبر الخاصّ بك بعيدين بحوالي\nقدميْن اثنيْن عن بعضهما ثمّ حاول مُجدّدًا."</string>
+  <string name="firmware_title">"تحديث البرنامج الثابت"</string>
+  <string name="firmware_prepare_title">"جاهز، استعد..."</string>
+  <string name="firmware_prepare_detail">".أنت على وشك تحديث\nبرنامج آي-بوبر الثّابت.\nتأكّد من أنّ آي-بوبر الخاصّ بك\nمشحون قبل مواصلة العملية.\nلا تطفئ جهازك أو\nتُغادر التّطبيق أثناء عملية التّحديث."</string>
+  <string name="firmware_writing">"كتابة..."</string>
+
+  <string name="fish_bass_lg_mth">"قاروس كبير الفمّ"</string>
+  <string name="fish_bass_sm_mth">"قاروس صغير الفمّ"</string>
+  <string name="fish_bass_rock">"قاروس الصّخر"</string>
+  <string name="fish_bass_striped">"قاروس مخطط"</string>
+  <string name="fish_bluegill">"خيشوم"</string>
+  <string name="fish_bullhead">"بولهيد"</string>
+  <string name="fish_carp">"شبّوط"</string>
+  <string name="fish_catfish">"سلّوْر"</string>
+  <string name="fish_crappie">"Crappie"</string>
+  <string name="fish_cord">"القد"</string>
+  <string name="fish_dorado">"ماهي-ماهي"</string>
+  <string name="fish_grouper">"القُشر"</string>
+  <string name="fish_mackeral">"الإسقمري"</string>
+  <string name="fish_marlin">"مرلين"</string>
+  <string name="fish_muskie">"بلح البحر"</string>
+  <string name="fish_perch">"الفرخ"</string>
+  <string name="fish_pike">"كراكي"</string>
+  <string name="fish_pompino">"بومبينو"</string>
+  <string name="fish_salmon_atlantic">"سالمون أطلسي"</string>
+  <string name="fish_salmon_copper">"سالمون نهر النحاس"</string>
+  <string name="fish_salmon_king">"سالمون الشينوك"</string>
+  <string name="fish_shark">"القرش"</string>
+  <string name="fish_sturgeon">"الحفش"</string>
+  <string name="fish_swordfish">"أبو سيف"</string>
+  <string name="fish_trout_brook">"سلمون مرقط أمريكي"</string>
+  <string name="fish_trout_brown">"سلمون مرقط بنّي"</string>
+  <string name="fish_trout_cut_throat">"سلمون مرقط سفاح"</string>
+  <string name="fish_trout_dolly">"سلمون دولي المرقط"</string>
+  <string name="fish_trout_steel">"سلمون مرقط صلب"</string>
+  <string name="fish_walleye">"Walleye"</string>
+
+    <string name="fish_sterlet">""</string>
+    <string name="fish_beluga">""</string>
+    <string name="fish_sturgeon_starry">""</string>
+    <string name="fish_sturgeon_russian">""</string>
+    <string name="fish_river_eel">""</string>
+    <string name="fish_roach">""</string>
+    <string name="fish_chub">""</string>
+    <string name="fish_chevin">""</string>
+    <string name="fish_perlín">""</string>
+    <string name="fish_white_amur">""</string>
+    <string name="fish_asp">""</string>
+    <string name="fish_tench">""</string>
+    <string name="fish_common_nase">""</string>
+    <string name="fish_parma_general">""</string>
+    <string name="fish_bream">""</string>
+    <string name="fish_carp_crucian">""</string>
+    <string name="fish_carp_bighead">""</string>
+    <string name="fish_bullhead_brown">""</string>
+    <string name="fish_grayling">""</string>
+    <string name="fish_sunfish">""</string>
+    <string name="fish_zander">""</string>
+
+
+    <string name="uom_feet">"أقدام"</string>
+  <string name="uom_meters">"أمتار"</string>
+  <string name="uom_max">"أقصى"</string>
+
+  <string name="onboarding_get_started">"دعنا نُجّهزك\nلتبدأ العثور على السّمك!"</string>
+
+  <string name="reel_command_title">"تشغيل آي-بوبر"</string>
+  <string name="reel_command_detail">"اضغط على أوكي عند إنهاءك رسم الخريطة."</string>
+
+  <string name="settings_language">"لغة"</string>
+  <string name="settings_app_tour">"جولة حول التّطبيق"</string>
+  <string name="settings_app_version">"نسخة التّطبيق"</string>
+  <string name="settings_firmware_version">"نسخة البرنامج الثّابت"</string>
+  <string name="settings_bluetooth">"بلوتوث"</string>
+  <string name="settings_favorite_fish">"السّمكة المُفضّلة"</string>
+  <string name="settings_personal">"شخصي"</string>
+  <string name="settings_bluetooth_sync">"مُزامنة البلوتوث"</string>
+  <string name="settings_required">"(مطلوب)"</string>
+  <string name="settings_metric">"متري"</string>
+  <string name="settings_imperial">"بريطاني"</string>
+  <string name="settings_email">"إيميل"</string>
+  <string name="settings_nickname">"الإسم المُستعار"</string>
+  <string name="settings_sonar_demo">"سونار توضيحي"</string>
+  <string name="settings_terms">"بنود الاستعمال"</string>
+  <string name="settings_privacy">"سياسة الخصوصية"</string>
+  <string name="settings_buy">"شراء آي-بوبر من ReelSonar.com "</string>
+  <string name="settings_firmware_update">"تحديث إلى"</string>
+  <string name="settings_firmware_bobber_required">"البرنامج الثّابت - مطلوب آي-بوبر"</string>
+  <string name="settings_speed">"السّرعة"</string>
+
+    <string name="settings_antiglare">"مكافحة أشعة الشمس"</string>
+
+
+    <string name="settings_measurement">"وحدة القياس"</string>
+
+
+  <string name="trip_log_bait">"طُعم"</string>
+  <string name="trip_log_spin">"الدَّوّار"</string>
+  <string name="trip_log_troll">"الصّنارة"</string>
+  <string name="trip_log_fly">"الذبابة"</string>
+  <string name="trip_log_calm">"هادئ"</string>
+  <string name="trip_log_chop">"التّشطير"</string>
+  <string name="trip_log_fish_caught">"سمكة ممسوكة"</string>
+  <string name="trip_log_conditions">"الظّروف"</string>
+  <string name="trip_log_rough">"صعبة"</string>
+  <string name="trip_log_date">"التّاريخ"</string>
+  <string name="trip_log_time">"الوقت"</string>
+  <string name="trip_log_location">"الموقع"</string>
+  <string name="trip_log_lure">"الطُّعم"</string>
+  <string name="trip_log_lure_ph">"إدخال الطُّعم"</string>
+  <string name="trip_log_title">"عنوان"</string>
+  <string name="trip_log_title_ph">"إدخال عنوان"</string>
+  <string name="trip_log_type_of_fishing">"نوع صيد السّمك"</string>
+  <string name="trip_log_notes_ph">"كتابة ملاحظات"</string>
+  <string name="trip_log_notes">"ملاحظات"</string>
+  <string name="trip_log_untitled">"غير مُعنوّن"</string>
+  <string name="trip_log_empty">"أنقر على زرّ وسم الجي بي أس لإنشاء أول دفتر دخولٍ لرحلتك."</string>
+  <string name="trip_log_unknown_location">"مجهول"</string>
+  <string name="trip_log_share">"دفتر آي-بوبر للرّحلات"</string>
+
+  <string name="trip_log_edit">"تعديل"</string>
+  <string name="trip_log_delete">" مسح"</string>
+  <string name="trip_log_trip_log_created">"تم إنشاء سجل الرحله"</string>
+  <string name="trip_log_photos">"الصور"</string>
+
+    <string name="weather_location_services">"قُم بتفعيل خدمات آي-بوبر الخاصّة بالموقع لكي نتمكن من تحديد مكانك."</string>
+  <string name="weather_unavailable">".عاجز عن الحصول عن معلوماتٍ حول حالة الطّقس"</string>
+
+  <string name="january">"يناير"</string>
+  <string name="february">"فبراير"</string>
+  <string name="march">"مارس"</string>
+  <string name="april">"أبريل"</string>
+  <string name="may">"مايو"</string>
+  <string name="june">"يونيو"</string>
+  <string name="july">"يوليو"</string>
+  <string name="august">"أغسطس"</string>
+  <string name="september">"سبتمبر"</string>
+  <string name="october">"أكتوبر"</string>
+  <string name="november">"نوفمبر"</string>
+  <string name="december">"ديسمبر"</string>
+
+  <string name="sun">"أح"</string>
+  <string name="mon">"إث"</string>
+  <string name="tue">"ثل"</string>
+  <string name="wed">"أر"</string>
+  <string name="thu">"خم"</string>
+  <string name="fri">"جم"</string>
+  <string name="sat">"سب"</string>
+
+  <string name="on">"تفعيل"</string>
+  <string name="off">"تعطيل"</string>
+</resources>

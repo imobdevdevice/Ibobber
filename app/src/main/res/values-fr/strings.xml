@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="bluetooth_off_alert">"Allumez le Bluetooth pour permettre à \"l'iBobber\" de se connecter aux Accessoires"</string>
+  <string name="bluetooth_unsupported_alert">"Le Bluetooth BC n'est pas pris en charge par cet appareil"</string>
+  <string name="bluetooth_start_search">Rechercher des iBobbers</string>
+  <string name="bluetooth_stop_search">Arrêter la recherche</string>
+  <string name="bluetooth_connected">Connecté</string>
+  <string name="bluetooth_disconnected">Déconnecté</string>
+
+    <string name="bluetooth_reminder_title">Rappel :</string>
+    <string name="bluetooth_charge_reminder">Chargez complètement votre iBobber au moins une fois par mois.</string>
+
+  <string name="bobber_out_of_water">"iBobber hors de l'eau"</string>
+  <string name="bobber_weak_sonar_signal">"Signal sonar faible"</string>
+
+  <string name="bottom_menu_sonar">"Sonar"</string>
+  <string name="bottom_menu_waterbed">"Cours d'eau"</string>
+  <string name="bottom_menu_weather">"Temps"</string>
+  <string name="bottom_menu_calendar">"Calendrier"</string>
+  <string name="bottom_menu_settings">"Réglages"</string>
+  <string name="bottom_menu_trip_log">"Historique de voyage"</string>
+
+  <string name="button_done">"Terminer"</string>
+  <string name="button_cancel">"Annuler"</string>
+  <string name="button_back">"RETOUR"</string>
+  <string name="button_done_uppercase">"TERMINER"</string>
+  <string name="button_ok">"OK"</string>
+  <string name="button_cancel_uppercase">"ANNULER"</string>
+  <string name="button_register">"ENREGISTRER"</string>
+  <string name="button_update_user">"METTRE A JOUR L'UTILISATEUR"</string>
+  <string name="button_skip">"Passer"</string>
+  <string name="button_next">"Suivant"</string>
+
+  <string name="cast_command_title">"LANCER L'iBOBBER"</string>
+  <string name="cast_command_detail">"Appuyez sur OK pour commencer à cartographier."</string>
+
+  <string name="calendar_rise">"Remonter"</string>
+  <string name="calendar_set">"Régler"</string>
+  <string name="calendar_today">"Aujourd'hui"</string>
+
+  <string name="firmware_done_title">"Succès"</string>
+  <string name="firmware_done_detail">"Votre iBobber redémarre\net sera prêt à être\nutilisé dans un instant."</string>
+  <string name="firmware_downloading">"Téléchargement..."</string>
+  <string name="firmware_download_error_title">"Erreur"</string>
+  <string name="firmware_download_error_detail">"Une erreur est survenue lors du téléchargement de\nl'image du micrologiciel.\nAssurez-vous que votre appareil ait bien\nune connection Internet active\net réessayez."</string>
+  <string name="firmware_prepare_error_title">"Erreur"</string>
+  <string name="firmware_prepare_error_detail">"Une erreur est survenue lors de la préparation de\nvotre iBobber pour la mise à jour.\nVeuillez redémarrer votre appareil\net redémarrer votre iBobber."</string>
+  <string name="firmware_write_error_title">"Erreur"</string>
+  <string name="firmware_write_error_detail">"Une erreur est survenue lors de l'écriture de\nl'image du micrologiciel.\nVeuillez vous assurer que votre appareil et\nvotre iBobber soient à moins de deux pieds\nl'un de l'autre et réessayez."</string>
+  <string name="firmware_title">"Mise à jour du micrologiciel"</string>
+  <string name="firmware_prepare_title">"Prêt..."</string>
+  <string name="firmware_prepare_detail">"Vous êtes sur le point de mettre à jour le\nmicrologiciel de votre iBobber.\n\nAssurez-vous que votre iBobber soit\nchargé avant de continuer.\n\nN'éteignez pas votre appareil et\nne quittez pas cette application pendant la mise à jour."</string>
+  <string name="firmware_writing">"Ecriture..."</string>
+
+    <string name="fish_carp_crucian">"Carpe"</string>
+    <string name="fish_salmon_atlantic">"Saumon"</string>
+    <string name="fish_trout_brook">"Truite"</string>
+    <string name="fish_catfish">"Silure"</string>
+    <string name="fish_zander">"Sandre"</string>
+    <string name="fish_bass_sm_mth">"Black-bass"</string>
+    <string name="fish_pike">"Brochet"</string>
+    <string name="fish_perch">"Perche"</string>
+  <string name="fish_bass_lg_mth">"Bar"</string>
+    <string name="fish_walleye">"Lieu"</string>
+    <string name="fish_mackeral">"Sardine"</string>
+
+
+  <string name="fish_bass_rock">""</string>
+  <string name="fish_bass_striped">""</string>
+  <string name="fish_bluegill">""</string>
+  <string name="fish_bullhead">""</string>
+  <string name="fish_carp">""</string>
+  <string name="fish_cord">""</string>
+  <string name="fish_crappie">""</string>
+  <string name="fish_dorado">""</string>
+  <string name="fish_grouper">""</string>
+  <string name="fish_marlin">""</string>
+  <string name="fish_muskie">""</string>
+  <string name="fish_pompino">""</string>
+  <string name="fish_salmon_copper">""</string>
+  <string name="fish_salmon_king">""</string>
+  <string name="fish_shark">""</string>
+  <string name="fish_sturgeon">""</string>
+  <string name="fish_swordfish">""</string>
+  <string name="fish_trout_brown">""</string>
+  <string name="fish_trout_cut_throat">""</string>
+  <string name="fish_trout_dolly">""</string>
+  <string name="fish_trout_steel">""</string>
+  <string name="fish_sterlet">""</string>
+  <string name="fish_beluga">""</string>
+  <string name="fish_sturgeon_starry">""</string>
+  <string name="fish_sturgeon_russian">""</string>
+  <string name="fish_river_eel">""</string>
+  <string name="fish_roach">""</string>
+  <string name="fish_chub">""</string>
+  <string name="fish_chevin">""</string>
+  <string name="fish_perlín">""</string>
+  <string name="fish_white_amur">""</string>
+  <string name="fish_asp">""</string>
+  <string name="fish_tench">""</string>
+  <string name="fish_common_nase">""</string>
+  <string name="fish_parma_general">""</string>
+  <string name="fish_bream">""</string>
+  <string name="fish_carp_bighead">""</string>
+  <string name="fish_bullhead_brown">""</string>
+  <string name="fish_grayling">""</string>
+  <string name="fish_sunfish">""</string>
+
+
+
+
+
+
+
+  <string name="uom_feet">"pieds"</string>
+  <string name="uom_meters">"mètres"</string>
+  <string name="uom_max">"max"</string>
+
+  <string name="onboarding_get_started">"Commençons la configuration pour\ntrouver des poissons !"</string>
+
+  <string name="reel_command_title">"RAMENEZ L'iBOBBER"</string>
+  <string name="reel_command_detail">"Appuyez sur OK une fois la cartographie terminée."</string>
+
+  <string name="settings_language">"Langue"</string>
+  <string name="settings_app_tour">"Aperçu de l'appli"</string>
+  <string name="settings_app_version">"Version de l'appli"</string>
+  <string name="settings_firmware_version">"Version du micrologiciel"</string>
+  <string name="settings_bluetooth">"Bluetooth"</string>
+  <string name="settings_favorite_fish">"Poisson préféré"</string>
+  <string name="settings_personal">"Personnel"</string>
+  <string name="settings_bluetooth_sync">"Sync Bluetooth"</string>
+  <string name="settings_required">"(Obligatoire)"</string>
+  <string name="settings_metric">"Métrique"</string>
+  <string name="settings_imperial">"Impérial"</string>
+  <string name="settings_email">"E-mail"</string>
+  <string name="settings_nickname">"Pseudo"</string>
+  <string name="settings_sonar_demo">"Démo du sonar"</string>
+  <string name="settings_terms">"Termes d'utilisation"</string>
+  <string name="settings_privacy">"Politique de confidentialité"</string>
+  <string name="settings_buy">"Achetez l'iBobber sur ReelSonar.com"</string>
+  <string name="settings_firmware_update">"Mettre à jour vers"</string>
+  <string name="settings_firmware_bobber_required">"Micrologiciel - iBobber obligatoire"</string>
+  <string name="settings_speed">"Vitesse"</string>
+
+    <string name="settings_antiglare">"Anti-soleil"</string>
+
+
+    <string name="settings_measurement">"Mesure"</string>
+
+    <string name="trip_log_bait">"Appât"</string>
+  <string name="trip_log_spin">"Rotation"</string>
+  <string name="trip_log_troll">"Troll"</string>
+  <string name="trip_log_fly">"Vol"</string>
+  <string name="trip_log_calm">"Calme"</string>
+  <string name="trip_log_chop">"Hâchage"</string>
+  <string name="trip_log_fish_caught">"Poisson attrapé"</string>
+  <string name="trip_log_conditions">"Conditions"</string>
+  <string name="trip_log_rough">"Difficile"</string>
+  <string name="trip_log_date">"Date"</string>
+  <string name="trip_log_time">"Heure"</string>
+  <string name="trip_log_location">"Lieu"</string>
+  <string name="trip_log_lure">"Leurre"</string>
+  <string name="trip_log_lure_ph">"Entrer le leurre"</string>
+  <string name="trip_log_title">"Titre"</string>
+  <string name="trip_log_title_ph">"Entrer le titre"</string>
+  <string name="trip_log_type_of_fishing">"Type de pêche"</string>
+  <string name="trip_log_notes_ph">"Entrer les annotations"</string>
+  <string name="trip_log_notes">"Annotations"</string>
+  <string name="trip_log_untitled">"Sans titre"</string>
+  <string name="trip_log_empty">"Utilisez le bouton Baliser le GPS pour créer votre première entrée dans le journal de voyage."</string>
+  <string name="trip_log_unknown_location">"Inconnu"</string>
+  <string name="trip_log_share">"Journal de voyage iBobber"</string>
+  <string name="trip_log_photos">"Photos"</string>
+
+    <string name="trip_log_edit">"Modifier"</string>
+    <string name="trip_log_delete">"Supprimer"</string>
+    <string name="trip_log_trip_log_created">"Journal de voyage créé"</string>
+
+    <string name="weather_location_services">"Activez le Service de Localisation d'iBobber pour nous permettre de déterminer votre emplacement."</string>
+  <string name="weather_unavailable">"Impossible d'obtenir des informations sur le temps."</string>
+
+  <string name="january">"Janvier"</string>
+  <string name="february">"Février"</string>
+  <string name="march">"Mars"</string>
+  <string name="april">"Avril"</string>
+  <string name="may">"Mai"</string>
+  <string name="june">"Juin"</string>
+  <string name="july">"Juillet"</string>
+  <string name="august">"Août"</string>
+  <string name="september">"Septembre"</string>
+  <string name="october">"Octobre"</string>
+  <string name="november">"Novembre"</string>
+  <string name="december">"Décembre"</string>
+
+  <string name="sun">"Dim"</string>
+  <string name="mon">"Lun"</string>
+  <string name="tue">"Mar"</string>
+  <string name="wed">"Mer"</string>
+  <string name="thu">"Jeu"</string>
+  <string name="fri">"Ven"</string>
+  <string name="sat">"Sam"</string>
+
+  <string name="on">"ALLUME"</string>
+  <string name="off">"ETEINT"</string>
+</resources>

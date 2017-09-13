@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ibobber" default="all">
+  
+  
+  <property file="ibobber_multi_triplog_image.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/*.rbc/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/RCS/**"/>
+    <exclude name="**/SCCS/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/rcs/**"/>
+    <exclude name="**/vssver.scc/**"/>
+    <exclude name="**/vssver2.scc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.war"/>
+    <include name="*.swc"/>
+    <include name="*.apk"/>
+    <include name="*.zip"/>
+    <include name="*.ear"/>
+    <include name="*.egg"/>
+    <include name="*.ane"/>
+    <include name="*.jar"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.1.8" value="${jdk.home.1.8}/bin"/>
+  <path id="jdk.classpath.1.8">
+    <fileset dir="${jdk.home.1.8}">
+      <include name="jre/lib/charsets.jar"/>
+      <include name="jre/lib/deploy.jar"/>
+      <include name="jre/lib/ext/cldrdata.jar"/>
+      <include name="jre/lib/ext/dnsns.jar"/>
+      <include name="jre/lib/ext/jfxrt.jar"/>
+      <include name="jre/lib/ext/localedata.jar"/>
+      <include name="jre/lib/ext/nashorn.jar"/>
+      <include name="jre/lib/ext/sunec.jar"/>
+      <include name="jre/lib/ext/sunjce_provider.jar"/>
+      <include name="jre/lib/ext/sunpkcs11.jar"/>
+      <include name="jre/lib/ext/zipfs.jar"/>
+      <include name="jre/lib/javaws.jar"/>
+      <include name="jre/lib/jce.jar"/>
+      <include name="jre/lib/jfr.jar"/>
+      <include name="jre/lib/jfxswt.jar"/>
+      <include name="jre/lib/jsse.jar"/>
+      <include name="jre/lib/management-agent.jar"/>
+      <include name="jre/lib/plugin.jar"/>
+      <include name="jre/lib/resources.jar"/>
+      <include name="jre/lib/rt.jar"/>
+      <include name="lib/ant-javafx.jar"/>
+      <include name="lib/dt.jar"/>
+      <include name="lib/javafx-mx.jar"/>
+      <include name="lib/jconsole.jar"/>
+      <include name="lib/packager.jar"/>
+      <include name="lib/sa-jdi.jar"/>
+      <include name="lib/tools.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="jdk.bin.android_api_20_platform_(1)" value="${jdk.home.android_api_20_platform_(1)}/../../../Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/bin"/>
+  <path id="jdk.classpath.android_api_20_platform_(1)">
+    <fileset dir="${jdk.home.android_api_20_platform_(1)}">
+      <include name="platforms/android-20/android.jar"/>
+      <include name="platforms/android-20/data/res"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.1.8}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.1.8}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.1.8"/>
+  
+  
+  <!-- Project Libraries -->
+  
+  <path id="library.aeris-android-lib-1.0.0.classpath">
+    <pathelement location="${basedir}/app/libs/aeris-android-lib-1.0.0.jar"/>
+  </path>
+  
+  <path id="library.bolts-android-1.1.2.classpath">
+    <pathelement location="${basedir}/app/libs/bolts-android-1.1.2.jar"/>
+  </path>
+  
+  <path id="library.crashlytics-1.1.13.classpath">
+    <pathelement location="${basedir}/../../../../.gradle/caches/modules-2/files-2.1/com.crashlytics.android/crashlytics/1.1.13/e821eafa1bf489a26bdb71f95078c26785b37a1/crashlytics-1.1.13.jar"/>
+  </path>
+  
+  <path id="library.dd-plist.classpath">
+    <pathelement location="${basedir}/app/libs/dd-plist.jar"/>
+  </path>
+  
+  <path id="library.eventbus-2.2.1.classpath">
+    <pathelement location="${basedir}/app/libs/eventbus-2.2.1.jar"/>
+  </path>
+  
+  <path id="library.facebook-3.19.1-javadoc.classpath">
+    <pathelement location="${basedir}/app/libs/facebook-3.19.1-javadoc.jar"/>
+  </path>
+  
+  <path id="library.facebook-3.19.1-sources.classpath">
+    <pathelement location="${basedir}/app/libs/facebook-3.19.1-sources.jar"/>
+  </path>
+  
+  <path id="library.facebook-3.19.1.classpath">
+    <pathelement location="${basedir}/app/build/intermediates/exploded-aar/com.example.library/facebook/3.19.1/res"/>
+    <pathelement location="${basedir}/app/build/intermediates/exploded-aar/com.example.library/facebook/3.19.1/classes.jar"/>
+  </path>
+  
+  <path id="library.gson-2.2.4.classpath">
+    <pathelement location="${basedir}/app/libs/gson-2.2.4.jar"/>
+  </path>
+  
+  <path id="library.parse-1.5.1.classpath">
+    <pathelement location="${basedir}/app/libs/Parse-1.5.1.jar"/>
+  </path>
+  
+  <path id="library.play-services-5.0.89.classpath">
+    <pathelement location="${basedir}/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.89/res"/>
+    <pathelement location="${basedir}/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.89/classes.jar"/>
+  </path>
+  
+  <path id="library.support-v4-19.1.0.classpath">
+    <pathelement location="${basedir}/../../../../android-sdks/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"/>
+  </path>
+  <!-- Register Custom Compiler Taskdefs -->
+  <property name="javac2.home" value="${idea.home}/lib"/>
+  <path id="javac2.classpath">
+    <pathelement location="${javac2.home}/javac2.jar"/>
+    <pathelement location="${javac2.home}/jdom.jar"/>
+    <pathelement location="${javac2.home}/asm-all.jar"/>
+    <pathelement location="${javac2.home}/jgoodies-forms.jar"/>
+  </path>
+  <target name="register.custom.compilers">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
+    <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
+  </target>
+  
+  <!-- Modules -->
+  
+  <import file="${basedir}/app/module_app.xml"/>
+  
+  <import file="${basedir}/module_ibobber-app-android.xml"/>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.app, clean.module.ibobber-app-android" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.app, compile.module.ibobber-app-android" description="build all modules"/>
+  
+  <target name="all" depends="build.modules" description="build all"/>
+</project>

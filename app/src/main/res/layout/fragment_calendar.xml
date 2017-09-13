@@ -1,0 +1,165 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingTop="62dip"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    >
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:background="@drawable/icon_white_calendar"
+        android:layout_gravity="right"
+        android:paddingBottom="3dip" />
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            >
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onPrevClick"
+                android:layout_gravity="left"
+                android:layout_marginLeft="7dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/arrow_prev_white"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:onClick="onPrevClick"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:background="#00000000"
+                android:layout_toStartOf="@+id/monthYearTextView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dip"
+                android:textStyle="bold"
+                android:text="June 2014"
+                android:id="@+id/monthYearTextView"
+                android:layout_centerInParent="true"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onNextClick"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="7dp"
+                android:layout_gravity="right"
+                android:background="@drawable/arrow_next_white"
+                android:layout_centerVertical="true"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:onClick="onNextClick"
+                android:background="#00000000"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/monthYearTextView" />
+
+        </RelativeLayout>
+
+
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TableRow android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:text="@string/sun"
+                android:padding="2dp"
+                android:textSize="14dip"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                    />
+
+             <TextView
+                android:text="@string/mon"
+                 android:textSize="14dip"
+                 android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                     />
+            <TextView
+                android:text="@string/tue"
+                android:textSize="14dip"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+
+                    />
+            <TextView
+                android:text="@string/wed"
+                android:textSize="14dip"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+
+                    />
+            <TextView
+                android:text="@string/thu"
+                android:textSize="14dip"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                    />
+            <TextView
+                android:text="@string/fri"
+                android:textSize="14dip"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+
+                    />
+            <TextView
+                android:text="@string/sat"
+                android:textSize="14dip"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                    />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <GridView
+        android:id="@+id/calendarGridView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:numColumns="7"
+        android:gravity="center_horizontal"
+        android:columnWidth="60dp"
+        android:stretchMode="columnWidth"
+        >
+
+        </GridView>
+</LinearLayout>
+

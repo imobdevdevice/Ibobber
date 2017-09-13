@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TripLogDetailActivity"
+    style="@style/ActivityTheme"
+    >
+
+    <RelativeLayout
+            android:id="@+id/tripLogHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="5dp">
+
+
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgTripLog"
+                android:clickable="false"
+                android:layout_alignTop="@+id/imgGPS"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:background="@null"
+                android:src="@drawable/icon_white_triplog" />
+
+        <ImageButton
+                android:id="@+id/shareButton"
+                android:onClick="shareTripLog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@+id/imgTripLog"
+                android:background="@null"
+                android:src="@drawable/icon_white_share" />
+
+    </RelativeLayout>
+
+    <ExpandableListView
+            android:layout_below="@id/tripLogHeader"
+            android:id="@+id/formListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_marginBottom="47dp"
+            android:groupIndicator="@color/transparent"/>
+
+    <fragment android:name="com.reelsonar.ibobber.drawer.DeviceDrawerFragment"
+              android:id="@+id/deviceDrawer"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              tools:layout="@layout/fragment_device_drawer"/>
+
+    <fragment android:name="com.reelsonar.ibobber.drawer.HomeDrawerFragment"
+              android:id="@+id/homeDrawer"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              tools:layout="@layout/fragment_home_drawer"/>
+
+</RelativeLayout>

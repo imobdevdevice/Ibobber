@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/white"
+      android:tag="triplog-form-item"
+      android:id="@+id/formFieldWrapper"
+      android:paddingTop="12dp"
+      android:paddingBottom="12dp"
+      android:paddingLeft="10dp"
+        >
+
+    <TextView
+            android:id="@+id/formLabel"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Form"
+            android:gravity="center_vertical"
+            style="@style/FormItem" />
+
+    <TextView
+            android:id="@+id/formField"
+            android:layout_toRightOf="@+id/formLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Field"
+            style="@style/FormItem" />
+
+    <ImageView
+            android:id="@+id/formDisclosure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/arrow_right"
+            android:layout_marginRight="12dp"
+            android:scaleType="fitEnd"/>
+
+</RelativeLayout>

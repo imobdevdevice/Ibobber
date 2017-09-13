@@ -1,0 +1,246 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="1"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    tools:context="com.reelsonar.ibobber.drawer.DeviceDrawerFragment">
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:clickable="false"
+            android:background="@android:color/transparent"
+            android:id="@+id/backgroundOverlay" />
+
+    <ImageButton
+            style="@style/SonarLiveButton"
+            android:id="@+id/sonarLiveButton"
+            android:layout_width="wrap_content"
+            android:background="@drawable/sonar_live_inactive"
+            android:layout_alignBottom="@+id/drawerBackground"
+            android:layout_alignLeft="@+id/drawerBackground"
+            android:layout_toLeftOf="@+id/bobberDrawerButton"
+            android:layout_marginBottom="2dp"
+            android:translationY="@dimen/device_drawer_translation"
+            />
+
+    <ImageButton
+            style="@style/SonarExploreButton"
+            android:id="@+id/sonarExploreButton"
+            android:layout_width="wrap_content"
+            android:background="@drawable/sonar_explore_inactive"
+            android:layout_alignBottom="@+id/drawerBackground"
+            android:layout_alignRight="@+id/drawerBackground"
+            android:layout_toRightOf="@+id/bobberDrawerButton"
+            android:layout_marginBottom="2dp"
+            android:translationY="@dimen/device_drawer_translation"
+            />
+
+    <ImageView
+            style="@style/DrawerBackground"
+            android:id="@+id/drawerBackground"
+            android:layout_width="match_parent"
+            android:src="@drawable/drawer"
+            android:scaleType="fitXY"
+            android:translationY="@dimen/device_drawer_translation"
+            />
+
+
+    <ImageButton
+            style="@style/BobberIcon"
+            android:id="@+id/bobberDrawerButton"
+            android:background="@drawable/bobber_drawer_button_bg"
+            android:layout_centerHorizontal="true"
+            android:alpha="0.5"
+            android:layout_alignBottom="@id/drawerBackground"
+            android:layout_marginBottom="5dp"
+            android:translationY="@dimen/device_drawer_translation"
+            />
+
+    <ImageButton
+            android:layout_height="40dp"
+            android:layout_width="80dp"
+            android:id="@+id/bobberDrawerButtonOverlay"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@id/drawerBackground"
+            android:alpha="0"
+            android:translationY="@dimen/device_drawer_translation"
+            />
+
+
+    <LinearLayout
+                android:id="@+id/deviceDrawerButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="30dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:translationY="@dimen/device_drawer_translation"
+                >
+
+            <LinearLayout
+                    style="@style/DeviceButton"
+                    android:id="@+id/battTempComboButton"
+                    android:background="@drawable/drawer_cell_on"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_weight=".2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:visibility="gone" >
+                <Button
+                        style="@style/DeviceButton"
+                        android:layout_width="match_parent"
+                        android:id="@+id/battComboButton"
+                        android:background="@drawable/drawer_cell_half_on"
+                        android:drawableStart="@drawable/drawer_icon_battery"
+                        android:paddingLeft="2dp"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+
+                <Button
+                        style="@style/DeviceButton"
+                        android:layout_width="match_parent"
+                        android:id="@+id/tempComboButton"
+                        android:background="@drawable/drawer_cell_half_on"
+                        android:drawableStart="@drawable/drawer_icon_temp"
+                        android:paddingLeft="4dp"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <ToggleButton
+                    style="@style/DeviceButton"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/buzzerButton"
+                    android:layout_weight=".2"
+                    android:drawableTop="@drawable/drawer_icon_buzzer"
+                    android:background="@drawable/drawer_cell"
+                    android:textSize="9pt"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textOn="@string/on"
+                    android:textOff="@string/off"
+                    android:layout_marginRight="2dp"
+                    android:visibility="gone"/>
+
+            <Button
+                    style="@style/DeviceButton"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/battButton"
+                    android:layout_weight=".2"
+                    android:drawableTop="@drawable/drawer_icon_battery"
+                    android:background="@drawable/drawer_cell_on"
+                    android:textSize="9pt"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="2dp"/>
+            <Button
+                    style="@style/DeviceButton"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tempButton"
+                    android:layout_weight=".2"
+                    android:drawableTop="@drawable/drawer_icon_temp"
+                    android:background="@drawable/drawer_cell_on"
+                    android:textSize="9pt"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="2dp"
+                    />
+            <ToggleButton
+                    style="@style/DeviceButton"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/alarmButton"
+                    android:layout_weight=".2"
+                    android:drawableTop="@drawable/drawer_icon_motion"
+                    android:background="@drawable/drawer_cell"
+                    android:textOn="@string/on"
+                    android:textOff="@string/off"
+                    android:textSize="9pt"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="2dp"
+                    />
+            <ToggleButton
+                    style="@style/DeviceButton"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/strikeButton"
+                    android:layout_weight=".2"
+                    android:drawableTop="@drawable/drawer_icon_bite"
+                    android:background="@drawable/drawer_cell"
+                    android:textOn="@string/on"
+                    android:textOff="@string/off"
+                    android:textSize="9pt"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="2dp"
+                    />
+            <ToggleButton
+                    style="@style/DeviceButton"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/lightButton"
+                    android:layout_weight=".2"
+                    android:drawableTop="@drawable/drawer_icon_light"
+                    android:background="@drawable/drawer_cell"
+                    android:textSize="9pt"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textOn="@string/on"
+                    android:textOff="@string/off"
+                    android:layout_marginRight="2dp" />
+        </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/accelerometerView"
+            android:layout_alignLeft="@id/deviceDrawerButtons"
+            android:layout_alignStart="@id/deviceDrawerButtons"
+            android:layout_alignEnd="@id/deviceDrawerButtons"
+            android:layout_alignRight="@id/deviceDrawerButtons"
+            android:layout_alignTop="@id/deviceDrawerButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#80000000"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:weightSum="10"
+            android:translationY="@dimen/device_drawer_translation"
+            android:visibility="gone">
+
+        <SeekBar
+                android:id="@+id/accelerometerSlider"
+                android:layout_width="wrap_content"
+                style="@android:style/Widget.Holo.SeekBar"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:layout_marginRight="10dp"/>
+
+        <Button
+                android:id="@+id/accelerometerButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="10pt"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:text="@string/button_done_uppercase"
+                android:background="@drawable/button_orange"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

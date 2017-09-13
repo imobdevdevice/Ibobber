@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.reelsonar.ibobber.ActiveUsersGlobeActivity">
+
+    <fragment
+        android:id="@+id/WhirlyGlobeFragment"
+        android:name="com.reelsonar.ibobber.WhirlyGlobeFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="28dp"
+        android:background="@android:color/transparent"
+        android:onClick="closeActiveUsersGlobeActivity"
+        android:scaleType="fitXY"
+        android:src="@drawable/close_button" />
+</RelativeLayout>

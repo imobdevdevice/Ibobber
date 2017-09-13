@@ -1,0 +1,5 @@
+keystore=/path/to/keystore
+keystore.password=
+keyAlias=ibobber
+keyPassword=
+

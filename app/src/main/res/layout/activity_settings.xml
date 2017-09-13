@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    style="@style/ActivityTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="SettingsActivity"
+    tools:ignore="MergeRootFrame">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/icon_white_settings" />
+
+    <ListView
+        android:id="@+id/settingsForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_marginBottom="47dp"
+        android:layout_marginTop="15dip"
+        android:background="#00000000"
+        android:cacheColorHint="#00000000"
+        android:listSelector="#00000000" />
+
+    <fragment
+        android:id="@+id/deviceDrawer"
+        android:name="com.reelsonar.ibobber.drawer.DeviceDrawerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_device_drawer" />
+
+    <fragment
+        android:id="@+id/homeDrawer"
+        android:name="com.reelsonar.ibobber.drawer.HomeDrawerFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_home_drawer" />
+
+</RelativeLayout>

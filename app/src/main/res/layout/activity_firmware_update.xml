@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/background"
+        >
+
+
+    <TextView android:layout_width="fill_parent"
+              android:layout_height="100dp"
+              android:layout_marginTop="20dp"
+              android:background="@color/transparent"
+              android:gravity="center"
+              android:textColor="@color/white"
+              android:textSize="30dp"
+              android:id="@+id/firmwareTitle"
+              android:text="@string/firmware_title"
+            />
+
+    <TextView android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:layout_marginBottom="30dp"
+              android:background="@color/transparent"
+              android:textColor="@color/white"
+              android:textSize="20dp"
+              android:visibility="gone"
+              android:id="@+id/firmwareBodyText"
+              android:text="@string/firmware_prepare_detail"
+              android:gravity="center"
+            />
+
+    <ProgressBar
+            android:layout_height="50dp"
+            android:layout_width="50dp"
+            android:layout_marginTop="80dp"
+            android:visibility="gone"
+            android:id="@+id/waitIndicator"
+            android:indeterminateOnly="true"
+            android:indeterminate="true"
+            android:layout_gravity="center"
+            />
+
+    <ProgressBar
+            android:id="@+id/flashProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="13dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="23dp"
+            android:layout_marginTop="20dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:keepScreenOn="true"
+            android:progress="1" />
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:gravity="center"
+                  android:background="@color/transparent"
+                  android:layout_height="100dp">
+
+    <Button
+            android:visibility="gone"
+            android:id="@+id/commandCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:textSize="10pt"
+            android:textStyle="bold"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_gray"
+            android:onClick="cancelClick"
+            android:text="@string/button_cancel"/>
+
+    <Button
+            android:visibility="gone"
+            android:id="@+id/commandOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="12pt"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_orange"
+            android:onClick="okClick"
+            android:text="@string/button_ok"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

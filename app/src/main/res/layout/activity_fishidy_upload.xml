@@ -1,0 +1,169 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context="com.reelsonar.ibobber.triplog.ShareActivity" android:background="@color/white"
+>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"
+            android:src="@drawable/fishidy_app_icon" android:scaleType="fitCenter"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="(fish species)"
+            android:id="@+id/fishidySpeciesTextview"
+            android:layout_below="@+id/imageView2" android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp" android:textColor="#000" android:textIsSelectable="true"
+            android:textSize="28sp"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" android:id="@+id/linearLayout">
+        <Button
+                android:layout_width="162dp"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:id="@+id/button2" android:onClick="cancelButtonClicked" android:textSize="18sp"/>
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sync"
+                android:id="@+id/fishidySyncButton" android:onClick="syncButtonClicked" android:textSize="18sp"/>
+    </LinearLayout>
+    <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fishidySharingPrivacySpinner"
+            android:layout_above="@+id/linearLayout" android:layout_alignParentStart="true"
+            android:layout_marginBottom="83dp" android:spinnerMode="dropdown"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:popupBackground="@android:color/darker_gray"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_below="@+id/fishidySpeciesTextview" android:layout_alignParentStart="false"
+            android:layout_marginTop="37dp" android:id="@+id/linearLayout2" android:layout_centerHorizontal="true"
+    >
+
+
+    </LinearLayout>
+    <LinearLayout android:id="@+id/imperialDataLinearLayout"
+                  android:visibility="visible"
+                  android:orientation="vertical" android:layout_width="wrap_content"
+                  android:layout_height="wrap_content" android:weightSum="1"
+                  android:layout_below="@+id/linearLayout2" android:layout_alignParentStart="false"
+                   android:layout_centerHorizontal="true">
+        <EditText
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/lengthInchesEditText"
+                android:hint="Inches"
+                android:layout_above="@+id/weightEditText" android:layout_alignParentStart="true"
+                android:layout_marginBottom="20dp" android:layout_weight="0.65" android:textSize="20sp"/>
+        <EditText android:layout_width="140dp" android:layout_height="wrap_content" android:inputType="numberDecimal"
+                  android:ems="10" android:id="@+id/weightPoundsEditText" android:hint="Pounds"
+                  android:layout_above="@+id/weightOuncesEditText" android:layout_alignParentStart="true"
+                  android:layout_marginBottom="2dp" android:layout_weight="0.65" android:textSize="20sp"/>
+        <EditText android:layout_width="140dp" android:layout_height="wrap_content" android:inputType="numberDecimal"
+              android:ems="10" android:id="@+id/weightOuncesEditText" android:hint="Ounces"
+              android:layout_weight="0.65" android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/metricDataLinearLayout"
+                  android:visibility="gone"
+                  android:orientation="vertical" android:layout_width="wrap_content"
+                  android:layout_height="wrap_content" android:weightSum="1"
+                  android:layout_below="@+id/linearLayout2" android:layout_alignParentStart="false"
+                  android:layout_centerHorizontal="true">
+        <EditText
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/lengthCentimetersEditText"
+                android:hint="Centimetres"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="20dp" android:layout_weight="0.65" android:textSize="20sp"/>
+        <EditText android:layout_width="140dp" android:layout_height="wrap_content" android:inputType="numberDecimal"
+                  android:ems="10" android:id="@+id/weightKilogramsEditText" android:hint="Kilograms"
+                  android:layout_above="@+id/weightEditText" android:layout_alignParentStart="true"
+                  android:layout_marginBottom="2dp" android:layout_weight="0.65" android:textSize="20sp"/>
+
+    </LinearLayout>
+
+
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:id="@+id/authLoginView" android:background="@color/white" android:visibility="gone">
+            <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView3" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"
+            android:src="@drawable/fishidy_app_icon" android:scaleType="fitCenter"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Authorize Sharing"
+            android:id="@+id/textView" android:layout_below="@+id/imageView3" android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp" android:textColor="#000" android:textIsSelectable="true"
+            android:textSize="28sp"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/loginEditText" android:layout_below="@+id/textView"
+                android:layout_marginTop="33dp" android:hint="Login (email)"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/passwordEditText"
+                android:hint="Password"
+                android:selectAllOnFocus="false" android:layout_marginLeft="20dp" android:layout_marginRight="20dp"
+                android:layout_below="@+id/loginEditText" android:layout_marginTop="5dp"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Authorize"
+                android:id="@+id/button" android:layout_below="@+id/passwordEditText"
+                android:layout_alignStart="@+id/passwordEditText" android:layout_marginTop="24dp" android:textStyle="bold"
+                android:onClick="authButtonClicked"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:id="@+id/button4" android:layout_alignBottom="@+id/button"
+                android:layout_alignEnd="@+id/passwordEditText" android:textStyle="bold" android:onClick="authCancelButtonClicked"/>
+
+    </RelativeLayout>
+
+
+
+    <ProgressBar
+        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:visibility="gone"
+        android:id="@+id/fishidySyncProgressBar"
+        android:indeterminateOnly="true"
+        android:indeterminate="true"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"/>
+
+
+</RelativeLayout>

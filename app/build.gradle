@@ -1,0 +1,134 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        flatDir {
+            dirs 'libs'
+        }
+        maven { url 'http://download.crashlytics.com/maven' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.crashlytics.tools.gradle:crashlytics-gradle:1.16.0'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'crashlytics'
+
+repositories {
+    mavenCentral()
+    maven { url 'http://download.crashlytics.com/maven' }
+    flatDir {
+        dirs 'libs'
+    }
+
+}
+
+android {
+    useLibrary 'org.apache.http.legacy'
+    compileSdkVersion 25
+    buildToolsVersion '25.0.3'
+//    signingConfigs {
+//        release {
+//            // filled in below from signing.properties
+//            storeFile file("/path/to/key/store")
+//            storePassword "*******"
+//            storePassword "*******"
+//            keyAlias "iBobber"
+//            keyPassword "*******"
+//        }
+//    }
+    dataBinding {
+        enabled = true
+    }
+    defaultConfig {
+        minSdkVersion 21
+//        minSdkVersion 18
+        targetSdkVersion 25
+        versionCode 38
+        versionName '1.97'
+        multiDexEnabled true
+
+    }
+//    aaptOptions {
+//        noCompress "apk"
+//    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            debuggable true
+//            signingConfig signingConfigs.release
+            zipAlignEnabled true
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+//    dexOptions {
+//        preDexLibraries = false
+//    }
+    productFlavors {
+        allLanguage {
+            buildConfigField 'boolean', 'OVERRIDE_LANGUAGE_DETECTION', 'false'
+            buildConfigField 'String', 'OVERRIDE_LANGUAGE_CODE', "\"not_used\""
+        }
+        chineseLanguage {
+            buildConfigField 'boolean', 'OVERRIDE_LANGUAGE_DETECTION', 'true'
+            buildConfigField 'String', 'OVERRIDE_LANGUAGE_CODE', "\"zh\""
+
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    // You must install or update the Google Repository through the SDK manager to use this dependency.
+    compile 'com.google.android.gms:play-services:11.0.4'
+    compile 'com.google.firebase:firebase-messaging:11.0.4'
+    compile 'com.crashlytics.android:crashlytics:1.1.13'
+//    compile 'com.mousebirdconsulting.maply:Android:0.7'
+    compile 'com.android.support:multidex:1.0.0'
+    compile(name: 'WhirlyGlobeMaply', ext: 'aar')
+    compile 'commons-io:commons-io:2.5'
+    compile 'com.intuit.sdp:sdp-android:1.0.4'
+    compile 'com.parse.bolts:bolts-tasks:1.4.0'
+    compile 'com.parse.bolts:bolts-applinks:1.4.0'
+    compile 'com.parse:parse-android:1.13.1'
+    compile "uk.co.chrisjenx:calligraphy:$CALLIGRAPHY_VERSION"
+    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    //stetho
+    compile 'com.facebook.stetho:stetho:1.1.1'
+    //Image processor
+    compile "com.github.bumptech.glide:glide:$GLIDE_VERSION"
+    //Twitter
+    // Include all the Twitter APIs
+    compile 'com.twitter.sdk.android:twitter:3.1.1'
+    compile('com.twitter.sdk.android:twitter:1.3.2@aar') {
+        transitive = true;
+    }
+    compile project(path: ':library')
+}
+apply plugin: 'com.google.gms.google-services'
+
+//task loadSigningData << {
+//    Properties signingProps = new Properties()
+//    signingProps.load(new FileInputStream(file("../signing.properties")))
+//
+//    android.signingConfigs.release.storeFile = file(signingProps['keystore'])
+//    android.signingConfigs.release.storePassword = file(signingProps['keystore.password'])
+//    android.signingConfigs.release.keyAlias = file(signingProps['keyAlias'])
+//    android.signingConfigs.release.keyPassword = file(signingProps['keyPassword'])
+//}
+//
+//tasks.whenTaskAdded { theTask ->
+//    if (theTask.name == 'validateReleaseSigning') {
+//        theTask.dependsOn "loadSigningData"
+//    }
+//}

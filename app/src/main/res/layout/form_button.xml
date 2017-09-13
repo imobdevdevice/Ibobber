@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:tag="triplog-form-switch"
+                android:id="@+id/formButtonWrapper"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="12dp"
+        >
+
+    <TextView
+            android:id="@+id/formLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Form"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            style="@style/FormItem" />
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/formButton"
+            android:textSize="12sp"
+            android:layout_gravity="right"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            style="@style/FormItem"/>
+
+    <TextView
+            android:id="@+id/secondaryLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Field"
+            style="@style/FormItem" />
+
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    style="@style/ActivityTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TripLogMapActivity"
+    tools:ignore="MergeRootFrame">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="47dp"
+        android:layout_marginTop="70dp"
+        tools:context="com.lebedev.ibobbertriplog.TripLogMapActivity" />
+
+    <fragment
+        android:id="@+id/deviceDrawer"
+        android:name="com.reelsonar.ibobber.drawer.DeviceDrawerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_device_drawer" />
+
+    <fragment
+        android:id="@+id/homeDrawer"
+        android:name="com.reelsonar.ibobber.drawer.HomeDrawerFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_home_drawer" />
+
+</FrameLayout>

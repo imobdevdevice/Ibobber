@@ -1,0 +1,62 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <integer name="custom_wrap_content">-2</integer>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="device_drawer_translation">-110dp</dimen>
+    <dimen name="home_drawer_translation">410dp</dimen>
+
+    <dimen name="divider">@dimen/_1sdp</dimen>
+
+
+    //This is for activity padding all over app
+    <dimen name="activity_margin">@dimen/_10sdp</dimen>
+    <dimen name="activity_margin_big">@dimen/_20sdp</dimen>
+
+    //Margin and Padding
+    <dimen name="tiny">@dimen/_3sdp</dimen>
+    <dimen name="small">@dimen/_5sdp</dimen>
+    <dimen name="regular">@dimen/_10sdp</dimen>
+    <dimen name="medium">@dimen/_12sdp</dimen>
+    <dimen name="large">@dimen/_17sdp</dimen>
+    <dimen name="extraLarge">@dimen/_25sdp</dimen>
+    <dimen name="huge">@dimen/_30sdp</dimen>
+    <dimen name="big">@dimen/_45sdp</dimen>
+    <dimen name="status_bar_height">0dp</dimen>
+    <dimen name="status_bar">0dp</dimen>
+
+    //Text Sizes
+    <dimen name="tiny_text">@dimen/_5sdp</dimen>
+    <dimen name="small_text">@dimen/_10sdp</dimen>
+    <dimen name="regular_text">@dimen/_15sdp</dimen>
+    <dimen name="medium_text">@dimen/_17sdp</dimen>
+    <dimen name="large_text">@dimen/_19sdp</dimen>
+    <dimen name="extraLarge_text">@dimen/_50sdp</dimen>
+
+    <dimen name="thumb_width">@dimen/_30sdp</dimen>
+    <dimen name="thumb_height">@dimen/_30sdp</dimen>
+
+    <dimen name="bubble_thumb_width">@dimen/_70sdp</dimen>
+    <dimen name="bubble_thumb_height">@dimen/_70sdp</dimen>
+
+
+    <!--material spinner-->
+    <dimen name="underline_top_spacing">@dimen/_8sdp</dimen>
+    <dimen name="underline_bottom_spacing">@dimen/_4sdp</dimen>
+    <dimen name="error_label_spacing">@dimen/_12sdp</dimen>
+
+    <dimen name="floating_label_top_spacing">@dimen/_4sdp</dimen>
+    <dimen name="floating_label_bottom_spacing">@dimen/_8sdp</dimen>
+    <dimen name="floating_label_inside_spacing">@dimen/_12sdp</dimen>
+
+    <dimen name="right_left_spinner_padding">@dimen/_8sdp</dimen>
+
+    <dimen name="label_text_size">@dimen/_12sdp</dimen>
+
+    <dimen name="min_content_height">@dimen/_20sdp</dimen>
+
+    <dimen name="corner_radius">@dimen/_30sdp</dimen>
+    <dimen name="profile_width">@dimen/_80sdp</dimen>
+
+</resources>

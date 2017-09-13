@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view_freespace"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.4"
+            android:background="@android:color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:layout_marginRight="@dimen/_25sdp"
+            android:background="@drawable/popup_guest_background"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_8sdp"
+                android:paddingLeft="@dimen/_8sdp"
+                android:paddingRight="@dimen/_8sdp">
+
+                <TextView
+                    android:id="@+id/tvDialogTitle"
+                    style="@style/FontRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:padding="@dimen/_8sdp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_15sdp"
+                    tools:text="@string/congratulations" />
+
+                <TextView
+                    android:id="@+id/ivClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@color/colorPrimary"
+                    android:gravity="left"
+                    android:text="x"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
+
+                <!-- <TextView
+                     android:id="@+id/tvDialogNext"
+                     style="@style/FontRegular"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentRight="true"
+                     android:layout_centerVertical="true"
+                     android:text="Next"
+                     android:textColor="@color/colorAccentMedium"
+                     android:textSize="@dimen/_15sdp" />-->
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/dialog_message"
+                style="@style/FontRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:gravity="center"
+                android:textColor="@color/comment_gray"
+                android:textSize="@dimen/_13sdp"
+                tools:text="@string/bed_username" />
+
+            <TextView
+                android:id="@+id/txt_ok"
+                style="@style/FontRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_weight="1"
+                android:background="@drawable/white_fill_bg"
+                android:gravity="center"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingRight="@dimen/_15sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:stateListAnimator="@drawable/lift_on_touch"
+                android:text="@string/okay"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_14sdp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,244 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="top"
+    android:paddingTop="70dip"
+    android:paddingBottom="10dip"
+    android:weightSum="1"
+    android:textAlignment="center"
+    android:id="@+id/todayFragment"
+    android:visibility="visible">
+
+    <!--  Current weather layout contains weather icon-->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|right"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/imageView"
+            android:background="@drawable/icon_white_calendar"
+            android:onClick="onCalendarButton"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="0dp"
+        android:gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/calendar_today"
+            android:id="@+id/todayTextView"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="28sp"
+            android:layout_weight="0.06"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+    <!--  Moon layout -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0."
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="10dip"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/moon_large"
+            />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="40dip"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/calendar_rise"
+                android:id="@+id/moonRiseTextView" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="8:40am"
+                    android:id="@+id/moonRiseTimeTextView" android:visibility="visible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/calendar_set"
+                android:id="@+id/moonSetTextView" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="10:41pm"
+                    android:id="@+id/moonSetTimeTextView" android:visibility="visible"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_height="wrap_content"
+        android:layout_width="310dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/teal_line_hort"
+        android:layout_gravity="center" />
+
+    <!--  Sun layout -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/sun_large" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="40dip"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/calendar_rise"
+                android:id="@+id/sunriseTextView" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="8:40am"
+                    android:id="@+id/sunriseTimeTextView" android:visibility="visible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/calendar_set"
+                android:id="@+id/sunsetTextView" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="10:41pm"
+                    android:id="@+id/sunsetTimeTextView" android:visibility="visible"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+        <ImageView
+        android:layout_height="wrap_content"
+        android:layout_width="310dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/teal_line_hort"
+        android:layout_gravity="center" />
+
+    <!-- Tides Layout -->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/tides_large" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="40dip"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="High"
+                android:id="@+id/sunriseTextViewX" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="8:40am"
+                    android:id="@+id/highTideTimeTextView" android:visibility="visible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Low"
+                android:id="@+id/sunsetTextViewX" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="10:41pm"
+                    android:id="@+id/lowTideTimeTextView" android:visibility="visible"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

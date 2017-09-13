@@ -1,0 +1,97 @@
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="top"
+        android:paddingTop="90dip"
+        android:layout_marginBottom="85dp"
+        android:weightSum="1"
+        android:textAlignment="center">
+
+
+    <TextView
+            android:id="@+id/reminderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bluetooth_reminder_title"
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white" />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bluetooth_charge_reminder"
+            android:textSize="18dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_below="@+id/reminderText"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white" />
+
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:id="@+id/imageView"
+            android:background="@drawable/icon_white_settings"
+            />
+
+    <RelativeLayout
+            android:layout_marginTop="45dip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/statusBarLayout"
+            android:layout_below="@+id/imageView"
+            android:background="@color/white"
+            >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="@string/settings_bluetooth"
+            android:textSize="28dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:background="@color/white"
+            android:textColor="@color/darkGray" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:id="@+id/btScanProgress"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:visibility="invisible"
+            android:background="@color/white"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/statusBarLayout"
+        android:textSize="38dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        />
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bluetooth_start_search"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="24dip"
+        android:onClick="scanClick"
+        android:textColor="#FFFFFFFF"
+        android:id="@+id/scanButton"
+        android:background="@drawable/button_gray" />
+
+</RelativeLayout>
+

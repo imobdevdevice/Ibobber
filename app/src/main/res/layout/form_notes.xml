@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:tag="triplog-form-notes"
+              android:id="@+id/formNotesWrapper"
+              android:paddingTop="12dp"
+              android:paddingBottom="12dp"
+        >
+
+    <TextView
+            android:id="@+id/formLabel"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Form"
+            style="@style/FormItem"
+            />
+
+</LinearLayout>

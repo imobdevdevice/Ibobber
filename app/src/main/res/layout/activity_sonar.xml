@@ -1,0 +1,261 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    style="@style/ActivityTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SonarActivity"
+    tools:ignore="MergeRootFrame">
+
+
+    <com.reelsonar.ibobber.view.SonarView
+        android:id="@+id/sonarView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:keepScreenOn="true" />
+
+    <ImageButton
+        android:id="@+id/imgGPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="47dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:onClick="onTripLogButtonPressed"
+        android:src="@drawable/triplog_button_bg" />
+
+    <TextView
+        android:id="@+id/demoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/demo_mode"
+        android:textColor="@color/white"
+        android:textIsSelectable="true"
+        android:textSize="12pt"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/demoExplorerModeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_marginRight="78dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/demo_mode"
+        android:textColor="@color/white"
+        android:textIsSelectable="true"
+        android:textSize="12pt"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/outOfWaterLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:text="@string/bobber_out_of_water"
+        android:textColor="@color/white"
+        android:textSize="12pt"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/weakSonarSignalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/bobber_weak_sonar_signal"
+        android:textColor="@color/white"
+        android:textSize="12pt"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/loadingSpinner"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/sonarStatusImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/drawer_bobber_off" />
+
+    <LinearLayout
+        android:id="@+id/sonarControls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/sonarLiveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1dp"
+            android:background="@drawable/sonar_live_inactive"
+            android:onClick="onLiveSonarButtonPressed" />
+
+        <ImageButton
+            android:id="@+id/sonarExploreButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:background="@drawable/sonar_explore_active"
+            android:onClick="onExploreSonarButtonPressed" />
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/deviceDrawer"
+        android:name="com.reelsonar.ibobber.drawer.DeviceDrawerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_device_drawer" />
+
+    <fragment
+        android:id="@+id/homeDrawer"
+        android:name="com.reelsonar.ibobber.drawer.HomeDrawerFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_home_drawer" />
+
+    <LinearLayout
+        android:id="@+id/promoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".2"
+            android:onClick="dismissPromo" />
+
+        <ImageView
+            android:id="@+id/promoImage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".7"
+            android:onClick="sendToPromoURL"
+            android:scaleType="fitCenter"
+            android:src="@drawable/amazon_gripper_promo" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".2"
+            android:onClick="dismissPromo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/advertisementLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".4"
+            android:background="#67858c94"
+            android:onClick="dismissAdvertisement" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:background="#67858c94">
+
+            <ImageView
+                android:id="@+id/sonarBobberAd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:longClickable="true"
+                android:onClick="sendToAdvertisementURL"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ibobber_ad" />
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignEnd="@id/sonarBobberAd"
+                android:layout_alignParentStart="false"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button_close"
+                android:onClick="dismissAdvertisement" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".4"
+            android:background="#67858c94"
+            android:onClick="dismissAdvertisement" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/advertisementExplorerModeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".2"
+            android:background="#67858c94"
+            android:onClick="dismissAdvertisement" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:background="#67858c94">
+
+            <ImageView
+                android:id="@+id/explorerBobberAd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:longClickable="true"
+                android:onClick="sendToAdvertisementURL"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ibobber_ad" />
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignEnd="@id/explorerBobberAd"
+                android:layout_alignParentStart="false"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button_close"
+                android:onClick="dismissAdvertisement" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".2"
+            android:background="#67858c94"
+            android:onClick="dismissAdvertisement" />
+    </LinearLayout>
+</FrameLayout>

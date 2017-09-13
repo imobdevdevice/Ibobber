@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/d295fd27423dd9bb253a883492fd0dfd294ac618/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a5d52089bf4d31537232bb6bcb70cee817d8a374">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_97dae2379b2847945b83ba7087a786d86b94d69d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/032bb5b1d7118f07b6a245f27c1a01384131dc28/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="11262f887015dc774ff36eb66698308df0a376d1">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_1c3875cbffea97791ee6df020d419b9533c44d93/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/cf2e55a959aa8cc4fd90a97bd5de877f160b55f2/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2c379c235d7983201bb83edfc3c60bb0dafb5805">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_d20aba25fbd5774c7cbf6aa0c5fa28c48706d2d3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/17bf7054baea7a6503442619983ec9399c588c83/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="dae0d68af4c87df40eca67069861e53b7cefaaa0">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_99916b4dacb85bdd807bcf92e1d637d77e174502/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/4897ef1f741028ace00b9c3f562ff4f3f9261f8f/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="f47f4d5bdfd7d7bf330945b8a7ccce4ab437a710">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_91aeb3930b5d14dfad5e62ff29c5b1a5e60f4d98/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/2358f4939f949a9db8adb7c3f7aad394dddc713e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="f15e20dd7bcde7c688cfda44d0c8320a5c1c24b8">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_11cb962b33ab1bc85c25d0ff25b703b712ceaa41/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/libs/eventbus-2.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="456100597c69ecb0c7993bd834505d4b9c9939cb">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/2/eventbus-2.2.1_67a51ce8c1ba604b25bae463720ca157a1ef8f2d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/6cfc1efb0b8f526a849bcef739bb0aa874baf7bc/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="63b03eaa1aa9b9431c7638841175f9842dcbf274">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_4d8b890f2a6ab780a5af15711bcc1e532166e692/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/dcb374f9c1c53a993f1c5d57009b89050ddb1799/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="dd282bdeaa904c59d77e57dedd7e0a241c9b679d">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_a8e130b9c895ea05b3500290454439c2eddab483/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/e24953e2a8f19f8d95993dbcbe89c6bd9f271c25/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="213a75f93fa2961a4c69566ef3c9a365c70a8693">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_d179360997806af5b84b7998497687fab5fba6d1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/c51e4d536c503d5d25d58a4825c341970a07c4ad/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="02b91f8efa91dcdf5c555ee24b7f006f02cd0f8b">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_d9881a091e814224f180b1be3d7834f6285e0b6b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/72fcca8dae6fd1e24b072147c965730730e3b4d5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2c73e2a93e00abd240e495c1e62217e53904a3f3">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_4fd7240b8a35857ce5a55153e11c91d3091b0d4f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/f9377406bd4b52492d21e275b91bad71868a02f5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c6aa915c08cfd82780c10d4b957018bf819a48e2">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_e71ab32c42d2bd96d54dcceaf44013e9657a38f9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/af6e84d2367c84e68a56fa678ff8f0594685b348/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="af13a350b71b437ebf4be335d02a8f785c39b111">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_6cd51a7b69fa232bbd5f680efbe45d1766743da4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.gradle/caches/modules-2/files-2.1/com.crashlytics.android/crashlytics/1.1.13/e821eafa1bf489a26bdb71f95078c26785b37a1/crashlytics-1.1.13.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="0e821eafa1bf489a26bdb71f95078c26785b37a1">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/crashlytics-1.1.13_088fb62fd363624c443a9c4a2def13c73ffcdef6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/04b8fe29fc5efea52e867a8317eb3b1943dd2407/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="34c23b5894b4f24d566bfc33e0e25462c6436b78">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_ce35d548cf5d9a1df466abe83978d7601da0991e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/a095c37fc9d071ab473f08154a1428f8d992eb5b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="576570f46ff6ccc69a984af9e55ddd58d9549270">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_fd2c9d1b2123a4aaf188a42690e3ab22cc5efddf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/3c6ce948798a2392227c55dd7aec6d5efa6d8af9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b5b6af36bacf1d812cd3dc45f9dcab9ea471ed91">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_eacb70277556608ec9c40e5e2306d90dfa82b891/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/bf195b9086bcf546d7e4401135519c3fb1ad6339/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="057fb316bed8467398333f30926c2d5506e275b2">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_11f6e100ba5df39c713b625b58763e0c54c33a7b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/2.0.1/516c03b21d50a644d538de0f0369c620989cd8f0/jsr305-2.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="516c03b21d50a644d538de0f0369c620989cd8f0">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/jsr305-2.0.1_aa849d978b336e02ef725005e5f6442df258c61b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/564ce3747ebfb74062f9df3a0e7ee72d9b924110/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_36611d492c99618e36f1be426e1a450b27cb5614/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/libs/eventbus-2.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="456100597c69ecb0c7993bd834505d4b9c9939cb">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/2/eventbus-2.2.1_67a51ce8c1ba604b25bae463720ca157a1ef8f2d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/dae72882aed9ba9a8c640896bed584234876a9f4/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="1b12397bc9f342b29d9e9108978828f99a6da579">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_fcdbd2508cb4afc4a948c1b99ced243c9e9436fd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/19c31c560145f6ccfb28ccb5dac6239468b12d0e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d8942ee348aaa9341f08f7e2437063893fe27542">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_a6bbd4024036ac89423d6637fe38dafb3055bc37/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/be7641fcc8c31727b82cfbdcb651b4374dfdc3c3/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4b685077cdb08cf7ae8b61afd1fe910e47d91b9a">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_b83d2ac64674c02bbfaad10870a1465b56fe6bc3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/006c200a49477d62132a5c23e2394dad0b0ec008/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8544f739799dd15db63927073a21312864ab0bfd">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_b85a12041d8035b139e5c00cc350ba2ff1966f14/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/libs/gson-2.2.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="973e832af433b44c3ed11c426f2f390b29f3f3f8">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/2/gson-2.2.4_7f5bf7e34200154efb2fac5a2900b170174f642c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/2358f4939f949a9db8adb7c3f7aad394dddc713e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="f15e20dd7bcde7c688cfda44d0c8320a5c1c24b8">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_11cb962b33ab1bc85c25d0ff25b703b712ceaa41/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/4897ef1f741028ace00b9c3f562ff4f3f9261f8f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="f47f4d5bdfd7d7bf330945b8a7ccce4ab437a710">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_91aeb3930b5d14dfad5e62ff29c5b1a5e60f4d98/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/3697fcc54dfcbaacb10134250161bb9c8540a6fa/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="f5ff5e3811e8c9485fd27f9052ae4d4d23a22d9d">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_7966508370ae88eec91eb6a4ec0ea0f63ecb07a9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.5/2852e6e05fbb95076fc091f6d1780f1f8fe35e0f/commons-io-2.5.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2852e6e05fbb95076fc091f6d1780f1f8fe35e0f">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/commons-io-2.5_a2d0aa53bddcd0632a4f63f0f4b2da0f7330a0d7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/cc5e5d51dbaea7f3345ed6778df498349199f963/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c6525f06e39d6c9e88d5b86ce6fe0351bc674a80">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_43051d93a8b9b3a1a9720675bb5b22396e1fdaff/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/22a9877f18ee4fd637ceb7204a67ec6847d35e3f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2038c541dede3f10cb8cc137090a87c86745a00b">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_c9445617b7f943ffc05119d1d3d166386101cd4d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/f7f0f4b9f8980329541dc785e71188ea5717d5f9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2b12b18c5518021cc71577c83d1290f8ddaa3c98">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_91f87980a86106958dce55f89c91bdff20267635/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/e7aa0a609ab6407ad7e0b4b5d48799b3f8d87296/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="377c5f26ebf67f3fa6ef2f663a58cac7ce647dde">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_487c001d525775f08f9ae6d49dca114d336f45d3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.gradle/caches/modules-2/files-2.1/commons-cli/commons-cli/1.2/2bf96b7aa8b611c177d329452af1dc933e14501c/commons-cli-1.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2bf96b7aa8b611c177d329452af1dc933e14501c">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/commons-cli-1.2_b0ae7d85156e780c1800e72fc722f35c6dbcd870/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/fe075237b5fe70f5ed37cd9cae60c7851555e594/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="f2cb88e7e28736d44e7e643deb80c9af1c3662c8">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_b397c41fd941b630814a0b4b4828a77ff70db186/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/17bf7054baea7a6503442619983ec9399c588c83/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="dae0d68af4c87df40eca67069861e53b7cefaaa0">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_99916b4dacb85bdd807bcf92e1d637d77e174502/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.gradle/caches/modules-2/files-2.1/com.crashlytics.android/crashlytics/1.1.13/e821eafa1bf489a26bdb71f95078c26785b37a1/crashlytics-1.1.13.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="0e821eafa1bf489a26bdb71f95078c26785b37a1">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/crashlytics-1.1.13_088fb62fd363624c443a9c4a2def13c73ffcdef6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/a095c37fc9d071ab473f08154a1428f8d992eb5b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="576570f46ff6ccc69a984af9e55ddd58d9549270">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_fd2c9d1b2123a4aaf188a42690e3ab22cc5efddf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/cc64970d25ff9f0a8161c2ac3545e8af9da71a14/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="fc3036436defd3070337b7191c50a136ebca7f8f">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_00a8b3550babdc5c0c487c286973eb68c2bcadbb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/c771f7f07f5d58098d401f2736ac7c32a2fb471b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="93dbcb6695ede7eb2ac82aeb2e84eb0e8c8309d4">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_b799a7a480c972cde4773dacda2a1f7b22162d68/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/72fcca8dae6fd1e24b072147c965730730e3b4d5/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2c73e2a93e00abd240e495c1e62217e53904a3f3">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_4fd7240b8a35857ce5a55153e11c91d3091b0d4f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/e1d5e822c79e18faed2b2972404fcc8a47a32a68/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="56d68d1174b9c1e368017a850b62b12429f39757">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_540aa70d0b38471506c43d1a0c5f60cbabecb693/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/032bb5b1d7118f07b6a245f27c1a01384131dc28/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="11262f887015dc774ff36eb66698308df0a376d1">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_1c3875cbffea97791ee6df020d419b9533c44d93/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/9b64b1a85a9f5ea29ef94e8df2ef2c8d67a37250/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c6706cc7c8c3093560edd55d322218afe7798aa9">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_620e077585a142c155fb511dd5d72bbc2aa7837e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/933a35b5c651970c48216e8f8c8fde04c9c73e9b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="0bffdc0bd4f7ca0e27c5bfeef39569f8da00aa26">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_90d84014eba6435000513d0ff128a2d4fa7834a2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/04b8fe29fc5efea52e867a8317eb3b1943dd2407/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="34c23b5894b4f24d566bfc33e0e25462c6436b78">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_ce35d548cf5d9a1df466abe83978d7601da0991e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/6cfc1efb0b8f526a849bcef739bb0aa874baf7bc/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="63b03eaa1aa9b9431c7638841175f9842dcbf274">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_4d8b890f2a6ab780a5af15711bcc1e532166e692/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.gradle/caches/modules-2/files-2.1/com.facebook.stetho/stetho/1.1.1/ab1142c5adfa474e7494cba19fd9fc6e73207960/stetho-1.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ab1142c5adfa474e7494cba19fd9fc6e73207960">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/stetho-1.1.1_a8cb9364f326856a23e0dfd61a6445fe3cbe108e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/be126ed8a107c3603aca97c08c2489d43bf515b6/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="9df547a8c3f971d9e8ed570b5e36c44a9dc7632f">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_db5778d3461e3e3471ccd11d59128c4efc3af95d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/libs/aeris-android-lib-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="95eb8e4a7c6a90aa61cb80df7435e91829e062f5">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/2/aeris-android-lib-1.0.0_fad006060749b6626af7cdfea83b150e5da25d4d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.gradle/caches/modules-2/files-2.1/com.parse/parse-android/1.13.1/5f645bf60e3b88ccc02bd2a4018c5e3ef2f77d0a/parse-android-1.13.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="5f645bf60e3b88ccc02bd2a4018c5e3ef2f77d0a">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/parse-android-1.13.1_e5f9770e0884a9b0c82d6e96077cdca9e4b011c1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/af6e84d2367c84e68a56fa678ff8f0594685b348/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="af13a350b71b437ebf4be335d02a8f785c39b111">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_6cd51a7b69fa232bbd5f680efbe45d1766743da4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/22a9877f18ee4fd637ceb7204a67ec6847d35e3f/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2038c541dede3f10cb8cc137090a87c86745a00b">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_c9445617b7f943ffc05119d1d3d166386101cd4d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.5/2852e6e05fbb95076fc091f6d1780f1f8fe35e0f/commons-io-2.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2852e6e05fbb95076fc091f6d1780f1f8fe35e0f">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/commons-io-2.5_a2d0aa53bddcd0632a4f63f0f4b2da0f7330a0d7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/933a35b5c651970c48216e8f8c8fde04c9c73e9b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="0bffdc0bd4f7ca0e27c5bfeef39569f8da00aa26">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_90d84014eba6435000513d0ff128a2d4fa7834a2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.2.0/a09926806199499a20b2f5168779499abfa33342/converter-gson-2.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a09926806199499a20b2f5168779499abfa33342">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/converter-gson-2.2.0_a1d689330c2ac886450dd2c6ab2f6827ec6589ee/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/006c200a49477d62132a5c23e2394dad0b0ec008/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8544f739799dd15db63927073a21312864ab0bfd">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_b85a12041d8035b139e5c00cc350ba2ff1966f14/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/libs/dd-plist.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d39b131d5aaf8bf6e53ff8dfd28f5cf2521c6d10">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/2/dd-plist_06a855322f80ee6d32b8126ec1412369e9be0a16/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/19c31c560145f6ccfb28ccb5dac6239468b12d0e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d8942ee348aaa9341f08f7e2437063893fe27542">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_a6bbd4024036ac89423d6637fe38dafb3055bc37/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.gradle/caches/modules-2/files-2.1/com.twitter/twitter-text/1.14.3/71218d7dd9435e8b43e5ccf117bec37cb78fa2eb/twitter-text-1.14.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="71218d7dd9435e8b43e5ccf117bec37cb78fa2eb">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/twitter-text-1.14.3_f4c6bbc711ebb895f6b9a52ee17fa84f57634acb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/852209153f7aef43e39d89855a5dc2e200fedbc0/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="eea424e61a0c85b93a0e477565314a58136abaea">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_235fba6e65bf8be13d6917ce23d86686c3ef9ad7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/5bebe4fb6e25770d9fba2a1800bc56319dac085a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6666dd525c3da197e7d07f4f23ef5fc7881a697b">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_0a65434e4f55c267cde31b635d6257230889e968/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/eadc7ec397e19b7972235673655039a6f696f6ce/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="9be5e957849eb82ad9addf9bdb2896de8bf5654b">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_d110662f0829c4d35bb1231bef619e5eb7c6cbfa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/incremental-classes/allLanguage/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="58ea8829296e3af691594354ee39f78f2b6028b3">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10000/instant-run-bootstrap_b8429ff5090eefb60e56ed8d89f909aa21a50e44/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/3c6ce948798a2392227c55dd7aec6d5efa6d8af9/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b5b6af36bacf1d812cd3dc45f9dcab9ea471ed91">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_eacb70277556608ec9c40e5e2306d90dfa82b891/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/f7f0f4b9f8980329541dc785e71188ea5717d5f9/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2b12b18c5518021cc71577c83d1290f8ddaa3c98">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_91f87980a86106958dce55f89c91bdff20267635/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/4e5a435f6230110801c588ea04c74d5270d2ae19/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ffd0ddf5e57b4d60c4a3fbcd38fa20349a0cebd1">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_4d387628d6edbdbbf6575829191b40743fda6c55/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/3697fcc54dfcbaacb10134250161bb9c8540a6fa/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="f5ff5e3811e8c9485fd27f9052ae4d4d23a22d9d">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_7966508370ae88eec91eb6a4ec0ea0f63ecb07a9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/24ac57ffe19e715cf0c84e958fc0073abf22b090/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e7f890dd2539b7f2582f450f0721e2dea6ae510c">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_eed5dff5d874dc87a5757cd03247923cc30a62dc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/incremental-runtime-classes/allLanguage/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10000/instant-run_50c0adb6873f40bf83daf90b5f7637efb3a7b70d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/libs/aeris-android-lib-1.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="95eb8e4a7c6a90aa61cb80df7435e91829e062f5">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/2/aeris-android-lib-1.0.0_fad006060749b6626af7cdfea83b150e5da25d4d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/3f7787a4d342c43939106e4abfa4da3e521de946/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="416fb9ee2fd6e7af0bba04b01d90cb475b1e2074">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_1e7ff35b84ad90021760d5cff9670cba2f524f4b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/cc64970d25ff9f0a8161c2ac3545e8af9da71a14/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="fc3036436defd3070337b7191c50a136ebca7f8f">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_00a8b3550babdc5c0c487c286973eb68c2bcadbb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/eadc7ec397e19b7972235673655039a6f696f6ce/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="9be5e957849eb82ad9addf9bdb2896de8bf5654b">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_d110662f0829c4d35bb1231bef619e5eb7c6cbfa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/libs/dd-plist.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d39b131d5aaf8bf6e53ff8dfd28f5cf2521c6d10">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/2/dd-plist_06a855322f80ee6d32b8126ec1412369e9be0a16/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/9b64b1a85a9f5ea29ef94e8df2ef2c8d67a37250/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c6706cc7c8c3093560edd55d322218afe7798aa9">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_620e077585a142c155fb511dd5d72bbc2aa7837e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/30195c0751c2798a27c97d5b40ba2cbe58d5a7ae/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="5594a368622908d89c47d9a391aa2724fe046c35">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_796bd879f49bd3c319ffec3f8e0a817da1b95d76/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/890c3d8bc9cdc644bd9743165b65e48e41e6e434/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c8bf878c09bf0df6ae76eb6c2df38c6a186b38b7">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_373c270baa00612ccddf6ee0315fa4937bd14d30/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/7b8ee6b60c360047313cf26164f04f9dbabf6e3a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="7c24e2e9773fb498e390ce973db382c3ddcf748e">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_353d30d49c2a90d22428ac1f01721e5aee2405df/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/873a6359de900d924f716669bb4f25900280722b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c72b1515efbd8ad652e2d63582c8234a979b1e53">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_7511616660f2fb20e7582d9984756cfa88aed221/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/a1f27468a12cea25074ef9ee5e2b7cf7e6304f00/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="bfba7cf662f7e3e2cfeb92226c6b84c08e590225">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_7f9b562c87f8576242eea9a55b2465d133c6aafe/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.gradle/caches/modules-2/files-2.1/com.parse/parse-android/1.13.1/5f645bf60e3b88ccc02bd2a4018c5e3ef2f77d0a/parse-android-1.13.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="5f645bf60e3b88ccc02bd2a4018c5e3ef2f77d0a">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/parse-android-1.13.1_e5f9770e0884a9b0c82d6e96077cdca9e4b011c1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/24ac57ffe19e715cf0c84e958fc0073abf22b090/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e7f890dd2539b7f2582f450f0721e2dea6ae510c">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_eed5dff5d874dc87a5757cd03247923cc30a62dc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/a3017b542853eeccf9941fa7e4983b399badaa06/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c175c3009577fad8b433703f5d7ac2dc21d3871f">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_c6c118e1ceb3e77359d5da4f95fbea442e141cf5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/852209153f7aef43e39d89855a5dc2e200fedbc0/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="eea424e61a0c85b93a0e477565314a58136abaea">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_235fba6e65bf8be13d6917ce23d86686c3ef9ad7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/df5b72b4c44b374bc9c8fefed620236f69557d37/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="76ea35b41786082af23db898ca9e0fc07cc71fb9">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_e3757cf5c8165728d95e8031b274ae7a5b4da1f5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/e1d5e822c79e18faed2b2972404fcc8a47a32a68/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="56d68d1174b9c1e368017a850b62b12429f39757">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_540aa70d0b38471506c43d1a0c5f60cbabecb693/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/4e5a435f6230110801c588ea04c74d5270d2ae19/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ffd0ddf5e57b4d60c4a3fbcd38fa20349a0cebd1">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_4d387628d6edbdbbf6575829191b40743fda6c55/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/af5ba1dd020a54710d0c9b822ff004d81a227345/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6b3430725095bd46b785e97bd34240826c27b4db">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_7f4481009a7d467890d579a033860a0b74eb14ae/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/8c8325544618594beebd9e5c6f5539e172d5f1a8/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ebcb0bcf52fab7c586f39717f7cb8de91748b1b1">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_6855fa3861536e484b583d6fc70d26001591b836/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/dcb374f9c1c53a993f1c5d57009b89050ddb1799/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="dd282bdeaa904c59d77e57dedd7e0a241c9b679d">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_a8e130b9c895ea05b3500290454439c2eddab483/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/d295fd27423dd9bb253a883492fd0dfd294ac618/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a5d52089bf4d31537232bb6bcb70cee817d8a374">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_97dae2379b2847945b83ba7087a786d86b94d69d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/e7aa0a609ab6407ad7e0b4b5d48799b3f8d87296/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="377c5f26ebf67f3fa6ef2f663a58cac7ce647dde">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_487c001d525775f08f9ae6d49dca114d336f45d3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/30195c0751c2798a27c97d5b40ba2cbe58d5a7ae/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="5594a368622908d89c47d9a391aa2724fe046c35">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_796bd879f49bd3c319ffec3f8e0a817da1b95d76/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/3f7787a4d342c43939106e4abfa4da3e521de946/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="416fb9ee2fd6e7af0bba04b01d90cb475b1e2074">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_1e7ff35b84ad90021760d5cff9670cba2f524f4b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/7b8ee6b60c360047313cf26164f04f9dbabf6e3a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="7c24e2e9773fb498e390ce973db382c3ddcf748e">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_353d30d49c2a90d22428ac1f01721e5aee2405df/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/873a6359de900d924f716669bb4f25900280722b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c72b1515efbd8ad652e2d63582c8234a979b1e53">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_7511616660f2fb20e7582d9984756cfa88aed221/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/cf2e55a959aa8cc4fd90a97bd5de877f160b55f2/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2c379c235d7983201bb83edfc3c60bb0dafb5805">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_d20aba25fbd5774c7cbf6aa0c5fa28c48706d2d3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/c51e4d536c503d5d25d58a4825c341970a07c4ad/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="02b91f8efa91dcdf5c555ee24b7f006f02cd0f8b">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_d9881a091e814224f180b1be3d7834f6285e0b6b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/e68582b7c472f149d8082e741b9c43aa1ec3ba60/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3ac08c35419ab7cf9146969de471768dbe502f0f">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_822161dfc61baedb33b1a59d01a6de5aea761fae/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/gson-2.7_6c01b4222cf542e119ea5122c337b002cdd619c7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/a1f27468a12cea25074ef9ee5e2b7cf7e6304f00/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="bfba7cf662f7e3e2cfeb92226c6b84c08e590225">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_7f9b562c87f8576242eea9a55b2465d133c6aafe/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/f9377406bd4b52492d21e275b91bad71868a02f5/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c6aa915c08cfd82780c10d4b957018bf819a48e2">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_e71ab32c42d2bd96d54dcceaf44013e9657a38f9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/890c3d8bc9cdc644bd9743165b65e48e41e6e434/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c8bf878c09bf0df6ae76eb6c2df38c6a186b38b7">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_373c270baa00612ccddf6ee0315fa4937bd14d30/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/e68582b7c472f149d8082e741b9c43aa1ec3ba60/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3ac08c35419ab7cf9146969de471768dbe502f0f">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_822161dfc61baedb33b1a59d01a6de5aea761fae/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/a3017b542853eeccf9941fa7e4983b399badaa06/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c175c3009577fad8b433703f5d7ac2dc21d3871f">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_c6c118e1ceb3e77359d5da4f95fbea442e141cf5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/be7641fcc8c31727b82cfbdcb651b4374dfdc3c3/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4b685077cdb08cf7ae8b61afd1fe910e47d91b9a">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_b83d2ac64674c02bbfaad10870a1465b56fe6bc3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/libs/gson-2.2.4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="973e832af433b44c3ed11c426f2f390b29f3f3f8">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/2/gson-2.2.4_7f5bf7e34200154efb2fac5a2900b170174f642c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/df5b72b4c44b374bc9c8fefed620236f69557d37/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="76ea35b41786082af23db898ca9e0fc07cc71fb9">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_e3757cf5c8165728d95e8031b274ae7a5b4da1f5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/dae72882aed9ba9a8c640896bed584234876a9f4/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="1b12397bc9f342b29d9e9108978828f99a6da579">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_fcdbd2508cb4afc4a948c1b99ced243c9e9436fd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/fe075237b5fe70f5ed37cd9cae60c7851555e594/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="f2cb88e7e28736d44e7e643deb80c9af1c3662c8">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_b397c41fd941b630814a0b4b4828a77ff70db186/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/8c8325544618594beebd9e5c6f5539e172d5f1a8/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ebcb0bcf52fab7c586f39717f7cb8de91748b1b1">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_6855fa3861536e484b583d6fc70d26001591b836/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/bf195b9086bcf546d7e4401135519c3fb1ad6339/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="057fb316bed8467398333f30926c2d5506e275b2">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_11f6e100ba5df39c713b625b58763e0c54c33a7b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/imobdev4/.android/build-cache/af5ba1dd020a54710d0c9b822ff004d81a227345/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6b3430725095bd46b785e97bd34240826c27b4db">
+        <dex dex="/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_7f4481009a7d467890d579a033860a0b74eb14ae/classes.dex" />
+    </item>
+
+</items>

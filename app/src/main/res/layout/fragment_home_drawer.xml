@@ -1,0 +1,198 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keepScreenOn="true"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    tools:context="HomeDrawerFragment"
+    style="@style/HomeDrawer"
+    android:translationY="@dimen/home_drawer_translation">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:clickable="false"
+        android:background="@android:color/transparent"
+        android:id="@+id/backgroundOverlay" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_menu_drawer"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imageView" />
+
+    <Button
+        android:id="@+id/homeDrawerToggleButton"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:background="@android:color/transparent"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_centerHorizontal="true"/>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+
+        android:layout_alignRight="@id/imageView"
+        android:layout_alignLeft="@id/imageView"
+        android:layout_centerHorizontal="true"
+
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/homeDrawerToggleButton"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:layout_weight="0.30"
+            android:paddingTop="20dp">
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+            </View>
+
+
+            <Button
+                android:id="@+id/sonarButton"
+                android:text="@string/bottom_menu_sonar"
+                android:layout_width="132dp"
+                android:layout_height="100dp"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/icon_sonar"
+                android:textColor="#000000"/>
+
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+            </View>
+
+            <Button
+                android:id="@+id/waterbedButton"
+                android:text="@string/bottom_menu_waterbed"
+                android:layout_width="132dp"
+                android:layout_height="100dp"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/icon_waterbed"
+                android:textColor="#000000"/>
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+            </View>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:layout_weight="0.30">
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+            </View>
+
+            <Button
+                android:id="@+id/weatherButton"
+                android:layout_width="132dp"
+                android:layout_height="100dp"
+                android:text="@string/bottom_menu_weather"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/icon_weather"
+                android:textColor="#000000"/>
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+            </View>
+
+            <Button
+                android:id="@+id/calendarButton"
+                android:layout_width="132dp"
+                android:layout_height="100dp"
+                android:text="@string/bottom_menu_global_users"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/icon_global_users"
+                android:textColor="#000000"/>
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+            </View>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:paddingTop="10dp"
+            android:gravity="center_horizontal">
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+            </View>
+
+            <Button
+                android:id="@+id/settingsButton"
+                android:layout_height="100dp"
+                android:layout_width="132dp"
+                android:text="@string/bottom_menu_settings"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/icon_settings"
+                android:textColor="#000000"/>
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+            </View>
+
+            <Button
+                android:id="@+id/triplogButton"
+                android:layout_width="132dp"
+                android:layout_height="100dp"
+                android:text="@string/bottom_menu_trip_log"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/icon_triplog"
+                android:textColor="#000000"/>
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+            </View>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
