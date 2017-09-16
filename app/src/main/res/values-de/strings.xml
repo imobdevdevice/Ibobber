@@ -202,4 +202,17 @@
 
   <string name="on">"EIN"</string>
   <string name="off">"AUS"</string>
+    <string name="intro_screen_1">\"So wird iBobber benutzt\"</string>
+  <string name="intro_screen_2">\"Setzen Sie iBobber ins Wasser\"</string>
+  <string name="intro_screen_3">\"In der \\\"Einstellung\\\" wählen Sie \\\"Bluetooth Sync\\\"\"</string>
+  <string name="intro_screen_4">\"Wählen Sie Ihren iBobber. Ihr iBobber ist nun startbereit!\"</string>
+  <string name="intro_screen_5">\"Wechseln Sie zwischen Fisch Markierung oder Echolot\"</string>
+  <string name="intro_screen_6">\"Sehen Sie Tiefe und Größe …\\norange = unter 40 cm\\nGrün = über 40 cm  \"</string>
+  <string name="intro_screen_7">\"...oder Dichte und Echolot Information\"</string>
+  <string name="intro_screen_8">\"Wasserbett Mapping hier\"</string>
+  <string name="intro_screen_9">\"Siehe Gerätestatus-Bedienelemente hier:\\n\\nBattery status, H2O temp, Fish Alarm, Strike Alarm, LED Light\"</string>
+  <string name="intro_screen_10">\"Fügen Sie hier Ihre Reiseaufzeichnung im Trip Log hinzu\"</string>
+  <string name="intro_screen_11">\"Speichern Sie detailierte Reiseaufzeichnungen im Trip Log\"</string>
+  <string name="intro_screen_12">\"Sehen Sie Wetter und andere Konditionen \"</string>
+  <string name="intro_screen_13">\"Sehen Sie wo in der Welt iBobber benutzt wird\"</string>
 </resources>

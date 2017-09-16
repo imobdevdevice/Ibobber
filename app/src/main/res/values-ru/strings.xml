@@ -195,4 +195,17 @@
 
   <string name="on">"ВКЛ"</string>
   <string name="off">"ВЫКЛ"</string>
+    <string name="intro_screen_1">Предлагаем Вам быстрый тур.</string>
+  <string name="intro_screen_2">Опустите iBobber в воду</string>
+  <string name="intro_screen_3">В Настройках нажмите «Bluetooth Sync»\\n«Синхронизация Bluetooth»</string>
+  <string name="intro_screen_4">Выберите Ваш iBobber. Теперь вы готовы!</string>
+  <string name="intro_screen_5">Переключитесь между режимами Fish Tagging & Raw Sonar / Маркировка рыбы & Эхолот</string>
+  <string name="intro_screen_6">Посмотрите на глубину и размеры….\\nОранжевый = менее 40 см\\nЗеленый более 40 см</string>
+  <string name="intro_screen_7">…или плотность и информацию от эхолота</string>
+  <string name="intro_screen_8">Получите карту рельефа дна</string>
+  <string name="intro_screen_9">См. Здесь элементы управления статусом устройства:\\nBattery status, H2O temp, Fish Alarm, Strike Alarm, LED Light</string>
+  <string name="intro_screen_10">Получите карту рельефа дна</string>
+  <string name="intro_screen_11">Сохраните детали в журнале рыбака</string>
+  <string name="intro_screen_12">Посмотрите погоду и другие данные</string>
+  <string name="intro_screen_13">Посмотрите где сейчас используют iBobber в Мире</string>
 </resources>

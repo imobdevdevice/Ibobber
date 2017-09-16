@@ -185,4 +185,17 @@
   <string name="sat">"土"</string>
   <string name="on">"ON"</string>
   <string name="off">"OFF"</string>
+    <string name="intro_screen_1">iBobberの使い方は以下の通りです</string>
+  <string name="intro_screen_2">iBobberを水に入れてください。</string>
+  <string name="intro_screen_3">「設定」で「Bluetooth Sync」をタップ。</string>
+  <string name="intro_screen_4">iBobberを選択すれば準備完了です！</string>
+  <string name="intro_screen_5">フィッシュタグ＆生ソナーの切り替えが出来ます</string>
+  <string name="intro_screen_6">見れる深さとサイズ...\\nオレンジ= 15インチ以下\\n緑色= 15インチ以上</string>
+  <string name="intro_screen_7">...または密度とソナー生情報</string>
+  <string name="intro_screen_8">水下地形マップはこちら</string>
+  <string name="intro_screen_9">ここではデバイス状態制御要素を参照してください:\\n\\nBattery status, H2O temp, Fish Alarm, Strike Alarm, LED Light</string>
+  <string name="intro_screen_10">ここで旅行記録にスポットを追加</string>
+  <string name="intro_screen_11">旅行記録で詳細な記録が保存できます</string>
+  <string name="intro_screen_12">天気などの情報が見れます</string>
+  <string name="intro_screen_13">世界のどこでiBobbersが使用されているか見る</string>
 </resources>

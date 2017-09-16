@@ -1,14 +1,22 @@
 package com.reelsonar.ibobber;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.util.Base64;
 import android.util.Log;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.reelsonar.ibobber.sonar.SonarLiveActivity;
 import com.reelsonar.ibobber.util.AppUtils;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 /**
  * Created by Manoj Singh
@@ -23,6 +31,7 @@ public class SplashActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         String deviceToken = AppUtils.getDeviceId(getApplicationContext());
+        printHashKey(this);
         if (FirebaseInstanceId.getInstance().getToken() != null)
             Log.d("User Token ", deviceToken + " , Device token :" + FirebaseInstanceId.getInstance().getToken());
         else
@@ -47,22 +56,22 @@ public class SplashActivity extends BaseActivity {
         }
     };
 
-//    public void printHashKey(Context pContext) {
-//        try {
-//            PackageInfo info = getPackageManager().getPackageInfo(
-//                    "com.reelsonar.ibobber",
-//                    PackageManager.GET_SIGNATURES);
-//            for (Signature signature : info.signatures) {
-//                MessageDigest md = MessageDigest.getInstance("SHA");
-//                md.update(signature.toByteArray());
-//                Log.d("KeyHash:", Base64.encodeToString(md.digest(), Base64.DEFAULT));
-//            }
-//        } catch (PackageManager.NameNotFoundException e) {
-//
-//        } catch (NoSuchAlgorithmException e) {
-//
-//        }
-//    }
+    public void printHashKey(Context pContext) {
+        try {
+            PackageInfo info = getPackageManager().getPackageInfo(
+                    "com.reelsonar.ibobber",
+                    PackageManager.GET_SIGNATURES);
+            for (Signature signature : info.signatures) {
+                MessageDigest md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                Log.d("KeyHash:", Base64.encodeToString(md.digest(), Base64.DEFAULT));
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+
+        } catch (NoSuchAlgorithmException e) {
+
+        }
+    }
 
 
 }

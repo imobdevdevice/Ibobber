@@ -4,14 +4,13 @@ package com.reelsonar.ibobber.settings;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.os.Debug;
 import android.os.Handler;
-import android.os.Looper;
-import android.util.Log;
 import android.widget.ListView;
+
 import com.reelsonar.ibobber.R;
 import com.reelsonar.ibobber.bluetooth.BTFirmwareUpdateProfile;
 import com.reelsonar.ibobber.bluetooth.BTService;
+
 import de.greenrobot.event.EventBus;
 
 

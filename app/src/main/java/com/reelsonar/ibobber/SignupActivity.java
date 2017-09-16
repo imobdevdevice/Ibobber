@@ -32,6 +32,7 @@ import static com.reelsonar.ibobber.util.RestConstants.DEVICE_TOKEN;
 import static com.reelsonar.ibobber.util.RestConstants.DEVICE_TYPE;
 import static com.reelsonar.ibobber.util.RestConstants.EMAIL;
 import static com.reelsonar.ibobber.util.RestConstants.FIRST_NAME;
+import static com.reelsonar.ibobber.util.RestConstants.LANGUAGE_CODE;
 import static com.reelsonar.ibobber.util.RestConstants.LAST_NAME;
 import static com.reelsonar.ibobber.util.RestConstants.PASSWORD;
 import static com.reelsonar.ibobber.util.RestConstants.UNIQUE_TOKEN;
@@ -144,6 +145,7 @@ public class SignupActivity extends BaseActivity {
                     registerParams.put(USERTYPE, "1");
                     registerParams.put(UNIQUE_TOKEN, AppUtils.getDeviceId(SignupActivity.this));
                     registerParams.put(DEVICE_TOKEN, gcmToken);
+                    registerParams.put(LANGUAGE_CODE, "en");
                 } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
                     e.printStackTrace();
                 }

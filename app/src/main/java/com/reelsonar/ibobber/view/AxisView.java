@@ -3,27 +3,29 @@
 package com.reelsonar.ibobber.view;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Rect;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
+
+import com.reelsonar.ibobber.R;
 
 public class AxisView extends View {
 
-    private static final float MAJOR_TIC_LENGTH = 30;
-    private static final float _MAJOR_TIC_LENGTH = -30;
-    private static final float MINOR_TIC_LENGTH = 20;
-
+    private static float MAJOR_TIC_LENGTH = 10;
+    private static float _MAJOR_TIC_LENGTH = -30;
+    private static float MINOR_TIC_LENGTH = 5;
     private int _numOfTicks = 10;
     private int _widthOverride = 0;
     private int _maxValue = 0;
     private int _prevMaxValue = 0;
 
     private float _pxPerDip = getContext().getResources().getDisplayMetrics().density;
+    private Resources resource;
 
 
     public AxisView(Context context) {
@@ -41,12 +43,17 @@ public class AxisView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+//        MAJOR_TIC_LENGTH *= _pxPerDip;
+//        MINOR_TIC_LENGTH *= _pxPerDip;
+
+        resource = getContext().getResources();
+        MAJOR_TIC_LENGTH = resource.getDimension(R.dimen._5sdp);
+        MINOR_TIC_LENGTH = resource.getDimension(R.dimen._3sdp);
 
         if (getHeight() > getWidth()) {
             drawVerticalAxis(canvas);
         } else {
             drawHorizontalAxis(canvas);
-
         }
     }
 
@@ -101,7 +108,6 @@ public class AxisView extends View {
         paint.setFakeBoldText(true);
 
         Rect textBounds = new Rect();
-        Log.d("axis", " == " + axisX + " -- " + height);
         Path path = new Path();
         path.moveTo(axisX, 0);
         path.lineTo(axisX, height);
@@ -138,7 +144,6 @@ public class AxisView extends View {
             if (i + 1 <= _numOfTicks) {
                 path.moveTo(minorTicX, ticY);
                 path.lineTo(axisX, ticY);
-
                 ticY += ticSpace;
             }
         }
@@ -147,15 +152,15 @@ public class AxisView extends View {
     }
 
     private void drawHorizontalAxis(Canvas canvas) {
+
         float width = Math.max(getWidth(), _widthOverride);
         float visibleWidth = Math.min(getWidth(), _widthOverride);
 
-//        Paint tempPaint = new Paint();
-//        tempPaint.setColor(Color.RED);
+        Paint tempPaint = new Paint();
+        tempPaint.setColor(Color.RED);
 //        canvas.drawRect(0, 0, getWidth(), getHeight(), tempPaint);
-
+        float middleHeight = getHeight() / 2;
         Paint paint = new Paint();
-
         paint.setColor(Color.WHITE);
 
         //        if (UserService.SUNLIGHT_TEST) {
@@ -167,11 +172,11 @@ public class AxisView extends View {
         paint.setStyle(Paint.Style.STROKE);
         paint.setTextSize(13.0f * _pxPerDip);
         paint.setFakeBoldText(true);
-        paint.setStrokeWidth(6f);
+        paint.setStrokeWidth(resource.getDimension(R.dimen._1sdp));
         Rect textBounds = new Rect();
         Path path = new Path();
-        path.moveTo(0, getHeight() / 2);
-        path.lineTo(width, getHeight() / 2);
+        path.moveTo(0, middleHeight);
+        path.lineTo(visibleWidth, middleHeight);
 
         canvas.drawPath(path, paint);
         path.reset();
@@ -180,11 +185,11 @@ public class AxisView extends View {
 
         float ticX = 0.f;
         float ticSpace = ((width - 1.f) / (float) _numOfTicks) / 2.f; // width - 1 to account for the 0th tic.
-        float initialHeight = getHeight() / 2;
+        int reverseCount = _numOfTicks;
         for (int i = 0; i <= _numOfTicks; ++i) {
             // For vertical Line
-            path.moveTo(ticX, initialHeight);
-            path.lineTo(ticX, initialHeight + MAJOR_TIC_LENGTH);
+            path.moveTo(ticX, middleHeight);
+            path.lineTo(ticX, middleHeight + MAJOR_TIC_LENGTH);
             canvas.drawPath(path, paint);
             path.reset();
 
@@ -193,22 +198,44 @@ public class AxisView extends View {
                 String depthText = String.valueOf(depth);
                 paint.getTextBounds(depthText, 0, depthText.length(), textBounds);
 
-                if (ticX < width) {
+                if (ticX < visibleWidth) {
                     float textX = ticX;
                     if (textX + textBounds.width() > width) {
                         textX -= textBounds.width() + 6.f;
                     } else if (i > 0) {
                         textX -= (textBounds.width() / 2.f);
                     }
-                    canvas.drawText(depthText, textX, initialHeight + MAJOR_TIC_LENGTH + textBounds.height() + 6.f, paint);
+                    canvas.drawText(depthText, textX, middleHeight + MAJOR_TIC_LENGTH + textBounds.height() + 6.f, paint);
+
+                    Paint reversePaint = new Paint();
+                    reversePaint.setStyle(Paint.Style.STROKE);
+                    reversePaint.setTextSize(13.0f * _pxPerDip);
+                    reversePaint.setFakeBoldText(true);
+                    reversePaint.setColor(Color.argb(255, 228, 82, 9));
+                    int reverseDepth = Math.round(reverseCount * distanceBetweenTicks);
+                    String revDepthText = String.valueOf(reverseDepth);
+                    canvas.drawText(revDepthText, textX, 30, reversePaint);
+                    if (reverseCount > 0) {
+                        reverseCount--;
+                    }
+//                    Rect revBound = new Rect();
+//
+//                    paint.getTextBounds(revDepthText, 0, revDepthText.length(), revBound);
+//                    float revTextX = ticX;
+//                    if (revTextX + revBound.width() > width) {
+//                        revTextX -= revBound.width() + 6.f;
+//                    } else if (i > 0) {
+//                        revTextX -= (revBound.width() / 2.f);
+//                    }
+//                    canvas.drawText(revDepthText, revTextX, 0, paint);
                 }
             }
 
             ticX += ticSpace;
 
             if (i + 1 <= _numOfTicks) {
-                path.moveTo(ticX, initialHeight);
-                path.lineTo(ticX, initialHeight + MINOR_TIC_LENGTH);
+                path.moveTo(ticX, middleHeight);
+                path.lineTo(ticX, middleHeight + MINOR_TIC_LENGTH);
                 canvas.drawPath(path, paint);
                 path.reset();
 

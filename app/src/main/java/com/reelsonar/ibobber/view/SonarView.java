@@ -133,7 +133,7 @@ public class SonarView extends RelativeLayout {
         _distanceAxisView = new AxisView(getContext());
         _distanceAxisView.setId(View.generateViewId());
         _distanceAxisView.setVisibility(View.INVISIBLE);
-        LayoutParams distanceParams = new LayoutParams(LayoutParams.WRAP_CONTENT, _bottomMargin + 1);
+        LayoutParams distanceParams = new LayoutParams(LayoutParams.WRAP_CONTENT, (int) getContext().getResources().getDimension(R.dimen._40sdp));
         distanceParams.addRule(RIGHT_OF, _depthAxisView.getId());
 //        distanceParams.bottomMargin = (_bottomMargin + 1) / 2;
         distanceParams.addRule(ALIGN_PARENT_RIGHT);
@@ -148,15 +148,7 @@ public class SonarView extends RelativeLayout {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-
-//                LayoutParams distanceParams = new LayoutParams(LayoutParams.WRAP_CONTENT, _bottomMargin + 1);
-//                distanceParams.addRule(RIGHT_OF, _depthAxisView.getId());
-//                distanceParams.bottomMargin = (_distanceAxisView.getHeight()) / 2;
-//                distanceParams.addRule(ALIGN_PARENT_RIGHT);
-//                distanceParams.addRule(ALIGN_PARENT_BOTTOM);
-
                 float y = ((_depthAxisView.getY() + _depthAxisView.getHeight()) - (_distanceAxisView.getHeight() / 2));
-//                float y = (_distanceAxisView.getY()-(_distanceAxisView.getHeight()/2));
                 _distanceAxisView.setY(y);
             }
         }, 1000);

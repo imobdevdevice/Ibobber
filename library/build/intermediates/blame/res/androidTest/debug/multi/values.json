@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/library/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
+        "outputFile": "/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/library/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/library/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 164
                 },
                 "from": {
-                    "file": "/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/library/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -49,7 +49,7 @@
                     "endOffset": 217
                 },
                 "from": {
-                    "file": "/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/library/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -68,7 +68,7 @@
                     "endOffset": 271
                 },
                 "from": {
-                    "file": "/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/library/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -87,7 +87,7 @@
                     "endOffset": 324
                 },
                 "from": {
-                    "file": "/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/library/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -107,7 +107,7 @@
                     "endOffset": 615
                 },
                 "from": {
-                    "file": "/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/library/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -128,7 +128,7 @@
                     "endOffset": 775
                 },
                 "from": {
-                    "file": "/home/imobdev4/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/library/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,

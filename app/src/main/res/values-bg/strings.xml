@@ -289,6 +289,19 @@
     <string name="action_settings">Настройки</string>
     <string name="title_activity_image_display">Trip Log Photo</string>
     <string name="title_activity_share">Fishidy</string>
+    <string name="intro_screen_1">\"Ето как да използвате iBobber\"</string>
+    <string name="intro_screen_2">\"Поставете iBobber във вода\"</string>
+    <string name="intro_screen_3">\"От „Настройки” натиснете „Блутут Синхронизация”\"</string>
+    <string name="intro_screen_4">\"\"Изберете Вашия iBobber. Вече сте готови!\"\"</string>
+    <string name="intro_screen_5">\"Превключвайте между Отбелязване на риба и Хидролокатор\"</string>
+    <string name="intro_screen_6">\"Следете дълбочината и размера Оранжево = под 38 см Зелено = над 38 см\"</string>
+    <string name="intro_screen_7">\"…или плътността и информацията от хидролокатора\"</string>
+    <string name="intro_screen_8">\"Тук е картата на подводния терен\"</string>
+    <string name="intro_screen_9">\"Вижте тук елементите за управление на състоянието на устройството:\\n\\nBattery status, H2O temp, Fish Alarm, Strike Alarm, LED Light\"</string>
+    <string name="intro_screen_10">\"Добавете мястото, където искате да отидете, регистрирано тук\"</string>
+    <string name="intro_screen_11">\"Запазвайте детайлни записи с Регистрирай място\"</string>
+    <string name="intro_screen_12">\"Вижте времето и другите условия\"</string>
+    <string name="intro_screen_13">\"Вижте къде по света може да се използва iBobbers\"</string>
 
 
 </resources>

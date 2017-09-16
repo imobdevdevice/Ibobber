@@ -158,9 +158,11 @@ public abstract class SonarActivity extends BaseActivity implements CommandFragm
                 != PackageManager.PERMISSION_GRANTED || ContextCompat.checkSelfPermission(this,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) {
+
             // Should we show an explanation?
             if (ActivityCompat.shouldShowRequestPermissionRationale(this,
                     Manifest.permission.ACCESS_COARSE_LOCATION)) {
+
                 // Show an explanation to the user *asynchronously* -- don't block
                 // this thread waiting for the user's response! After the user
                 // sees the explanation, try again to request the permission.
@@ -686,12 +688,14 @@ public abstract class SonarActivity extends BaseActivity implements CommandFragm
         float distanceAxisWidth = pixelsPerUnitOfMeasurement * (float) distanceRounded;
 
         _sonarView.getDistanceAxisView().setWidthOverride(Math.round(distanceAxisWidth));
-        _sonarView.getDistanceAxisView().setMaxValue(distanceRounded);
+//        _sonarView.getDistanceAxisView().setVisibility(View.VISIBLE);
+//        _sonarView.getDistanceAxisView().setMaxValue(distanceRounded);
         _sonarView.getDistanceAxisView().setVisibility(View.VISIBLE);
+        _sonarView.getDistanceAxisView().setMaxValue(10);
 
-        _sonarView.getNewAxisView().setWidthOverride(Math.round(distanceAxisWidth));
-        _sonarView.getNewAxisView().setMaxValue(distanceRounded);
-        _sonarView.getNewAxisView().setVisibility(View.VISIBLE);
+//        _sonarView.getNewAxisView().setWidthOverride(Math.round(distanceAxisWidth));
+//        _sonarView.getNewAxisView().setMaxValue(distanceRounded);
+//        _sonarView.getNewAxisView().setVisibility(View.VISIBLE);
 
         _sonarView.setMaxDataFrames(captured.size());
         _sonarView.setSonarData(captured);

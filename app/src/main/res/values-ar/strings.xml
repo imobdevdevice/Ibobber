@@ -197,4 +197,17 @@
 
   <string name="on">"تفعيل"</string>
   <string name="off">"تعطيل"</string>
+  <string name="intro_screen_1">\"فيما يلي كيفية استخدام iBobber\"</string>
+  <string name="intro_screen_2">\"ضع iBobber في بعض الماء\"</string>
+  <string name="intro_screen_3">\"في الاعدادات اضغط على Bluetooth Sync\"</string>
+  <string name="intro_screen_4">\"حدد  iBobber الخاص بك. الآن أنت جاهز!\"</string>
+  <string name="intro_screen_5">\"بدل بين توصيف الأسماك وسونار Raw\"</string>
+  <string name="intro_screen_6">\"انظر العمق الحجم ...البرتقال = تحت 15 \\\"أخضر = أكثر من 15 \\\"\"</string>
+  <string name="intro_screen_7">\"... أو الكثافة ومعلومات سونار Raw\"</string>
+  <string name="intro_screen_8">\"اعمل هنا خريطة تحت الأراضي\"</string>
+  <string name="intro_screen_9">\"اطلع هنا على عناصر التحكم في حالة الجهاز:\\n\\nBattery status, H2O temp, Fish Alarm, Strike Alarm, LED Light\"</string>
+  <string name="intro_screen_10">" \"إضافة نقاط سجل الرحلة هنا\""</string>
+  <string name="intro_screen_11">\"الاحتفاظ بسجلات مفصلة مع سجل الرحلة\"</string>
+  <string name="intro_screen_12">\"معرفة الطقس وغيرها من الشروط\"</string>
+  <string name="intro_screen_13">\"انظر أي مكان في العالم iBobbers قيد الاستخدام\"</string>
 </resources>

@@ -262,6 +262,19 @@
     <string name="google_maps_key" templateMergeStrategy="preserve">AIzaSyBYMOSFJErEajXeA79Mr2x2kynkyEK7YJo</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="intro_screen_1">Here\'s how to use \\\"iBobber\\\"</string>
+    <string name="intro_screen_2">Place iBobber in some water</string>
+    <string name="intro_screen_3">In \\\"Settings\\\" tap \\\"Bluetooth Sync\\\"</string>
+    <string name="intro_screen_4">Select your iBobber\\nNow you\'re ready!</string>
+    <string name="intro_screen_5">Switch between Fish Tagging &amp; Raw Sonar</string>
+    <string name="intro_screen_6">See depth and size ...\\n Orange = under 15\\\"\\nGreen = over 15\\\"</string>
+    <string name="intro_screen_7">...or density and raw sonar info</string>
+    <string name="intro_screen_8">Map underwater terrain here</string>
+    <string name="intro_screen_9">See device status controls here:\\n\\nBattery status, H2O temp, Fish Alarm, Strike Alarm, LED Light</string>
+    <string name="intro_screen_10">Add a spot to trip log here</string>
+    <string name="intro_screen_11">Keep detailed records with the Trip Log</string>
+    <string name="intro_screen_12">See weather and other conditions</string>
+    <string name="intro_screen_13">See where in the world iBobbers are in use</string>
 
 </resources>
 

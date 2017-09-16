@@ -3,21 +3,36 @@ Minor task :
 * Login and register shared preference data store
 * Validation
 * Progress Bar
-* Logout
 * understand code for Parse api
-* Create Trip Log Entry
-* Dynamic permission in Sonar Activity -- done
 
 Change :
 Store data into db on  Get Catch api ,
 
 
-Remaining :
-Logout nu function as per social media
+Testing :
+Catch creation flow
 Database new fields add on upgrade method
 Remove 2 time ads on every trip log catch
 
-Confusion points :
-Get catches api not returns : lat , lng ,
+Remaiaing :
+
+1) On boaurding
+2) App Icon and Logo and splash design
+3) Perfection in axis view
+4) Tracking Link
+5) Test when user update the app
+6) App Tour Back Next Done button text in all language
+
+
+
+
+Confusion :
+
+1)
+            if (_mode != Mode.EXPLORE
+                    && _bobberOutOfWaterCount >= BOBBER_OUT_OF_WATER_THRESHOLD
+                    && BTService.getSingleInstance().getConnectedToDevice()) {
+
+                _sonarView.clear();
 
 

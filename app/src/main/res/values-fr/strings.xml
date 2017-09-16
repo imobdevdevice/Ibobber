@@ -202,4 +202,17 @@
 
   <string name="on">"ALLUME"</string>
   <string name="off">"ETEINT"</string>
+    <string name="intro_screen_1">Comment utiliser iBobber</string>
+  <string name="intro_screen_2">Mettez iBobber dans l\'eau</string>
+  <string name="intro_screen_3">Dans \\\"Paramètres\\\", appuyez sur \\\"Synchronisation Bluetooth\\\"</string>
+  <string name="intro_screen_4">Sélectionnez votre iBobber. Voila, vous êtes prêt!</string>
+  <string name="intro_screen_5">Allez entre \'marquage des poissons\' et \'sonar\'</string>
+  <string name="intro_screen_6">Trouvez la profondeur et la taille …\\nOrange = moins de 38cm\\nVert = plus de 38cm</string>
+  <string name="intro_screen_7">... ou la densité et les informations sonar</string>
+  <string name="intro_screen_8">Regarder le terrain sous-marin</string>
+  <string name="intro_screen_9">Voir les contrôles d\'état du périphérique ici:\\n\\nBattery status, H2O temp, Fish Alarm, Strike Alarm, LED Light</string>
+  <string name="intro_screen_10">Ajouter un endroit dans votre Journal de Voyage</string>
+  <string name="intro_screen_11">Gardez des enregistrements détaillés avec le Journal de Voyage</string>
+  <string name="intro_screen_12">Regarder la météo et autres conditions</string>
+  <string name="intro_screen_13">Regarder où dans le monde d\'autres iBobbers sont utilisés</string>
 </resources>

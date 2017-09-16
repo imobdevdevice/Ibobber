@@ -6,25 +6,43 @@ import android.content.Context;
 import android.location.Location;
 import android.os.SystemClock;
 import android.util.Log;
-import com.hamweather.aeris.communication.*;
-import com.hamweather.aeris.communication.loaders.*;
+
+import com.hamweather.aeris.communication.AerisCallback;
+import com.hamweather.aeris.communication.AerisCommunicationTask;
+import com.hamweather.aeris.communication.AerisEngine;
+import com.hamweather.aeris.communication.AerisRequest;
+import com.hamweather.aeris.communication.Endpoint;
+import com.hamweather.aeris.communication.EndpointType;
+import com.hamweather.aeris.communication.loaders.ForecastsTask;
+import com.hamweather.aeris.communication.loaders.ForecastsTaskCallback;
+import com.hamweather.aeris.communication.loaders.ObservationsTask;
+import com.hamweather.aeris.communication.loaders.ObservationsTaskCallback;
+import com.hamweather.aeris.communication.loaders.TidesTask;
+import com.hamweather.aeris.communication.loaders.TidesTaskCallback;
 import com.hamweather.aeris.communication.parameter.ParameterBuilder;
 import com.hamweather.aeris.communication.parameter.PlaceParameter;
-import com.hamweather.aeris.model.*;
+import com.hamweather.aeris.model.AerisDataJSON;
+import com.hamweather.aeris.model.AerisError;
+import com.hamweather.aeris.model.AerisLocation;
+import com.hamweather.aeris.model.AerisResponse;
+import com.hamweather.aeris.model.ForecastPeriod;
+import com.hamweather.aeris.model.Observation;
+import com.hamweather.aeris.model.TidesPeriod;
 import com.hamweather.aeris.response.ForecastsResponse;
 import com.hamweather.aeris.response.ObservationResponse;
 import com.hamweather.aeris.response.TidesResponse;
 import com.reelsonar.ibobber.R;
 import com.reelsonar.ibobber.service.LocationService;
-import de.greenrobot.event.EventBus;
 
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import de.greenrobot.event.EventBus;
+
 public class WeatherService {
-    
+
     private static final String TAG = WeatherService.class.getSimpleName();
 
     private static final long UPDATE_INTERVAL_MS = TimeUnit.MINUTES.toMillis(5);
@@ -74,7 +92,9 @@ public class WeatherService {
         return _eventBus.getStickyEvent(SunMoonData.class);
     }
 
-    public Boolean getIsLocationAvailable() { return _locationAvailable;}
+    public Boolean getIsLocationAvailable() {
+        return _locationAvailable;
+    }
 
     public void onEventMainThread(final Location location) {
         long now = SystemClock.uptimeMillis();
@@ -97,8 +117,7 @@ public class WeatherService {
                 loadSunMoon(aerisLocation);
                 loadTides(place);
             }
-        }
-        else {
+        } else {
             _locationAvailable = false;
 
         }
@@ -106,8 +125,7 @@ public class WeatherService {
 
     private void loadObservations(final PlaceParameter place,
                                   final WeatherData weatherData,
-                                  final AtomicInteger countDown)
-    {
+                                  final AtomicInteger countDown) {
         ObservationsTask task = new ObservationsTask(_context, new ObservationsTaskCallback() {
 
             @Override
@@ -120,7 +138,7 @@ public class WeatherService {
                 ObservationResponse obResponse = responses.get(0);
                 Observation ob = obResponse.getObservation();
 
-                if ( ob != null ) {
+                if (ob != null) {
                     weatherData.setTempF(ob.tempF);
                     weatherData.setTempC(ob.tempC);
                     weatherData.setWindSpeedMPH(ob.windSpeedMPH);
@@ -130,8 +148,8 @@ public class WeatherService {
                     weatherData.setPressureMB(ob.pressureMB);
                     weatherData.setWeatherCode(ob.weatherCoded);
                     weatherData.setCloudCode(ob.cloudsCoded);
-                    weatherData.setCardinalWindDirection( ob.windDir );
-                    if( ob.icon != null) {
+                    weatherData.setCardinalWindDirection(ob.windDir);
+                    if (ob.icon != null) {
                         int pos = ob.icon.indexOf(".");
                         weatherData.setIcon(ob.icon.substring(0, pos));
                     }
@@ -149,11 +167,9 @@ public class WeatherService {
     }
 
 
-
     private void loadForecast(final PlaceParameter place,
                               final WeatherData weatherData,
-                              final AtomicInteger countDown)
-    {
+                              final AtomicInteger countDown) {
         ForecastsTask forecastsTask = new ForecastsTask(_context, new ForecastsTaskCallback() {
 
             @Override
@@ -165,7 +181,7 @@ public class WeatherService {
             public void onForecastsLoaded(List<ForecastsResponse> fResponse) {
                 ForecastsResponse fRes = fResponse.get(0);
 
-                if ( fRes != null ) {
+                if (fRes != null) {
                     ForecastPeriod fp = fRes.getPeriod(0);
 
                     if (fp != null) {
@@ -188,8 +204,7 @@ public class WeatherService {
         forecastsTask.requestClosest(place);
     }
 
-     private void loadTides(final PlaceParameter place)
-    {
+    private void loadTides(final PlaceParameter place) {
         TidesTask tidesTask = new TidesTask(_context, new TidesTaskCallback() {
 
             @Override
@@ -201,7 +216,7 @@ public class WeatherService {
             public void onTidesLoaded(List<TidesResponse> tResponse) {
                 TidesResponse tRes = tResponse.get(0);
 
-                if ( tRes != null ) {
+                if (tRes != null) {
 
                     TideData tideData = new TideData();
 
@@ -209,22 +224,22 @@ public class WeatherService {
                     Date lowTideDate = null;
 
                     Float highTide = Float.MIN_VALUE;
-                    Float lowTide  = Float.MAX_VALUE;
+                    Float lowTide = Float.MAX_VALUE;
 
-                    for( TidesPeriod tp : tRes.getPeriods()) {
-                        if(tp.heightM.floatValue() > highTide ) {
+                    for (TidesPeriod tp : tRes.getPeriods()) {
+                        if (tp.heightM.floatValue() > highTide) {
                             highTide = tp.heightM.floatValue();
-                            highTideDate = new Date( tp.timestamp.longValue() * 1000 );
+                            highTideDate = new Date(tp.timestamp.longValue() * 1000);
                         }
-                        if(tp.heightM.floatValue() < lowTide ) {
+                        if (tp.heightM.floatValue() < lowTide) {
                             lowTide = tp.heightM.floatValue();
-                            lowTideDate = new Date( tp.timestamp.longValue() * 1000 );
+                            lowTideDate = new Date(tp.timestamp.longValue() * 1000);
                         }
                     }
-                    tideData.setmHighTideDate( highTideDate );
-                    tideData.setmHighTide( highTide );
-                    tideData.setmLowTideDate( lowTideDate );
-                    tideData.setmLowTide( lowTide );
+                    tideData.setmHighTideDate(highTideDate);
+                    tideData.setmHighTide(highTide);
+                    tideData.setmLowTideDate(lowTideDate);
+                    tideData.setmLowTide(lowTide);
                     _eventBus.postSticky(tideData);
                 }
             }
@@ -260,16 +275,20 @@ public class WeatherService {
 
                         //have seen issues where moon data exists - but set is null
                         if (smResponse.sun != null) {
-                            if (smResponse.sun.rise != null) sunMoonData.setSunrise(smResponse.sun.rise.longValue());
+                            if (smResponse.sun.rise != null)
+                                sunMoonData.setSunrise(smResponse.sun.rise.longValue());
                             sunMoonData.setSunriseISO(smResponse.sun.riseISO);
-                            if (smResponse.sun.set != null) sunMoonData.setSunset(smResponse.sun.set.longValue());
+                            if (smResponse.sun.set != null)
+                                sunMoonData.setSunset(smResponse.sun.set.longValue());
                             sunMoonData.setSunsetISO(smResponse.sun.setISO);
                         }
 
                         if (smResponse.moon != null) {
-                            if (smResponse.moon.rise != null) sunMoonData.setMoonRise(smResponse.moon.rise.longValue());
+                            if (smResponse.moon.rise != null)
+                                sunMoonData.setMoonRise(smResponse.moon.rise.longValue());
                             sunMoonData.setMoonRiseISO(smResponse.moon.riseISO);
-                            if (smResponse.moon.set != null) sunMoonData.setMoonSet(smResponse.moon.set.longValue());
+                            if (smResponse.moon.set != null)
+                                sunMoonData.setMoonSet(smResponse.moon.set.longValue());
                             sunMoonData.setMoonSetISO(smResponse.moon.setISO);
                         }
 
@@ -283,6 +302,7 @@ public class WeatherService {
     }
 
     private static double MOON_PHASE_LENGTH = 29.530588853;
+
     public static double moonPhaseForDate(int day, int month, int year) {
 
         double transformedYear = year - Math.floor((12.0 - (double) month) / 10.0);

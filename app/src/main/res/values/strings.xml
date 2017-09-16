@@ -23,13 +23,13 @@
     <string name="bottom_menu_trip_log">"Trip Log"</string>
     <string name="button_done">"Done"</string>
     <string name="button_cancel">"Cancel"</string>
-    <string name="button_back">"BACK"</string>
     <string name="button_done_uppercase">"DONE"</string>
     <string name="button_ok">"OK"</string>
     <string name="button_cancel_uppercase">"CANCEL"</string>
     <string name="button_register">"REGISTER"</string>
     <string name="button_update_user">"UPDATE USER"</string>
     <string name="button_skip">"Skip"</string>
+    <string name="button_back">"Back"</string>
     <string name="button_next">"Next"</string>
     <string name="cast_command_title">"CAST iBOBBER"</string>
     <string name="cast_command_detail">"Press OK when ready to map."</string>
@@ -446,5 +446,81 @@
     <string name="netfish">NetFish</string>
     <string name="netfish_catch_created">New netfish catch created.</string>
 
+    <integer-array name="intro_screens">
+        <item>@drawable/screen_2</item>
+        <item>@drawable/screen_3</item>
+        <item>@drawable/screen_4</item>
+        <item>@drawable/screen_5</item>
+        <item>@drawable/screen_6</item>
+        <item>@drawable/screen_7</item>
+        <item>@drawable/screen_8</item>
+        <item>@drawable/screen_9</item>
+        <item>@drawable/screen_10</item>
+        <item>@drawable/screen_11</item>
+        <item>@drawable/screen_12</item>
+        <item>@drawable/screen_13</item>
+        <item>@drawable/screen_14</item>
+    </integer-array>
 
+    <string name="intro_screen_1">Here\'s how to use \"iBobber\"</string>
+    <string name="intro_screen_2">Place iBobber in some water</string>
+    <string name="intro_screen_3">In \"Settings\" tap \"Bluetooth Sync\"</string>
+    <string name="intro_screen_4">Select your iBobber\nNow you\'re ready\!</string>
+    <string name="intro_screen_5">Switch between Fish Tagging &amp; Raw Sonar</string>
+    <string name="intro_screen_6">See depth and size …\n Orange = under 15\"\nGreen = over 15\"</string>
+    <string name="intro_screen_7">…or density and raw sonar info</string>
+    <string name="intro_screen_8">Map underwater terrain here</string>
+    <string name="intro_screen_9">See device status controls here:\n\nBattery status, H2O temp, Fish Alarm, Strike Alarm, LED Light"</string>
+    <string name="intro_screen_10">Add a spot to trip log here</string>
+    <string name="intro_screen_11">Keep detailed records with the Trip Log</string>
+    <string name="intro_screen_12">See weather and other conditions</string>
+    <string name="intro_screen_13">See where in the world iBobbers are in use</string>
+
+    <string-array name="intro_screens_text">
+        <item>@string/intro_screen_1</item>
+        <item>@string/intro_screen_2</item>
+        <item>@string/intro_screen_3</item>
+        <item>@string/intro_screen_4</item>
+        <item>@string/intro_screen_5</item>
+        <item>@string/intro_screen_6</item>
+        <item>@string/intro_screen_7</item>
+        <item>@string/intro_screen_8</item>
+        <item>@string/intro_screen_9</item>
+        <item>@string/intro_screen_10</item>
+        <item>@string/intro_screen_11</item>
+        <item>@string/intro_screen_12</item>
+        <item>@string/intro_screen_13</item>
+    </string-array>
+
+    <string-array name="intro_screens_title">
+        <item></item>
+        <item>1.</item>
+        <item>2.</item>
+        <item>3.</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <integer-array name="intro_selected_number">
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </integer-array>
 </resources>

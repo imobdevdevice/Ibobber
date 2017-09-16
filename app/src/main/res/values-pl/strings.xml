@@ -205,5 +205,18 @@
 
     <string name="on">"ON"</string>
     <string name="off">"OFF"</string>
+    <string name="intro_screen_1">jak uzywac iBoober</string>
+    <string name="intro_screen_2">Umiesc iBoober w wodzie.</string>
+    <string name="intro_screen_3">W ustawieniach ustaw synchronizacja bluetooth.</string>
+    <string name="intro_screen_4">Wybierz Twoj iBoober.Gotowe!</string>
+    <string name="intro_screen_5">Polacz miedzy znakowaniem ryb I sonarem</string>
+    <string name="intro_screen_6">Ustaw glebokosc I wymiary…\\nPomaranczowy-ponizej 15,\\nZielony-Powyzej 40cm</string>
+    <string name="intro_screen_7">…lub przeznaczenie surowego sonara.</string>
+    <string name="intro_screen_8">Mapa terenow podwodnych tutaj</string>
+    <string name="intro_screen_9">Zobacz tutaj elementy kontroli stanu urządzenia:\\n\\nBattery status, H2O temp, Fish Alarm, Strike Alarm, LED Light</string>
+    <string name="intro_screen_10">Dodaj miejsce do logowania tutaj</string>
+    <string name="intro_screen_11">Zachowaj detele nagrywania do tej przygody</string>
+    <string name="intro_screen_12">Sprawdz pogode I inne warunki</string>
+    <string name="intro_screen_13">Sprawdz gdzie na swiecie uzywany jest iBoober</string>
 
 </resources>

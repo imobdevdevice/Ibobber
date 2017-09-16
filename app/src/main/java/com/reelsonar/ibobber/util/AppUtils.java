@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
@@ -58,6 +59,7 @@ import com.facebook.login.LoginManager;
 import com.google.gson.Gson;
 import com.reelsonar.ibobber.LoginActivity;
 import com.reelsonar.ibobber.R;
+import com.reelsonar.ibobber.model.Intro;
 import com.reelsonar.ibobber.model.UserAuth.UserAuth;
 
 import java.io.ByteArrayOutputStream;
@@ -71,6 +73,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
@@ -1514,4 +1517,20 @@ public class AppUtils {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         prefs.edit().clear().commit();
     }
+
+    public static ArrayList<Intro> getIntroList(Context context) {
+        ArrayList<Intro> arrayList = new ArrayList<>();
+        String[] intro_text = context.getResources().getStringArray(R.array.intro_screens_text);
+        String[] intro_title = context.getResources().getStringArray(R.array.intro_screens_title);
+        TypedArray intro_img = context.getResources().obtainTypedArray(R.array.intro_screens);
+        int[] selected_num = context.getResources().getIntArray(R.array.intro_selected_number);
+
+        for (int i = 0; i < intro_text.length; i++) {
+            Intro introDetail = new Intro(intro_text[i], intro_title[i], intro_img.getResourceId(i, 0), selected_num[i]);
+            arrayList.add(introDetail);
+        }
+
+        return arrayList;
+    }
+
 }

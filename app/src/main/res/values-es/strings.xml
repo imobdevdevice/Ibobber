@@ -197,4 +197,17 @@
 
   <string name="on">"ENCENDIDO"</string>
   <string name="off">"APAGADO"</string>
+    <string name="intro_screen_1">Aqui esta cómo utilizar iBobber</string>
+  <string name="intro_screen_2">Ponga iBobber en algo de agua</string>
+  <string name="intro_screen_3">En \\\"Configuración\\\" toque \\\"Bluetooth Sync\\\"</string>
+  <string name="intro_screen_4">Seleccione su iBobber. ¡Ahora estás listo!</string>
+  <string name="intro_screen_5">Cambiar entre Marcar Peces y Sonar Crudo</string>
+  <string name="intro_screen_6">Ver profundidad y tamaño ...\\nNaranja = menos de 15\\\"\\nVerde = más de 15\\\"</string>
+  <string name="intro_screen_7">... o densidad e información de sonar crudo</string>
+  <string name="intro_screen_8">Mapa del terreno submarino aquí</string>
+  <string name="intro_screen_9">Consulte los controles de estado del dispositivo aquí:\\n\\nBattery status, H2O temp, Fish Alarm, Strike Alarm, LED Light</string>
+  <string name="intro_screen_10">Añadir un lugar para el registro de viaje aquí</string>
+  <string name="intro_screen_11">Mantenga registros detallados con el registro de viaje</string>
+  <string name="intro_screen_12">Vea el tiempo y otras condiciones</string>
+  <string name="intro_screen_13">Vea en qué parte del mundo los iBobbers están en uso</string>
 </resources>

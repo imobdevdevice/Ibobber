@@ -197,6 +197,19 @@
 
     <string name="on">ON"</string>
     <string name="off">OFF"</string>
+    <string name="intro_screen_1">\"Jak používat iBobber\"</string>
+    <string name="intro_screen_2">\"Umístěte iBobber do vody\"</string>
+    <string name="intro_screen_3">\"V \\\"Nastavení\\\" klikněte na \\\"Synchronizaci Bluetooth\\\"\"</string>
+    <string name="intro_screen_4">\"Vyberte váš iBobber a vše je připraveno!\"</string>
+    <string name="intro_screen_5">\"Přepínejte mezi označováním ryb a sonarem\"</string>
+    <string name="intro_screen_6">\"Podívejte se na hloubku a velikost…\\nOranžová = pod 38 cm\\nZelená = přes 38 cm\"</string>
+    <string name="intro_screen_7">\"… nebo informace o hustotě a sonaru\"</string>
+    <string name="intro_screen_8">\"Mapujte podvodní terén zde\"</string>
+    <string name="intro_screen_9">\"Zde naleznete prvky kontroly stavu zařízení:\\n\\nBattery status, H2O temp, Fish Alarm, Strike Alarm, LED Light\"</string>
+    <string name="intro_screen_10">" \"Zde přidejte místo do záznamu cest\""</string>
+    <string name="intro_screen_11">\"Uchovejte si detailní záznamy se záznamem cest\"</string>
+    <string name="intro_screen_12">\"Podívejte se na počasí a jiné podmínky\"</string>
+    <string name="intro_screen_13">\"Podívejte se, kde na světě se používají iBoober\"</string>
 
 
 </resources>
