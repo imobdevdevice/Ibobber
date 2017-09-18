@@ -1,95 +1,101 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="AppDemoActivity$AppDemoFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="AppDemoActivity$AppDemoFragment">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/view_pager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/bottom_intro_view"
-        android:overScrollMode="never" />
+        <ImageView
+            android:id="@+id/close_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_14sdp"
+            android:src="@drawable/arrow_prev_white" />
 
-    <!-- Bottom controls -->
-    <LinearLayout
-        android:id="@+id/bottom_intro_view"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_60sdp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:background="@color/onBoardControlView"
-        android:orientation="vertical">
-
-        <RelativeLayout
-            android:id="@+id/footerLayout"
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottom_intro_view"
+            android:overScrollMode="never" />
+
+        <!-- Bottom controls -->
+        <LinearLayout
+            android:id="@+id/bottom_intro_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_gravity="center_horizontal"
             android:background="@color/onBoardControlView"
-            android:gravity="center_vertical"
-            android:paddingLeft="20dip"
-            android:paddingRight="20dip">
-
-            <TextView
-                android:id="@+id/backButton"
-                android:layout_width="80dp"
-                android:layout_height="30dp"
-                android:background="@color/onBoardControlView"
-                android:gravity="left"
-                android:onClick="onPrevButton"
-                android:text="@string/button_back"
-                android:textColor="@color/ltGray"
-                android:textSize="18dip"
-                android:layout_alignBottom="@+id/pageIndicatorLayout"
-                android:layout_alignParentStart="true" />
+            android:orientation="vertical">
 
             <RelativeLayout
-                android:id="@+id/pageIndicatorLayout"
-                android:layout_width="100dp"
-                android:layout_height="20dp"
-                android:layout_centerHorizontal="true"
+                android:id="@+id/footerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="8dip"
-                android:background="@color/onBoardControlView" />
-
-
-            <TextView
-                android:id="@+id/nextButton"
-                android:layout_width="80dp"
-                android:layout_height="30dp"
-                android:layout_alignBottom="@+id/pageIndicatorLayout"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
                 android:background="@color/onBoardControlView"
-                android:gravity="right"
-                android:onClick="onNextButton"
-                android:text="@string/button_next"
-                android:textColor="@color/ltGray"
-                android:textSize="18dip" />
+                android:gravity="center_vertical"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip">
 
-            <TextView
-                android:id="@+id/doneButton"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_alignBottom="@+id/backButton"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:background="@color/onBoardControlView"
-                android:gravity="right"
-                android:onClick="onSkipButton"
-                android:text="@string/button_done"
-                android:textColor="@color/ltGray"
-                android:textSize="18dip"
-                android:visibility="gone" />
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/backButton"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_alignBottom="@+id/pageIndicatorLayout"
+                    android:layout_alignParentStart="true"
+                    android:background="@color/onBoardControlView"
+                    android:gravity="left"
+                    android:onClick="onPrevButton"
+                    android:text="@string/button_back"
+                    android:textColor="@color/ltGray"
+                    android:textSize="18dip" />
+
+                <RelativeLayout
+                    android:id="@+id/pageIndicatorLayout"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dip"
+                    android:background="@color/onBoardControlView" />
 
 
-    </LinearLayout>
-</RelativeLayout>
+                <TextView
+                    android:id="@+id/nextButton"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_alignBottom="@+id/pageIndicatorLayout"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/onBoardControlView"
+                    android:gravity="right"
+                    android:onClick="onNextButton"
+                    android:text="@string/button_next"
+                    android:textColor="@color/ltGray"
+                    android:textSize="18dip" />
+
+                <TextView
+                    android:id="@+id/doneButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignBottom="@+id/backButton"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/onBoardControlView"
+                    android:gravity="right"
+                    android:onClick="onSkipButton"
+                    android:text="@string/button_done"
+                    android:textColor="@color/ltGray"
+                    android:textSize="18dip"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

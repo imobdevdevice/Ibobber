@@ -201,7 +201,7 @@
   <string name="intro_screen_2">Coloque o iBobber na água</string>
   <string name="intro_screen_3">Em \\\"Definições\\\" carregue em \\\"Sincronização por Bluetooth\\\"</string>
   <string name="intro_screen_4">Selecione o seu iBobber. Agora está pronto a usar</string>
-  <string name="intro_screen_5">Selecione entre Marcar Peixe & Sonar</string>
+  <string name="intro_screen_5">Selecione entre Marcar Peixe &amp; Sonar</string>
   <string name="intro_screen_6">Veja a profundidade e tamanho…\\nLaranja = menos de 15\\\"\\nVerde = mais de 15\\\"</string>
   <string name="intro_screen_7">… ou informação de densidade e de sonar</string>
   <string name="intro_screen_8">Mapeie terreno submerso aqui</string>
