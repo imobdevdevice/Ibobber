@@ -215,4 +215,11 @@
   <string name="intro_screen_11">Gardez des enregistrements détaillés avec le Journal de Voyage</string>
   <string name="intro_screen_12">Regarder la météo et autres conditions</string>
   <string name="intro_screen_13">Regarder où dans le monde d\'autres iBobbers sont utilisés</string>
+    <string name="intro_start">Commencer</string>
+  <string name="intro_finish">Terminer</string>
+  <string name="intro_finish_conclusion">C\'est tout!</string>
+  <string name="intro_finish_salutation">Amusez-vous à la pêche!</string>
+  <string name="intro_welcometo">Bienvenue a</string>
+  <string name="intro_start_conclusion">Merci pour votre enregistrement!</string>
+  <string name="intro_start_salutation">Maintenant une explication rapide...</string>
 </resources>

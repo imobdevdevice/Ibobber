@@ -198,4 +198,11 @@
   <string name="intro_screen_11">旅行記録で詳細な記録が保存できます</string>
   <string name="intro_screen_12">天気などの情報が見れます</string>
   <string name="intro_screen_13">世界のどこでiBobbersが使用されているか見る</string>
+    <string name="intro_start">ベギン</string>
+  <string name="intro_finish">仕上げ</string>
+  <string name="intro_finish_conclusion">それだけです！</string>
+  <string name="intro_finish_salutation">釣りをお楽しみください！</string>
+  <string name="intro_welcometo">ようこそ</string>
+  <string name="intro_start_conclusion">サインアップありがとうございます</string>
+  <string name="intro_start_salutation">クイックツアーをしましょう。</string>
 </resources>

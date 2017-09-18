@@ -14,7 +14,7 @@ import com.reelsonar.ibobber.bluetooth.BTService;
 import de.greenrobot.event.EventBus;
 
 
-public class SettingsActivity extends Activity  {
+public class SettingsActivity extends Activity {
 
     private final static String TAG = SettingsActivity.class.getSimpleName();
 
@@ -25,7 +25,7 @@ public class SettingsActivity extends Activity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        ListView formView = (ListView)findViewById(R.id.settingsForm);
+        ListView formView = (ListView) findViewById(R.id.settingsForm);
         SettingsAdapter adapter = new SettingsAdapter(SettingsActivity.this);
         formView.setAdapter(adapter);
         formView.setOnItemClickListener(adapter);
@@ -33,8 +33,8 @@ public class SettingsActivity extends Activity  {
 
 
     private void refreshFormView() {
-        ListView formView = (ListView)findViewById(R.id.settingsForm);
-        SettingsAdapter adapter = (SettingsAdapter)formView.getAdapter();
+        ListView formView = (ListView) findViewById(R.id.settingsForm);
+        SettingsAdapter adapter = (SettingsAdapter) formView.getAdapter();
         adapter.notifyDataSetChanged();
     }
 
@@ -63,7 +63,6 @@ public class SettingsActivity extends Activity  {
 
         EventBus.getDefault().unregister(this);
     }
-
 
 
 }

@@ -215,4 +215,11 @@
   <string name="intro_screen_11">\"Speichern Sie detailierte Reiseaufzeichnungen im Trip Log\"</string>
   <string name="intro_screen_12">\"Sehen Sie Wetter und andere Konditionen \"</string>
   <string name="intro_screen_13">\"Sehen Sie wo in der Welt iBobber benutzt wird\"</string>
+    <string name="intro_start">Start</string>
+  <string name="intro_finish">Fertig</string>
+  <string name="intro_finish_conclusion">Dass wars!</string>
+  <string name="intro_finish_salutation">Viel Spaß beim angeln!</string>
+  <string name="intro_welcometo">Willkommen zu</string>
+  <string name="intro_start_conclusion">Danke für Ihre Anmeldung!</string>
+  <string name="intro_start_salutation">Nehmen Sie eine kurze Tour.</string>
 </resources>

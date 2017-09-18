@@ -210,6 +210,13 @@
     <string name="intro_screen_11">\"Uchovejte si detailní záznamy se záznamem cest\"</string>
     <string name="intro_screen_12">\"Podívejte se na počasí a jiné podmínky\"</string>
     <string name="intro_screen_13">\"Podívejte se, kde na světě se používají iBoober\"</string>
+    <string name="intro_start">Začít</string>
+    <string name="intro_finish">Dokončit</string>
+    <string name="intro_finish_conclusion">To je vše!</string>
+    <string name="intro_finish_salutation">Bavte se u rybaření!</string>
+    <string name="intro_welcometo">Vítejte na</string>
+    <string name="intro_start_conclusion">Děkujeme za registraci!</string>
+    <string name="intro_start_salutation">Pojďme si vše rychle představit.</string>
 
 
 </resources>

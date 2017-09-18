@@ -7,7 +7,7 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.reelsonar.ibobber.sonar.SonarLiveActivity;
+import com.reelsonar.ibobber.util.Actions;
 import com.reelsonar.ibobber.util.AppUtils;
 
 /**
@@ -23,7 +23,6 @@ public class SplashActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         String deviceToken = AppUtils.getDeviceId(getApplicationContext());
-//        printHashKey(this);
         if (FirebaseInstanceId.getInstance().getToken() != null)
             Log.d("User Token ", deviceToken + " , Device token :" + FirebaseInstanceId.getInstance().getToken());
         else
@@ -41,8 +40,9 @@ public class SplashActivity extends BaseActivity {
                 startActivity(intent);
                 finish();
             } else {
-                Intent intent = new Intent(SplashActivity.this, SonarLiveActivity.class);
-                startActivity(intent);
+                Intent sonar = new Intent(Actions.SONAR_LIVE);
+                sonar.addCategory(Actions.CATEGORY_INITIAL_DEMO);
+                startActivity(sonar);
                 finish();
             }
         }
@@ -64,6 +64,4 @@ public class SplashActivity extends BaseActivity {
 //
 //        }
 //    }
-
-
 }

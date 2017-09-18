@@ -209,4 +209,11 @@
   <string name="intro_screen_11">자세한 기록과 여행로그를 간직하세요</string>
   <string name="intro_screen_12">날씨와 다른 조건들을 보세요</string>
   <string name="intro_screen_13">세상 어디에서 iBobbers 가 쓰이는지 보세요</string>
+    <string name="intro_start">시작하다</string>
+  <string name="intro_finish">끝내다</string>
+  <string name="intro_finish_conclusion">끝~!</string>
+  <string name="intro_finish_salutation">이제 낚시를 즐기세요 !</string>
+  <string name="intro_welcometo">로 오신것을 환영합니다</string>
+  <string name="intro_start_conclusion">가입해주셔서 감사합니다 !</string>
+  <string name="intro_start_salutation">빠르게 둘러볼까요 ?</string>
 </resources>

@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/ibobber_hor_logo"
+            android:src="@drawable/ibobber_logo"
             android:visibility="visible" />
 
         <TextView
@@ -36,7 +36,7 @@
             android:layout_marginTop="@dimen/_10sdp"
             android:text="@string/SignUpTitle"
             android:textColor="@color/white"
-            android:textSize="@dimen/_14sdp" />
+            android:textSize="@dimen/_12sdp" />
 
     </LinearLayout>
 </layout>

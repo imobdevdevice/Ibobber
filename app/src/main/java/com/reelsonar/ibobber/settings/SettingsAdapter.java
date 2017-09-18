@@ -204,16 +204,16 @@ public class SettingsAdapter extends BaseAdapter implements AdapterView.OnItemCl
                             BTService.getSingleInstance().setSlowMode(0);
                         }
                     }
-                }, new SwitchField(_context, R.string.netfish_mode, AppUtils.getIntegerSharedpreference(_context,NETFISH_MODE)== 1) {
+                }, new SwitchField(_context, R.string.netfish_mode, AppUtils.getIntegerSharedpreference(_context, NETFISH_MODE) == 1) {
                     @Override
                     public void onValueChanged(final boolean checked) {
                         if (checked) {
-                            AppUtils.storeSharedPreference(_context,NETFISH_MODE,1);
+                            AppUtils.storeSharedPreference(_context, NETFISH_MODE, 1);
                         } else {
-                            AppUtils.storeSharedPreference(_context,NETFISH_MODE,0);
+                            AppUtils.storeSharedPreference(_context, NETFISH_MODE, 0);
                         }
                     }
-                },  
+                },
                 new LabelField(_context, R.string.settings_app_tour, null, true) {
                     @Override
                     public void onGroupClick(final View view, final boolean isExpanded) {
@@ -249,9 +249,6 @@ public class SettingsAdapter extends BaseAdapter implements AdapterView.OnItemCl
                     @Override
                     public void onGroupClick(final View view, final boolean isExpanded) {
                         AppUtils.logout(_context);
-                        AppUtils.clearSharedPreference(_context);
-//                        Intent intent = new Intent(_context, LoginActivity.class);
-//                        _context.startActivity(intent);
                     }
                 },
                 new LabelField(_context, R.string.fcc, null, false),

@@ -220,4 +220,11 @@
     <string name="intro_screen_11">保持详细的记录在旅行记录簿中</string>
     <string name="intro_screen_12">查看气候和其它情况</string>
     <string name="intro_screen_13">查看全球其它使用中的iBobbers的位置</string>
+    <string name="intro_start">开始</string>
+    <string name="intro_finish">完</string>
+    <string name="intro_finish_conclusion">就这些！</string>
+    <string name="intro_finish_salutation">祝钓鱼玩的开心！</string>
+    <string name="intro_welcometo">欢迎来到</string>
+    <string name="intro_start_conclusion">感谢您登录！</string>
+    <string name="intro_start_salutation">让我们快速的流覽一下。</string>
 </resources>

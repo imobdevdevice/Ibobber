@@ -208,4 +208,11 @@
     <string name="intro_screen_11">Сохраните детали в журнале рыбака</string>
     <string name="intro_screen_12">Посмотрите погоду и другие данные</string>
     <string name="intro_screen_13">Посмотрите где сейчас используют iBobber в Мире</string>
+    <string name="intro_start">Начало</string>
+    <string name="intro_finish">Конец</string>
+    <string name="intro_finish_conclusion">Вот так!</string>
+    <string name="intro_finish_salutation">Хорошей Вам рыбалки!</string>
+    <string name="intro_start_conclusion">Благодарим за подписку.</string>
+    <string name="intro_welcometo">Добро пожаловать в</string>
+    <string name="intro_start_salutation">Давайте быстро совершим экскурсию.</string>
 </resources>

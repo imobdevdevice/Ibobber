@@ -158,7 +158,12 @@
             android:name=".onboarding.AppDemoActivity"
             android:label="@string/settings_app_tour"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+
+
+
+        </activity>
         <activity
             android:name=".HTMLViewActivity"
             android:screenOrientation="portrait"></activity>

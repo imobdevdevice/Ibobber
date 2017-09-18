@@ -210,4 +210,10 @@
   <string name="intro_screen_11">\"الاحتفاظ بسجلات مفصلة مع سجل الرحلة\"</string>
   <string name="intro_screen_12">\"معرفة الطقس وغيرها من الشروط\"</string>
   <string name="intro_screen_13">\"انظر أي مكان في العالم iBobbers قيد الاستخدام\"</string>
+    <string name="intro_start">ابدأ</string>
+  <string name="intro_finish">النهاية</string>
+  <string name="intro_finish_conclusion">هذا هو! استمتع بالصيد</string>
+    <string name="intro_welcometo">مرحبا بك في</string>
+  <string name="intro_start_conclusion">شكرا جزيلا على الاشتراك!</string>
+  <string name="intro_start_salutation">دعنا نأخذ جولة سريعة.</string>
 </resources>

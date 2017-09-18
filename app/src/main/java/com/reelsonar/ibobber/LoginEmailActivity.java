@@ -11,7 +11,7 @@ import com.google.gson.Gson;
 import com.reelsonar.ibobber.databinding.ActivityEmailLoginBinding;
 import com.reelsonar.ibobber.dialogs.SimpleCustomDialog;
 import com.reelsonar.ibobber.model.UserAuth.UserAuth;
-import com.reelsonar.ibobber.sonar.SonarLiveActivity;
+import com.reelsonar.ibobber.util.Actions;
 import com.reelsonar.ibobber.util.ApiLoader;
 import com.reelsonar.ibobber.util.AppUtils;
 import com.reelsonar.ibobber.util.CallBack;
@@ -164,9 +164,13 @@ public class LoginEmailActivity extends BaseActivity {
 
     private void sucessLogin(UserAuth userAuth) {
         storeUserInfo(userAuth);
-        Intent in = new Intent(LoginEmailActivity.this, SonarLiveActivity.class);
-        startActivity(in);
+        Intent sonar = new Intent(Actions.SONAR_LIVE);
+        sonar.addCategory(Actions.CATEGORY_INITIAL_DEMO);
+        startActivity(sonar);
         finish();
     }
 
+    public void onBack(View view) {
+        onBackPressed();
+    }
 }

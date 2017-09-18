@@ -218,5 +218,12 @@
     <string name="intro_screen_11">Zachowaj detele nagrywania do tej przygody</string>
     <string name="intro_screen_12">Sprawdz pogode I inne warunki</string>
     <string name="intro_screen_13">Sprawdz gdzie na swiecie uzywany jest iBoober</string>
+    <string name="intro_start">Zaczynać</string>
+    <string name="intro_finish">Koniec</string>
+    <string name="intro_welcometo">Welcome to</string>
+    <string name="intro_finish_conclusion">To wszystko!</string>
+    <string name="intro_finish_salutation">baw sie dobrze!</string>
+    <string name="intro_start_conclusion">Dziekujemy za zarejestrowanie sie</string>
+    <string name="intro_start_salutation">Zacznijmy ta przygode</string>
 
 </resources>

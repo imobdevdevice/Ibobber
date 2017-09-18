@@ -33,6 +33,12 @@ public class ScreenSlidePageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = FragmentScreenSlidePageBinding.inflate(inflater, container, false);
         binding.setIntroModel(introArray.get(currentPos));
+        binding.tvClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().finish();
+            }
+        });
         return binding.getRoot();
     }
 

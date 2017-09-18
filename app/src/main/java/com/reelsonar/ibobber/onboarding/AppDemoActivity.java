@@ -3,6 +3,7 @@
 package com.reelsonar.ibobber.onboarding;
 
 import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Canvas;
@@ -27,15 +28,15 @@ import com.reelsonar.ibobber.util.AppUtils;
 
 import java.util.ArrayList;
 
-public class AppDemoActivity extends AppCompatActivity {
+import static com.reelsonar.ibobber.onboarding.ThanksFragment.FINISH_STATE;
+import static com.reelsonar.ibobber.onboarding.ThanksFragment.START_STATE;
 
+public class AppDemoActivity extends AppCompatActivity {
     private final static String TAG = "AppDemoActivity";
     private static final int NUMBER_OF_DEMO_VIEWS = 13;
-
     public final static String INITIAL_DEMO_AFTER_REGISTER_KEY = "initialdemo";
     public final static int INITIAL_DEMO_IS_TRUE = 1;
     private boolean mIsInitialDemo = false;
-
 
     static private PageIndicator mPageIndicator;
     private ScreenSlidePagerAdapter mPagerAdapter;
@@ -55,29 +56,35 @@ public class AppDemoActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
 
         if (bundle != null) {
+//        if (bundle != null) {
             if (bundle.getInt(INITIAL_DEMO_AFTER_REGISTER_KEY) == INITIAL_DEMO_IS_TRUE) {
                 mIsInitialDemo = true;
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.add(R.id.container, ThanksFragment.getInstance(START_STATE, mIsInitialDemo));
+                transaction.addToBackStack(AppDemoActivity.class.getName());
+                transaction.commit();
             }
         }
-
-
-
     }
 
 
     public void onSkipButton(View v) {
-
         if (mIsInitialDemo == true) {
             Intent sonar = new Intent(Actions.SONAR_LIVE);
             sonar.addCategory(Actions.CATEGORY_INITIAL_DEMO);
             startActivity(sonar);
         }
-
         finish();
     }
 
     public void onNextButton(View v) {
-        binding.viewPager.setCurrentItem(binding.viewPager.getCurrentItem() + 1);
+        if ((binding.viewPager.getCurrentItem() + 1) == NUMBER_OF_DEMO_VIEWS) {
+            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+            transaction.add(R.id.container, ThanksFragment.getInstance(FINISH_STATE, mIsInitialDemo));
+            transaction.commit();
+        } else {
+            binding.viewPager.setCurrentItem(binding.viewPager.getCurrentItem() + 1);
+        }
     }
 
     public void onPrevButton(View v) {
@@ -143,7 +150,6 @@ public class AppDemoActivity extends AppCompatActivity {
 
         @Override
         public void onDraw(Canvas canvas) {
-
             int indicatorWidth = getWidth();
             int dotSpacing = indicatorWidth / mTotalPages;
             float indicatorStart = ((getWidth() / 2.0f) - (indicatorWidth / 2.0f)) + (DOT_RADIUS * 2.0f);

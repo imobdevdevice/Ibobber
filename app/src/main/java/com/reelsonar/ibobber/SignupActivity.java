@@ -7,11 +7,11 @@ import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.reelsonar.ibobber.databinding.ActivitySingupBinding;
 import com.reelsonar.ibobber.dialogs.SimpleCustomDialog;
 import com.reelsonar.ibobber.model.UserAuth.UserAuth;
-import com.reelsonar.ibobber.sonar.SonarLiveActivity;
+import com.reelsonar.ibobber.onboarding.AppDemoActivity;
 import com.reelsonar.ibobber.util.ApiLoader;
 import com.reelsonar.ibobber.util.AppUtils;
 import com.reelsonar.ibobber.util.CallBack;
@@ -27,6 +27,8 @@ import retrofit2.Call;
 import retrofit2.Response;
 
 import static android.text.TextUtils.isEmpty;
+import static com.reelsonar.ibobber.onboarding.AppDemoActivity.INITIAL_DEMO_AFTER_REGISTER_KEY;
+import static com.reelsonar.ibobber.onboarding.AppDemoActivity.INITIAL_DEMO_IS_TRUE;
 import static com.reelsonar.ibobber.util.RestConstants.APP_TYPE;
 import static com.reelsonar.ibobber.util.RestConstants.DEVICE_TOKEN;
 import static com.reelsonar.ibobber.util.RestConstants.DEVICE_TYPE;
@@ -128,13 +130,11 @@ public class SignupActivity extends BaseActivity {
 //            }
 
             if (AppUtils.isNetworkAvailable(SignupActivity.this)) {
-                showProgressBar();//
-
+                showProgressBar();
                 HashMap<String, String> registerParams = new HashMap<>();
                 try {
                     String deviceModel = android.os.Build.MODEL;
                     String osVersion = String.valueOf(android.os.Build.VERSION.SDK_INT);
-//                    app_type=1&deviceType=1&userType=1&uniqueToken=82AB8D43-E4F2-4806-BEAD-2EE1F2CC619C&user_name=vivek.lathiya&first_name=Vivek&last_name=Lathiya&email=vivek.lathiya@imobdev.com&password=7c222fb2927d828af22f592134e8932480637c0d&language_code=en
                     registerParams.put(FIRST_NAME, fname);
                     registerParams.put(LAST_NAME, lname);
                     registerParams.put(EMAIL, email);
@@ -149,15 +149,14 @@ public class SignupActivity extends BaseActivity {
                 } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
                     e.printStackTrace();
                 }
-
-
                 ApiLoader.getRegister(SignupActivity.this, registerParams, new CallBack() {
                     @Override
                     public void onResponse(Call call, Response response, String msg) {
-                        UserAuth userAuth = new Gson().fromJson((response.body()).toString(), UserAuth.class);
+                        //{"status":true,"message":"Registration done successfully.","accessToken":"df35d21e-9c6e-11e7-a2ff-0018510d9bfb","data":{"user_id":"746","user_first_name":"james","user_last_name":"smith","user_user_name":"james.smith","user_type":"1","user_email":"james.smith@gmail.com","user_location":"","user_latitude":"","user_longitude":"","user_about_me":"","user_dob":"","user_gender":"","user_created_at":"1505738566","user_loyalty_points":0,"image_url":"","banner_image_url":"","premium_plan":false,"language_code":"en","referral":{"referred_by":"","code":"140a16d7"},"privacy":{"hometown":"1","gender":"1","date_of_birth":"1","catches":"1","name":"1"},"settings":{"share_post":"1","push_all":"1","push_follow":"1","push_comment":"1","push_vote":"1","push_message":"1","email_summary":"1"},"inapp_data":{"subscription_status":0,"transaction_id":"","activation_date":""},"redeem_info":[]}}
+                        UserAuth userAuth = (new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create()).fromJson((response.body()).toString(), UserAuth.class);
                         if (userAuth != null) {
                             if (userAuth.getStatus()) {
-                                sucessLogin();
+                                sucessLogin(userAuth);
                             } else {
                                 AppUtils.showToast(SignupActivity.this, userAuth.getMessage());
                             }
@@ -199,9 +198,11 @@ public class SignupActivity extends BaseActivity {
         onBackPressed();
     }
 
-    private void sucessLogin() {
-        Intent in = new Intent(SignupActivity.this, SonarLiveActivity.class);
-        startActivity(in);
+    private void sucessLogin(UserAuth userAuth) {
+        storeUserInfo(userAuth);
+        Intent intent = new Intent(SignupActivity.this, AppDemoActivity.class);
+        intent.putExtra(INITIAL_DEMO_AFTER_REGISTER_KEY, INITIAL_DEMO_IS_TRUE);
+        startActivity(intent);
         finish();
     }
 }

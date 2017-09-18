@@ -124,6 +124,18 @@
         <item name="fontPath">fonts/SanFranciscoText_Bold.otf</item>
     </style>
 
+    <style name="boldTitleFont">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/_24sdp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:paddingLeft">@dimen/_15sdp</item>
+        <item name="android:paddingRight">@dimen/_15sdp</item>
+        <item name="android:paddingTop">@dimen/_11sdp</item>
+        <item name="android:paddingBottom">@dimen/_11sdp</item>
+        <item name="fontPath">fonts/SanFranciscoText_Bold.otf</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 
     <style name="regularFont">
         <item name="android:gravity">center</item>

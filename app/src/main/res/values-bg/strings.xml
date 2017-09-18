@@ -302,6 +302,13 @@
     <string name="intro_screen_11">\"Запазвайте детайлни записи с Регистрирай място\"</string>
     <string name="intro_screen_12">\"Вижте времето и другите условия\"</string>
     <string name="intro_screen_13">\"Вижте къде по света може да се използва iBobbers\"</string>
+    <string name="intro_start">започвам</string>
+    <string name="intro_finish">завършек</string>
+    <string name="intro_finish_conclusion">Това е!</string>
+    <string name="intro_finish_salutation">Забавлявайте се с риболова!</string>
+    <string name="intro_welcometo">Добре дошли в</string>
+    <string name="intro_start_conclusion">Благодарим за регистрацията!</string>
+    <string name="intro_start_salutation">Нека направим бърза обиколка.</string>
 
 
 </resources>

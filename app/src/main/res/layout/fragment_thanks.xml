@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_close"
+            style="@style/titleFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="X"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/start_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/boldTitleFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tv_des"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="@string/intro_finish_conclusion" />
+
+            <TextView
+                android:id="@+id/tv_des"
+                style="@style/regularFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/intro_finish_salutation" />
+
+            <com.reelsonar.ibobber.view.GradientButton
+                android:id="@+id/btnFinish"
+                style="@style/ButtonBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_des"
+                android:layout_margin="@dimen/_20sdp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:stateListAnimator="@drawable/lift_on_touch"
+                android:text="@string/intro_finish"
+                android:textSize="@dimen/_13sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/welcome_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/titleFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_120sdp"
+                android:text="@string/intro_welcometo" />
+
+            <com.reelsonar.ibobber.view.TitleView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:SubTitleText=""
+                app:dividerSize="0dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

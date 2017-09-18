@@ -367,6 +367,7 @@
     <string name="confirm_password_star">Confirm Password *</string>
     <string name="agree_to_terms_of_use">Agree to terms of use *</string>
     <string name="invite_code">Referral code</string>
+    <string name="login">Login</string>
 
     <string name="action_sign_in_short">Sign in</string>
     <string name="action_sign_up_short">Done</string>
@@ -475,6 +476,13 @@
     <string name="intro_screen_11">Keep detailed records with the Trip Log</string>
     <string name="intro_screen_12">See weather and other conditions</string>
     <string name="intro_screen_13">See where in the world iBobbers are in use</string>
+    <string name="intro_start">Start</string>
+    <string name="intro_finish">Finish</string>
+    <string name="intro_finish_conclusion">That\'s it\!</string>
+    <string name="intro_finish_salutation">Have fun fishing\!</string>
+    <string name="intro_start_conclusion">Thanks for signing up!</string>
+    <string name="intro_start_salutation">Let’s take a quick tour</string>
+    <string name="intro_welcometo">Welcome to</string>
 
     <string-array name="intro_screens_text">
         <item>@string/intro_screen_1</item>

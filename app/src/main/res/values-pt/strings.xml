@@ -210,4 +210,11 @@
   <string name="intro_screen_11">Mantenha registos detalhados com o Diário de Bordo</string>
   <string name="intro_screen_12">Veja o tempo e outras condições</string>
   <string name="intro_screen_13">Veja onde pode encontrar iBobbers em uso em todo o mundo</string>
+    <string name="intro_start">Início</string>
+  <string name="intro_finish">Terminar</string>
+  <string name="intro_finish_conclusion">É isto!</string>
+  <string name="intro_finish_salutation">Divirta-se a pescar!</string>
+  <string name="intro_welcometo">Benvindo a</string>
+  <string name="intro_start_conclusion">Obrigado pela sua inscrição!</string>
+  <string name="intro_start_salutation">Vamos dar uma pequena volta.</string>
 </resources>

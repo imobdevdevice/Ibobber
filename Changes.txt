@@ -22,6 +22,22 @@ Remaiaing :
 4) Tracking Link
 5) Test when user update the app
 6) App Tour Back Next Done button text in all language
+7) On Create Trip Log image is not perfectly showing into trip log
+
+
+Credentials :
+
+1)
+
+james.smith@gmail.com
+123456
+
+ronaldo.lewis@gmail.com
+123456
+
+2) Facebook :
+
+
 
 
 

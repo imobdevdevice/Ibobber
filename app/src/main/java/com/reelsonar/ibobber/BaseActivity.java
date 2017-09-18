@@ -9,8 +9,6 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.google.gson.Gson;
 import com.reelsonar.ibobber.model.UserAuth.UserAuth;
 
@@ -41,13 +39,13 @@ public class BaseActivity extends Activity {
         mProgressDialog.getWindow().setBackgroundDrawable(ContextCompat.getDrawable(this, android.R.color.transparent));
         mProgressDialog.setCancelable(false);
         mProgressDialog.setCanceledOnTouchOutside(false);
-        loadingImageView = (ImageView) view.findViewById(R.id.ivLoadingIndicator);
+//        loadingImageView = (ImageView) view.findViewById(R.id.ivLoadingIndicator);
         mProgressDialog.show();
-        Glide.with(this)
-                .load(R.drawable.loading)
-                .asGif()
-                .diskCacheStrategy(DiskCacheStrategy.SOURCE)
-                .into(loadingImageView);
+//        Glide.with(this)
+//                .load(R.drawable.loading)
+//                .asGif()
+//                .diskCacheStrategy(DiskCacheStrategy.SOURCE)
+//                .into(loadingImageView);
     }
 
     protected final void hideProgressBar() {

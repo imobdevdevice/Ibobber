@@ -210,4 +210,11 @@
   <string name="intro_screen_11">Mantenga registros detallados con el registro de viaje</string>
   <string name="intro_screen_12">Vea el tiempo y otras condiciones</string>
   <string name="intro_screen_13">Vea en qué parte del mundo los iBobbers están en uso</string>
+    <string name="intro_start">Comienzo</string>
+  <string name="intro_finish">Terminar</string>
+  <string name="intro_finish_conclusion">¡Eso es!</string>
+  <string name="intro_finish_salutation">"¡Diviértase pescando! "</string>
+  <string name="intro_welcometo">Bienvenido a</string>
+  <string name="intro_start_conclusion">¡Gracias por registrarte!</string>
+  <string name="intro_start_salutation">Hagamos un recorrido rápido.</string>
 </resources>

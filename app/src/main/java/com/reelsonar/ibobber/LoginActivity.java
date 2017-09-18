@@ -17,7 +17,7 @@ import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.gson.GsonBuilder;
 import com.reelsonar.ibobber.databinding.ActivityLoginBinding;
 import com.reelsonar.ibobber.model.UserAuth.UserAuth;
-import com.reelsonar.ibobber.sonar.SonarLiveActivity;
+import com.reelsonar.ibobber.util.Actions;
 import com.reelsonar.ibobber.util.ApiLoader;
 import com.reelsonar.ibobber.util.AppUtils;
 import com.reelsonar.ibobber.util.CallBack;
@@ -77,7 +77,6 @@ public class LoginActivity extends BaseActivity {
         binding.btnFBLogin.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-                Log.d("Sucess", "Login Sucess By Facebook");
                 GraphRequest graphRequest = GraphRequest
                         .newMeRequest(loginResult.getAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
                             @Override
@@ -146,6 +145,7 @@ public class LoginActivity extends BaseActivity {
     }
 
     private void loginApiCall() {
+        showProgressBar();
         ApiLoader.getLogin(LoginActivity.this, getLoginInfo(), new CallBack() {
             @Override
             public void onResponse(Call call, Response response, String msg) {
@@ -162,15 +162,18 @@ public class LoginActivity extends BaseActivity {
                     if (userAuth.getStatus())
                         sucessLogin(userAuth);
                 }
+                hideProgressBar();
             }
 
             @Override
             public void onFail(Call call, Throwable e) {
+                hideProgressBar();
                 AppUtils.showToast(LoginActivity.this, getString(R.string.err_network));
             }
 
             @Override
             public void onSocketTimeout(Call call, Throwable e) {
+                hideProgressBar();
                 AppUtils.showToast(LoginActivity.this, getString(R.string.err_timeout));
             }
         });
@@ -178,31 +181,36 @@ public class LoginActivity extends BaseActivity {
 
     private void sucessLogin(UserAuth userAuth) {
         storeUserInfo(userAuth);
-        Intent in = new Intent(LoginActivity.this, SonarLiveActivity.class);
-        startActivity(in);
+        Intent sonar = new Intent(Actions.SONAR_LIVE);
+        sonar.addCategory(Actions.CATEGORY_INITIAL_DEMO);
+        startActivity(sonar);
         finish();
     }
 
     private void Register() {
+        showProgressBar();
         ApiLoader.getRegister(LoginActivity.this, getLoginInfo(), new CallBack() {
             @Override
             public void onResponse(Call call, Response response, String msg) {
-                Log.d("Response", (response.body()).toString());
                 String responseStr = response.body().toString();
                 UserAuth userAuth = (new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create()).fromJson(responseStr, UserAuth.class);
-                if (userAuth.getStatus())
+                if (userAuth.getStatus()) {
                     sucessLogin(userAuth);
-                else
+                } else {
                     AppUtils.showToast(LoginActivity.this, userAuth.getMessage());
+                }
+                hideProgressBar();
             }
 
             @Override
             public void onFail(Call call, Throwable e) {
+                hideProgressBar();
                 AppUtils.showToast(LoginActivity.this, getString(R.string.err_network));
             }
 
             @Override
             public void onSocketTimeout(Call call, Throwable e) {
+                hideProgressBar();
                 AppUtils.showToast(LoginActivity.this, getString(R.string.err_timeout));
             }
         });

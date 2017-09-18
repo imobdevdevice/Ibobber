@@ -110,9 +110,10 @@ public class AppUtils {
     public static final String DEVICE_TYPE = "2";
 
 
-    public static void logout(Context context) {
+    public static void  logout(Context context) {
         UserAuth auth = getUserInfo(context);
         String userType = auth.getData().getUserType();
+        clearSharedPreference(context);
         if (userType.equalsIgnoreCase("1")) {
 
         } else if (userType.equalsIgnoreCase("2")) {
@@ -160,7 +161,6 @@ public class AppUtils {
     }
 
     protected final void storeUserInfo(UserAuth auth, Context context) {
-//        {"accessToken":"5c994ef4-93d1-11e7-a2ff-0018510d9bfb","data":{"banner_image_url":"","image_url":"users/707/707_1504690940.","inapp_data":{"activation_date":"","subscription_status":0,"transaction_id":""},"language_code":"en","premium_plan":false,"privacy":{"catches":"1","date_of_birth":"1","gender":"1","hometown":"1","name":"1"},"redeem_info":[],"referral":{"code":"64823206","referred_by":""},"settings":{"email_summary":"1","push_all":"1","push_comment":"1","push_follow":"1","push_message":"1","push_vote":"1","share_post":"1"},"user_about_me":"","user_created_at":"1504690940","user_dob":"","user_email":"amarjadeja12@gmail.com","user_first_name":"Amar","user_gender":"","user_id":"707","user_last_name":"Jadeja","user_latitude":"37.09024","user_location":"","user_longitude":"-95.71289","user_loyalty_points":0,"user_type":"2","user_user_name":"amarjadeja34088"},"message":"Successfully logged in","status":true}
         String userInfoStr = new Gson().toJson(auth, UserAuth.class);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         SharedPreferences.Editor editor = prefs.edit();
