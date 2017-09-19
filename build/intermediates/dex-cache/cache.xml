@@ -579,6 +579,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/rujul/.android/build-cache/3bf11c2ec195449720bc2ba4648f2ec1c3c7c121/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="edbff97e416c0fbd0f3e03feca7eb64ffe96d7ea">
+        <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_9fe2525ffb7b0b90b336bc1f4ea07818ea37eda4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/rujul/.android/build-cache/3cfb8c5a5904c4f414348e5f177021aadb59a5b6/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"

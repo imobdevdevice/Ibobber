@@ -9,7 +9,10 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.preference.PreferenceManager;
 import android.support.multidex.MultiDex;
+import android.util.Log;
 
+import com.appsflyer.AppsFlyerConversionListener;
+import com.appsflyer.AppsFlyerLib;
 import com.facebook.stetho.Stetho;
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
@@ -19,7 +22,10 @@ import com.reelsonar.ibobber.dsp.TestSonarDataService;
 import com.reelsonar.ibobber.service.DemoSonarService;
 import com.reelsonar.ibobber.service.UserService;
 import com.reelsonar.ibobber.service.WearService;
+import com.reelsonar.ibobber.util.RestConstants;
 import com.reelsonar.ibobber.weather.WeatherService;
+
+import java.util.Map;
 
 public class BobberApp extends Application {
 
@@ -83,6 +89,37 @@ public class BobberApp extends Application {
         _context = this.getApplicationContext();
 
         WearService.getSingleInstance();
+
+        //AppsFlyer
+        //AppsFlyer
+        AppsFlyerLib.getInstance().startTracking(this, RestConstants.APPS_FLYER_KEY);
+
+        AppsFlyerLib.getInstance().registerConversionListener(this, new AppsFlyerConversionListener() {
+            @Override
+            public void onInstallConversionDataLoaded(Map<String, String> conversionData) {
+                for (String attrName : conversionData.keySet()) {
+                    Log.d(AppsFlyerLib.LOG_TAG, "attribute: " + attrName + " = " +
+                            conversionData.get(attrName));
+                }
+
+            }
+
+            @Override
+            public void onInstallConversionFailure(String errorMessage) {
+                Log.d(AppsFlyerLib.LOG_TAG, "error getting conversion data: " + errorMessage);
+            }
+
+            @Override
+            public void onAppOpenAttribution(Map<String, String> conversionData) {
+            }
+
+            @Override
+            public void onAttributionFailure(String errorMessage) {
+                Log.d(AppsFlyerLib.LOG_TAG, "error onAttributionFailure : " + errorMessage);
+            }
+        });
+
+
     }
 
     public static boolean bobberHasSynched() {

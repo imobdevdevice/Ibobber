@@ -16,12 +16,11 @@ Remove 2 time ads on every trip log catch
 
 Remaiaing :
 
-1) On boaurding
+
 2) App Icon and Logo and splash design
 3) Perfection in axis view
 4) Tracking Link
 5) Test when user update the app
-6) App Tour Back Next Done button text in all language
 7) On Create Trip Log image is not perfectly showing into trip log
 
 
@@ -52,3 +51,98 @@ Confusion :
                 _sonarView.clear();
 
 
+------------------------
+
+
+
+        float width = Math.max(getWidth(), _widthOverride);
+        float visibleWidth = Math.min(getWidth(), _widthOverride);
+        Log.d("Width and override width", "Width : " + getWidth() + " , Override width : " + _widthOverride);
+        Paint tempPaint = new Paint();
+        tempPaint.setColor(Color.RED);
+//        canvas.drawRect(0, 0, getWidth(), getHeight(), tempPaint);
+        float middleHeight = getHeight() / 2;
+        Paint paint = new Paint();
+        paint.setColor(Color.WHITE);
+
+        //        if (UserService.SUNLIGHT_TEST) {
+        //            paint.setColor(Color.BLACK);
+        //        } else {
+        //            paint.setColor(Color.WHITE);
+        //        }
+
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setTextSize(13.0f * _pxPerDip);
+        paint.setFakeBoldText(true);
+        paint.setStrokeWidth(resource.getDimension(R.dimen._1sdp));
+        Rect textBounds = new Rect();
+        Path path = new Path();
+        path.moveTo(0, middleHeight);
+        path.lineTo(visibleWidth, middleHeight);
+
+        canvas.drawPath(path, paint);
+        path.reset();
+
+        float distanceBetweenTicks = (float) _maxValue / (float) _numOfTicks;
+
+        float ticX = 0.f;
+        float ticSpace = ((width - 1.f) / (float) _numOfTicks) / 2.f; // width - 1 to account for the 0th tic.
+        int reverseCount = _numOfTicks;
+        for (int i = 0; i <= _numOfTicks; ++i) {
+            // For vertical Line
+            path.moveTo(ticX, middleHeight);
+            path.lineTo(ticX, middleHeight + MAJOR_TIC_LENGTH);
+            canvas.drawPath(path, paint);
+            path.reset();
+
+            if (_maxValue > 0) {
+                int depth = Math.round(i * distanceBetweenTicks);
+                String depthText = String.valueOf(depth);
+                paint.getTextBounds(depthText, 0, depthText.length(), textBounds);
+
+                if (ticX < visibleWidth) {
+                    float textX = ticX;
+                    if (textX + textBounds.width() > width) {
+                        textX -= textBounds.width() + 6.f;
+                    } else if (i > 0) {
+                        textX -= (textBounds.width() / 2.f);
+                    }
+                    canvas.drawText(depthText, textX, middleHeight + MAJOR_TIC_LENGTH + textBounds.height() + 6.f, paint);
+
+                    Paint reversePaint = new Paint();
+                    reversePaint.setStyle(Paint.Style.STROKE);
+                    reversePaint.setTextSize(13.0f * _pxPerDip);
+                    reversePaint.setFakeBoldText(true);
+                    reversePaint.setColor(Color.argb(255, 228, 82, 9));
+                    int reverseDepth = Math.round(reverseCount * distanceBetweenTicks);
+                    String revDepthText = String.valueOf(reverseDepth);
+                    canvas.drawText(revDepthText, textX, 30, reversePaint);
+                    if (reverseCount > 0) {
+                        reverseCount--;
+                    }
+//                    Rect revBound = new Rect();
+//
+//                    paint.getTextBounds(revDepthText, 0, revDepthText.length(), revBound);
+//                    float revTextX = ticX;
+//                    if (revTextX + revBound.width() > width) {
+//                        revTextX -= revBound.width() + 6.f;
+//                    } else if (i > 0) {
+//                        revTextX -= (revBound.width() / 2.f);
+//                    }
+//                    canvas.drawText(revDepthText, revTextX, 0, paint);
+                }
+            }
+
+            ticX += ticSpace;
+
+            if (i + 1 <= _numOfTicks) {
+                path.moveTo(ticX, middleHeight);
+                path.lineTo(ticX, middleHeight + MINOR_TIC_LENGTH);
+                canvas.drawPath(path, paint);
+                path.reset();
+
+                ticX += ticSpace;
+            }
+        }
+
+    }

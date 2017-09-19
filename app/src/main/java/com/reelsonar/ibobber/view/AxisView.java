@@ -10,6 +10,7 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Rect;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 import com.reelsonar.ibobber.R;
@@ -76,7 +77,6 @@ public class AxisView extends View {
         if (maxValue != _maxValue) {
             invalidate();
         }
-
         _prevMaxValue = _maxValue;
         _maxValue = maxValue;
     }
@@ -155,7 +155,12 @@ public class AxisView extends View {
 
         float width = Math.max(getWidth(), _widthOverride);
         float visibleWidth = Math.min(getWidth(), _widthOverride);
+        float distanceBetweenTicks = (float) _maxValue / (float) _numOfTicks;
 
+//        if (_widthOverride > getWidth()) {
+//            distanceBetweenTicks = distanceBetweenTicks / (_widthOverride / getWidth());
+//        }
+        Log.d("Width and override width", "Width : " + getWidth() + " , Override width : " + _widthOverride);
         Paint tempPaint = new Paint();
         tempPaint.setColor(Color.RED);
 //        canvas.drawRect(0, 0, getWidth(), getHeight(), tempPaint);
@@ -172,7 +177,7 @@ public class AxisView extends View {
         paint.setStyle(Paint.Style.STROKE);
         paint.setTextSize(13.0f * _pxPerDip);
         paint.setFakeBoldText(true);
-        paint.setStrokeWidth(resource.getDimension(R.dimen._1sdp));
+//        paint.setStrokeWidth(resource.getDimension(R.dimen._1sdp));
         Rect textBounds = new Rect();
         Path path = new Path();
         path.moveTo(0, middleHeight);
@@ -181,10 +186,10 @@ public class AxisView extends View {
         canvas.drawPath(path, paint);
         path.reset();
 
-        float distanceBetweenTicks = (float) _maxValue / (float) _numOfTicks;
+//        float distanceBetweenTicks = (float) _maxValue / (float) _numOfTicks;
 
         float ticX = 0.f;
-        float ticSpace = ((width - 1.f) / (float) _numOfTicks) / 2.f; // width - 1 to account for the 0th tic.
+        float ticSpace = ((visibleWidth - 1.f) / (float) _numOfTicks) / 2.f; // width - 1 to account for the 0th tic.
         int reverseCount = _numOfTicks;
         for (int i = 0; i <= _numOfTicks; ++i) {
             // For vertical Line
@@ -218,16 +223,6 @@ public class AxisView extends View {
                     if (reverseCount > 0) {
                         reverseCount--;
                     }
-//                    Rect revBound = new Rect();
-//
-//                    paint.getTextBounds(revDepthText, 0, revDepthText.length(), revBound);
-//                    float revTextX = ticX;
-//                    if (revTextX + revBound.width() > width) {
-//                        revTextX -= revBound.width() + 6.f;
-//                    } else if (i > 0) {
-//                        revTextX -= (revBound.width() / 2.f);
-//                    }
-//                    canvas.drawText(revDepthText, revTextX, 0, paint);
                 }
             }
 
@@ -236,7 +231,7 @@ public class AxisView extends View {
             if (i + 1 <= _numOfTicks) {
                 path.moveTo(ticX, middleHeight);
                 path.lineTo(ticX, middleHeight + MINOR_TIC_LENGTH);
-                canvas.drawPath(path, paint);
+//                canvas.drawPath(path, paint);
                 path.reset();
 
                 ticX += ticSpace;

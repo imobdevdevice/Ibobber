@@ -133,7 +133,7 @@ public class SonarView extends RelativeLayout {
         _distanceAxisView = new AxisView(getContext());
         _distanceAxisView.setId(View.generateViewId());
         _distanceAxisView.setVisibility(View.INVISIBLE);
-        LayoutParams distanceParams = new LayoutParams(LayoutParams.WRAP_CONTENT, (int) getContext().getResources().getDimension(R.dimen._40sdp));
+        LayoutParams distanceParams = new LayoutParams(LayoutParams.MATCH_PARENT, (int) getContext().getResources().getDimension(R.dimen._40sdp));
         distanceParams.addRule(RIGHT_OF, _depthAxisView.getId());
 //        distanceParams.bottomMargin = (_bottomMargin + 1) / 2;
         distanceParams.addRule(ALIGN_PARENT_RIGHT);
@@ -154,12 +154,12 @@ public class SonarView extends RelativeLayout {
         }, 1000);
 
 
-        _newTestAxis = new NewAxisView(getContext());
-        LayoutParams newdistanceParams = new LayoutParams(LayoutParams.WRAP_CONTENT, _bottomMargin + 1);
-        _newTestAxis.setVisibility(View.INVISIBLE);
-        newdistanceParams.addRule(ABOVE, _distanceAxisView.getId());
-        newdistanceParams.addRule(ALIGN_START, _distanceAxisView.getId());
-        //   addView(_newTestAxis, newdistanceParams);
+//        _newTestAxis = new NewAxisView(getContext());
+//        LayoutParams newdistanceParams = new LayoutParams(LayoutParams.WRAP_CONTENT, _bottomMargin + 1);
+//        _newTestAxis.setVisibility(View.INVISIBLE);
+//        newdistanceParams.addRule(ABOVE, _distanceAxisView.getId());
+//        newdistanceParams.addRule(ALIGN_START, _distanceAxisView.getId());
+//        //   addView(_newTestAxis, newdistanceParams);
 
         setWillNotDraw(false);
     }

@@ -115,6 +115,8 @@ dependencies {
         transitive = true;
     }
     compile project(path: ':library')
+    // AppsFlyer
+    compile 'com.appsflyer:af-android-sdk:4+@aar'
 }
 apply plugin: 'com.google.gms.google-services'
 

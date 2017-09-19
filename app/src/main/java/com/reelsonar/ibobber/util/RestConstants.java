@@ -101,4 +101,8 @@ public class RestConstants {
     public static final String IEXTRA_AUTH_URL = "auth_url";
     public static final String IEXTRA_OAUTH_VERIFIER = "oauth_verifier";
     public static final String IEXTRA_OAUTH_TOKEN = "oauth_token";
+
+
+    // Apps Flyer DEV KEY
+    public static final String APPS_FLYER_KEY = "C42f3fvwUjmzsxRe4qTq2H";
 }

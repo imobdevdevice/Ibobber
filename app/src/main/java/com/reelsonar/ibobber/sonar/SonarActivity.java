@@ -572,7 +572,7 @@ public abstract class SonarActivity extends BaseActivity implements CommandFragm
         showReelView();
         _sonarView.setMaxDataFrames(MAX_WATERBED_SONAR_DATA_SIZE);
         _sonarView.getDepthAxisView().setVisibility(View.VISIBLE);
-        _sonarView.getNewAxisView().setVisibility(View.VISIBLE);
+//        _sonarView.getNewAxisView().setVisibility(View.VISIBLE);
         startUpdate();
     }
 
@@ -688,12 +688,13 @@ public abstract class SonarActivity extends BaseActivity implements CommandFragm
         float distanceAxisWidth = pixelsPerUnitOfMeasurement * (float) distanceRounded;
 
         _sonarView.getDistanceAxisView().setWidthOverride(Math.round(distanceAxisWidth));
-//        _sonarView.getDistanceAxisView().setVisibility(View.VISIBLE);
-//        _sonarView.getDistanceAxisView().setMaxValue(distanceRounded);
         _sonarView.getDistanceAxisView().setVisibility(View.VISIBLE);
-        _sonarView.getDistanceAxisView().setMaxValue(10);
-
-//        _sonarView.getNewAxisView().setWidthOverride(Math.round(distanceAxisWidth));
+        _sonarView.getDistanceAxisView().setMaxValue(distanceRounded);
+//        // TODO: 19/9/17  Rujul
+//        // D/Width and override width: Width : 1687 , Override width : 8435
+//        _sonarView.getDistanceAxisView().setVisibility(View.VISIBLE);
+//        _sonarView.getDistanceAxisView().setMaxValue(30);
+//        _sonarView.getDistanceAxisView().setWidthOverride(8435);
 //        _sonarView.getNewAxisView().setMaxValue(distanceRounded);
 //        _sonarView.getNewAxisView().setVisibility(View.VISIBLE);
 
