@@ -17,6 +17,7 @@ import com.reelsonar.ibobber.util.AppUtils;
 import com.reelsonar.ibobber.util.CallBack;
 import com.reelsonar.ibobber.util.RestConstants;
 import com.reelsonar.ibobber.util.Validation;
+import com.reelsonar.ibobber.view.DividerEditText;
 
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
@@ -79,34 +80,17 @@ public class LoginEmailActivity extends BaseActivity {
             String email = AppUtils.getText(binding.edtEmail);
 
             String errPassword = Validation.checkPassword(password);
-            String errUserName = Validation.checkUserName(email);
+            String errEmail = Validation.checkUserName(email);
 
-///            if (!isEmpty(errLname)) {
-//                onLastNameError(errLname);
-//                return;
-//            }
-//
-//            if (!isEmpty(errEmail)) {
-//                onUserEmailError(errEmail);
-//                return;
-//            }
-//            if (!isEmpty(errUserName)) {
-//                onUserNameError(errUserName);
-//                return;
-//            }
-//            if (!isEmpty(errPassword)) {
-//                onPasswordError(errPassword);
-//                return;
-//            }
-//            if (!isEmpty(errConfirmPassword)) {
-//                onConfirmPasswordError(errConfirmPassword);
-//                return;
-//            }
-//
-//            if (!cbIsChecked) {
-//                onAgreeTermsError();
-//                return;
-//            }
+            if (!isEmpty(errEmail)) {
+                onEditTextError(binding.edtEmail, errEmail);
+                return;
+            }
+
+            if (!isEmpty(errPassword)) {
+                onEditTextError(binding.edtPassword, errPassword);
+                return;
+            }
 
             if (AppUtils.isNetworkAvailable(LoginEmailActivity.this)) {
                 showProgressBar();//
@@ -172,5 +156,10 @@ public class LoginEmailActivity extends BaseActivity {
 
     public void onBack(View view) {
         onBackPressed();
+    }
+
+    private void onEditTextError(DividerEditText edtUserName, String errMessage) {
+        edtUserName.setError(errMessage);
+        edtUserName.requestFocus();
     }
 }

@@ -5,7 +5,6 @@ package com.reelsonar.ibobber.triplog;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,6 +14,7 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 
 import com.google.gson.GsonBuilder;
+import com.reelsonar.ibobber.ApiCallBack;
 import com.reelsonar.ibobber.BaseActivity;
 import com.reelsonar.ibobber.NetFishAdsActivity;
 import com.reelsonar.ibobber.R;
@@ -106,13 +106,12 @@ public class TripLogListActivity extends BaseActivity implements AdapterView.OnI
         hashMap.put(USERID, auth.getData().getUserId());
         hashMap.put(OTHER_USERID, auth.getData().getUserId());
         hashMap.put(IBOBBER_APP, "1");
-        Log.d("userId", auth.getData().getUserId());
         ApiLoader.getTripLog(this, hashMap, new CallBack() {
             @Override
             public void onResponse(Call call, Response response, String msg) {
                 String responseStr = (response.body()).toString();
                 listMain = (new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create()).fromJson(responseStr, CatchTripListMain.class);
-                TripLogService.getInstance(getApplicationContext()).saveTripLog(listMain.getData(), new com.reelsonar.ibobber.CallBack() {
+                TripLogService.getInstance(getApplicationContext()).saveTripLog(listMain.getData(), new ApiCallBack() {
                     @Override
                     public void onCompleted() {
                         progressBar.setVisibility(View.GONE);
@@ -184,7 +183,7 @@ public class TripLogListActivity extends BaseActivity implements AdapterView.OnI
 
     public void editTripLog(final int position) {
         TripLog tripLog = (TripLog) adapter.getItem(position);
-        long idTrip = tripLog.getNetFishId();
+        long idTrip = tripLog.getIdTrip();
         Intent tripDetail = new Intent(this, TripLogDetailActivity.class);
         tripDetail.putExtra("idTrip", idTrip);
         startActivity(tripDetail);

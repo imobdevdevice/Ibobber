@@ -9,6 +9,8 @@ import retrofit2.Response;
 
 public interface CallBack {
 
+//    <T> void onResponse(Call call, Response response, String msg, Class<T> clazz);
+
     void onResponse(Call call, Response response, String msg);
 
     void onFail(Call call, Throwable e);

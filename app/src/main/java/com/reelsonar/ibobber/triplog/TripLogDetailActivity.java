@@ -79,8 +79,8 @@ public class TripLogDetailActivity extends Activity implements LoaderManager.Loa
         setContentView(R.layout.activity_triplog_detail);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
-//        long idTrip = getIntent().getLongExtra("idTrip", -1);
-        long idTrip = 2L;
+        long idTrip = getIntent().getLongExtra("idTrip", -1);
+//        long idTrip = 2L;
         if (idTrip != -1) {
             Bundle bundle = new Bundle();
             bundle.putLong("idTrip", idTrip);
@@ -89,9 +89,9 @@ public class TripLogDetailActivity extends Activity implements LoaderManager.Loa
             getLoaderManager().initLoader(LOADER_TRIP_LOG_FISH, bundle, this);
         } else {
             _tripLog = new TripLog();
-            _tripLog.setWaterTemp( 9999 );
-            _tripLog.setWaterDepth( 9999 );
-            _tripLog.setAirTemp( 9999 );
+            _tripLog.setWaterTemp(9999);
+            _tripLog.setWaterDepth(9999);
+            _tripLog.setAirTemp(9999);
             _tripLogImages = new TripLogImages();
             _tripLogFish = new TripLogFish();
             _isNewTripLog = true;
@@ -144,30 +144,30 @@ public class TripLogDetailActivity extends Activity implements LoaderManager.Loa
     public void onLoadFinished(final Loader loader, final Object data) {
         switch (loader.getId()) {
             case LOADER_TRIP_LOG:
-                _tripLog = (TripLog)data;
-                        // Determine weather airTemp needs to be requested from Aeris (Botswana fish tournament use case)
-                if( _tripLog != null ) {
-                   // _tripLog.setAirTemp( 9999 ); // Debugging ....
-                    if( _tripLog.getAirTemp() == 9999 ) {
+                _tripLog = (TripLog) data;
+                // Determine weather airTemp needs to be requested from Aeris (Botswana fish tournament use case)
+                if (_tripLog != null) {
+                    // _tripLog.setAirTemp( 9999 ); // Debugging ....
+                    if (_tripLog.getAirTemp() == 9999) {
                         WeatherArchiveService weatherArchiveService = new WeatherArchiveService(this);
                         weatherArchiveService.setDelegate(this);
-                        weatherArchiveService.loadArchivedWeather( _tripLog.getLatitude(), _tripLog.getLongitude(), _tripLog.getDate() );
+                        weatherArchiveService.loadArchivedWeather(_tripLog.getLatitude(), _tripLog.getLongitude(), _tripLog.getDate());
                     }
                 }
                 break;
             case LOADER_TRIP_LOG_IMAGES:
-                _tripLogImages = (TripLogImages)data;
+                _tripLogImages = (TripLogImages) data;
                 break;
             case LOADER_TRIP_LOG_FISH:
-                _tripLogFish = (TripLogFish)data;
+                _tripLogFish = (TripLogFish) data;
                 break;
             case LOADER_ALL_FISH:
-                _allFish = (List<FavoriteFish>)data;
+                _allFish = (List<FavoriteFish>) data;
                 break;
         }
 
         if (_formAdapter == null && _tripLog != null && _tripLogFish != null && _allFish != null) {
-            _formView = (ExpandableListView)findViewById(R.id.formListView);
+            _formView = (ExpandableListView) findViewById(R.id.formListView);
             _formAdapter = new TripLogFormAdapter(this, _tripLog, _tripLogImages, _tripLogFish, _allFish);
             _formView.setAdapter(_formAdapter);
             _formView.setOnChildClickListener(_formAdapter);
@@ -208,13 +208,12 @@ public class TripLogDetailActivity extends Activity implements LoaderManager.Loa
         for (int i = 0; i < resInfo.size(); i++) {
             ResolveInfo ri = resInfo.get(i);
             String packageName = ri.activityInfo.packageName;
-            if(packageName.contains("twitter") || packageName.contains("facebook") ||
+            if (packageName.contains("twitter") || packageName.contains("facebook") ||
                     packageName.contains("android.talk") || packageName.contains("apps.plus") ||
                     packageName.contains("mms") || packageName.contains("android.gm") ||
                     packageName.contains("email") ||
                     packageName.contains("com.reelsonar.ibobber")  // We serve as the go-tween for the Fishidy service
-                    )
-            {
+                    ) {
                 Intent intent = new Intent();
                 intent.setComponent(new ComponentName(packageName, ri.activityInfo.name));
                 intent.setAction(Intent.ACTION_SEND);
@@ -222,53 +221,53 @@ public class TripLogDetailActivity extends Activity implements LoaderManager.Loa
                 intent.putExtra(Intent.EXTRA_SUBJECT, subject);
                 intent.putExtra(Intent.EXTRA_TEXT, getTripLogShareString(false));
 
-                if(packageName.contains("twitter")) {
+                if (packageName.contains("twitter")) {
                     intent.putExtra(Intent.EXTRA_TEXT, getTripLogShareString(true));
-                } else if(packageName.contains("facebook")) {
+                } else if (packageName.contains("facebook")) {
                     intent = new Intent(this, FacebookActivity.class);
                     intent.putExtra(Intent.EXTRA_SUBJECT, subject);
                     intent.putExtra(Intent.EXTRA_TEXT, getTripLogShareString(false));
-                } else if( packageName.contains("com.reelsonar.ibobber")) {
+                } else if (packageName.contains("com.reelsonar.ibobber")) {
 
-                     ArrayList<Integer> tripLogFishIds = _tripLogFish.getKeys();
+                    ArrayList<Integer> tripLogFishIds = _tripLogFish.getKeys();
 
-                    if( tripLogFishIds.size() > 0 ) {
+                    if (tripLogFishIds.size() > 0) {
 
                         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-d H:mm");
-                        formatter.setTimeZone( TimeZone.getTimeZone("UTC"));
+                        formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
                         String catchDateString = formatter.format(_tripLog.getDate());
                         intent.putExtra("catch_date", catchDateString);
 
                         intent.putExtra("latitude", String.valueOf(_tripLog.getLatitude()));
                         intent.putExtra("longitude", String.valueOf(_tripLog.getLongitude()));
 
-                        if( _tripLog.getWaterTemp() != 9999 )
-                            intent.putExtra("waterTemp", String.format("%.1f", (_tripLog.getWaterTemp() * 1.8) + 32 )); // This data is stored metric locally.  Fishidy uses Imperial.
-                        if( _tripLog.getWaterDepth() != 9999 )
+                        if (_tripLog.getWaterTemp() != 9999)
+                            intent.putExtra("waterTemp", String.format("%.1f", (_tripLog.getWaterTemp() * 1.8) + 32)); // This data is stored metric locally.  Fishidy uses Imperial.
+                        if (_tripLog.getWaterDepth() != 9999)
                             intent.putExtra("waterDepth", String.format("%.2f", _tripLog.getWaterDepth() * 3.28));
-                        if( _tripLog.getAirTemp() != 9999 )
-                            intent.putExtra("airTemp", String.format("%.1f", (_tripLog.getAirTemp() * 1.8) + 32 ));
+                        if (_tripLog.getAirTemp() != 9999)
+                            intent.putExtra("airTemp", String.format("%.1f", (_tripLog.getAirTemp() * 1.8) + 32));
 
                         String lure = "Other";
                         LureType lureType = _tripLog.getLureType();
-                        if( (lureType != null) && (lureType != LureType.OTHER) )
-                            lure = getResources().getString( _tripLog.getLureType().getName() );
+                        if ((lureType != null) && (lureType != LureType.OTHER))
+                            lure = getResources().getString(_tripLog.getLureType().getName());
                         intent.putExtra("lure", lure);
 
                         String notes = _tripLog.getNotes();
-                        if( notes != null && notes.length() > 0 )
-                            intent.putExtra("notes", notes );
+                        if (notes != null && notes.length() > 0)
+                            intent.putExtra("notes", notes);
 
-                        String title= _tripLog.getTitle();
-                        if( title != null && title.length() > 0 )
-                            intent.putExtra("title", title );
+                        String title = _tripLog.getTitle();
+                        if (title != null && title.length() > 0)
+                            intent.putExtra("title", title);
 
                         ArrayList<String> fishSpeciesList = new ArrayList<String>(tripLogFishIds.size());
-                        for( Integer fishId : tripLogFishIds ) {
-                            fishSpeciesList.add( _tripLogFish.getNameForFishId( fishId ));
+                        for (Integer fishId : tripLogFishIds) {
+                            fishSpeciesList.add(_tripLogFish.getNameForFishId(fishId));
                         }
 
-                        intent.putStringArrayListExtra("fishList", fishSpeciesList );
+                        intent.putStringArrayListExtra("fishList", fishSpeciesList);
                     }
                 }
 
@@ -280,7 +279,7 @@ public class TripLogDetailActivity extends Activity implements LoaderManager.Loa
 
         if (intentList.size() > 0) intentList.remove(0);
 
-        LabeledIntent[] extraIntents = intentList.toArray( new LabeledIntent[ intentList.size() ]);
+        LabeledIntent[] extraIntents = intentList.toArray(new LabeledIntent[intentList.size()]);
 
         openInChooser.putExtra(Intent.EXTRA_INITIAL_INTENTS, extraIntents);
         startActivity(openInChooser);
@@ -335,7 +334,7 @@ public class TripLogDetailActivity extends Activity implements LoaderManager.Loa
 
     public void selectImageFromGalery() {
 
-       startActivityForResult( Intent.createChooser( new Intent(Intent.ACTION_GET_CONTENT).setType("image/*"), "Choose an image"), REQUEST_GALLERY_IMAGE );
+        startActivityForResult(Intent.createChooser(new Intent(Intent.ACTION_GET_CONTENT).setType("image/*"), "Choose an image"), REQUEST_GALLERY_IMAGE);
     }
 
     @Override
@@ -347,7 +346,7 @@ public class TripLogDetailActivity extends Activity implements LoaderManager.Loa
             _formAdapter.notifyDataSetChanged();
             return;
         }
-        if (requestCode == REQUEST_GALLERY_IMAGE && resultCode == RESULT_OK ) {
+        if (requestCode == REQUEST_GALLERY_IMAGE && resultCode == RESULT_OK) {
 
             if ((data != null) && (data.getData() != null)) {
 
@@ -376,14 +375,14 @@ public class TripLogDetailActivity extends Activity implements LoaderManager.Loa
 
                     _formAdapter.notifyDataSetChanged();
 
-                } catch( Exception exc ) {
+                } catch (Exception exc) {
                     Log.e("Something went wrong.", exc.toString());
                 } finally {
                     try {
                         in.close();
                         out.close();
-                    } catch( Exception ioExc ) {
-                        Log.e(TAG, ioExc.toString() );
+                    } catch (Exception ioExc) {
+                        Log.e(TAG, ioExc.toString());
                     }
                 }
             }
@@ -394,7 +393,7 @@ public class TripLogDetailActivity extends Activity implements LoaderManager.Loa
             if (resultCode == RESULT_OK) {
                 if ((data != null) && (data.getData() != null)) {
                     int imageId = data.getIntExtra("imageId", -1);
-                    _tripLogImages.deleteImageAtIndex( imageId );
+                    _tripLogImages.deleteImageAtIndex(imageId);
                     _formAdapter.notifyDataSetChanged();
                 }
             }
@@ -407,11 +406,11 @@ public class TripLogDetailActivity extends Activity implements LoaderManager.Loa
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String imageFileName = "IBOBBER_" + timeStamp + ".jpg";
         File storageDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-        File imageDir= new File(storageDir.toString() + File.separator + "ibobber" );
+        File imageDir = new File(storageDir.toString() + File.separator + "ibobber");
         if (!imageDir.exists()) {
             imageDir.mkdir();
         }
-        File imageFile= new File( imageDir.getPath() + File.separator + imageFileName);
+        File imageFile = new File(imageDir.getPath() + File.separator + imageFileName);
         imageFile.createNewFile();
         mCurrentPhotoPath = imageFile.getAbsolutePath();
 
@@ -427,10 +426,12 @@ public class TripLogDetailActivity extends Activity implements LoaderManager.Loa
         String notes = !(_tripLog.getNotes() == null) ? _tripLog.getNotes() : "";
 
         String conditions = "";
-        if (_tripLog.getCondition() != null) conditions = getResources().getString(_tripLog.getCondition().getName());
+        if (_tripLog.getCondition() != null)
+            conditions = getResources().getString(_tripLog.getCondition().getName());
 
         String fishingType = "";
-        if (_tripLog.getFishingType() != null) fishingType = getResources().getString(_tripLog.getFishingType().getName());
+        if (_tripLog.getFishingType() != null)
+            fishingType = getResources().getString(_tripLog.getFishingType().getName());
 
         DateFormat dateFormat = android.text.format.DateFormat.getDateFormat(this);
         DateFormat timeFormat = android.text.format.DateFormat.getTimeFormat(this);
@@ -440,7 +441,7 @@ public class TripLogDetailActivity extends Activity implements LoaderManager.Loa
 
         final boolean hasLocation = _tripLog.getLatitude() != 0 || _tripLog.getLongitude() != 0;
 
-        String locationAsString = hasLocation ? String.valueOf(_tripLog.getLatitude())+","+String.valueOf(_tripLog.getLongitude()) : getResources().getString(R.string.trip_log_unknown_location);
+        String locationAsString = hasLocation ? String.valueOf(_tripLog.getLatitude()) + "," + String.valueOf(_tripLog.getLongitude()) : getResources().getString(R.string.trip_log_unknown_location);
 
         shareString = header + "\n\n";
 
@@ -484,26 +485,25 @@ public class TripLogDetailActivity extends Activity implements LoaderManager.Loa
         }
 
         if (!notes.isEmpty()) {
-           if (!twitter) {
-               shareString = shareString + String.format("%s: %s\n", getResources().getString(R.string.trip_log_notes), notes);
+            if (!twitter) {
+                shareString = shareString + String.format("%s: %s\n", getResources().getString(R.string.trip_log_notes), notes);
+            } else {
+                shareString = shareString + String.format("%s\n", notes);
             }
-           else {
-               shareString = shareString + String.format("%s\n", notes);
-           }
-    }
+        }
 
-    if (!twitter) {
-        shareString = shareString + String.format("\nwww.reelsonar.com");
-    }
+        if (!twitter) {
+            shareString = shareString + String.format("\nwww.reelsonar.com");
+        }
 
         return shareString;
     }
 
-    public void displayImage( int imageId, String imageFilename ) {
+    public void displayImage(int imageId, String imageFilename) {
 
         Intent intent = new Intent(this, ImageDisplayActivity.class);
-        intent.putExtra(ImageDisplayActivity.IMAGE_FILENAME, imageFilename );
-        intent.putExtra(ImageDisplayActivity.IMAGE_ID, imageId );
+        intent.putExtra(ImageDisplayActivity.IMAGE_FILENAME, imageFilename);
+        intent.putExtra(ImageDisplayActivity.IMAGE_ID, imageId);
 
         startActivityForResult(intent, REQUEST_IMAGE_DELETION);
     }
@@ -514,13 +514,13 @@ public class TripLogDetailActivity extends Activity implements LoaderManager.Loa
     @Override
     public void handleObservationFetchSuccess(Observation obs) {
         // Log.d(TAG, "Got weather observation:  " + obs.toString() );
-        _tripLog.setAirTemp( obs.tempC.doubleValue() );
+        _tripLog.setAirTemp(obs.tempC.doubleValue());
         _formAdapter.notifyDataSetChanged();
     }
 
     @Override
-    public void handleObservationFetchFailure( String errorMessage ) {
-        Log.e(TAG, errorMessage );
+    public void handleObservationFetchFailure(String errorMessage) {
+        Log.e(TAG, errorMessage);
     }
 
     @Override

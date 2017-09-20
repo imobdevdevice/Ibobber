@@ -12,7 +12,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.util.SparseIntArray;
 
-import com.reelsonar.ibobber.CallBack;
+import com.reelsonar.ibobber.ApiCallBack;
 import com.reelsonar.ibobber.bluetooth.BTService;
 import com.reelsonar.ibobber.db.DBLoader;
 import com.reelsonar.ibobber.db.DBOpenHelper;
@@ -299,7 +299,7 @@ public class TripLogService {
         });
     }
 
-    public void saveTripLog(final List<CatchTripLogDetails> catchTripLog, final CallBack callBack) {
+    public void saveTripLog(final List<CatchTripLogDetails> catchTripLog, final ApiCallBack callBack) {
 //        synchronized (this) {
             for (int i = 0; i < catchTripLog.size(); i++) {
                 CatchTripLogDetails tripLog = catchTripLog.get(i);

@@ -4,7 +4,7 @@ package com.reelsonar.ibobber;
  * Created by Rujul Gandhi
  */
 
-public interface CallBack {
+public interface ApiCallBack {
 
     public void onCompleted();
 

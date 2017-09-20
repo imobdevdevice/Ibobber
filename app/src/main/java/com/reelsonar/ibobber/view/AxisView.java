@@ -157,9 +157,6 @@ public class AxisView extends View {
         float visibleWidth = Math.min(getWidth(), _widthOverride);
         float distanceBetweenTicks = (float) _maxValue / (float) _numOfTicks;
 
-//        if (_widthOverride > getWidth()) {
-//            distanceBetweenTicks = distanceBetweenTicks / (_widthOverride / getWidth());
-//        }
         Log.d("Width and override width", "Width : " + getWidth() + " , Override width : " + _widthOverride);
         Paint tempPaint = new Paint();
         tempPaint.setColor(Color.RED);
@@ -177,7 +174,6 @@ public class AxisView extends View {
         paint.setStyle(Paint.Style.STROKE);
         paint.setTextSize(13.0f * _pxPerDip);
         paint.setFakeBoldText(true);
-//        paint.setStrokeWidth(resource.getDimension(R.dimen._1sdp));
         Rect textBounds = new Rect();
         Path path = new Path();
         path.moveTo(0, middleHeight);

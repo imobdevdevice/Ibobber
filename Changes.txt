@@ -1,4 +1,4 @@
-Minor task :
+gooMinor task :
 * Message changes Login , Register , App login Confirmation -- Done
 * Login and register shared preference data store
 * Validation

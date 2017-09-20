@@ -3,6 +3,9 @@ package com.reelsonar.ibobber.util;
 import android.content.Context;
 import android.util.Log;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -30,17 +33,21 @@ public class ApiLoader {
 //                if (response.code() == HttpURLConnection.HTTP_OK) {
 //                    ResponseBody employeeHandler = response.body();
 //                }
+                Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
+                String jsonRes = "";
                 try {
                     JSONObject jsonObject = new JSONObject(response.body());
                     if (jsonObject.has("authentication")) {
-                        if(jsonObject.optBoolean("authentication")){
-                            Log.d("reponseLogout","Logout");
+                        if (jsonObject.optBoolean("authentication")) {
+                            Log.d("reponseLogout", "Logout");
                         }
                     }
+                    jsonRes = String.valueOf(jsonObject);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
                 if (callBack != null)
+//                    callBack.onResponse(call, response, error, (Class<Object>) gson.fromJson(jsonRes, clazz));
                     callBack.onResponse(call, response, error);
             }
 
@@ -70,8 +77,8 @@ public class ApiLoader {
                 try {
                     JSONObject jsonObject = new JSONObject(response.body());
                     if (jsonObject.has("authentication")) {
-                        if(jsonObject.optBoolean("authentication")){
-                            Log.d("reponseLogout","Logout");
+                        if (jsonObject.optBoolean("authentication")) {
+                            Log.d("reponseLogout", "Logout");
                         }
                     }
                 } catch (JSONException e) {
@@ -108,7 +115,7 @@ public class ApiLoader {
                 try {
                     JSONObject jsonObject = new JSONObject(response.body());
                     if (jsonObject.has("authentication")) {
-                        if(!jsonObject.optBoolean("authentication")){
+                        if (!jsonObject.optBoolean("authentication")) {
                             logout(context);
                         }
                     }

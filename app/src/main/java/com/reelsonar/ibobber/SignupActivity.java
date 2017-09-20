@@ -86,6 +86,7 @@ public class SignupActivity extends BaseActivity {
             String fname = AppUtils.getText(binding.edtFirstName);
             String lname = AppUtils.getText(binding.edtLastName);
 
+            // Error Messages String
             String errEmail = Validation.checkEmail(email);
             String errPassword = Validation.checkPassword(password);
             String errUserName = Validation.checkUserName(userName);
@@ -93,41 +94,29 @@ public class SignupActivity extends BaseActivity {
             String errLname = Validation.checkName(lname);
 
             if (!isEmpty(errFname)) {
-                onEditTextError(binding.edtUserName, errFname);
+                onEditTextError(binding.edtFirstName, errFname);
                 return;
             }
-//
             if (binding.edtFirstName.length() < 2) {
                 onEditTextError(binding.edtFirstName, getString(R.string.error_fname));
                 return;
             }
-//
-//            if (!isEmpty(errLname)) {
-//                onLastNameError(errLname);
-//                return;
-//            }
-//
-//            if (!isEmpty(errEmail)) {
-//                onUserEmailError(errEmail);
-//                return;
-//            }
-//            if (!isEmpty(errUserName)) {
-//                onUserNameError(errUserName);
-//                return;
-//            }
-//            if (!isEmpty(errPassword)) {
-//                onPasswordError(errPassword);
-//                return;
-//            }
-//            if (!isEmpty(errConfirmPassword)) {
-//                onConfirmPasswordError(errConfirmPassword);
-//                return;
-//            }
-//
-//            if (!cbIsChecked) {
-//                onAgreeTermsError();
-//                return;
-//            }
+            if (!isEmpty(errLname)) {
+                onEditTextError(binding.edtLastName, errLname);
+                return;
+            }
+            if (!isEmpty(errEmail)) {
+                onEditTextError(binding.edtEmail, errEmail);
+                return;
+            }
+            if (!isEmpty(errUserName)) {
+                onEditTextError(binding.edtUserName, errUserName);
+                return;
+            }
+            if (!isEmpty(errPassword)) {
+                onEditTextError(binding.edtPassword, errPassword);
+                return;
+            }
 
             if (AppUtils.isNetworkAvailable(SignupActivity.this)) {
                 showProgressBar();
@@ -152,7 +141,6 @@ public class SignupActivity extends BaseActivity {
                 ApiLoader.getRegister(SignupActivity.this, registerParams, new CallBack() {
                     @Override
                     public void onResponse(Call call, Response response, String msg) {
-                        //{"status":true,"message":"Registration done successfully.","accessToken":"df35d21e-9c6e-11e7-a2ff-0018510d9bfb","data":{"user_id":"746","user_first_name":"james","user_last_name":"smith","user_user_name":"james.smith","user_type":"1","user_email":"james.smith@gmail.com","user_location":"","user_latitude":"","user_longitude":"","user_about_me":"","user_dob":"","user_gender":"","user_created_at":"1505738566","user_loyalty_points":0,"image_url":"","banner_image_url":"","premium_plan":false,"language_code":"en","referral":{"referred_by":"","code":"140a16d7"},"privacy":{"hometown":"1","gender":"1","date_of_birth":"1","catches":"1","name":"1"},"settings":{"share_post":"1","push_all":"1","push_follow":"1","push_comment":"1","push_vote":"1","push_message":"1","email_summary":"1"},"inapp_data":{"subscription_status":0,"transaction_id":"","activation_date":""},"redeem_info":[]}}
                         UserAuth userAuth = (new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create()).fromJson((response.body()).toString(), UserAuth.class);
                         if (userAuth != null) {
                             if (userAuth.getStatus()) {
