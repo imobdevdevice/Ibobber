@@ -110,7 +110,7 @@ public class AppUtils {
     public static final String DEVICE_TYPE = "2";
 
 
-    public static void  logout(Context context) {
+    public static void logout(Context context) {
         UserAuth auth = getUserInfo(context);
         String userType = auth.getData().getUserType();
         clearSharedPreference(context);
@@ -129,7 +129,7 @@ public class AppUtils {
             cookieManager.removeAllCookie();
         }
         Intent in = new Intent(context, LoginActivity.class);
-        in.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        in.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(in);
     }
 

@@ -23,7 +23,7 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:background="@color/onBoardControlView"
+            android:background="@color/app_tour_bg"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -31,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
-                android:background="@color/onBoardControlView"
+                android:background="@color/app_tour_bg"
                 android:gravity="center_vertical"
                 android:paddingLeft="20dip"
                 android:paddingRight="20dip">
@@ -42,7 +42,7 @@
                     android:layout_height="30dp"
                     android:layout_alignBottom="@+id/pageIndicatorLayout"
                     android:layout_alignParentStart="true"
-                    android:background="@color/onBoardControlView"
+                    android:background="@color/app_tour_bg"
                     android:gravity="left"
                     android:onClick="onPrevButton"
                     android:text="@string/button_back"
@@ -56,7 +56,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="8dip"
-                    android:background="@color/onBoardControlView" />
+                    android:background="@color/app_tour_bg" />
 
 
                 <TextView
@@ -66,7 +66,7 @@
                     android:layout_alignBottom="@+id/pageIndicatorLayout"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:background="@color/onBoardControlView"
+                    android:background="@color/app_tour_bg"
                     android:gravity="right"
                     android:onClick="onNextButton"
                     android:text="@string/button_next"
@@ -80,7 +80,7 @@
                     android:layout_alignBottom="@+id/backButton"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:background="@color/onBoardControlView"
+                    android:background="@color/app_tour_bg"
                     android:gravity="right"
                     android:onClick="onSkipButton"
                     android:text="@string/button_done"

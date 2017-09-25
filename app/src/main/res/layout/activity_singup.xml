@@ -108,7 +108,7 @@
                     android:layout_height="@dimen/_1sdp"
                     android:background="@color/white" />
 
-                <com.reelsonar.ibobber.view.GradientButton
+                <TextView
                     android:id="@+id/btnSignUp"
                     style="@style/ButtonBold"
                     android:layout_width="match_parent"
@@ -116,6 +116,7 @@
                     android:layout_marginTop="@dimen/_20sdp"
                     android:onClick="onSignUp"
                     android:text="@string/create_account"
+                    android:background="@drawable/email_rounded"
                     android:textSize="@dimen/_13sdp" />
 
                 <LinearLayout

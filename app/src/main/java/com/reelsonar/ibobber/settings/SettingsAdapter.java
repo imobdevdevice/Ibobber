@@ -249,6 +249,7 @@ public class SettingsAdapter extends BaseAdapter implements AdapterView.OnItemCl
                     @Override
                     public void onGroupClick(final View view, final boolean isExpanded) {
                         AppUtils.logout(_context);
+
                     }
                 },
                 new LabelField(_context, R.string.fcc, null, false),

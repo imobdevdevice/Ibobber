@@ -15,5 +15,5 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_margin="@dimen/_10sdp"
-        android:background="@drawable/onboarding_splash" />
+        android:src="@drawable/onboarding_splash" />
 </RelativeLayout>

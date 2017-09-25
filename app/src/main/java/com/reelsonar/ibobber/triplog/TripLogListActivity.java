@@ -13,8 +13,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
-import com.google.gson.GsonBuilder;
-import com.reelsonar.ibobber.ApiCallBack;
+import com.reelsonar.ibobber.TaskListener;
 import com.reelsonar.ibobber.BaseActivity;
 import com.reelsonar.ibobber.NetFishAdsActivity;
 import com.reelsonar.ibobber.R;
@@ -106,20 +105,22 @@ public class TripLogListActivity extends BaseActivity implements AdapterView.OnI
         hashMap.put(USERID, auth.getData().getUserId());
         hashMap.put(OTHER_USERID, auth.getData().getUserId());
         hashMap.put(IBOBBER_APP, "1");
-        ApiLoader.getTripLog(this, hashMap, new CallBack() {
+        ApiLoader.getInstance().getResponse(this, hashMap, RestConstants.GET_CATCH, CatchTripListMain.class, new CallBack() {
             @Override
-            public void onResponse(Call call, Response response, String msg) {
-                String responseStr = (response.body()).toString();
-                listMain = (new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create()).fromJson(responseStr, CatchTripListMain.class);
-                TripLogService.getInstance(getApplicationContext()).saveTripLog(listMain.getData(), new ApiCallBack() {
-                    @Override
-                    public void onCompleted() {
-                        progressBar.setVisibility(View.GONE);
-                        List<TripLog> list = TripLogService.getInstance(getApplicationContext()).getCatchTripLog();
-                        adapter = new TripLogAdapter(TripLogListActivity.this, list);
-                        lstTrip.setAdapter(adapter);
-                    }
-                });
+            public void onResponse(Call call, Response response, String msg, Object object) {
+//                String responseStr = (response.body()).toString();
+//                listMain = (new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create()).fromJson(responseStr, CatchTripListMain.class);
+                listMain = ((CatchTripListMain) object);
+                if (listMain != null && listMain.getData() != null)
+                    TripLogService.getInstance(getApplicationContext()).saveTripLog(listMain.getData(), new TaskListener() {
+                        @Override
+                        public void onTaskCompleted() {
+                            progressBar.setVisibility(View.GONE);
+                            List<TripLog> list = TripLogService.getInstance(getApplicationContext()).getCatchTripLog();
+                            adapter = new TripLogAdapter(TripLogListActivity.this, list);
+                            lstTrip.setAdapter(adapter);
+                        }
+                    });
             }
 
             @Override
@@ -173,9 +174,9 @@ public class TripLogListActivity extends BaseActivity implements AdapterView.OnI
             case R.id.edit:
                 editTripLog(info.position);
                 return true;
-//            case R.id.delete:
-//                deleteTripLog(info.position);
-//                return true;
+            case R.id.delete:
+                deleteTripLog(info.position);
+                return true;
             default:
                 return super.onContextItemSelected(item);
         }
@@ -189,12 +190,12 @@ public class TripLogListActivity extends BaseActivity implements AdapterView.OnI
         startActivity(tripDetail);
     }
 
-//    public void deleteTripLog(final int position) {
-//        final TripLog tripLog = (TripLog) adapter.getItem(position);
-//
-//        TripLogService.getInstance(TripLogListActivity.this).deleteTripLog(tripLog);
-//        adapter.removeItem(position);
-//    }
+    public void deleteTripLog(final int position) {
+        final TripLog tripLog = (TripLog) adapter.getItem(position);
+
+        TripLogService.getInstance(TripLogListActivity.this).deleteTripLog(tripLog);
+        adapter.removeItem(position);
+    }
 
     public void onEventMainThread(final DBLoader.ContentChangedEvent event) {
 //        findViewById(R.id.loadingSpinner).setVisibility(View.VISIBLE);

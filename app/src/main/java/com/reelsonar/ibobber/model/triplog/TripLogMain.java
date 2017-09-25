@@ -3,11 +3,13 @@ package com.reelsonar.ibobber.model.triplog;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * Created by Manoj Singh
  */
 
-public class TripLogMain {
+public class TripLogMain implements Serializable{
     @SerializedName("message")
     @Expose
     private String message;

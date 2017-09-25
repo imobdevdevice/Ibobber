@@ -12,6 +12,7 @@ import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -139,11 +140,12 @@ public class AppDemoActivity extends AppCompatActivity {
         public int mCurrentPage = 0;
 
         private static int CURRENT_PAGE_COLOR = Color.WHITE;
-        private static int OTHER_PAGE_COLOR = Color.GRAY;
         private static float DOT_RADIUS = 4 * BobberApp.getContext().getResources().getDisplayMetrics().density;
+        private Context context;
 
         public PageIndicator(Context context) {
             super(context);
+            this.context = context;
         }
 
         Paint paint = new Paint();
@@ -155,7 +157,7 @@ public class AppDemoActivity extends AppCompatActivity {
             float indicatorStart = ((getWidth() / 2.0f) - (indicatorWidth / 2.0f)) + (DOT_RADIUS * 2.0f);
 
             for (int dots = 0; dots < mTotalPages; dots++) {
-                paint.setColor(OTHER_PAGE_COLOR);
+                paint.setColor(ContextCompat.getColor(context, R.color.app_tour_unselected));
                 if (dots == mCurrentPage) paint.setColor(CURRENT_PAGE_COLOR);
                 canvas.drawCircle(indicatorStart + (dots * dotSpacing), getHeight() / 2, DOT_RADIUS, paint);
             }

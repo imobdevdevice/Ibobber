@@ -21,7 +21,10 @@ public enum Language implements IdName {
     JAPANESE("ja", R.string.lang_ja),
     KOREAN("ko", R.string.lang_ko),
     CHINESE("zh", R.string.lang_zh_hans),
+    VIETNAMESE("vi",R.string.lang_vi),
+    HEBREW("he",R.string.lang_he),
     ARABIC("ar", R.string.lang_ar);
+
 
     public static Language forCode(final String code) {
         for (Language language : values()) {

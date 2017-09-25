@@ -31,7 +31,8 @@
 
     <color name="toast_bg">#004C7D</color>
     <color name="green">#66BEC2</color>
-
     <color name="light_blue">#00AAE3</color>
+    <color name="app_tour_bg">#00AAE3</color>
+    <color name="app_tour_unselected">#71bae4</color>
 
 </resources>

@@ -133,7 +133,7 @@ public class SonarView extends RelativeLayout {
         _distanceAxisView = new AxisView(getContext());
         _distanceAxisView.setId(View.generateViewId());
         _distanceAxisView.setVisibility(View.INVISIBLE);
-        LayoutParams distanceParams = new LayoutParams(LayoutParams.MATCH_PARENT, (int) getContext().getResources().getDimension(R.dimen._40sdp));
+        LayoutParams distanceParams = new LayoutParams(LayoutParams.MATCH_PARENT, (int) getContext().getResources().getDimension(R.dimen._50sdp));
         distanceParams.addRule(RIGHT_OF, _depthAxisView.getId());
 //        distanceParams.bottomMargin = (_bottomMargin + 1) / 2;
         distanceParams.addRule(ALIGN_PARENT_RIGHT);

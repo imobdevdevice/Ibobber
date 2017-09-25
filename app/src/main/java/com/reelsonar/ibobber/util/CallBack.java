@@ -7,7 +7,8 @@ import retrofit2.Response;
  * Created by rujul on 22/9/17.
  */
 
-public interface GenericCallBack {
+public interface CallBack {
+
     <T> void onResponse(Call call, Response response, String msg, Object object);
 
     void onFail(Call call, Throwable e);

@@ -111,11 +111,11 @@ public class LoginEmailActivity extends BaseActivity {
                     e.printStackTrace();
                 }
 
-                ApiLoader.getLogin(LoginEmailActivity.this, registerParams, new CallBack() {
+                ApiLoader.getInstance().getResponse(LoginEmailActivity.this, registerParams, RestConstants.LOGIN, UserAuth.class, new CallBack() {
                     @Override
-                    public void onResponse(Call call, Response response, String msg) {
-
+                    public <T> void onResponse(Call call, Response response, String msg, Object object) {
                         UserAuth userAuth = new Gson().fromJson((response.body()).toString(), UserAuth.class);
+                        userAuth = ((UserAuth) object);
                         if (userAuth != null) {
                             if (userAuth.getStatus()) {
                                 sucessLogin(userAuth);

@@ -15,9 +15,9 @@
 
             <com.reelsonar.ibobber.view.TitleView
                 android:id="@+id/titleView"
-                app:SubTitleText="@string/sing_in"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                app:SubTitleText="@string/sing_in" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -25,7 +25,6 @@
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/_15sdp"
                 android:orientation="vertical">
-
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -40,29 +39,12 @@
                         android:layout_marginTop="@dimen/_9sdp"
                         android:background="@drawable/facebook_rounded"
                         android:drawableLeft="@drawable/icon_facebook_white"
-                        android:foreground="?android:attr/selectableItemBackground"
                         android:paddingLeft="@dimen/_15sdp"
-
                         android:stateListAnimator="@drawable/lift_on_touch"
                         android:text="@string/continue_with_facebook"
                         android:textSize="@dimen/_13sdp" />
 
-                    <com.reelsonar.ibobber.view.GradientButton
-                        android:id="@+id/tvSignupFacebook"
-                        style="@style/ButtonBold"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_9sdp"
-                        android:drawableLeft="@drawable/icon_facebook_white"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:paddingLeft="@dimen/_15sdp"
-                        android:stateListAnimator="@drawable/lift_on_touch"
-                        android:text="@string/sign_up_with_facebook"
-                        android:textSize="@dimen/_13sdp"
-                        android:visibility="gone"
-                        app:backColor="@color/facebookBtnColor"
-                        app:endColorGradient="@color/facebookBtnColor"
-                        app:startColorGradient="@color/facebookBtnColor" />
+
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -78,28 +60,26 @@
                         android:layout_marginTop="@dimen/_15sdp"
                         android:background="@drawable/twitter_rounded"
                         android:drawableLeft="@drawable/icon_twitter_white"
-                        android:foreground="?android:attr/selectableItemBackground"
                         android:paddingLeft="@dimen/_15sdp"
                         android:stateListAnimator="@drawable/lift_on_touch"
                         android:text="@string/continue_with_twitter"
                         android:textSize="@dimen/_13sdp" />
 
-                    <com.reelsonar.ibobber.view.GradientButton
-                        android:id="@+id/tvSignupTwitter"
-                        style="@style/ButtonBold"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_15sdp"
-                        android:drawableLeft="@drawable/icon_twitter_white"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:paddingLeft="@dimen/_15sdp"
-                        android:stateListAnimator="@drawable/lift_on_touch"
-                        android:text="@string/sign_up_with_twitter"
-                        android:textSize="@dimen/_13sdp"
-                        android:visibility="gone"
-                        app:backColor="@color/twitterColor"
-                        app:endColorGradient="@color/twitterColor"
-                        app:startColorGradient="@color/twitterColor" />
+                    <!--<com.reelsonar.ibobber.view.GradientButton-->
+                        <!--android:id="@+id/tvSignupTwitter"-->
+                        <!--style="@style/ButtonBold"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="@dimen/_15sdp"-->
+                        <!--android:drawableLeft="@drawable/icon_twitter_white"-->
+                        <!--android:paddingLeft="@dimen/_15sdp"-->
+                        <!--android:stateListAnimator="@drawable/lift_on_touch"-->
+                        <!--android:text="@string/sign_up_with_twitter"-->
+                        <!--android:textSize="@dimen/_13sdp"-->
+                        <!--android:visibility="gone"-->
+                        <!--app:backColor="@color/twitterColor"-->
+                        <!--app:endColorGradient="@color/twitterColor"-->
+                        <!--app:startColorGradient="@color/twitterColor" />-->
 
 
                 </RelativeLayout>
@@ -117,33 +97,31 @@
                         android:layout_marginTop="@dimen/_15sdp"
                         android:background="@drawable/instagram_rounded"
                         android:drawableLeft="@drawable/instagram_white"
-                        android:foreground="?android:attr/selectableItemBackground"
                         android:stateListAnimator="@drawable/lift_on_touch"
                         android:text="@string/continue_with_instagram"
                         android:textSize="@dimen/_13sdp" />
 
-                    <com.reelsonar.ibobber.view.GradientButton
-                        android:id="@+id/tvSignupInstagram"
-                        style="@style/ButtonBold"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_15sdp"
-                        android:drawableLeft="@drawable/instagram_white"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:stateListAnimator="@drawable/lift_on_touch"
-                        android:text="@string/sign_up_with_instagram"
-                        android:textSize="@dimen/_13sdp"
-                        android:visibility="gone"
-                        app:backColor="@color/dark_red"
-                        app:endColorGradient="@color/dark_red"
-                        app:startColorGradient="@color/dark_red" />
+                    <!--<com.reelsonar.ibobber.view.GradientButton-->
+                        <!--android:id="@+id/tvSignupInstagram"-->
+                        <!--style="@style/ButtonBold"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="@dimen/_15sdp"-->
+                        <!--android:drawableLeft="@drawable/instagram_white"-->
+                        <!--android:stateListAnimator="@drawable/lift_on_touch"-->
+                        <!--android:text="@string/sign_up_with_instagram"-->
+                        <!--android:textSize="@dimen/_13sdp"-->
+                        <!--android:visibility="gone"-->
+                        <!--app:backColor="@color/dark_red"-->
+                        <!--app:endColorGradient="@color/dark_red"-->
+                        <!--app:startColorGradient="@color/dark_red" />-->
 
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:onClick="onLoginByEmail"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:onClick="onLoginByEmail">
 
                     <TextView
                         android:id="@+id/tvLoginEmail"
@@ -153,28 +131,26 @@
                         android:layout_marginTop="@dimen/_15sdp"
                         android:background="@drawable/email_rounded"
                         android:drawableLeft="@drawable/icon_email_white"
-                        android:foreground="?android:attr/selectableItemBackground"
                         android:paddingLeft="@dimen/_15sdp"
                         android:stateListAnimator="@drawable/lift_on_touch"
                         android:text="@string/sign_in_with_email"
                         android:textSize="@dimen/_13sdp" />
 
-                    <com.reelsonar.ibobber.view.GradientButton
-                        android:id="@+id/tvSignupEmail"
-                        style="@style/ButtonBold"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_15sdp"
-                        android:drawableLeft="@drawable/icon_email_white"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:paddingLeft="@dimen/_15sdp"
-                        android:stateListAnimator="@drawable/lift_on_touch"
-                        android:text="@string/sign_up_with_email"
-                        android:textSize="@dimen/_13sdp"
-                        android:visibility="gone"
-                        app:backColor="@color/email"
-                        app:endColorGradient="@color/email"
-                        app:startColorGradient="@color/email" />
+                    <!--<com.reelsonar.ibobber.view.GradientButton-->
+                        <!--android:id="@+id/tvSignupEmail"-->
+                        <!--style="@style/ButtonBold"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="@dimen/_15sdp"-->
+                        <!--android:drawableLeft="@drawable/icon_email_white"-->
+                        <!--android:paddingLeft="@dimen/_15sdp"-->
+                        <!--android:stateListAnimator="@drawable/lift_on_touch"-->
+                        <!--android:text="@string/sign_up_with_email"-->
+                        <!--android:textSize="@dimen/_13sdp"-->
+                        <!--android:visibility="gone"-->
+                        <!--app:backColor="@color/email"-->
+                        <!--app:endColorGradient="@color/email"-->
+                        <!--app:startColorGradient="@color/email" />-->
                 </RelativeLayout>
 
                 <TextView
@@ -215,7 +191,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:textAllCaps="false" />
-
 
                 <com.twitter.sdk.android.core.identity.TwitterLoginButton
                     android:id="@+id/btnTwitterLogin"

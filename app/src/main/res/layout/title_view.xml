@@ -34,7 +34,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/_10sdp"
-            android:text="@string/SignUpTitle"
             android:textColor="@color/white"
             android:textSize="@dimen/_12sdp" />
 

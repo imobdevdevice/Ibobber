@@ -3,11 +3,13 @@ package com.reelsonar.ibobber.model.UserAuth;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * Created by Manoj Singh
  */
 
-public class UserAuth {
+public class UserAuth implements Serializable {
     @SerializedName("status")
     @Expose
     private Boolean status;

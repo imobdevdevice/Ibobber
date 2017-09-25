@@ -300,13 +300,16 @@
     <string name="lang_ko">한국의</string>
     <string name="lang_zh_hans">中文</string>
     <string name="lang_ar">العربية</string>
+    <string name="lang_he">עִברִית</string>
+    <string name="lang_vi">TIẾNG VIỆT</string>
     <string name="app_name">iBobber</string>
     <string name="fcc">FCC: SGGIBOBBER | IBOBBER</string>
     <string name="ic">IC: 11845AIBOBBER | IBOBBER</string>
     <string name="aeris_client_id">h26I2r6C3oLIoSSTAecRR</string>
     <string name="aeris_client_secret">1lMQaUV4BDyzBFZglHaotLbVUFizoy1RrulWVF3h</string>
     <string name="app_id">358989610957868</string>
-    <string name="google_maps_key" templateMergeStrategy="preserve">AIzaSyBYMOSFJErEajXeA79Mr2x2kynkyEK7YJo</string>
+    <!--<string name="google_maps_key" templateMergeStrategy="preserve">AIzaSyBYMOSFJErEajXeA79Mr2x2kynkyEK7YJo</string>-->
+    <!--<string name="google_maps_key" templateMergeStrategy="preserve">AIzaSyCcrjghq0cQm_oNV3mn8cSyRk6NHJ3uSnk</string>-->
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_image_display">Trip Log Photo</string>
@@ -483,6 +486,7 @@
     <string name="intro_start_conclusion">Thanks for signing up!</string>
     <string name="intro_start_salutation">Let’s take a quick tour</string>
     <string name="intro_welcometo">Welcome to</string>
+
 
     <string-array name="intro_screens_text">
         <item>@string/intro_screen_1</item>

@@ -32,7 +32,7 @@
   <string name="cast_command_title">"iBOBBERで釣りを行う"</string>
   <string name="cast_command_detail">"マッピングの準備ができたらOKを押してください。"</string>
   <string name="calendar_rise">"のぼる"</string>
-  <string name="calendar_set">"セット"</string>
+  <string name="calendar_set">הגדר</string>
   <string name="calendar_today">"今日"</string>
   <string name="firmware_done_title">"成功"</string>
   <string name="firmware_done_detail">"iBobberがリブート\nし、すぐに\n使用できるようになります。"</string>

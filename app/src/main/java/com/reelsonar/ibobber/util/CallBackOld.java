@@ -7,7 +7,7 @@ import retrofit2.Response;
  * Created by Manoj Singh
  */
 
-public interface CallBack {
+public interface CallBackOld {
 
 //    <T> void onResponse(Call call, Response response, String msg, Class<T> clazz);
 

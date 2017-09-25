@@ -32,7 +32,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/onBoardControlView"
+                android:background="@color/app_tour_bg"
                 android:maxHeight="@dimen/_100sdp"
                 android:minHeight="@dimen/_100sdp"
                 android:orientation="horizontal">

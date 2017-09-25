@@ -22,6 +22,9 @@ Remaiaing :
 4) Tracking Link
 5) Test when user update the app
 7) On Create Trip Log image is not perfectly showing into trip log
+8) Language add herbrew
+9) Ja language ma calender set word changes
+
 
 
 Credentials :

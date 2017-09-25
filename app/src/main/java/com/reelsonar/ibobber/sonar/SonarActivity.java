@@ -28,7 +28,6 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.google.gson.GsonBuilder;
 import com.reelsonar.ibobber.BaseActivity;
 import com.reelsonar.ibobber.BobberApp;
 import com.reelsonar.ibobber.LoginActivity;
@@ -53,6 +52,7 @@ import com.reelsonar.ibobber.util.ApiLoader;
 import com.reelsonar.ibobber.util.AppUtils;
 import com.reelsonar.ibobber.util.CallBack;
 import com.reelsonar.ibobber.util.MathUtil;
+import com.reelsonar.ibobber.util.RestConstants;
 import com.reelsonar.ibobber.util.Sound;
 import com.reelsonar.ibobber.view.CommandFragment;
 import com.reelsonar.ibobber.view.CountdownFragment;
@@ -687,14 +687,14 @@ public abstract class SonarActivity extends BaseActivity implements CommandFragm
         float pixelsPerUnitOfMeasurement = (float) _sonarView.getDistanceAxisView().getWidth() / (float) captureDistance;
         float distanceAxisWidth = pixelsPerUnitOfMeasurement * (float) distanceRounded;
 
-        _sonarView.getDistanceAxisView().setWidthOverride(Math.round(distanceAxisWidth));
-        _sonarView.getDistanceAxisView().setVisibility(View.VISIBLE);
-        _sonarView.getDistanceAxisView().setMaxValue(distanceRounded);
-//        // TODO: 19/9/17  Rujul
-////        // D/Width and override width: Width : 1687 , Override width : 8435
+//        _sonarView.getDistanceAxisView().setWidthOverride(Math.round(distanceAxisWidth));
 //        _sonarView.getDistanceAxisView().setVisibility(View.VISIBLE);
-//        _sonarView.getDistanceAxisView().setMaxValue(30);
-//        _sonarView.getDistanceAxisView().setWidthOverride(8435);
+//        _sonarView.getDistanceAxisView().setMaxValue(distanceRounded);
+        // TODO: 19/9/17  Rujul
+//        // D/Width and override width: Width : 1687 , Override width : 8435
+        _sonarView.getDistanceAxisView().setVisibility(View.VISIBLE);
+        _sonarView.getDistanceAxisView().setMaxValue(30);
+        _sonarView.getDistanceAxisView().setWidthOverride(8435);
 //        _sonarView.getNewAxisView().setMaxValue(distanceRounded);
 //        _sonarView.getNewAxisView().setVisibility(View.VISIBLE);
 
@@ -871,17 +871,17 @@ public abstract class SonarActivity extends BaseActivity implements CommandFragm
 
 
         } catch (Exception exc) {
-            Log.e(TAG, "Error saving screen capture");
+            Log.e(TAG, "Error saving screen capture" + exc.getMessage());
+
         }
     }
 
     private void createTripLog(TripLog newTripLog) {
-        ApiLoader.createTripLog(SonarActivity.this, getTripInfo(newTripLog, getUserInfo()), new CallBack() {
+        ApiLoader.getInstance().getResponse(SonarActivity.this, getTripInfo(newTripLog, getUserInfo()), RestConstants.ADD_CATCH, TripLogMain.class, new CallBack() {
             @Override
-            public void onResponse(Call call, Response response, String msg) {
-                String responseStr = response.body().toString();
-                Log.d("responseString", responseStr);
-                TripLogMain tripLog = (new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create()).fromJson(responseStr, TripLogMain.class);
+            public <T> void onResponse(Call call, Response response, String msg, Object object) {
+                TripLogMain tripLog;
+                tripLog = ((TripLogMain) object);
                 if (tripLog.getStatus()) {
                     AppUtils.showToast(getApplicationContext(), getString(R.string.netfish_catch_created));
                 } else {

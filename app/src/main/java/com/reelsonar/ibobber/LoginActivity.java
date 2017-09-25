@@ -21,6 +21,7 @@ import com.reelsonar.ibobber.util.Actions;
 import com.reelsonar.ibobber.util.ApiLoader;
 import com.reelsonar.ibobber.util.AppUtils;
 import com.reelsonar.ibobber.util.CallBack;
+import com.reelsonar.ibobber.util.RestConstants;
 import com.twitter.sdk.android.core.Callback;
 import com.twitter.sdk.android.core.DefaultLogger;
 import com.twitter.sdk.android.core.Result;
@@ -146,12 +147,13 @@ public class LoginActivity extends BaseActivity {
 
     private void loginApiCall() {
         showProgressBar();
-        ApiLoader.getLogin(LoginActivity.this, getLoginInfo(), new CallBack() {
+        ApiLoader.getInstance().getResponse(getApplicationContext(), getLoginInfo(), RestConstants.LOGIN, UserAuth.class, new CallBack() {
             @Override
-            public void onResponse(Call call, Response response, String msg) {
-                //String responseStr = ((ResponseBody) response.body()).string();
+            public <T> void onResponse(Call call, Response response, String msg, Object object) {
                 String responseStr = response.body().toString();
+
                 UserAuth userAuth = (new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create()).fromJson(responseStr, UserAuth.class);
+                userAuth = ((UserAuth) object);
                 if (userAuth.getNouser() != null) {
                     if (userAuth.getNouser()) {
                         Register();
@@ -189,11 +191,13 @@ public class LoginActivity extends BaseActivity {
 
     private void Register() {
         showProgressBar();
-        ApiLoader.getRegister(LoginActivity.this, getLoginInfo(), new CallBack() {
+        ApiLoader.getInstance().getResponse(getApplicationContext(), getLoginInfo(), RestConstants.REGISTER, UserAuth.class, new CallBack() {
             @Override
-            public void onResponse(Call call, Response response, String msg) {
+            public <T> void onResponse(Call call, Response response, String msg, Object object) {
+
                 String responseStr = response.body().toString();
                 UserAuth userAuth = (new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create()).fromJson(responseStr, UserAuth.class);
+                userAuth = ((UserAuth) object);
                 if (userAuth.getStatus()) {
                     sucessLogin(userAuth);
                 } else {
@@ -214,6 +218,7 @@ public class LoginActivity extends BaseActivity {
                 AppUtils.showToast(LoginActivity.this, getString(R.string.err_timeout));
             }
         });
+
     }
 
     private HashMap<String, String> getLoginInfo() {

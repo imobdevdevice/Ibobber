@@ -5,9 +5,12 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.util.AttributeSet;
+import android.view.KeyEvent;
 import android.widget.EditText;
 
 import com.reelsonar.ibobber.R;
+
+import static com.reelsonar.ibobber.R.id.editText;
 
 
 /**
@@ -62,4 +65,19 @@ public class DividerEditText extends EditText {
             mDividerViewController.onDraw(canvas);
         }
     }
+//    @Override
+//    public boolean onKeyPreIme(int keyCode, KeyEvent event) {
+//        if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_UP) {
+//            clearFocus();
+//            return false;
+//        }
+//        return false;
+//    }
+//    public void revalidateEditText() {
+//        // Dismiss your origial error dialog
+//        setError(null);
+//        // figure out which EditText it is, you already have this code
+//        // call your validator like in the Q
+////        validate(editText); // or whatever your equivalent is
+//    }
 }

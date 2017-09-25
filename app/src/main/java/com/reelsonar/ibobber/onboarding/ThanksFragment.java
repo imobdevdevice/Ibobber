@@ -57,7 +57,7 @@ public class ThanksFragment extends Fragment implements View.OnClickListener {
                 handler.postDelayed(runnable, 3000);
                 IS_START = true;
                 binding.tvTitle.setText(getString(R.string.intro_start_conclusion));
-                binding.tvTitle.setText(getString(R.string.intro_start_salutation));
+                binding.tvDes.setText(getString(R.string.intro_start_salutation));
                 binding.btnFinish.setText(getString(R.string.intro_start));
 
             } else if ((getArguments().getInt(STATE)) == FINISH_STATE) {
@@ -65,7 +65,7 @@ public class ThanksFragment extends Fragment implements View.OnClickListener {
                 setViews(false);
                 IS_START = false;
                 binding.tvTitle.setText(getString(R.string.intro_finish_conclusion));
-                binding.tvTitle.setText(getString(R.string.intro_finish_salutation));
+                binding.tvDes.setText(getString(R.string.intro_finish_salutation));
                 binding.btnFinish.setText(getString(R.string.intro_finish));
 
             }

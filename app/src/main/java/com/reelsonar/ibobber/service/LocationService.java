@@ -38,7 +38,6 @@ public class LocationService {
         if (INSTANCE == null) {
             INSTANCE = new LocationService(context.getApplicationContext());
         }
-
         return INSTANCE;
     }
 
@@ -126,7 +125,7 @@ public class LocationService {
         //try to provide cached location immediately
         checkForCachedLocation();
 
-        if (_locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER))
+        if (_locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
             if (ActivityCompat.checkSelfPermission(_context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(_context, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 // TODO: Consider calling
                 //    ActivityCompat#requestPermissions
@@ -136,11 +135,24 @@ public class LocationService {
                 // to handle the case where the user grants the permission. See the documentation
                 // for ActivityCompat#requestPermissions for more details.
                 return;
+            } else {
+                _locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, TimeUnit.MINUTES.toMillis(UPDATE_PERIOD_MINUTES), MIN_DISTANCE_METERS, _locationListener);
             }
-        _locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, TimeUnit.MINUTES.toMillis(UPDATE_PERIOD_MINUTES), MIN_DISTANCE_METERS, _locationListener);
 
+        }
         if (_locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER))
-            _locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, TimeUnit.MINUTES.toMillis(UPDATE_PERIOD_MINUTES), MIN_DISTANCE_METERS, _locationListener);
+            if (ActivityCompat.checkSelfPermission(_context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(_context, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                // TODO: Consider calling
+                //    ActivityCompat#requestPermissions
+                // here to request the missing permissions, and then overriding
+                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                //                                          int[] grantResults)
+                // to handle the case where the user grants the permission. See the documentation
+                // for ActivityCompat#requestPermissions for more details.
+                return;
+            } else {
+                _locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, TimeUnit.MINUTES.toMillis(UPDATE_PERIOD_MINUTES), MIN_DISTANCE_METERS, _locationListener);
+            }
 
     }
 

@@ -4,8 +4,8 @@ package com.reelsonar.ibobber;
  * Created by Rujul Gandhi
  */
 
-public interface ApiCallBack {
+public interface TaskListener {
 
-    public void onCompleted();
+    public void onTaskCompleted();
 
 }

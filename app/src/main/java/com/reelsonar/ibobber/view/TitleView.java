@@ -17,6 +17,8 @@ import com.reelsonar.ibobber.databinding.TitleViewBinding;
 public class TitleView extends LinearLayout {
 
     private String subHeaderTitle;
+    private Integer background;
+    public Integer backgroundColor = 0;
     public TitleViewBinding binding;
 
     public TitleView(Context context) {
@@ -38,17 +40,22 @@ public class TitleView extends LinearLayout {
         LayoutInflater inflater = (LayoutInflater)
                 context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         binding = DataBindingUtil.inflate(inflater, R.layout.title_view, this, true);
-        binding.tvAppName.setText(getResources().getString(R.string.app_name));
+        binding.tvAppName.setText("iBobber");//getResources().getString(R.string.app_name)
         if (attributeSet != null) {
             TypedArray a = getContext().obtainStyledAttributes(attributeSet, R.styleable.TitleView);
             subHeaderTitle = a.getString(R.styleable.TitleView_SubTitleText);
-            a.recycle();
-            binding.tvTitle.setText(subHeaderTitle);
+//            backgroundColor = a.getColor(R.styleable.TitleView_BackgroundColor, 0);
+//            if (backgroundColor != 0)
+//                setBackgroundColor(ContextCompat.getColor(context,Integer.valueOf(backgroundColor)));
 
+            if (subHeaderTitle != null && !subHeaderTitle.isEmpty())
+                binding.tvTitle.setText(subHeaderTitle);
+            a.recycle();
             TypedArray attrs = getContext().obtainStyledAttributes(attributeSet, R.styleable.Netfish);
             if (attrs.getBoolean(R.styleable.Netfish_isNetFish, false)) {
                 binding.titleViewImage.setImageResource(R.drawable.netfish_banner);
             }
+            attrs.recycle();
         }
     }
 

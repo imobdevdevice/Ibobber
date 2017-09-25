@@ -5,6 +5,7 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.gson.GsonBuilder;
@@ -138,10 +139,12 @@ public class SignupActivity extends BaseActivity {
                 } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
                     e.printStackTrace();
                 }
-                ApiLoader.getRegister(SignupActivity.this, registerParams, new CallBack() {
+
+                ApiLoader.getInstance().getResponse(SignupActivity.this, registerParams, RestConstants.REGISTER, UserAuth.class, new CallBack() {
                     @Override
-                    public void onResponse(Call call, Response response, String msg) {
+                    public <T> void onResponse(Call call, Response response, String msg, Object object) {
                         UserAuth userAuth = (new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create()).fromJson((response.body()).toString(), UserAuth.class);
+                        userAuth = ((UserAuth) object);
                         if (userAuth != null) {
                             if (userAuth.getStatus()) {
                                 sucessLogin(userAuth);
@@ -178,8 +181,9 @@ public class SignupActivity extends BaseActivity {
     }
 
     private void onEditTextError(DividerEditText edtUserName, String errMessage) {
-        edtUserName.setError(errMessage);
-        edtUserName.requestFocus();
+//        edtUserName.setError(errMessage);
+//        edtUserName.requestFocus();
+        Toast.makeText(this, errMessage, Toast.LENGTH_SHORT).show();
     }
 
     public void onBack(View view) {
@@ -193,4 +197,5 @@ public class SignupActivity extends BaseActivity {
         startActivity(intent);
         finish();
     }
+
 }

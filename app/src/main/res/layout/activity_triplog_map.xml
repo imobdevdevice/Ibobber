@@ -7,15 +7,14 @@
     tools:context=".TripLogMapActivity"
     tools:ignore="MergeRootFrame">
 
-    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <fragment
         android:id="@+id/map"
         class="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="47dp"
         android:layout_marginTop="70dp"
-        tools:context="com.lebedev.ibobbertriplog.TripLogMapActivity" />
+        tools:context="com.reelsonar.ibobber.triplogTripLogMapActivity" />
 
     <fragment
         android:id="@+id/deviceDrawer"

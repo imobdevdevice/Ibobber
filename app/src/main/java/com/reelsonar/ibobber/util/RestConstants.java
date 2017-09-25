@@ -61,9 +61,6 @@ public class RestConstants {
     //YouTube Api Key
     public static final String YOUTUBE_API_KEY = "AIzaSyAcVbnXVwtiHCrvczxFfJcE664h50JrMdk";
 
-    //Api Constants
-    public static final String BASE_URL = "http://netfish.reviewprototypes.com/image.php?";
-    public static final String IMAGE_URL = BASE_URL + "url=";
 
     //food2fork
     public static final String F2F_API_KEY = "1956b15ce596697ce7455afb6d6bbb7a";
@@ -105,4 +102,17 @@ public class RestConstants {
 
     // Apps Flyer DEV KEY
     public static final String APPS_FLYER_KEY = "C42f3fvwUjmzsxRe4qTq2H";
+
+
+    //Api Constants
+    public static final String BASE_URL = "http://netfish.reviewprototypes.com/image.php?";
+    public static final String IMAGE_URL = BASE_URL + "url=";
+
+    // Api Name
+    public static final String LOGIN = "login";
+    public static final String REGISTER = "register";
+    public static final String ADD_CATCH = "catch_add";
+    public static final String GET_CATCH = "catches_view";
+
+
 }
