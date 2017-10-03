@@ -5,6 +5,7 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.gson.Gson;
@@ -120,7 +121,7 @@ public class LoginEmailActivity extends BaseActivity {
                             if (userAuth.getStatus()) {
                                 sucessLogin(userAuth);
                             } else {
-                                AppUtils.showToast(LoginEmailActivity.this, userAuth.getMessage());
+                                Toast.makeText(LoginEmailActivity.this, userAuth.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         } else {
                             AppUtils.showToast(LoginEmailActivity.this, getString(R.string.somethingwrong));

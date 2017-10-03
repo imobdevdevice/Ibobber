@@ -172,4 +172,11 @@
     <string name="weather_location_services">Bật Dịch vụ Định vị iBobber để cho phép chúng tôi xác định vị trí của bạn.</string>
     <string name="weather_unavailable">Không thể truy xuất thông tin thời tiết.</string>
     <string name="wed">Thứ Tư</string>
+    <string name="create_account">Tạo tài khoản</string>
+    <string name="sing_in">Đăng nhập</string>
+    <string name="continue_with_twitter">Tiếp tục với Twitter</string>
+    <string name="continue_with_facebook">Tiếp tục với Facebook</string>
+    <string name="continue_with_instagram">Tiếp tục với Instagram</string>
+    <string name="not_have_account">Bạn chưa có tài khoản?</string>
+    <string name="action_sign_up_short">\"ОК\"</string>
 </resources>

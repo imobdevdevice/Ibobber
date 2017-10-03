@@ -170,4 +170,11 @@
     <string name="weather_location_services">הפעל את שירותי המיקום של iBobber כדי לאפשר לנו לקבוע את המיקום שלך.</string>
     <string name="weather_unavailable">לא ניתן לקבל מידע על מזג האוויר</string>
     <string name="wed">רביעי</string>
+    <string name="create_account">צור חשבון</string>
+    <string name="sing_in">היכנס</string>
+    <string name="continue_with_twitter">המשך לצפצף</string>
+    <string name="continue_with_facebook">המשך עם פייסבוק</string>
+    <string name="continue_with_instagram">המשך עם Instagram</string>
+    <string name="not_have_account">אין לך חשבון?</string>
+    <string name="action_sign_up_short">\"Terminer\"</string>
 </resources>

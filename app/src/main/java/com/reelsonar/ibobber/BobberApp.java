@@ -13,6 +13,7 @@ import android.util.Log;
 
 import com.appsflyer.AppsFlyerConversionListener;
 import com.appsflyer.AppsFlyerLib;
+import com.crashlytics.android.Crashlytics;
 import com.facebook.stetho.Stetho;
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
@@ -26,6 +27,8 @@ import com.reelsonar.ibobber.util.RestConstants;
 import com.reelsonar.ibobber.weather.WeatherService;
 
 import java.util.Map;
+
+import io.fabric.sdk.android.Fabric;
 
 public class BobberApp extends Application {
 
@@ -42,6 +45,7 @@ public class BobberApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Fabric.with(this, new Crashlytics());
         MultiDex.install(this);
 //        Fabric.with(this, new Crashlytics());
 

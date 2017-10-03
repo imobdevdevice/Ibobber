@@ -2,39 +2,55 @@
 
 package com.reelsonar.ibobber.service;
 
-import android.graphics.Point;
-import android.util.DisplayMetrics;
-import android.util.Log;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.graphics.Point;
 import android.os.Build;
 import android.preference.PreferenceManager;
+import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Display;
 import android.view.WindowManager;
-import com.parse.*;
 
+import com.parse.FindCallback;
+import com.parse.Parse;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
+import com.parse.SaveCallback;
 import com.reelsonar.ibobber.BuildConfig;
+import com.reelsonar.ibobber.bluetooth.BTService;
 import com.reelsonar.ibobber.model.FavoriteFish;
 import com.reelsonar.ibobber.model.SonarData;
-import com.reelsonar.ibobber.bluetooth.BTService;
-import de.greenrobot.event.EventBus;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.RandomAccessFile;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
+import java.util.StringTokenizer;
+import java.util.UUID;
+
+import de.greenrobot.event.EventBus;
 
 public class UserService {
 
-    public static class BobberPurchaseDateStatus{};
+    public static class BobberPurchaseDateStatus {
+    }
+
+    ;
 
     private final String TAG = "UserService";
 
-    public static final class LocalizationChangedNotification {}
+    public static final class LocalizationChangedNotification {
+    }
 
     private static final boolean OVERRIDE_LANGUAGE_DETECTION = BuildConfig.OVERRIDE_LANGUAGE_DETECTION;
     private static final String OVERRIDE_LANGUAGE_CODE = BuildConfig.OVERRIDE_LANGUAGE_CODE;
@@ -105,7 +121,7 @@ public class UserService {
 
         boolean useHostedParse = false;
 
-        if( useHostedParse ) {
+        if (useHostedParse) {
 
             Parse.initialize(context, PARSE_ID, PARSE_SECRET);
 
@@ -148,7 +164,7 @@ public class UserService {
     }
 
     public boolean shouldUseMetricForCurrentLanguage() {
-        if (_languageCode.equals("en") || _languageCode.equals("en_GB")) return(false);
+        if (_languageCode.equals("en") || _languageCode.equals("en_GB")) return (false);
         return true;
     }
 
@@ -188,7 +204,6 @@ public class UserService {
     }
 
 
-
     public void recordAmazonPromoShown() {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(_context);
         SharedPreferences.Editor editor = prefs.edit();
@@ -214,8 +229,7 @@ public class UserService {
 
     public void persistUserInfo(final String nickname,
                                 final String email,
-                                final List<FavoriteFish> fish)
-    {
+                                final List<FavoriteFish> fish) {
         _nickname = nickname;
         _email = email;
         _fish = fish;
@@ -229,7 +243,7 @@ public class UserService {
         editor.apply();
 
         ParseQuery<ParseObject> query = ParseQuery.getQuery("UserDetail");
-        query.whereEqualTo(KEY_EMAIL, prefs.getString( KEY_EMAIL, "") );
+        query.whereEqualTo(KEY_EMAIL, prefs.getString(KEY_EMAIL, ""));
 
         query.findInBackground(new FindCallback<ParseObject>() {
 
@@ -239,7 +253,7 @@ public class UserService {
 
                     final ParseObject userDetail;
 
-                    if( list == null || list.size() == 0 ) {
+                    if (list == null || list.size() == 0) {
 
                         userDetail = new ParseObject("UserDetail");
 
@@ -263,7 +277,7 @@ public class UserService {
                     String osVersion = "Android " + Build.VERSION.RELEASE;
                     userDetail.put(KEY_OPERATING_SYSTEM, osVersion);
 
-                    String device =  android.os.Build.MODEL + " ("+ android.os.Build.PRODUCT + ")";
+                    String device = android.os.Build.MODEL + " (" + android.os.Build.PRODUCT + ")";
 
                     Display display = ((WindowManager) _context.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
                     Point size = new Point();
@@ -272,9 +286,9 @@ public class UserService {
                     int height = size.y;
 
                     DisplayMetrics metrics = new DisplayMetrics();
-                   ((WindowManager) _context.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay().getMetrics(metrics);
-                    final String displayDpiInfo = getDpiInfo( metrics.densityDpi );
-                    String metricsInfo =  metrics.densityDpi + " dpi (" + displayDpiInfo + ")";
+                    ((WindowManager) _context.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay().getMetrics(metrics);
+                    final String displayDpiInfo = getDpiInfo(metrics.densityDpi);
+                    String metricsInfo = metrics.densityDpi + " dpi (" + displayDpiInfo + ")";
 
                     userDetail.put(KEY_DEVICE_TYPE, device + ", display: " + width + "x" + height + ", " + metricsInfo);
 
@@ -290,27 +304,26 @@ public class UserService {
                         userDetail.put(KEY_FAV_FISH, Collections.emptyList());
                     }
 
-                    userDetail.saveInBackground( new SaveCallback() {
+                    userDetail.saveInBackground(new SaveCallback() {
 
                         public void done(ParseException e) {
 
-                             if (e == null) {
+                            if (e == null) {
 
-                                 String userId = userDetail.getObjectId();
+                                String userId = userDetail.getObjectId();
 
-                                 if( userId != null ) {
-                                     _userId = userId;
-                                     SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(_context);
-                                     SharedPreferences.Editor editor = prefs.edit();
-                                     editor.putString(KEY_USER_ID, userId);
-                                     editor.apply();
-                                 }
-                             } else {
-                               Log.e(TAG, "Failure to get response from Parse when persisting user info");
-                             }
-                           }
-                         });
-
+                                if (userId != null) {
+                                    _userId = userId;
+                                    SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(_context);
+                                    SharedPreferences.Editor editor = prefs.edit();
+                                    editor.putString(KEY_USER_ID, userId);
+                                    editor.apply();
+                                }
+                            } else {
+                                Log.e(TAG, "Failure to get response from Parse when persisting user info");
+                            }
+                        }
+                    });
 
 
                 } else {
@@ -318,6 +331,15 @@ public class UserService {
                 }
             }
         });
+    }
+
+    public void setNickName(String nickname) {
+        _nickname = nickname;
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(_context);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString(KEY_NICKNAME, nickname);
+        editor.commit();
+
     }
 
     public void persistBobberInfo() {
@@ -328,15 +350,15 @@ public class UserService {
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(_context);
 
-        final String email = prefs.getString( KEY_EMAIL, "");
-        final String userId = prefs.getString( KEY_USER_ID, "");
+        final String email = prefs.getString(KEY_EMAIL, "");
+        final String userId = prefs.getString(KEY_USER_ID, "");
 
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString(KEY_BOBBER_ADDRESS, bobberAddress);
         editor.apply();
 
         ParseQuery<ParseObject> query = ParseQuery.getQuery("ibobbers");
-        query.whereEqualTo(KEY_BOBBER_ID, bobberAddress );
+        query.whereEqualTo(KEY_BOBBER_ID, bobberAddress);
 
         query.findInBackground(new FindCallback<ParseObject>() {
 
@@ -344,18 +366,18 @@ public class UserService {
 
                 if (e == null) {
 
-                    if( list == null )
+                    if (list == null)
                         return;
 
                     ParseObject bobber;
 
-                    if( list.size() == 0 ) {
+                    if (list.size() == 0) {
                         // New bobber for this user
                         bobber = new ParseObject("ibobbers");
-                        bobber.put( KEY_BOBBER_ID, bobberAddress ); // On Android, mac address is also the Parse bobberId value
-                        bobber.put( KEY_BOBBER_ADDRESS, bobberAddress );
-                        bobber.put( KEY_BOBBER_HW_VERSION, hwVersion );
-                        bobber.put( KEY_BOBBER_ACTIVATION_DATE, new Date() );
+                        bobber.put(KEY_BOBBER_ID, bobberAddress); // On Android, mac address is also the Parse bobberId value
+                        bobber.put(KEY_BOBBER_ADDRESS, bobberAddress);
+                        bobber.put(KEY_BOBBER_HW_VERSION, hwVersion);
+                        bobber.put(KEY_BOBBER_ACTIVATION_DATE, new Date());
 
                         EventBus.getDefault().post(new BobberPurchaseDateStatus());
 
@@ -363,7 +385,7 @@ public class UserService {
                         bobber = list.get(0);
 
                         Date datePurchased = bobber.getDate(KEY_BOBBER_PURCHASE_DATE);
-                        if( datePurchased != null ) {
+                        if (datePurchased != null) {
 
                             BTService.getSingleInstance().setDatePurchased(datePurchased);
                             // Todo: Persist locally if not already stored
@@ -373,8 +395,8 @@ public class UserService {
                         } else {
 
                             datePurchased = BTService.getSingleInstance().getDatePurchased();
-                            if( datePurchased != null ) {
-                                bobber.put( KEY_BOBBER_PURCHASE_DATE, datePurchased );
+                            if (datePurchased != null) {
+                                bobber.put(KEY_BOBBER_PURCHASE_DATE, datePurchased);
 
                                 // Todo: Persist locally if not already stored
 
@@ -384,10 +406,10 @@ public class UserService {
                         }
                     }
 
-                    if( userId != null )
-                        bobber.put( KEY_BOBBER_USER_ID, userId );       // Firmware version and possibly associated userId are the only properties of an iBobber that will change over time
-                    if( fwVersion != null )
-                        bobber.put( KEY_BOBBER_FW_VERSION, fwVersion );
+                    if (userId != null)
+                        bobber.put(KEY_BOBBER_USER_ID, userId);       // Firmware version and possibly associated userId are the only properties of an iBobber that will change over time
+                    if (fwVersion != null)
+                        bobber.put(KEY_BOBBER_FW_VERSION, fwVersion);
 
                     bobber.saveInBackground();
                 } else {
@@ -397,45 +419,45 @@ public class UserService {
         });
     }
 
-public void fetchUserId() {
+    public void fetchUserId() {
 
-    final String email = _email;
+        final String email = _email;
 
-    SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(_context);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(_context);
 
-    ParseQuery<ParseObject> query = ParseQuery.getQuery("UserDetail");
-    query.whereEqualTo(KEY_EMAIL, email );
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("UserDetail");
+        query.whereEqualTo(KEY_EMAIL, email);
 
-    query.findInBackground(new FindCallback<ParseObject>() {
+        query.findInBackground(new FindCallback<ParseObject>() {
 
-        public void done(List<ParseObject> list, ParseException e) {
+            public void done(List<ParseObject> list, ParseException e) {
 
-            if (e == null) {
+                if (e == null) {
 
-                final ParseObject userDetail;
+                    final ParseObject userDetail;
 
-                if( list == null || list.size() == 0 ) {
+                    if (list == null || list.size() == 0) {
 
-                    Log.e(TAG, "fetchUserId() failed to find a UserDetail object matching email: " + email );
-                    return;
+                        Log.e(TAG, "fetchUserId() failed to find a UserDetail object matching email: " + email);
+                        return;
+                    }
+
+                    userDetail = list.get(0);
+                    String userId = userDetail.getObjectId();
+
+                    if (userId != null) {
+
+                        _userId = userId;
+                        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(_context);
+                        SharedPreferences.Editor editor = prefs.edit();
+                        editor.putString(KEY_USER_ID, userId);
+                        editor.apply();
+                    }
+
+                } else {
+                    Log.e(TAG, "fetchUserId() Go Error: " + e.getMessage());
                 }
-
-                userDetail = list.get(0);
-                String userId = userDetail.getObjectId();
-
-                if (userId != null) {
-
-                    _userId = userId;
-                    SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(_context);
-                    SharedPreferences.Editor editor = prefs.edit();
-                    editor.putString(KEY_USER_ID, userId);
-                    editor.apply();
-                }
-
-            } else {
-                Log.e(TAG, "fetchUserId() Go Error: " + e.getMessage());
             }
-        }
         });
     }
 
@@ -454,9 +476,13 @@ public void fetchUserId() {
         return _nickname;
     }
 
-    public String getEmail() { return _email; }
+    public String getEmail() {
+        return _email;
+    }
 
-    public String getUserId() { return _userId; }
+    public String getUserId() {
+        return _userId;
+    }
 
     public List<FavoriteFish> getFish() {
         return _fish;
@@ -558,6 +584,7 @@ public void fetchUserId() {
     }
 
     private static final String INSTALLATION = "INSTALLATION";
+
     private String getUUID() {
         File installation = new File(_context.getFilesDir(), INSTALLATION);
         try {
@@ -584,10 +611,10 @@ public void fetchUserId() {
         out.close();
     }
 
-    private static String getDpiInfo( int dpi ) {
+    private static String getDpiInfo(int dpi) {
 
         String dpiInfo = "U/K";
-        switch( dpi ) {
+        switch (dpi) {
 
             case DisplayMetrics.DENSITY_LOW:  // 120
                 dpiInfo = "ldpi";

@@ -12,7 +12,7 @@ import static com.reelsonar.ibobber.util.RestConstants.NETFISH_ADS_FLAG;
 import static com.reelsonar.ibobber.util.RestConstants.NETFISH_PACKAGE;
 
 /**
- * Created by Manoj Singh
+ * Created by Rujul Gandhi
  */
 
 public class NetFishAdsActivity extends BaseActivity {

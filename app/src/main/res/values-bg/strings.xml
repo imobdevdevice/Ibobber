@@ -309,6 +309,13 @@
     <string name="intro_welcometo">Добре дошли в</string>
     <string name="intro_start_conclusion">Благодарим за регистрацията!</string>
     <string name="intro_start_salutation">Нека направим бърза обиколка.</string>
+    <string name="create_account">Създай акаунт</string>
+    <string name="sing_in">Нямате профил?</string>
+    <string name="continue_with_twitter">Продължете с Twitter</string>
+    <string name="continue_with_facebook">Продължете с Facebook</string>
+    <string name="continue_with_instagram">Продължете с Instagram</string>
+    <string name="not_have_account">Don\'t have an account?</string>
+    <string name="action_sign_up_short">\"Done\"</string>
 
 
 </resources>

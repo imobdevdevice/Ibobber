@@ -63,14 +63,14 @@
                     android:layout_height="@dimen/_1sdp"
                     android:background="@color/white" />
 
-                <com.reelsonar.ibobber.view.GradientButton
+                <TextView
                     android:id="@+id/btnLogin"
                     style="@style/ButtonBold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_20sdp"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:onClick="onLogin"
+                    android:background="@drawable/email_rounded"
                     android:stateListAnimator="@drawable/lift_on_touch"
                     android:text="@string/login"
                     android:textSize="@dimen/_13sdp" />

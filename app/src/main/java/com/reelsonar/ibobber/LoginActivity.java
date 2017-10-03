@@ -150,9 +150,7 @@ public class LoginActivity extends BaseActivity {
         ApiLoader.getInstance().getResponse(getApplicationContext(), getLoginInfo(), RestConstants.LOGIN, UserAuth.class, new CallBack() {
             @Override
             public <T> void onResponse(Call call, Response response, String msg, Object object) {
-                String responseStr = response.body().toString();
-
-                UserAuth userAuth = (new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create()).fromJson(responseStr, UserAuth.class);
+                UserAuth userAuth;
                 userAuth = ((UserAuth) object);
                 if (userAuth.getNouser() != null) {
                     if (userAuth.getNouser()) {

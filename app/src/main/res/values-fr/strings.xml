@@ -222,4 +222,11 @@
   <string name="intro_welcometo">Bienvenue a</string>
   <string name="intro_start_conclusion">Merci pour votre enregistrement!</string>
   <string name="intro_start_salutation">Maintenant une explication rapide...</string>
+    <string name="create_account">Créer un compte</string>
+    <string name="sing_in">Se connecter</string>
+    <string name="continue_with_twitter">Continuer avec Twitter</string>
+    <string name="continue_with_facebook">Continuer avec Facebook</string>
+    <string name="continue_with_instagram">Continuer avec Instagram</string>
+    <string name="not_have_account">Pas de compte?</string>
+    <string name="action_sign_up_short">\"Done\"</string>
 </resources>

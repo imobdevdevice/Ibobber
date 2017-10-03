@@ -227,4 +227,11 @@
     <string name="intro_welcometo">欢迎来到</string>
     <string name="intro_start_conclusion">感谢您登录！</string>
     <string name="intro_start_salutation">让我们快速的流覽一下。</string>
+    <string name="create_account">إصنع حساب</string>
+    <string name="sing_in">签到</string>
+    <string name="continue_with_twitter">继续 Twitter</string>
+    <string name="continue_with_facebook">继续 Facebook</string>
+    <string name="continue_with_instagram">继续 Instagram</string>
+    <string name="not_have_account">没有帐号？</string>
+    <string name="action_sign_up_short">\"Hotovo\"</string>
 </resources>

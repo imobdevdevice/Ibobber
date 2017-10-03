@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/netfish_ads_bg"
+        tools:context=".NetFishAdsActivity">
+
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/titleFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/record_your_latest_catch" />
+
+        <com.reelsonar.ibobber.view.TitleView
+            android:id="@+id/titleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_tv"
+            app:isNetFish="true" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleView"
+            android:src="@drawable/mobile_image" />
+
+        <TextView
+            style="@style/smallFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:drawablePadding="@dimen/_5sdp"
+            android:gravity="center"
+            android:onClick="onSkipBtn"
+            android:text="@string/opening_play_store" />
+
+    </RelativeLayout>
+</layout>

@@ -84,7 +84,6 @@ import static android.text.TextUtils.isEmpty;
 import static com.facebook.FacebookSdk.getApplicationContext;
 import static com.reelsonar.ibobber.util.RestConstants.NETFISH_ADS_FLAG;
 import static com.reelsonar.ibobber.util.RestConstants.NETFISH_PACKAGE;
-import static com.reelsonar.ibobber.util.RestConstants.NETFISH_REPEAT_ADS_COUNT;
 import static com.reelsonar.ibobber.util.RestConstants.USER_INFO;
 
 
@@ -550,15 +549,29 @@ public class AppUtils {
         return installed;
     }
 
-    public static boolean showNetFishAds(Context context) {
+//    public static boolean showNetFishAds(Context context) {
+//        if (!AppUtils.isAppInstalled(context, NETFISH_PACKAGE)) {
+//            if (getIntegerSharedpreference(context, NETFISH_ADS_FLAG) < NETFISH_REPEAT_ADS_COUNT) {
+//                return true;
+//            } else {
+//                return false;
+//            }
+//        } else {
+//            return false;
+//        }
+//    }
+
+    /**
+     * @param context
+     * NETFISH_ADS_FLAG = 0 at initial , First time it redirect to netfish directly
+     * and then next time redirect to NetFishAdsActivity.
+     * @return Couunt of NETFISH_ADS
+     */
+    public static int showNetFishAds(Context context) {
         if (!AppUtils.isAppInstalled(context, NETFISH_PACKAGE)) {
-            if (getIntegerSharedpreference(context, NETFISH_ADS_FLAG) < NETFISH_REPEAT_ADS_COUNT) {
-                return true;
-            } else {
-                return false;
-            }
+            return getIntegerSharedpreference(context, NETFISH_ADS_FLAG);
         } else {
-            return false;
+            return -1;
         }
     }
 
@@ -814,10 +827,10 @@ public class AppUtils {
                 View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
         shareView.layout(0, 0, shareView.getMeasuredWidth(), shareView.getMeasuredHeight());*/
         shareView.setDrawingCacheEnabled(true);
-        bitmap = Bitmap.createBitmap(shareView.getDrawingCache());
+    bitmap =Bitmap.createBitmap(shareView.getDrawingCache());
         shareView.setDrawingCacheEnabled(false);
         return bitmap;
-    }
+}
 
     public static void createVideoURL(Activity activity, String videoUrl) {
         Intent sendIntent = new Intent();

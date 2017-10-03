@@ -217,4 +217,11 @@
   <string name="intro_welcometo">Bienvenido a</string>
   <string name="intro_start_conclusion">¡Gracias por registrarte!</string>
   <string name="intro_start_salutation">Hagamos un recorrido rápido.</string>
+    <string name="create_account">Crear una cuenta</string>
+    <string name="sing_in">Registrarse</string>
+    <string name="continue_with_twitter">Continua con Twitter</string>
+    <string name="continue_with_facebook">Continua con Facebook</string>
+    <string name="continue_with_instagram">Continua con Instagram</string>
+  <string name="not_have_account">¿No tiene una cuenta?</string>
+    <string name="action_sign_up_short">\"Fertig\"</string>
 </resources>

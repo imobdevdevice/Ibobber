@@ -216,4 +216,11 @@
   <string name="intro_welcometo">로 오신것을 환영합니다</string>
   <string name="intro_start_conclusion">가입해주셔서 감사합니다 !</string>
   <string name="intro_start_salutation">빠르게 둘러볼까요 ?</string>
+    <string name="create_account">계정 만들기</string>
+    <string name="sing_in">로그인</string>
+    <string name="continue_with_twitter">Twitter와 함께 계속</string>
+    <string name="continue_with_facebook">Facebook와 함께 계속</string>
+    <string name="continue_with_instagram">Instagram와 함께 계속</string>
+    <string name="not_have_account">계정이 없습니까?</string>
+  <string name="action_sign_up_short">בוצע</string>
 </resources>

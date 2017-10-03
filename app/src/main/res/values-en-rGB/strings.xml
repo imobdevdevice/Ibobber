@@ -282,6 +282,13 @@
     <string name="intro_welcometo">Welcome to</string>
     <string name="intro_start_conclusion">Thanks for signing up!</string>
     <string name="intro_start_salutation">Let\'s take a brief tour</string>
+    <string name="create_account">Create Account</string>
+    <string name="sing_in">Sign in</string>
+    <string name="continue_with_twitter">Continue with Twitter</string>
+    <string name="continue_with_facebook">Continue with Facebook</string>
+    <string name="continue_with_instagram">Continue with Instagram</string>
+    <string name="not_have_account">Don\'t have an account?</string>
+    <string name="action_sign_up_short">Hotovo\"</string>
 
 </resources>
 

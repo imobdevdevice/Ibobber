@@ -81,11 +81,7 @@
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".sonar.SonarLiveRawActivity"
@@ -94,6 +90,7 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.reelsonar.ibobber.Actions.SONAR_LIVE_RAW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="com.reelsonar.ibobber.Actions.CATEGORY_INITIAL_DEMO" />
             </intent-filter>
@@ -112,7 +109,7 @@
         <activity
             android:name=".settings.FirmwareUpdateActivity"
             android:label="@string/firmware_title"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".WeatherActivity"
             android:label="@string/bottom_menu_weather"
@@ -160,22 +157,12 @@
         <activity
             android:name=".BLEScanActivity"
             android:label="@string/settings_bluetooth"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".onboarding.RegisterActivity"
-            android:label="@string/button_register"
-            android:screenOrientation="portrait">
-
-
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".onboarding.AppDemoActivity"
             android:label="@string/settings_app_tour"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
-
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".HTMLViewActivity"
             android:screenOrientation="portrait"></activity>
@@ -183,7 +170,13 @@
             android:name=".onboarding.fish.SelectFishActivity"
             android:label="@string/settings_favorite_fish"
             android:parentActivityName=".onboarding.RegisterActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".triplog.TripLogListActivity"
             android:screenOrientation="portrait">
@@ -293,7 +286,12 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
 
         </activity>
+        <activity
+            android:name=".NetFishAdsSplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
 
+        </activity>
         <!--Appflyer-->
         <receiver
             android:name="com.appsflyer.MultipleInstallBroadcastReceiver"
@@ -305,8 +303,7 @@
 
         <meta-data
             android:name="io.fabric.ApiKey"
-            android:value="65581e5072efafdddb5bb952d7926156d2f737fd"
-            />
+            android:value="65581e5072efafdddb5bb952d7926156d2f737fd" />
     </application>
 
 </manifest>

@@ -373,7 +373,6 @@
     <string name="login">Login</string>
 
     <string name="action_sign_in_short">Sign in</string>
-    <string name="action_sign_up_short">Done</string>
 
     <string name="facebook_app_id">484682045228905</string>
     <string name="fb_login_protocol_scheme">fbSS484682045228905</string>
@@ -486,6 +485,7 @@
     <string name="intro_start_conclusion">Thanks for signing up!</string>
     <string name="intro_start_salutation">Let’s take a quick tour</string>
     <string name="intro_welcometo">Welcome to</string>
+    <string name="opening_play_store">opening play store</string>
 
 
     <string-array name="intro_screens_text">

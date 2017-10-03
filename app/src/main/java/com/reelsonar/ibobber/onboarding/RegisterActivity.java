@@ -3,30 +3,37 @@
 package com.reelsonar.ibobber.onboarding;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.view.*;
-import android.widget.*;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 import com.reelsonar.ibobber.BobberApp;
 import com.reelsonar.ibobber.LanguageActivity;
 import com.reelsonar.ibobber.R;
-import com.reelsonar.ibobber.form.*;
+import com.reelsonar.ibobber.form.FormGroup;
+import com.reelsonar.ibobber.form.LabelField;
+import com.reelsonar.ibobber.form.TextField;
 import com.reelsonar.ibobber.model.FavoriteFish;
 import com.reelsonar.ibobber.onboarding.fish.SelectFishActivity;
 import com.reelsonar.ibobber.service.UserService;
 import com.reelsonar.ibobber.util.Style;
-import de.greenrobot.event.EventBus;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import de.greenrobot.event.EventBus;
 
 public class RegisterActivity extends Activity {
 
@@ -51,7 +58,7 @@ public class RegisterActivity extends Activity {
         setContentView(R.layout.activity_register);
         Bundle bundle = getIntent().getExtras();
 
-        _registerButton = (Button)findViewById(R.id.btnRegister);
+        _registerButton = (Button) findViewById(R.id.btnRegister);
         _registerForm = (ListView) findViewById(R.id.registerForm);
 
         findViewById(R.id.deviceDrawer).setVisibility(View.INVISIBLE);
@@ -61,7 +68,7 @@ public class RegisterActivity extends Activity {
             if (bundle.getInt(UPDATE_USER_KEY) == UPDATING_USER_IS_TRUE) {
                 _updatingUser = true;
 
-                Tracker tracker = ((BobberApp)getApplication()).getGaTracker();
+                Tracker tracker = ((BobberApp) getApplication()).getGaTracker();
                 tracker.setScreenName("Settings Personal");
                 tracker.send(new HitBuilders.AppViewBuilder().build());
 
@@ -95,8 +102,8 @@ public class RegisterActivity extends Activity {
 
         int dpValue = 120;
         float d = this.getResources().getDisplayMetrics().density;
-        int margin = (int)(dpValue * d);
-        registerFormParams.setMargins(0,margin,0,0);
+        int margin = (int) (dpValue * d);
+        registerFormParams.setMargins(0, margin, 0, 0);
 
         RelativeLayout.LayoutParams registerButtonParams = (RelativeLayout.LayoutParams) _registerButton.getLayoutParams();
         registerButtonParams.removeRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
@@ -119,7 +126,7 @@ public class RegisterActivity extends Activity {
     public void onEventMainThread(final UserService.LocalizationChangedNotification notification) {
         _registerAdapter.notifyDataSetChanged();
         _registerButton.setText(R.string.button_register);
-        ((TextView)findViewById(R.id.registerText)).setText(R.string.onboarding_get_started);
+        ((TextView) findViewById(R.id.registerText)).setText(R.string.onboarding_get_started);
     }
 
     public class RegisterAdapter extends BaseAdapter implements AdapterView.OnItemClickListener {
@@ -158,11 +165,11 @@ public class RegisterActivity extends Activity {
                 @Override
                 public void onGroupClick(final View view, final boolean isExpanded) {
 
-                    Tracker tracker = ((BobberApp)getApplication()).getGaTracker();
+                    Tracker tracker = ((BobberApp) getApplication()).getGaTracker();
 
                     if (_updatingUser) {
-                        tracker.setScreenName("Settings Favorite Fish");}
-                    else {
+                        tracker.setScreenName("Settings Favorite Fish");
+                    } else {
                         tracker.setScreenName("On-boarding Favorite Fish");
                     }
                     tracker.send(new HitBuilders.AppViewBuilder().build());
@@ -177,7 +184,7 @@ public class RegisterActivity extends Activity {
                 @Override
                 public void onGroupClick(final View view, final boolean isExpanded) {
 
-                    Tracker tracker = ((BobberApp)getApplication()).getGaTracker();
+                    Tracker tracker = ((BobberApp) getApplication()).getGaTracker();
                     tracker.setScreenName("On-boarding Language");
                     tracker.send(new HitBuilders.AppViewBuilder().build());
 
@@ -187,7 +194,7 @@ public class RegisterActivity extends Activity {
             };
 
             if (!_updatingUser) {
-                _formGroups = Arrays.asList(nickNameForm, emailForm, fishForm, languageForm);
+                _formGroups = Arrays.asList(nickNameForm, emailForm, fishForm, languageForm, nickNameForm, nickNameForm, nickNameForm, nickNameForm);
             } else {
                 _formGroups = Arrays.asList(nickNameForm, emailForm, fishForm);
             }
@@ -202,16 +209,24 @@ public class RegisterActivity extends Activity {
 
 
         @Override
-        public int getCount() {return _formGroups.size();}
+        public int getCount() {
+            return _formGroups.size();
+        }
 
         @Override
-        public Object getItem(final int position) {return null;}
+        public Object getItem(final int position) {
+            return null;
+        }
 
         @Override
-        public long getItemId(final int position) {return position;}
+        public long getItemId(final int position) {
+            return position;
+        }
 
         @Override
-        public int getViewTypeCount() {return 2;}
+        public int getViewTypeCount() {
+            return 2;
+        }
 
         @Override
         public int getItemViewType(final int position) {

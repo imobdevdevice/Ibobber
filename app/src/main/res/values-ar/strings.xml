@@ -216,4 +216,10 @@
     <string name="intro_welcometo">مرحبا بك في</string>
   <string name="intro_start_conclusion">شكرا جزيلا على الاشتراك!</string>
   <string name="intro_start_salutation">دعنا نأخذ جولة سريعة.</string>
+    <string name="create_account">إصنع حساب</string>
+    <string name="sing_in">تسجيل الدخول</string>
+    <string name="continue_with_twitter">تابع تويتر</string>
+    <string name="continue_with_facebook">متابعة مع الفيسبوك</string>
+    <string name="continue_with_instagram">متابعة مع إينستاجرام</string>
+    <string name="not_have_account">لا حساب؟</string>
 </resources>

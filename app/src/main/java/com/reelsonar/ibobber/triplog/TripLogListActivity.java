@@ -13,10 +13,11 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
-import com.reelsonar.ibobber.TaskListener;
 import com.reelsonar.ibobber.BaseActivity;
 import com.reelsonar.ibobber.NetFishAdsActivity;
+import com.reelsonar.ibobber.NetFishAdsSplashActivity;
 import com.reelsonar.ibobber.R;
+import com.reelsonar.ibobber.TaskListener;
 import com.reelsonar.ibobber.db.DBLoader;
 import com.reelsonar.ibobber.model.UserAuth.UserAuth;
 import com.reelsonar.ibobber.model.triplog.CatchTripListMain;
@@ -69,12 +70,18 @@ public class TripLogListActivity extends BaseActivity implements AdapterView.OnI
         imgGPS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (AppUtils.showNetFishAds(getApplicationContext())) {
+                /**
+                 * NETFISH_ADS_FLAG = 0 at initial , First time it redirect to netfish play store directly
+                 * and then next time redirect to NetFishAdsActivity.
+                 */
+                int netFishCount = AppUtils.showNetFishAds(getApplicationContext());
+                if (netFishCount == 0) {
+                    Intent in = new Intent(getApplicationContext(), NetFishAdsSplashActivity.class);
+                    startActivity(in);
+                } else if (netFishCount < 3) {
                     Intent in = new Intent(getApplicationContext(), NetFishAdsActivity.class);
                     startActivity(in);
                 }
-            /*    Intent main = new Intent(TripLogListActivity.this, TripLogDetailActivity.class);
-                startActivity(main);*/
             }
         });
 

@@ -42,10 +42,6 @@ public class SplashActivity extends BaseActivity {
                 sonar.addCategory(Actions.CATEGORY_INITIAL_DEMO);
                 startActivity(sonar);
                 finish();
-//                Intent intent = new Intent(SplashActivity.this, AppDemoActivity.class);
-//                intent.putExtra(INITIAL_DEMO_AFTER_REGISTER_KEY, INITIAL_DEMO_IS_TRUE);
-//                startActivity(intent);
-//                finish();
             }
         }
     };

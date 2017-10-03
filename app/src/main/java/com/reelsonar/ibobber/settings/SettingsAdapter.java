@@ -24,6 +24,7 @@ import com.reelsonar.ibobber.form.LabelField;
 import com.reelsonar.ibobber.form.NumberField;
 import com.reelsonar.ibobber.form.SpinnerField;
 import com.reelsonar.ibobber.form.SwitchField;
+import com.reelsonar.ibobber.form.TextField;
 import com.reelsonar.ibobber.onboarding.AppDemoActivity;
 import com.reelsonar.ibobber.service.DemoSonarService;
 import com.reelsonar.ibobber.service.UserService;
@@ -100,7 +101,6 @@ public class SettingsAdapter extends BaseAdapter implements AdapterView.OnItemCl
     int testFirmwareToggleCount = 0;
 
     private FormGroup getFirmwareField() {
-
         if ((BTService.getSingleInstance().getConnectedToDevice() && (BTService.getSingleInstance().getFirmwareUpdateProfile().isFirmwareUpdateAvailable() ||
                 BTConstants.ALLOW_A_TO_B_FW_SWAP_ON_SAME_FW_VERSION))) {
 
@@ -130,21 +130,20 @@ public class SettingsAdapter extends BaseAdapter implements AdapterView.OnItemCl
     }
 
     private void updateFormGroups() {
+
         final UserService userService = UserService.getInstance(_context);
+        String _nickName = userService.getNickname();
         String versionName = userService.getVersionName();
 
         _formGroups = Arrays.asList(
                 new LabelField(_context, R.string.settings_app_version, versionName, false),
                 getFirmwareField(), null,
-//                new LabelField(_context, R.string.settings_personal, null, true) {
-//                    @Override
-//                    public void onGroupClick(final View view, final boolean isExpanded) {
-//                        Intent intent = new Intent(_context, RegisterActivity.class);
-//                        intent.putExtra(RegisterActivity.UPDATE_USER_KEY, RegisterActivity.UPDATING_USER_IS_TRUE);
-//                        _context.startActivity(intent);
-//
-//                    }
-//                },
+                new TextField(_context, R.string.settings_nickname, _nickName, R.string.settings_required, true, false, true) {
+                    @Override
+                    public void onValueChange(final String value) {
+                        UserService.getInstance(_context).setNickName(value);
+                    }
+                },
                 new LabelField(_context, R.string.settings_bluetooth_sync, null, true) {
                     @Override
                     public void onGroupClick(final View view, final boolean isExpanded) {
@@ -230,7 +229,6 @@ public class SettingsAdapter extends BaseAdapter implements AdapterView.OnItemCl
                     @Override
                     public void onGroupClick(final View view, final boolean isExpanded) {
                         AppUtils.logout(_context);
-
                     }
                 },
                 null,
@@ -327,6 +325,5 @@ public class SettingsAdapter extends BaseAdapter implements AdapterView.OnItemCl
         if (group != null) {
             group.onGroupClick(view, false);
         }
-
     }
 }
