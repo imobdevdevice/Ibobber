@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.reelsonar.ibobber">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -41,8 +42,9 @@
         android:allowBackup="true"
         android:icon="@drawable/icon"
         android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        tools:replace="android:supportsRtl">
         <!--<meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/app_id" />-->
@@ -60,6 +62,16 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="com.reelsonar.ibobber.Actions.CATEGORY_INITIAL_DEMO" />
+            </intent-filter>
+
+            <!--Appflyer deeplinking-->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="ibobber" />
             </intent-filter>
 
         </activity>
@@ -82,7 +94,6 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.reelsonar.ibobber.Actions.SONAR_LIVE_RAW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="com.reelsonar.ibobber.Actions.CATEGORY_INITIAL_DEMO" />
             </intent-filter>
@@ -97,10 +108,11 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".settings.FirmwareUpdateActivity"
             android:label="@string/firmware_title"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".WeatherActivity"
             android:label="@string/bottom_menu_weather"
@@ -230,7 +242,8 @@
             android:value="a263a18cb70c0f29ed60efd51ebaeb4f3018dc49" />
         <meta-data
             android:name="com.google.android.gms.analytics.globalConfigResource"
-            android:resource="@xml/ga_global_config" />
+            android:resource="@xml/ga_global_config" />7) On Create Trip Log image is not perfectly
+        showing into trip log
 
         <activity
             android:name=".triplog.FacebookActivity"
@@ -270,7 +283,7 @@
         <activity
             android:name=".SignupActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" />
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".LoginEmailActivity"
             android:screenOrientation="portrait" />
@@ -289,6 +302,11 @@
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
             </intent-filter>
         </receiver>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="65581e5072efafdddb5bb952d7926156d2f737fd"
+            />
     </application>
 
 </manifest>

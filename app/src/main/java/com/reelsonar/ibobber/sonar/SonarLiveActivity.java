@@ -7,4 +7,5 @@ public class SonarLiveActivity extends SonarActivity {
     protected Mode getMode() {
         return Mode.LIVE;
     }
+
 }

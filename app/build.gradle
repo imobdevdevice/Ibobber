@@ -4,16 +4,19 @@ buildscript {
         flatDir {
             dirs 'libs'
         }
-        maven { url 'http://download.crashlytics.com/maven' }
+        maven { url 'https://maven.fabric.io/public' }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.3'
-        classpath 'com.crashlytics.tools.gradle:crashlytics-gradle:1.16.0'
+        classpath 'io.fabric.tools:gradle:1.+'
     }
 }
 apply plugin: 'com.android.application'
-apply plugin: 'crashlytics'
+apply plugin: 'io.fabric'
 
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
 repositories {
     mavenCentral()
     maven { url 'http://download.crashlytics.com/maven' }
@@ -90,7 +93,7 @@ dependencies {
     // You must install or update the Google Repository through the SDK manager to use this dependency.
     compile 'com.google.android.gms:play-services:11.0.4'
     compile 'com.google.firebase:firebase-messaging:11.0.4'
-    compile 'com.crashlytics.android:crashlytics:1.1.13'
+
 //    compile 'com.mousebirdconsulting.maply:Android:0.7'
     compile 'com.android.support:multidex:1.0.0'
     compile(name: 'WhirlyGlobeMaply', ext: 'aar')
@@ -117,6 +120,13 @@ dependencies {
     compile project(path: ':library')
     // AppsFlyer
     compile 'com.appsflyer:af-android-sdk:4+@aar'
+    // Fabric io
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
+        transitive = true;
+    }
+    compile('com.crashlytics.sdk.android:crashlytics-ndk:1.1.6@aar') {
+        transitive = true;
+    }
 }
 apply plugin: 'com.google.gms.google-services'
 
@@ -135,3 +145,9 @@ apply plugin: 'com.google.gms.google-services'
 //        theTask.dependsOn "loadSigningData"
 //    }
 //}
+
+crashlytics {
+    enableNdk true
+    androidNdkOut 'src/main/obj'
+    androidNdkLibsOut 'src/main/libs'
+}

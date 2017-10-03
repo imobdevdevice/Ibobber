@@ -43,7 +43,7 @@ public class BobberApp extends Application {
     public void onCreate() {
         super.onCreate();
         MultiDex.install(this);
-//        Crashlytics.start(this);
+//        Fabric.with(this, new Crashlytics());
 
         Stetho.InitializerBuilder initializerBuilder =
                 Stetho.newInitializerBuilder(this);

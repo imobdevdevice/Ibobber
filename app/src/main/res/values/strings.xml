@@ -205,7 +205,7 @@
     <string name="settings_antiglare">"Anti-Glare"</string>
     <string name="settings_language">"Language"</string>
     <string name="settings_slow_mode">"Smart Watch"</string>
-    <string name="netfish_mode">"NetFish Mode"</string>
+    <string name="netfish_mode">"Use NetFish Catches"</string>
 
     <string name="settings_measurement">"Measurement"</string>
 

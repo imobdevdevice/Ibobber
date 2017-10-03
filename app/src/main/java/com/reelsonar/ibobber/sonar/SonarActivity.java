@@ -28,6 +28,8 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.appsflyer.AppsFlyerConversionListener;
+import com.appsflyer.AppsFlyerLib;
 import com.reelsonar.ibobber.BaseActivity;
 import com.reelsonar.ibobber.BobberApp;
 import com.reelsonar.ibobber.LoginActivity;
@@ -64,6 +66,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledExecutorService;
@@ -73,6 +76,7 @@ import de.greenrobot.event.EventBus;
 import retrofit2.Call;
 import retrofit2.Response;
 
+import static com.reelsonar.ibobber.util.Actions.TRIPLOG;
 import static com.reelsonar.ibobber.util.RestConstants.ACCESSS_TOKEN;
 import static com.reelsonar.ibobber.util.RestConstants.CACHE_TITLE;
 import static com.reelsonar.ibobber.util.RestConstants.CATCH_DEPTH;
@@ -237,6 +241,42 @@ public abstract class SonarActivity extends BaseActivity implements CommandFragm
             finish();
             return;
         }
+        AppsFlyerLib.getInstance().registerConversionListener(this, new AppsFlyerConversionListener() {
+            @Override
+            public void onInstallConversionDataLoaded(Map<String, String> map) {
+                if (map != null) {
+                    for (Map.Entry<String, String> entry : map.entrySet()) {
+                        Log.d("Key value", "Key : " + entry.getKey() + " = " + entry.getValue());
+                    }
+                }
+            }
+
+            @Override
+            public void onInstallConversionFailure(String s) {
+
+            }
+
+            @Override
+            public void onAppOpenAttribution(Map<String, String> map) {
+                if (map != null) {
+                    for (Map.Entry<String, String> entry : map.entrySet()) {
+                        Log.d("App open Key value", "Key : " + entry.getKey() + " = " + entry.getValue());
+                        if (entry.getKey().equalsIgnoreCase("media_source")) {
+                            if (entry.getValue().equalsIgnoreCase("trip_log")) {
+                                Intent intent = new Intent(TRIPLOG);
+                                startActivity(intent);
+                            }
+                        }
+                    }
+                }
+            }
+
+            @Override
+            public void onAttributionFailure(String s) {
+
+            }
+        });
+
         setContentView(R.layout.activity_sonar);
         _mode = getMode();
 
@@ -678,9 +718,7 @@ public abstract class SonarActivity extends BaseActivity implements CommandFragm
         }
 
         UserService.getInstance(this).setLastCapturedSonarData(_capturedSonarData);
-
         updateDepth(_capturedSonarData);
-
         double captureDistanceMeters = getCaptureDistanceMeters();
         double captureDistance = MathUtil.metersToUnitOfMeasure(captureDistanceMeters, this);
         int distanceRounded = MathUtil.roundToNearest((int) Math.floor(captureDistance), 10);
@@ -838,10 +876,10 @@ public abstract class SonarActivity extends BaseActivity implements CommandFragm
     }
 
     public void onTripLogButtonPressed(final View view) {
-        UserAuth auth = getUserInfo();
         TripLog newTripLog = TripLogService.getInstance(this).saveTripLogAtCurrentLocation();
 
         try {
+//            this._sonarView.invalidate();
             View captureView = this._sonarView;
             captureView.setDrawingCacheEnabled(true);
             String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
@@ -854,22 +892,16 @@ public abstract class SonarActivity extends BaseActivity implements CommandFragm
             String fullPath = imageDir.getPath() + File.separator + imageFileName;
             Bitmap b = captureView.getDrawingCache();
             b.compress(Bitmap.CompressFormat.JPEG, 95, new FileOutputStream(fullPath));
-
             TripLogImages tripLogImages = new TripLogImages(newTripLog.getIdTrip());
             tripLogImages.addImage(fullPath);
 
             if (AppUtils.getIntegerSharedpreference(this, NETFISH_MODE) == 1) {
                 //API CALL
                 createTripLog(newTripLog);
-
             } else {
-
                 TripLogService.getInstance(this).saveTripLog(newTripLog, tripLogImages, null);
                 AppUtils.showToast(this, getString(R.string.trip_log_trip_log_created));
-
             }
-
-
         } catch (Exception exc) {
             Log.e(TAG, "Error saving screen capture" + exc.getMessage());
 

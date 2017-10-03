@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name"></string>
     <string name="april">אפריל</string>
     <string name="august">אוגוסט</string>
     <string name="bluetooth_charge_reminder">טען באופן מלא את ה- iBobber שלך לפחות פעם בחודש</string>

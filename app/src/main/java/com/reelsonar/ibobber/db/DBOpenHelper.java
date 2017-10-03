@@ -6,6 +6,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+
 import com.reelsonar.ibobber.R;
 
 import java.io.*;
@@ -14,11 +15,13 @@ public class DBOpenHelper extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "dbBobber";
 
-    private static final int DB_VERSION = 4;  // Note: Increment DB_VERSION when needing to force call to onUpdate(), below.
-                                              // Incremented to '2' for Feb 2016 trip log image update
-                                              // Incremented to '3' for Jne 2016 new fields:  water temp, water depth, & air temp
-                                              // Incremented to '4' pending fishCaugth , fishCatchId
+    private static final int DB_VERSION = 4;
+    // Note: Increment DB_VERSION when needing to force call to onUpdate(), below.
+    // Incremented to '2' for Feb 2016 trip log image update
+    // Incremented to '3' for Jne 2016 new fields:  water temp, water depth, & air temp
+    // Incremented to '4' pending fishCaugth , fishCatchId
     private static DBOpenHelper INSTANCE;
+
     public static synchronized DBOpenHelper getInstance(Context context) {
         if (INSTANCE == null) {
             INSTANCE = new DBOpenHelper(context.getApplicationContext());
@@ -45,9 +48,11 @@ public class DBOpenHelper extends SQLiteOpenHelper {
                 sql.write(buffer, 0, n);
             }
         } finally {
-            try { reader.close(); } catch (IOException ignored) { }
+            try {
+                reader.close();
+            } catch (IOException ignored) {
+            }
         }
-
         return sql.toString();
     }
 
@@ -73,26 +78,29 @@ public class DBOpenHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
-        if( oldVersion < 2 ) {
+        if (oldVersion < 2) {
             // Create tripLogImages table
             String tripLogImagesTableSQL = "CREATE TABLE tripLogImages (tripLogId INTEGER, filename TEXT, PRIMARY KEY(tripLogId, filename), FOREIGN KEY (tripLogId) REFERENCES tripLog(id))";
             try {
-                db.execSQL( tripLogImagesTableSQL );
-            }  catch (Exception ex) {
-                Log.e("iBobber","Got db error: " + ex.toString() );
+                db.execSQL(tripLogImagesTableSQL);
+            } catch (Exception ex) {
+                Log.e("iBobber", "Got db error: " + ex.toString());
             }
         }
 
-        if( oldVersion >= 1 && oldVersion < 4) {
+        if (oldVersion >= 1 && oldVersion < 3) {
             try {
-                db.execSQL( "ALTER TABLE tripLog ADD COLUMN lureType INTEGER" );
-                db.execSQL( "ALTER TABLE tripLog ADD COLUMN waterTemp NUMERIC" );
-                db.execSQL( "ALTER TABLE tripLog ADD COLUMN waterDepth NUMERIC" );
-                db.execSQL( "ALTER TABLE tripLog ADD COLUMN fishCaught TEXT" );
-                db.execSQL( "ALTER TABLE tripLog ADD COLUMN netFishCatchId NUMERIC" );
-            }  catch (Exception ex) {
-                Log.e("iBobber","Got db error: " + ex.toString() );
+                db.execSQL("ALTER TABLE tripLog ADD COLUMN lureType INTEGER");
+                db.execSQL("ALTER TABLE tripLog ADD COLUMN waterTemp NUMERIC");
+                db.execSQL("ALTER TABLE tripLog ADD COLUMN waterDepth NUMERIC");
+            } catch (Exception ex) {
+                Log.e("iBobber", "Got db error: " + ex.toString());
             }
+        }
+
+        if (oldVersion <= 3) {
+            db.execSQL("ALTER TABLE tripLog ADD COLUMN netFishCatchId NUMERIC");
+            db.execSQL("ALTER TABLE tripLog ADD COLUMN fishCaught TEXT");
         }
     }
 

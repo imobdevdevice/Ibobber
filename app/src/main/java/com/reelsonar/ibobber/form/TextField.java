@@ -57,7 +57,7 @@ public class TextField extends FormGroup {
 
     @Override
     public int getViewWrapperId() {
-        return R.id.formFieldWrapper;
+        return R.id.formLabelWrapper;
     }
 
     @Override

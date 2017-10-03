@@ -11,7 +11,7 @@ CREATE TABLE "tripLog" (
 	`lureType` INTEGER,
 	`airTemp`  NUMERIC,
 	`waterTemp`  NUMERIC,
-	`waterDepth`  NUMERIC,
+	`waterDepth`  NUMERIC
 	`fishCaught` TEXT,
     `netFishCatchId` NUMERIC
 );

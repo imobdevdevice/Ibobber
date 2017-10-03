@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.gson.GsonBuilder;
 import com.reelsonar.ibobber.databinding.ActivitySingupBinding;
 import com.reelsonar.ibobber.dialogs.SimpleCustomDialog;
 import com.reelsonar.ibobber.model.UserAuth.UserAuth;
@@ -143,7 +142,7 @@ public class SignupActivity extends BaseActivity {
                 ApiLoader.getInstance().getResponse(SignupActivity.this, registerParams, RestConstants.REGISTER, UserAuth.class, new CallBack() {
                     @Override
                     public <T> void onResponse(Call call, Response response, String msg, Object object) {
-                        UserAuth userAuth = (new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create()).fromJson((response.body()).toString(), UserAuth.class);
+                        UserAuth userAuth;
                         userAuth = ((UserAuth) object);
                         if (userAuth != null) {
                             if (userAuth.getStatus()) {
@@ -160,7 +159,7 @@ public class SignupActivity extends BaseActivity {
                     @Override
                     public void onFail(Call call, Throwable e) {
                         AppUtils.showToast(SignupActivity.this, getString(R.string.err_timeout));
-                        hideProgressBar();
+                         hideProgressBar();
                     }
 
                     @Override
@@ -171,11 +170,6 @@ public class SignupActivity extends BaseActivity {
                 });
             }
 
-//            getPresenter().validateSignUpDetails(AppUtils.getText(edtFirstName), AppUtils.getText(edtLastName),
-//                    cbTermsOfUse.isChecked(), AppUtils.getText(edtEmail),
-//                    AppUtils.getText(edtPassword), AppUtils.getText(edtConfirmPassword),
-//                    AppUtils.getText(edtUserName), AppUtils.getText(edtPromoCode), location,
-//                    signUpMethod, facebookId, twitterId, gcmToken, deviceToken, ibobber, AppUtils.getGAClientID());
         } else
             AppUtils.showToast(SignupActivity.this, getString(R.string.err_network));
     }

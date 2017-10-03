@@ -12,6 +12,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/rujul/.android/build-cache/ca5628a37cc5fb3bd2d49e4875680552551eea50/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="0d394688dd7030b83dea8eed3fa483410c24afe0">
+        <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_fa88bfbfeb8e00e8e65f7dd013cc475080c79a70/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/rujul/.android/build-cache/2464a2a28c67a616da91bcc390cfcb20b43fa44c/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -39,12 +48,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/rujul/.android/build-cache/cd1447a3c4af3ea3cb73c88bfaca709b447f1c57/output/jars/classes.jar"
+        jar="/home/rujul/.android/build-cache/679cbcd943ed7f639b8d7a430541ffba6e6b7f8d/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.3"
-        sha1="ae6d72cc57e336b9800ab890a4065511f7b88845">
-        <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_85d96634f3d4fdaa40dd5b3ba9f6651c39905ec7/classes.dex" />
+        sha1="82ea5a937ab84229fbd2f3fc8cf2a72cbdf0ee0f">
+        <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_42095646600899749329b0c1c79f2cfcb0cb5d9e/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -90,6 +99,15 @@
         revision="25.0.3"
         sha1="0bffdc0bd4f7ca0e27c5bfeef39569f8da00aa26">
         <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_cc0d0aa7887a31b4d274ce28433751f4ada9148d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rujul/.android/build-cache/ba3c7928c33b83e8d2a14cbe2a9f0f6ae0902319/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="bc9ea2bc291bbebc83f5b160d115c699bddc4e16">
+        <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_3e982b93526f9f87e4994408c22d279308eb2c49/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -144,6 +162,24 @@
         revision="25.0.3"
         sha1="c6706cc7c8c3093560edd55d322218afe7798aa9">
         <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_242fa668ad49f5075ce29d3976e4dc900bf792ec/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rujul/.android/build-cache/b67687bf5fa565cbae61d9bfa4279be2f825c960/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b8b26b28aae0ba8e2db55ad9fe0ebc770530c5ef">
+        <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_92bfac0b48ed74bc06eaa871e55b403b86f2eefd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rujul/.android/build-cache/85da61c04d8a4ec646ecd3dfd721280ed9f5fc1b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="204f607419af8247cc1b2a61f50663c65f841c12">
+        <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_ad3b33df6866ffabb42cfa6f88981ba4e5b1df90/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -390,6 +426,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/rujul/.android/build-cache/fb6beac07c8b195dee9090321e323d8312badd3b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="005d20a198159b87f65812fc5c51b2d84c5eba0a">
+        <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_8da4e147e56ba57107a1e510f05b65a8c809d9c6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/rujul/.android/build-cache/16f3e56d135b975baf5acb080afbbdf7cae22325/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -462,15 +507,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/rujul/.android/build-cache/da4f37637e1b4fd9e79ee20a969878671e5f13e5/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="e09663005d70dcedff0bb77211b9ac52d8b69421">
-        <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_8f4fc8590fe29862b4e94533c41f58e79199c7b8/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/rujul/.android/build-cache/27eb0284f13da36c615b356b0dd794f35cdf0c47/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -513,6 +549,15 @@
         revision="25.0.3"
         sha1="d8942ee348aaa9341f08f7e2437063893fe27542">
         <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_0ab756d907d9c7f98c3718cdfa1c20018473b57d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rujul/.android/build-cache/ba7b882df1889dd60cceb5482b90bc11862751b4/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="42b06ec116de30e6e1e02e2e0ebd661f661f51e6">
+        <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_dc3b1c2383cf03c3b5939a149352a2e0b7592a0d/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -747,6 +792,15 @@
         revision="25.0.3"
         sha1="041e67dba73c3347e4503761642c39d0e06ca1f2">
         <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/retrofit-2.2.0_035b9b6d6e566089b6e97ee2a70641ad30267f12/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rujul/.android/build-cache/8fd8b2693e34114188dbde16ab2715c0fd7e5d20/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="9a0c96cb2e74d3a6e692d920c9e03326e77f6429">
+        <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_eb9b464d566da58b5e577edd2a8bebdf192b011b/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -1182,6 +1236,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/rujul/.android/build-cache/595871f6bf9ffc26945395fffe5aac86cefa28fc/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="7045152f3bd1870740b9bcb1cddff495e189774e">
+        <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_351286050929ef2736c17515de4667a7f25cffbd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/rujul/.android/build-cache/c998c2afd586a0f2d3b57f525657f587e06639b0/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -1200,6 +1263,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/rujul/.android/build-cache/21f5fef875bc9cc62d32d2ce8881a7121fe2583a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="646439081688c43e04ec4aa7ba6915ddfdcc337f">
+        <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_b35e43705e19391c1751bc0883aa853785314c97/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/rujul/.gradle/caches/modules-2/files-2.1/com.facebook.stetho/stetho/1.1.1/ab1142c5adfa474e7494cba19fd9fc6e73207960/stetho-1.1.1.jar"
         jumboMode="true"
         optimize="true"
@@ -1215,6 +1287,15 @@
         revision="25.0.3"
         sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
         <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/bolts-tasks-1.4.0_ae1d38bd3848fb328864bf32998d6b4a65a64797/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rujul/.android/build-cache/d9d997cd583cf50d152571e6ece5bcf6ffc4e407/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2482bfd874e8b3927f4141105674ad392ff83698">
+        <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_1047908325e41c52a4dfbc5583442982d43c20b3/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -1242,15 +1323,6 @@
         revision="25.0.3"
         sha1="11262f887015dc774ff36eb66698308df0a376d1">
         <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_1e8c04b3e5f05e3e0d564f2722d4a52e16f9ca64/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/rujul/.android/build-cache/da4f37637e1b4fd9e79ee20a969878671e5f13e5/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="e09663005d70dcedff0bb77211b9ac52d8b69421">
-        <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_8f4fc8590fe29862b4e94533c41f58e79199c7b8/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -1332,6 +1404,15 @@
         revision="25.0.3"
         sha1="2c2f1b3f82c027e98f56bb0154de0acbcce42e6d">
         <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_614bced75611c1d2de68c1ae8aeefa238cab75c1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rujul/.android/build-cache/fe8311b3f6d43cde39bc88856f8524d96b425bb6/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="461929440e66685425a298693507f6fb27b0a872">
+        <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_dad836e2452fc98629be4c0ab36435dba716d6be/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -1449,15 +1530,6 @@
         revision="25.0.3"
         sha1="456100597c69ecb0c7993bd834505d4b9c9939cb">
         <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/2/eventbus-2.2.1_2024b2f433dca546f7062d34e998e1c6a1e3c7ad/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/rujul/.gradle/caches/modules-2/files-2.1/com.crashlytics.android/crashlytics/1.1.13/e821eafa1bf489a26bdb71f95078c26785b37a1/crashlytics-1.1.13.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="0e821eafa1bf489a26bdb71f95078c26785b37a1">
-        <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/crashlytics-1.1.13_09d213a7eda1f93554064ad0dfc78a7876c5dba2/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -1623,6 +1695,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/rujul/.android/build-cache/150f5d933c070d4e141b7215df7ce08969bffd8b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4309053f1e20370642b19c7e947517c96b3981ea">
+        <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_0055e0d8f84a6ef2fc02d3cbb6874d716c65d11a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/rujul/.android/build-cache/4319ea5d71f71b2b26aab5877ee9a061897563ef/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -1632,12 +1713,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/rujul/.gradle/caches/modules-2/files-2.1/com.crashlytics.android/crashlytics/1.1.13/e821eafa1bf489a26bdb71f95078c26785b37a1/crashlytics-1.1.13.jar"
-        jumboMode="true"
+        jar="/home/rujul/.android/build-cache/4e859207116efc3583bdeb8cf80299db3c883906/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.3"
-        sha1="0e821eafa1bf489a26bdb71f95078c26785b37a1">
-        <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/crashlytics-1.1.13_09d213a7eda1f93554064ad0dfc78a7876c5dba2/classes.dex" />
+        sha1="252896ce41f2a84a2849e29235e66098be7d12ee">
+        <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_1c3227747b7a0b700560001bddb103d0a5179055/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -1746,6 +1827,15 @@
         revision="25.0.3"
         sha1="7f2f348b830f292429db987f74ba3e67c6752322">
         <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_fead1ef964a463f227292fba5656cf660334a136/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rujul/.android/build-cache/a19f9d73396448c3040fde0813d0bf40fd6e9a0a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="53e8932b1ac8c7dfc35cfeda1f9efbc9822ceaf3">
+        <dex dex="/home/rujul/Desktop/Rujul/Projects/ibobber_android_clientcode/ibobber_android_clientcode/app/build/intermediates/transforms/dex/allLanguage/debug/folders/1000/10/classes_55c8be8dfe0ec7681c978edf97fed2bd182e4b26/classes.dex" />
     </item>
     <item
         is-multidex="true"

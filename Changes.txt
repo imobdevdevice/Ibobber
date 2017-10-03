@@ -17,47 +17,25 @@ Remove 2 time ads on every trip log catch
 Remaiaing :
 
 
-2) App Icon and Logo and splash design
-3) Perfection in axis view
+2) App Icon and Logo
 4) Tracking Link
-5) Test when user update the app
 7) On Create Trip Log image is not perfectly showing into trip log
-8) Language add herbrew
-9) Ja language ma calender set word changes
-
-
 
 Credentials :
-
 1)
-
 james.smith@gmail.com
 123456
 
 ronaldo.lewis@gmail.com
 123456
-
 2) Facebook :
 
-
-
-
-
-
 Confusion :
-
-1)
-            if (_mode != Mode.EXPLORE
+1) If (_mode != Mode.EXPLORE
                     && _bobberOutOfWaterCount >= BOBBER_OUT_OF_WATER_THRESHOLD
                     && BTService.getSingleInstance().getConnectedToDevice()) {
-
                 _sonarView.clear();
-
-
-------------------------
-
-
-
+------------------
         float width = Math.max(getWidth(), _widthOverride);
         float visibleWidth = Math.min(getWidth(), _widthOverride);
         Log.d("Width and override width", "Width : " + getWidth() + " , Override width : " + _widthOverride);

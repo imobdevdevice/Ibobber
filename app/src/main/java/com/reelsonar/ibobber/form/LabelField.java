@@ -3,12 +3,12 @@
 package com.reelsonar.ibobber.form;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.reelsonar.ibobber.R;
 
 public class LabelField extends FormGroup {
@@ -47,7 +47,7 @@ public class LabelField extends FormGroup {
         TextView field = (TextView)view.findViewById(R.id.formField);
         ImageView disclosure = (ImageView)view.findViewById(R.id.formDisclosure);
 
-        label.setText(_label);
+        label.setText(_label);  
         label.setTypeface(getTypeface());
 
         if (_value != null) {

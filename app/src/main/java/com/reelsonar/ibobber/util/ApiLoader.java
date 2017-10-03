@@ -199,7 +199,6 @@ public class ApiLoader {
                 }
             }
 
-
             @Override
             public void onFailure(Call<String> call, Throwable t) {
                 if (callBack != null) {

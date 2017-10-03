@@ -109,7 +109,6 @@ public class AppUtils {
     // Device Type : iOS = 1 , android =  2
     public static final String DEVICE_TYPE = "2";
 
-
     public static void logout(Context context) {
         UserAuth auth = getUserInfo(context);
         String userType = auth.getData().getUserType();

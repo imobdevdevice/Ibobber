@@ -25,7 +25,6 @@ import com.reelsonar.ibobber.form.NumberField;
 import com.reelsonar.ibobber.form.SpinnerField;
 import com.reelsonar.ibobber.form.SwitchField;
 import com.reelsonar.ibobber.onboarding.AppDemoActivity;
-import com.reelsonar.ibobber.onboarding.RegisterActivity;
 import com.reelsonar.ibobber.service.DemoSonarService;
 import com.reelsonar.ibobber.service.UserService;
 import com.reelsonar.ibobber.util.AppUtils;
@@ -137,15 +136,15 @@ public class SettingsAdapter extends BaseAdapter implements AdapterView.OnItemCl
         _formGroups = Arrays.asList(
                 new LabelField(_context, R.string.settings_app_version, versionName, false),
                 getFirmwareField(), null,
-                new LabelField(_context, R.string.settings_personal, null, true) {
-                    @Override
-                    public void onGroupClick(final View view, final boolean isExpanded) {
-                        Intent intent = new Intent(_context, RegisterActivity.class);
-                        intent.putExtra(RegisterActivity.UPDATE_USER_KEY, RegisterActivity.UPDATING_USER_IS_TRUE);
-                        _context.startActivity(intent);
-
-                    }
-                },
+//                new LabelField(_context, R.string.settings_personal, null, true) {
+//                    @Override
+//                    public void onGroupClick(final View view, final boolean isExpanded) {
+//                        Intent intent = new Intent(_context, RegisterActivity.class);
+//                        intent.putExtra(RegisterActivity.UPDATE_USER_KEY, RegisterActivity.UPDATING_USER_IS_TRUE);
+//                        _context.startActivity(intent);
+//
+//                    }
+//                },
                 new LabelField(_context, R.string.settings_bluetooth_sync, null, true) {
                     @Override
                     public void onGroupClick(final View view, final boolean isExpanded) {
@@ -179,23 +178,7 @@ public class SettingsAdapter extends BaseAdapter implements AdapterView.OnItemCl
                     public void onValueChanged(final boolean checked) {
                         userService.setAntiGlare(checked);
                     }
-                },
-
-                null,
-
-                new SwitchField(_context, R.string.settings_sonar_demo, DemoSonarService.getSingleInstance(_context).getDemoRunning()) {
-                    @Override
-                    public void onValueChanged(final boolean checked) {
-                        if (checked) {
-                            DemoSonarService.getSingleInstance(_context).startSendingData();
-                            EventBus.getDefault().post(new DemoModeEnabled());
-                        } else {
-                            DemoSonarService.getSingleInstance(_context).stopSendingData();
-                            EventBus.getDefault().post(new DemoModeDisabled());
-                        }
-                    }
-                },
-                new SwitchField(_context, R.string.settings_slow_mode, BTService.getSingleInstance().getSlowModeStatus() == 1) {
+                }, new SwitchField(_context, R.string.settings_slow_mode, BTService.getSingleInstance().getSlowModeStatus() == 1) {
                     @Override
                     public void onValueChanged(final boolean checked) {
                         if (checked) {
@@ -214,6 +197,22 @@ public class SettingsAdapter extends BaseAdapter implements AdapterView.OnItemCl
                         }
                     }
                 },
+
+                null,
+
+                new SwitchField(_context, R.string.settings_sonar_demo, DemoSonarService.getSingleInstance(_context).getDemoRunning()) {
+                    @Override
+                    public void onValueChanged(final boolean checked) {
+                        if (checked) {
+                            DemoSonarService.getSingleInstance(_context).startSendingData();
+                            EventBus.getDefault().post(new DemoModeEnabled());
+                        } else {
+                            DemoSonarService.getSingleInstance(_context).stopSendingData();
+                            EventBus.getDefault().post(new DemoModeDisabled());
+                        }
+                    }
+                },
+
                 new LabelField(_context, R.string.settings_app_tour, null, true) {
                     @Override
                     public void onGroupClick(final View view, final boolean isExpanded) {
@@ -226,6 +225,12 @@ public class SettingsAdapter extends BaseAdapter implements AdapterView.OnItemCl
                     public void onGroupClick(final View view, final boolean isExpanded) {
                         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(_context.getResources().getString(R.string.settings_buy_url)));
                         _context.startActivity(intent);
+                    }
+                }, new LabelField(_context, R.string.logout, null, true) {
+                    @Override
+                    public void onGroupClick(final View view, final boolean isExpanded) {
+                        AppUtils.logout(_context);
+
                     }
                 },
                 null,
@@ -243,13 +248,6 @@ public class SettingsAdapter extends BaseAdapter implements AdapterView.OnItemCl
                         Intent intent = new Intent(_context, HTMLViewActivity.class);
                         intent.putExtra("term", false);
                         _context.startActivity(intent);
-                    }
-                },
-                new LabelField(_context, R.string.logout, null, true) {
-                    @Override
-                    public void onGroupClick(final View view, final boolean isExpanded) {
-                        AppUtils.logout(_context);
-
                     }
                 },
                 new LabelField(_context, R.string.fcc, null, false),
