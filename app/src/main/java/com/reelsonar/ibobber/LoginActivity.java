@@ -14,7 +14,6 @@ import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
 import com.facebook.login.LoginResult;
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.gson.GsonBuilder;
 import com.reelsonar.ibobber.databinding.ActivityLoginBinding;
 import com.reelsonar.ibobber.model.UserAuth.UserAuth;
 import com.reelsonar.ibobber.util.Actions;
@@ -91,7 +90,7 @@ public class LoginActivity extends BaseActivity {
                                     login_type = USERTYPE_FACEBOOK;
                                     loginApiCall();
                                 } else {
-                                    AppUtils.showToast(getApplicationContext(), getString(R.string.somethingwrong));
+                                    AppUtils.showToast(getApplicationContext(), getString(R.string.somethingwrong), false);
                                 }
                             }
                         });
@@ -168,13 +167,13 @@ public class LoginActivity extends BaseActivity {
             @Override
             public void onFail(Call call, Throwable e) {
                 hideProgressBar();
-                AppUtils.showToast(LoginActivity.this, getString(R.string.err_network));
+                AppUtils.showToast(LoginActivity.this, getString(R.string.err_network), false);
             }
 
             @Override
             public void onSocketTimeout(Call call, Throwable e) {
                 hideProgressBar();
-                AppUtils.showToast(LoginActivity.this, getString(R.string.err_timeout));
+                AppUtils.showToast(LoginActivity.this, getString(R.string.err_timeout), false);
             }
         });
     }
@@ -193,13 +192,13 @@ public class LoginActivity extends BaseActivity {
             @Override
             public <T> void onResponse(Call call, Response response, String msg, Object object) {
 
-                String responseStr = response.body().toString();
-                UserAuth userAuth = (new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create()).fromJson(responseStr, UserAuth.class);
+                UserAuth userAuth;
                 userAuth = ((UserAuth) object);
                 if (userAuth.getStatus()) {
                     sucessLogin(userAuth);
-                } else {
                     AppUtils.showToast(LoginActivity.this, userAuth.getMessage());
+                } else {
+                    AppUtils.showToast(LoginActivity.this, userAuth.getMessage(), false);
                 }
                 hideProgressBar();
             }
@@ -207,13 +206,13 @@ public class LoginActivity extends BaseActivity {
             @Override
             public void onFail(Call call, Throwable e) {
                 hideProgressBar();
-                AppUtils.showToast(LoginActivity.this, getString(R.string.err_network));
+                AppUtils.showToast(LoginActivity.this, getString(R.string.err_network), false);
             }
 
             @Override
             public void onSocketTimeout(Call call, Throwable e) {
                 hideProgressBar();
-                AppUtils.showToast(LoginActivity.this, getString(R.string.err_timeout));
+                AppUtils.showToast(LoginActivity.this, getString(R.string.err_timeout), false);
             }
         });
 
@@ -260,13 +259,13 @@ public class LoginActivity extends BaseActivity {
 
         @Override
         public void onError(String error) {
-            AppUtils.showToast(LoginActivity.this, getString(R.string.err_network));
+            AppUtils.showToast(LoginActivity.this, getString(R.string.err_network), false);
         }
 
 
         @Override
         public void onCancel() {
-            AppUtils.showToast(LoginActivity.this, getString(R.string.error_cancel));
+            AppUtils.showToast(LoginActivity.this, getString(R.string.error_cancel), false);
         }
     };
 

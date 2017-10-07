@@ -26,7 +26,6 @@ public final class RestClient {
         if (baseApiService == null) {
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl(BASE_TEST_URL)
-//                    .addConverterFactory(GsonConverterFactory.create())
                     .addConverterFactory(new ToStringConverterFactory())
                     .client(httpClient)
                     .build();

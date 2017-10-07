@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
@@ -59,6 +60,7 @@ import com.facebook.login.LoginManager;
 import com.google.gson.Gson;
 import com.reelsonar.ibobber.LoginActivity;
 import com.reelsonar.ibobber.R;
+import com.reelsonar.ibobber.db.DBOpenHelper;
 import com.reelsonar.ibobber.model.Intro;
 import com.reelsonar.ibobber.model.UserAuth.UserAuth;
 
@@ -112,6 +114,7 @@ public class AppUtils {
         UserAuth auth = getUserInfo(context);
         String userType = auth.getData().getUserType();
         clearSharedPreference(context);
+        clearAllTables(context);
         if (userType.equalsIgnoreCase("1")) {
 
         } else if (userType.equalsIgnoreCase("2")) {
@@ -129,6 +132,14 @@ public class AppUtils {
         Intent in = new Intent(context, LoginActivity.class);
         in.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(in);
+    }
+
+
+    public static void clearAllTables(Context context) {
+        SQLiteDatabase db = DBOpenHelper.getInstance(context).getWritableDatabase();
+        db.execSQL("delete from tripLog");
+        db.execSQL("delete from tripLogImages");
+        db.execSQL("delete from fishCaught");
     }
 
 
@@ -231,6 +242,21 @@ public class AppUtils {
         }
     }
 
+    public static void showToast(final Context activity, final String message, final boolean isSucess) {
+        if (activity != null) {
+            View view =
+                    LayoutInflater.from(activity).inflate(R.layout.custom_toast_layout, null);
+            TextView customToastText = (TextView) view.findViewById(R.id.tvCustomToast);
+            customToastText.setText(message);
+            if (!isSucess)
+                customToastText.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+            Toast toast = new Toast(activity);
+            toast.setDuration(Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.FILL_HORIZONTAL | Gravity.BOTTOM, 0, 0);
+            toast.setView(view);
+            toast.show();
+        }
+    }
 
     public static boolean isNetworkAvailable(Context context) {
         if (context != null) {
@@ -562,9 +588,8 @@ public class AppUtils {
 //    }
 
     /**
-     * @param context
-     * NETFISH_ADS_FLAG = 0 at initial , First time it redirect to netfish directly
-     * and then next time redirect to NetFishAdsActivity.
+     * @param context NETFISH_ADS_FLAG = 0 at initial , First time it redirect to netfish directly
+     *                and then next time redirect to NetFishAdsActivity.
      * @return Couunt of NETFISH_ADS
      */
     public static int showNetFishAds(Context context) {
@@ -827,10 +852,10 @@ public class AppUtils {
                 View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
         shareView.layout(0, 0, shareView.getMeasuredWidth(), shareView.getMeasuredHeight());*/
         shareView.setDrawingCacheEnabled(true);
-    bitmap =Bitmap.createBitmap(shareView.getDrawingCache());
+        bitmap = Bitmap.createBitmap(shareView.getDrawingCache());
         shareView.setDrawingCacheEnabled(false);
         return bitmap;
-}
+    }
 
     public static void createVideoURL(Activity activity, String videoUrl) {
         Intent sendIntent = new Intent();

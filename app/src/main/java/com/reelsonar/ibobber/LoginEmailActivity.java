@@ -5,10 +5,8 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
-import android.widget.Toast;
 
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.gson.Gson;
 import com.reelsonar.ibobber.databinding.ActivityEmailLoginBinding;
 import com.reelsonar.ibobber.dialogs.SimpleCustomDialog;
 import com.reelsonar.ibobber.model.UserAuth.UserAuth;
@@ -115,36 +113,36 @@ public class LoginEmailActivity extends BaseActivity {
                 ApiLoader.getInstance().getResponse(LoginEmailActivity.this, registerParams, RestConstants.LOGIN, UserAuth.class, new CallBack() {
                     @Override
                     public <T> void onResponse(Call call, Response response, String msg, Object object) {
-                        UserAuth userAuth = new Gson().fromJson((response.body()).toString(), UserAuth.class);
+                        UserAuth userAuth;
                         userAuth = ((UserAuth) object);
                         if (userAuth != null) {
                             if (userAuth.getStatus()) {
                                 sucessLogin(userAuth);
                             } else {
-                                Toast.makeText(LoginEmailActivity.this, userAuth.getMessage(), Toast.LENGTH_SHORT).show();
+                                AppUtils.showToast(LoginEmailActivity.this, userAuth.getMessage(), false);
                             }
                         } else {
-                            AppUtils.showToast(LoginEmailActivity.this, getString(R.string.somethingwrong));
+                            AppUtils.showToast(LoginEmailActivity.this, getString(R.string.somethingwrong), false);
                         }
                         hideProgressBar();
                     }
 
                     @Override
                     public void onFail(Call call, Throwable e) {
-                        AppUtils.showToast(LoginEmailActivity.this, getString(R.string.err_network));
+                        AppUtils.showToast(LoginEmailActivity.this, getString(R.string.err_network), false);
                         hideProgressBar();
                     }
 
                     @Override
                     public void onSocketTimeout(Call call, Throwable e) {
-                        AppUtils.showToast(LoginEmailActivity.this, getString(R.string.err_timeout));
+                        AppUtils.showToast(LoginEmailActivity.this, getString(R.string.err_timeout), false);
                         hideProgressBar();
                     }
                 });
             }
 
         } else
-            AppUtils.showToast(LoginEmailActivity.this, getString(R.string.err_network));
+            AppUtils.showToast(LoginEmailActivity.this, getString(R.string.err_network), false);
     }
 
     private void sucessLogin(UserAuth userAuth) {

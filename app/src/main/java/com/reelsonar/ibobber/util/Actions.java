@@ -11,6 +11,8 @@ public class Actions {
     public static final String CALENDAR = "com.reelsonar.ibobber.Actions.CALENDAR";
     public static final String ACTIVE_USERS_MAP = "com.reelsonar.ibobber.Actions.ACTIVE_USERS_MAP";
     public static final String TRIPLOG = "com.reelsonar.ibobber.Actions.TRIPLOG";
-
+    public static final String NETFISH_SPLASH_ACTION = "com.reelsonar.ibobber.Actions.NETFISH_ADS_SPLASH";
+    public static final String NETFISH_ADS_ACTION = "com.reelsonar.ibobber.Actions.NETFISH_ADS";
     public static final String CATEGORY_INITIAL_DEMO = "com.reelsonar.ibobber.Actions.CATEGORY_INITIAL_DEMO";
+
 }

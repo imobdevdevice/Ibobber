@@ -9,7 +9,10 @@ import android.util.Log;
 
 import com.reelsonar.ibobber.R;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.StringWriter;
 
 public class DBOpenHelper extends SQLiteOpenHelper {
 

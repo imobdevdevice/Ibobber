@@ -24,12 +24,12 @@ import com.reelsonar.ibobber.form.LabelField;
 import com.reelsonar.ibobber.form.NumberField;
 import com.reelsonar.ibobber.form.SpinnerField;
 import com.reelsonar.ibobber.form.SwitchField;
-import com.reelsonar.ibobber.form.TextField;
 import com.reelsonar.ibobber.onboarding.AppDemoActivity;
 import com.reelsonar.ibobber.service.DemoSonarService;
 import com.reelsonar.ibobber.service.UserService;
 import com.reelsonar.ibobber.util.AppUtils;
 import com.reelsonar.ibobber.util.Style;
+import com.reelsonar.ibobber.view.EditTextField;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -126,7 +126,6 @@ public class SettingsAdapter extends BaseAdapter implements AdapterView.OnItemCl
                 }
             };
         }
-
     }
 
     private void updateFormGroups() {
@@ -138,10 +137,11 @@ public class SettingsAdapter extends BaseAdapter implements AdapterView.OnItemCl
         _formGroups = Arrays.asList(
                 new LabelField(_context, R.string.settings_app_version, versionName, false),
                 getFirmwareField(), null,
-                new TextField(_context, R.string.settings_nickname, _nickName, R.string.settings_required, true, false, true) {
+                new EditTextField(_context, R.string.settings_nickname, _nickName, false) {
                     @Override
-                    public void onValueChange(final String value) {
-                        UserService.getInstance(_context).setNickName(value);
+                    public void onValueChange(String value) {
+                        userService.setNickName(value);
+                        notifyDataSetChanged();
                     }
                 },
                 new LabelField(_context, R.string.settings_bluetooth_sync, null, true) {
@@ -196,9 +196,7 @@ public class SettingsAdapter extends BaseAdapter implements AdapterView.OnItemCl
                         }
                     }
                 },
-
                 null,
-
                 new SwitchField(_context, R.string.settings_sonar_demo, DemoSonarService.getSingleInstance(_context).getDemoRunning()) {
                     @Override
                     public void onValueChanged(final boolean checked) {
@@ -211,7 +209,6 @@ public class SettingsAdapter extends BaseAdapter implements AdapterView.OnItemCl
                         }
                     }
                 },
-
                 new LabelField(_context, R.string.settings_app_tour, null, true) {
                     @Override
                     public void onGroupClick(final View view, final boolean isExpanded) {

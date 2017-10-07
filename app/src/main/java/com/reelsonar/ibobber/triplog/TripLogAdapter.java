@@ -78,7 +78,7 @@ public class TripLogAdapter extends BaseAdapter {
         final ImageView tripImage = (ImageView) vi.findViewById(R.id.tripImage);
 
         if (tripLog.getTitle().equalsIgnoreCase(RestConstants.NETFISH_CATCH_TITLE)) {
-            tripImage.setImageResource(R.drawable.netfish_small);
+            tripImage.setImageResource(R.drawable.netfish_catch_icon);
         } else {
             tripImage.setImageResource(R.drawable.arrow_right);
         }
@@ -118,6 +118,7 @@ public class TripLogAdapter extends BaseAdapter {
         String dateStr = DateFormat.format("MM/dd/yyyy", date).toString();
         return dateStr;
     }
+
     public void editTripLog(final int position) {
         TripLog tripLog = tripLogs.get(position);
         long idTrip = tripLog.getNetFishId();

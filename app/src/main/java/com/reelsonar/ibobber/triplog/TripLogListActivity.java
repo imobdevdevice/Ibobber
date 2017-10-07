@@ -14,8 +14,6 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 
 import com.reelsonar.ibobber.BaseActivity;
-import com.reelsonar.ibobber.NetFishAdsActivity;
-import com.reelsonar.ibobber.NetFishAdsSplashActivity;
 import com.reelsonar.ibobber.R;
 import com.reelsonar.ibobber.TaskListener;
 import com.reelsonar.ibobber.db.DBLoader;
@@ -35,6 +33,8 @@ import de.greenrobot.event.EventBus;
 import retrofit2.Call;
 import retrofit2.Response;
 
+import static com.reelsonar.ibobber.util.Actions.NETFISH_ADS_ACTION;
+import static com.reelsonar.ibobber.util.Actions.NETFISH_SPLASH_ACTION;
 import static com.reelsonar.ibobber.util.RestConstants.CATCH_ID;
 import static com.reelsonar.ibobber.util.RestConstants.IBOBBER_APP;
 import static com.reelsonar.ibobber.util.RestConstants.ISIBOBBER;
@@ -53,6 +53,7 @@ public class TripLogListActivity extends BaseActivity implements AdapterView.OnI
     private CatchTripListMain listMain = null;
     private UserAuth userAuth;
     private ProgressBar progressBar;
+    private List<TripLog> tripLogList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,16 +72,22 @@ public class TripLogListActivity extends BaseActivity implements AdapterView.OnI
             @Override
             public void onClick(View view) {
                 /**
-                 * NETFISH_ADS_FLAG = 0 at initial , First time it redirect to netfish play store directly
+                 * NETFISH_ADS_FLAG = 0 at initial , First time it redirect to netfish play store using appsflyer link
                  * and then next time redirect to NetFishAdsActivity.
                  */
                 int netFishCount = AppUtils.showNetFishAds(getApplicationContext());
                 if (netFishCount == 0) {
-                    Intent in = new Intent(getApplicationContext(), NetFishAdsSplashActivity.class);
+                    Intent in = new Intent(NETFISH_SPLASH_ACTION);
                     startActivity(in);
-                } else if (netFishCount < 3) {
-                    Intent in = new Intent(getApplicationContext(), NetFishAdsActivity.class);
+                } else if (netFishCount > 0 && netFishCount < 3) {
+                    Intent in = new Intent(NETFISH_ADS_ACTION);
                     startActivity(in);
+                } else {
+                    TripLog newTripLog = TripLogService.getInstance(getApplicationContext()).saveTripLogAtCurrentLocation();
+                    TripLog addedTripLog = TripLogService.getInstance(getApplicationContext()).saveTripLog(newTripLog, null, null);
+                    tripLogList.add(addedTripLog);
+                    adapter.notifyDataSetChanged();
+                    editTripLog(addedTripLog.getIdTrip());
                 }
             }
         });
@@ -115,16 +122,14 @@ public class TripLogListActivity extends BaseActivity implements AdapterView.OnI
         ApiLoader.getInstance().getResponse(this, hashMap, RestConstants.GET_CATCH, CatchTripListMain.class, new CallBack() {
             @Override
             public void onResponse(Call call, Response response, String msg, Object object) {
-//                String responseStr = (response.body()).toString();
-//                listMain = (new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create()).fromJson(responseStr, CatchTripListMain.class);
                 listMain = ((CatchTripListMain) object);
                 if (listMain != null && listMain.getData() != null)
                     TripLogService.getInstance(getApplicationContext()).saveTripLog(listMain.getData(), new TaskListener() {
                         @Override
                         public void onTaskCompleted() {
                             progressBar.setVisibility(View.GONE);
-                            List<TripLog> list = TripLogService.getInstance(getApplicationContext()).getCatchTripLog();
-                            adapter = new TripLogAdapter(TripLogListActivity.this, list);
+                            tripLogList = TripLogService.getInstance(getApplicationContext()).getCatchTripLog();
+                            adapter = new TripLogAdapter(TripLogListActivity.this, tripLogList);
                             lstTrip.setAdapter(adapter);
                         }
                     });
@@ -133,13 +138,13 @@ public class TripLogListActivity extends BaseActivity implements AdapterView.OnI
             @Override
             public void onFail(Call call, Throwable e) {
                 findViewById(R.id.loadingSpinner).setVisibility(View.GONE);
-                AppUtils.showToast(TripLogListActivity.this, getString(R.string.err_network));
+                AppUtils.showToast(TripLogListActivity.this, getString(R.string.err_network),false);
             }
 
             @Override
             public void onSocketTimeout(Call call, Throwable e) {
                 findViewById(R.id.loadingSpinner).setVisibility(View.GONE);
-                AppUtils.showToast(TripLogListActivity.this, getString(R.string.err_network));
+                AppUtils.showToast(TripLogListActivity.this, getString(R.string.err_network),false);
             }
         });
     }
@@ -194,6 +199,13 @@ public class TripLogListActivity extends BaseActivity implements AdapterView.OnI
         long idTrip = tripLog.getIdTrip();
         Intent tripDetail = new Intent(this, TripLogDetailActivity.class);
         tripDetail.putExtra("idTrip", idTrip);
+        startActivity(tripDetail);
+    }
+
+
+    public void editTripLog(final long tripLogId) {
+        Intent tripDetail = new Intent(this, TripLogDetailActivity.class);
+        tripDetail.putExtra("idTrip", tripLogId);
         startActivity(tripDetail);
     }
 

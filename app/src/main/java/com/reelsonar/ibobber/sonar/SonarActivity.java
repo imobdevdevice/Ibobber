@@ -76,6 +76,8 @@ import de.greenrobot.event.EventBus;
 import retrofit2.Call;
 import retrofit2.Response;
 
+import static com.reelsonar.ibobber.util.Actions.NETFISH_SPLASH_ACTION;
+import static com.reelsonar.ibobber.util.Actions.SONAR_LIVE;
 import static com.reelsonar.ibobber.util.Actions.TRIPLOG;
 import static com.reelsonar.ibobber.util.RestConstants.ACCESSS_TOKEN;
 import static com.reelsonar.ibobber.util.RestConstants.CACHE_TITLE;
@@ -244,11 +246,6 @@ public abstract class SonarActivity extends BaseActivity implements CommandFragm
         AppsFlyerLib.getInstance().registerConversionListener(this, new AppsFlyerConversionListener() {
             @Override
             public void onInstallConversionDataLoaded(Map<String, String> map) {
-                if (map != null) {
-                    for (Map.Entry<String, String> entry : map.entrySet()) {
-                        Log.d("Key value", "Key : " + entry.getKey() + " = " + entry.getValue());
-                    }
-                }
             }
 
             @Override
@@ -257,13 +254,17 @@ public abstract class SonarActivity extends BaseActivity implements CommandFragm
             }
 
             @Override
-            public void onAppOpenAttribution(Map<String, String> map) {
+            public void onAppOpenAttribution(Map<
+                    String, String> map) {
                 if (map != null) {
                     for (Map.Entry<String, String> entry : map.entrySet()) {
-                        Log.d("App open Key value", "Key : " + entry.getKey() + " = " + entry.getValue());
                         if (entry.getKey().equalsIgnoreCase("media_source")) {
                             if (entry.getValue().equalsIgnoreCase("trip_log")) {
                                 Intent intent = new Intent(TRIPLOG);
+                                startActivity(intent);
+                            }
+                            if (entry.getValue().equalsIgnoreCase("popup_ad")) {
+                                Intent intent = new Intent(NETFISH_SPLASH_ACTION);
                                 startActivity(intent);
                             }
                         }
@@ -276,7 +277,6 @@ public abstract class SonarActivity extends BaseActivity implements CommandFragm
 
             }
         });
-
         setContentView(R.layout.activity_sonar);
         _mode = getMode();
 
@@ -725,16 +725,14 @@ public abstract class SonarActivity extends BaseActivity implements CommandFragm
         float pixelsPerUnitOfMeasurement = (float) _sonarView.getDistanceAxisView().getWidth() / (float) captureDistance;
         float distanceAxisWidth = pixelsPerUnitOfMeasurement * (float) distanceRounded;
 
-//        _sonarView.getDistanceAxisView().setWidthOverride(Math.round(distanceAxisWidth));
-//        _sonarView.getDistanceAxisView().setVisibility(View.VISIBLE);
-//        _sonarView.getDistanceAxisView().setMaxValue(distanceRounded);
-        // TODO: 19/9/17  Rujul
-//        // D/Width and override width: Width : 1687 , Override width : 8435
+        _sonarView.getDistanceAxisView().setWidthOverride(Math.round(distanceAxisWidth));
         _sonarView.getDistanceAxisView().setVisibility(View.VISIBLE);
-        _sonarView.getDistanceAxisView().setMaxValue(30);
-        _sonarView.getDistanceAxisView().setWidthOverride(8435);
-//        _sonarView.getNewAxisView().setMaxValue(distanceRounded);
-//        _sonarView.getNewAxisView().setVisibility(View.VISIBLE);
+        _sonarView.getDistanceAxisView().setMaxValue(distanceRounded);
+        // TODO: 19/9/17  Rujul
+//        // Width : 1687 , Override width : 8435
+//        _sonarView.getDistanceAxisView().setVisibility(View.VISIBLE);
+//        _sonarView.getDistanceAxisView().setMaxValue(30);
+//        _sonarView.getDistanceAxisView().setWidthOverride(8435);
 
         _sonarView.setMaxDataFrames(captured.size());
         _sonarView.setSonarData(captured);
@@ -866,7 +864,7 @@ public abstract class SonarActivity extends BaseActivity implements CommandFragm
     }
 
     public void onLiveSonarButtonPressed(View view) {
-        Intent intent = new Intent(Actions.SONAR_LIVE);
+        Intent intent = new Intent(SONAR_LIVE);
         startActivity(intent);
         finish();
     }
@@ -879,7 +877,7 @@ public abstract class SonarActivity extends BaseActivity implements CommandFragm
         TripLog newTripLog = TripLogService.getInstance(this).saveTripLogAtCurrentLocation();
 
         try {
-//            this._sonarView.invalidate();
+            this._sonarView.invalidate();
             View captureView = this._sonarView;
             captureView.setDrawingCacheEnabled(true);
             String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
@@ -917,18 +915,18 @@ public abstract class SonarActivity extends BaseActivity implements CommandFragm
                 if (tripLog.getStatus()) {
                     AppUtils.showToast(getApplicationContext(), getString(R.string.netfish_catch_created));
                 } else {
-                    AppUtils.showToast(getApplicationContext(), getString(R.string.error_cancel));
+                    AppUtils.showToast(getApplicationContext(), getString(R.string.somethingwrong),false);
                 }
             }
 
             @Override
             public void onFail(Call call, Throwable e) {
-                AppUtils.showToast(getApplicationContext(), getString(R.string.err_network));
+                AppUtils.showToast(getApplicationContext(), getString(R.string.err_network),false);
             }
 
             @Override
             public void onSocketTimeout(Call call, Throwable e) {
-                AppUtils.showToast(getApplicationContext(), getString(R.string.err_timeout));
+                AppUtils.showToast(getApplicationContext(), getString(R.string.err_timeout),false);
             }
         });
     }

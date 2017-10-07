@@ -147,8 +147,6 @@ public class TextField extends FormGroup {
                     return false;
                 }
             });
-
-
             alertDialog.show();
         }
     }

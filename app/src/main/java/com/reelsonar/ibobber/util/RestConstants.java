@@ -114,5 +114,9 @@ public class RestConstants {
     public static final String ADD_CATCH = "catch_add";
     public static final String GET_CATCH = "catches_view";
 
+    // AppsFlyer
+    public static final String NETFISH_URL_TRIP_LOG = "https://go.onelink.me/Gy99?pid=iBobber_triplog_auto";
+    public static final String NETFISH_URL_CATCH = "https://go.onelink.me/Gy99?pid=iBobber_triplog_auto";
+
 
 }

@@ -81,7 +81,11 @@
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".sonar.SonarLiveRawActivity"
@@ -157,7 +161,7 @@
         <activity
             android:name=".BLEScanActivity"
             android:label="@string/settings_bluetooth"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".onboarding.AppDemoActivity"
             android:label="@string/settings_app_tour"
@@ -171,11 +175,7 @@
             android:label="@string/settings_favorite_fish"
             android:parentActivityName=".onboarding.RegisterActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".triplog.TripLogListActivity"
@@ -284,13 +284,19 @@
             android:name=".NetFishAdsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
-
+            <intent-filter>
+                <action android:name="com.reelsonar.ibobber.Actions.NETFISH_ADS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".NetFishAdsSplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
-
+            <intent-filter>
+                <action android:name="com.reelsonar.ibobber.Actions.NETFISH_ADS_SPLASH" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
         <!--Appflyer-->
         <receiver

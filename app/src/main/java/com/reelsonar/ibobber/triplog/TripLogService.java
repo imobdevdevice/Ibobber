@@ -213,117 +213,120 @@ public class TripLogService {
         return tripLog;
     }
 
-    public void saveTripLog(final TripLog tripLog, final TripLogImages tripLogImages, final TripLogFish fish) {
+    public TripLog saveTripLog(final TripLog tripLog, final TripLogImages tripLogImages, final TripLogFish fish) {
 
-        if (tripLog == null) return;
+        if (tripLog == null) return null;
 
-        AsyncTask.THREAD_POOL_EXECUTOR.execute(new Runnable() {
-            @Override
-            public void run() {
-                String title;
-                if (tripLog.getTitle() != null) {
-                    title = tripLog.getTitle();
-                } else {
-                    title = "untitled";
-                }
+//        AsyncTask.THREAD_POOL_EXECUTOR.execute(new Runnable() {
+//            @Override
+//            public void run() {
+        long tripLogId = 0;
+        String title;
+        if (tripLog.getTitle() != null) {
+            title = tripLog.getTitle();
+        } else {
+            title = "untitled";
+        }
+        tripLog.setTitle(title);
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("dateTrip", tripLog.getDate().getTime());
+        contentValues.put("longitude", tripLog.getLongitude());
+        contentValues.put("latitude", tripLog.getLatitude());
+        contentValues.put("title", title);
+        contentValues.put("lure", tripLog.getLure());
+        if (tripLog.getLureType() != null)
+            contentValues.put("lureType", tripLog.getLureType().ordinal() + 1);
+        contentValues.put("waterTemp", tripLog.getWaterTemp());
+        contentValues.put("waterDepth", tripLog.getWaterDepth());
+        contentValues.put("airTemp", tripLog.getAirTemp());
 
-                ContentValues contentValues = new ContentValues();
-                contentValues.put("dateTrip", tripLog.getDate().getTime());
-                contentValues.put("longitude", tripLog.getLongitude());
-                contentValues.put("latitude", tripLog.getLatitude());
-                contentValues.put("title", title);
-                contentValues.put("lure", tripLog.getLure());
-                if (tripLog.getLureType() != null)
-                    contentValues.put("lureType", tripLog.getLureType().ordinal() + 1);
-                contentValues.put("waterTemp", tripLog.getWaterTemp());
-                contentValues.put("waterDepth", tripLog.getWaterDepth());
-                contentValues.put("airTemp", tripLog.getAirTemp());
+        if (tripLog.getCondition() != null) {
+            contentValues.put("condition", tripLog.getCondition().getId());
+        }
+        if (tripLog.getFishingType() != null) {
+            contentValues.put("fishingType", tripLog.getFishingType().getId());
+        }
+        contentValues.put("notes", tripLog.getNotes());
 
-                if (tripLog.getCondition() != null) {
-                    contentValues.put("condition", tripLog.getCondition().getId());
-                }
-                if (tripLog.getFishingType() != null) {
-                    contentValues.put("fishingType", tripLog.getFishingType().getId());
-                }
-                contentValues.put("notes", tripLog.getNotes());
+        SQLiteDatabase db = DBOpenHelper.getInstance(_context).getWritableDatabase();
+        try {
+            db.beginTransaction();
 
-                SQLiteDatabase db = DBOpenHelper.getInstance(_context).getWritableDatabase();
-                try {
-                    db.beginTransaction();
+            tripLogId = tripLog.getIdTrip();
+            if (tripLogId == -1) {
+                tripLogId = db.insert("tripLog", null, contentValues);
+            } else {
+                String[] args = new String[]{String.valueOf(tripLog.getIdTrip())};
+                db.update("tripLog", contentValues, "id = ?", args);
+                db.delete("fishCaught", "tripLogId = ?", args);
+                db.delete("tripLogImages", "tripLogId = ?", args);
+            }
 
-                    long tripLogId = tripLog.getIdTrip();
-                    if (tripLogId == -1) {
-                        tripLogId = db.insert("tripLog", null, contentValues);
-                    } else {
-                        String[] args = new String[]{String.valueOf(tripLog.getIdTrip())};
-                        db.update("tripLog", contentValues, "id = ?", args);
-                        db.delete("fishCaught", "tripLogId = ?", args);
-                        db.delete("tripLogImages", "tripLogId = ?", args);
+            if (fish != null) {
+                SparseIntArray fishArray = fish.getFishIdsToQuantities();
+                ContentValues fishValues = new ContentValues();
+                fishValues.put("tripLogId", tripLogId);
+                for (int i = 0; i < fishArray.size(); ++i) {
+                    int quantity = fishArray.valueAt(i);
+                    if (quantity > 0) {
+                        int id = fishArray.keyAt(i);
+                        fishValues.put("fishId", id);
+                        fishValues.put("fishQty", quantity);
+                        db.insert("fishCaught", null, fishValues);
                     }
-
-                    if (fish != null) {
-                        SparseIntArray fishArray = fish.getFishIdsToQuantities();
-                        ContentValues fishValues = new ContentValues();
-                        fishValues.put("tripLogId", tripLogId);
-                        for (int i = 0; i < fishArray.size(); ++i) {
-                            int quantity = fishArray.valueAt(i);
-                            if (quantity > 0) {
-                                int id = fishArray.keyAt(i);
-                                fishValues.put("fishId", id);
-                                fishValues.put("fishQty", quantity);
-                                db.insert("fishCaught", null, fishValues);
-                            }
-                        }
-                    }
-
-                    if (tripLogImages != null) {
-                        ArrayList<String> imageFilenameList = tripLogImages.getImageFilenameList();
-                        if (imageFilenameList != null && imageFilenameList.size() > 0) {
-                            ContentValues imageFilenameValues = new ContentValues();
-                            imageFilenameValues.put("tripLogId", tripLogId);
-                            for (int i = 0; i < imageFilenameList.size(); ++i) {
-                                String imageFilename = imageFilenameList.get(i);
-                                imageFilenameValues.put("filename", imageFilename);
-                                db.insert("tripLogImages", null, imageFilenameValues);
-                                Log.d("iBobber", "breakpoint");
-                            }
-                        }
-                    }
-
-                    db.setTransactionSuccessful();
-                    EventBus.getDefault().post(new DBLoader.ContentChangedEvent());
-                } finally {
-                    db.endTransaction();
                 }
             }
-        });
+
+            if (tripLogImages != null) {
+                ArrayList<String> imageFilenameList = tripLogImages.getImageFilenameList();
+                if (imageFilenameList != null && imageFilenameList.size() > 0) {
+                    ContentValues imageFilenameValues = new ContentValues();
+                    imageFilenameValues.put("tripLogId", tripLogId);
+                    for (int i = 0; i < imageFilenameList.size(); ++i) {
+                        String imageFilename = imageFilenameList.get(i);
+                        imageFilenameValues.put("filename", imageFilename);
+                        db.insert("tripLogImages", null, imageFilenameValues);
+                        Log.d("iBobber", "breakpoint");
+                    }
+                }
+            }
+
+            db.setTransactionSuccessful();
+            EventBus.getDefault().post(new DBLoader.ContentChangedEvent());
+            tripLog.setIdTrip(tripLogId);
+        } finally {
+            db.endTransaction();
+        }
+
+//    }
+//    });
+        return tripLog;
     }
 
     public void saveTripLog(final List<CatchTripLogDetails> catchTripLog, final TaskListener callBack) {
 //        synchronized (this) {
-            for (int i = 0; i < catchTripLog.size(); i++) {
-                CatchTripLogDetails tripLog = catchTripLog.get(i);
-                String catchId = tripLog.getCatchId();
-                ContentValues contentValues = new ContentValues();
-                contentValues.put("dateTrip", Long.parseLong(tripLog.getCatchCreatedAt()) * 1000L);
-//                    contentValues.put("dateTrip", 1495690225000L);
-                contentValues.put("title", NETFISH_CATCH_TITLE);
-                contentValues.put("netFishCatchId", Long.parseLong(tripLog.getCatchId()));
-                SQLiteDatabase db = DBOpenHelper.getInstance(_context).getWritableDatabase();
-                db.beginTransaction();
-                if (isCatchCreated(catchId)) {
-                    String[] args = new String[]{String.valueOf(catchId)};
-                    db.update("tripLog", contentValues, " netFishCatchId = ?", args);
-                    db.setTransactionSuccessful();
-                    db.endTransaction();
-                    EventBus.getDefault().post(new DBLoader.ContentChangedEvent());
-                } else {
-                    Long id = db.insert("tripLog", null, contentValues);
-                    db.setTransactionSuccessful();
-                    db.endTransaction();
+        for (int i = 0; i < catchTripLog.size(); i++) {
+            CatchTripLogDetails tripLog = catchTripLog.get(i);
+            String catchId = tripLog.getCatchId();
+            ContentValues contentValues = new ContentValues();
+            contentValues.put("dateTrip", Long.parseLong(tripLog.getCatchCreatedAt()) * 1000L);
+            contentValues.put("title", NETFISH_CATCH_TITLE);
+            contentValues.put("netFishCatchId", Long.parseLong(tripLog.getCatchId()));
+            SQLiteDatabase db = DBOpenHelper.getInstance(_context).getWritableDatabase();
+            db.beginTransaction();
+            if (isCatchCreated(catchId)) {
+                String[] args = new String[]{String.valueOf(catchId)};
+                db.update("tripLog", contentValues, " netFishCatchId = ?", args);
+                db.setTransactionSuccessful();
+                db.endTransaction();
+                EventBus.getDefault().post(new DBLoader.ContentChangedEvent());
+            } else {
+                Long id = db.insert("tripLog", null, contentValues);
+                db.setTransactionSuccessful();
+                db.endTransaction();
 //                        db.close();
-                    EventBus.getDefault().post(new DBLoader.ContentChangedEvent());
-                }
+                EventBus.getDefault().post(new DBLoader.ContentChangedEvent());
+            }
 //
 //
 //                    SQLiteDatabase db = DBOpenHelper.getInstance(_context).getWritableDatabase();
@@ -343,8 +346,8 @@ public class TripLogService {
 //                        db.close();
 //                        EventBus.getDefault().post(new DBLoader.ContentChangedEvent());
 //                    }
-            }
-            callBack.onTaskCompleted();
+        }
+        callBack.onTaskCompleted();
 //        }
 
     }

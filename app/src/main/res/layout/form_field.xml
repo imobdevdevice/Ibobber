@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/formLabelWrapper"
+    android:id="@+id/formFieldWrapper"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
     android:orientation="horizontal"
     android:paddingBottom="12dp"
     android:paddingLeft="10dp"
-    android:paddingRight="12dp"
     android:paddingTop="12dp"
-    android:tag="triplog-form-label">
+    android:tag="triplog-form-item">
 
     <TextView
         android:id="@+id/formLabel"
         style="@style/FormItem"
-        android:layout_width="match_parent"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:gravity="left|start"
+        android:gravity="center_vertical"
         android:text="Form" />
 
     <TextView
@@ -24,15 +24,15 @@
         style="@style/FormItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/formLabel"
         android:text="Field" />
 
     <ImageView
         android:id="@+id/formDisclosure"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="12dp"
         android:scaleType="fitEnd"
         android:src="@drawable/arrow_right" />
 
